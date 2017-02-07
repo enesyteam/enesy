@@ -4632,7 +4632,7 @@ pre {
 .course-list__adjacent-thumbnail {
     float: left;
     width: 50%;
-    width: calc(100% - 91px)
+    width: 100%;/* calc(100% - 91px)*/
 }
 
 @media (min-width: 1025px) {
