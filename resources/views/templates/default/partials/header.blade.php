@@ -44,10 +44,10 @@
                      <div class="header-logo-account__sundry-dropdown js-sundry-5-dropdown">
                         <ul class="hub-header-dropdown">
                            <li>
-                              <a class="header-logo-account__sundry-sub-link" href="#">Mua khóa học</a>
+                              <a class="header-logo-account__sundry-sub-link" href="{{route('help.enrollers')}}">Trợ giúp học viên</a>
                            </li>
                            <li>
-                              <a class="header-logo-account__sundry-sub-link" href="#">Trở thành giảng viên</a>
+                              <a class="header-logo-account__sundry-sub-link" href="{{route('help.authors')}}">Dành cho giảng viên</a>
                            </li>
                         </ul>
                      </div>
@@ -68,7 +68,7 @@
                      </a>
                   </div>
                   <div class="header-logo-account__user-nav-item">
-                     <a rel="nofollow" class="header-logo-account__user-nav-main-link--omega" href="/sign_in">Đăng nhập</a>
+                     <a rel="nofollow" class="header-logo-account__user-nav-main-link--omega" href="{{route('user.login')}}">Đăng nhập</a>
                   </div>
                </div>
             </nav>

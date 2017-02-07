@@ -171,3 +171,6 @@ Stack trace:
 #49 C:\Users\CaCom\Documents\GitHub\laravel\enesy\public\index.php(54): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
 #50 C:\Users\CaCom\Documents\GitHub\laravel\enesy\server.php(21): require_once('C:\\Users\\CaCom\\...')
 #51 {main}  
+[2017-02-07 16:38:12] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected ''Trang trợ giúp dành cho h' (T_CONSTANT_ENCAPSED_STRING)' in C:\Users\CaCom\Documents\GitHub\enesy\app\Http\Controllers\HelpController.php:11
+Stack trace:
+#0 {main}  

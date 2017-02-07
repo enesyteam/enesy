@@ -12,3 +12,26 @@
 */
 
 Route::get('/', 'PagesController@index');
+
+/*Courses*/
+Route::get('khoa-hoc',[
+	'as' 	=>	'courses.index',
+	'uses'	=>	'CourseController@index'
+	]);
+
+/*Help*/
+Route::get('tro-giup-hoc-vien',[
+	'as'	=>	'help.enrollers',
+	'uses'	=>	'HelpController@enrollers'
+	]);
+Route::get('tro-giup-giang-vien',[
+	'as'	=>	'help.authors',
+	'uses'	=>	'HelpController@authors'
+	]);
+
+/*User*/
+Route::get('dang-nhap',[
+	'as'	=>	'user.login',
+	'uses'	=>	'UserController@login'
+	]);
+

@@ -3,17 +3,17 @@
       <div class="grid-container">
          <ul class="header-categories__links">
             <li class="header-categories__links-item">
-               <a class="header-categories__main-link" href="/category/all">Tất cả khóa học</a>
+               <a class="header-categories__main-link" href="{{route('courses.index')}}">Tất cả khóa học</a>
                <div class="header-categories__links-dropdown js-categories-all-files-dropdown">
                   <ul class="hub-header-dropdown">
                      <li>
-                        <a href="#">Học nhiều nhất</a>
-                     </li>
-                     <li>
-                        <a href="#">Khóa học nổi bật</a>
+                        <a href="#">Khóa học nổi bật nhất</a>
                      </li>
                      <li>
                         <a href="#">Khóa học mới nhất</a>
+                     </li>
+                     <li>
+                        <a href="#">Đang khuyến mãi</a>
                      </li>
                   </ul>
                </div>
