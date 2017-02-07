@@ -2,7 +2,7 @@
    <div class="header-logo-account">
       <div class="grid-container">
          <div class="header-logo-account__container">
-            <a class="header-logo-account__logo" href="index.html">
+            <a class="header-logo-account__logo" href="{{route('home')}}">
             <span>Enesy</span>
             </a>
             <nav class="header-logo-account__right">

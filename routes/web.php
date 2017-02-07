@@ -11,7 +11,10 @@
 |
 */
 
-Route::get('/', 'PagesController@index');
+Route::get('/', [
+	'as'	=>	'home',
+	'uses'	=>	'PagesController@index'
+	]);
 
 /*Courses*/
 Route::get('khoa-hoc',[
