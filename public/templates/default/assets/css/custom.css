@@ -1,0 +1,158 @@
+.search-header__results-count {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    padding-bottom: 16px;
+    border-radius: 4px 4px 0 0;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+.search-header__form-wrapper .heading__block {
+    padding: 50px 16px 0;
+    margin: auto;
+    border-radius: 2px;
+    text-align: center;
+    z-index: 1;
+}
+.heading__block .heading {
+    margin: 0;
+    color: #fff;
+    font-size: 35px;
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: 1.3px;
+    padding-bottom: 15px;
+}
+.heading__block .subhead {
+    color: #fff;
+    font-size: 24px;
+    margin-bottom: 20px;
+    line-height: 1;
+    font-weight: 300;
+}
+.faceted-search{margin-top:10px}
+@media (min-width: 569px){.faceted-search{margin-top:20px}}
+/*enesy*/
+
+.course-list__column-category b:after{
+    font-family:marketplace-glyphs;
+    font-style:normal;
+    font-weight:normal;
+    speak:none;
+    text-align:center;
+    width:1em;
+    content:"";
+    display:inline-block;
+    font-size:9px;
+    color:#bababa;
+    margin:0 4px 0 8px;
+    cursor:default
+}
+.course-list__column-category b:last-of-type:after{
+    display:none
+}
+.sc-list-nostyle {
+    list-style: none;
+    margin: 0;
+}
+.sc-ministats-group>.sc-ministats-item {
+    float: left;
+}
+.sc-ministats-group .sc-ministats-small {
+    margin-right: 5px;
+    padding-right: 4px;
+}
+.sc-ministats-group .sc-ministats {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-right: 7px;
+    padding-right: 6px;
+}
+a.sc-ministats {
+    color: #999;
+    text-decoration: none;
+}
+.sc-ministats-small.sc-ministats-followers:before {
+    background-size: 18px 18px;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAQAAABKfvVzAAAAsElEQVQ4y+WRKw6DUBBFr8d0Ce0CSJBIkq4Cxw5AV6Gw6JOQPIl/G2IJLGEqgFea8PPMVZPcM1/p7kHCgGEMJNeAyW4YgyQRk5MT7wO20pMUPyu9AjxoAtDsAWOwj9IVwAXASZQBKPevtACJdGEHiRbDaOesORxIkqgxjHrOIjyeaNuaUeHC4xwVmUSP37YXfyddVJDj6fiQ89r78VoDEf28eHde/9dj0vus/lGPe8UX4E70SZJ80VEAAAAASUVORK5CYII=);
+}
+.sc-ministats.sc-ministats-small:before {
+    width: 18px;
+    height: 14px;
+}
+.sc-ministats:before {
+    display: inline-block;
+    content: "";
+    width: 18px;
+    height: 18px;
+    vertical-align: top;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.sc-visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+.sc-ministats-small {
+    color: #999;
+    font-size: 11px;
+    line-height: 16px;
+}
+.sc-ministats {
+    display: inline-block;
+    font-family: "Source Sans Pro",Helvetica,Arial,sans-serif;
+    font-weight: 100;
+    color: #999;
+}
+.sc-ministats-group>.sc-ministats-item {
+    float: left;
+}
+.sc-ministats-group>.sc-ministats-item:last-child .sc-ministats {
+    margin-right: 0;
+    padding-right: 0;
+}
+.sc-ministats-group .sc-ministats-small {
+    margin-right: 5px;
+    padding-right: 4px;
+}
+.sc-ministats-group .sc-ministats {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-right: 7px;
+    padding-right: 6px;
+}
+.sc-ministats-small.sc-ministats-sounds:before {
+    background-size: 18px 18px;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAJFBMVEUAAACZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZnSZt8QAAAAC3RSTlMAECBgcICPn8/f72wH4AkAAABOSURBVHjanY5BCsAwCARXo0mq//9v0YDxWDqHhR1kEf8gUSWQqtDp5u6bd2Qa9eDJlBDLL1oXXXATjECqx0RfWfXJzD5xGeY20OHJ+MgLDHIDxo6IojMAAAAASUVORK5CYII=);
+}
+.sc-ministats.sc-ministats-small:before {
+    width: 18px;
+    height: 14px;
+}
+.sc-ministats:before {
+    display: inline-block;
+    content: "";
+    width: 16px;
+    height: 16px;
+    vertical-align: top;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.userBadge.horizontal .userBadge-title {
+    white-space: nowrap;
+}
+.userBadge-title {
+    margin: 3px 0 0 0;
+}
+.userBadge.horizontal .userBadge-content {
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
