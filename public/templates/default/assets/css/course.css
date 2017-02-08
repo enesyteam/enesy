@@ -3953,7 +3953,7 @@ input[type=checkbox].wordy-checkbox {
     max-width: 100%
 }
 
-.item-preview.-preview-live>a:hover:after,
+/*.item-preview.-preview-live>a:hover:after,
 .item-preview.-preview-screenshot>a:hover:after {
     content: "";
     position: absolute;
@@ -3961,8 +3961,8 @@ input[type=checkbox].wordy-checkbox {
     left: 0;
     height: 100%;
     width: 100%;
-    background: rgba(0, 0, 0, 0.7) url(//public-assets.envato-static.com/assets/item/overlay_live_preview-ffadfc4b5abf2663e8f42ae1fe270016.svg) no-repeat center center
-}
+    background: rgba(0, 0, 0, 0.7) url(../images/watch-now.svg) no-repeat center center;
+}*/
 
 .item-preview.-preview-screenshot>a:hover:after {
     content: "";

@@ -121,11 +121,15 @@
                                                       <div class="course-list__item-thumbnail">
                                                          <div class="item-thumbnail">
                                                             <div class="item-thumbnail__image">
-                                                               <a class="js-google-analytics__list-event-trigger" href="course-detail.html">
+                                                               <a class="js-google-analytics__list-event-trigger" href="{{route('course.detail')}}">
                                                                <img src="{{'templates/default/assets/images/courses/cad/csharp-thumb.jpg'}}" border="0" height="80" width="150" alt="Moti App PSD Landing Page PSD Template - ThemeForest Item for Sale" title="" class="preload no_preview landscape-image-magnifier" data-tooltip="Moti App PSD Landing Page PSD Template">
                                                                </a>
                                                                <div class="item-thumbnail__preview">
-                                                                  <a target="_blank" href="course-detail.html">Xem giới thiệu</a>
+                                                                  <a target="_blank" href="{{route('course.detail')}}">
+                                                                  <div class="" ng-show="showPlaceholderPlayButton" style="">
+                                                                     <div class="play-button play-button--initially-visible" data-purpose="video-play-button-initial"></div>
+                                                                  </div>
+                                                                  </a>
                                                                </div>
                                                             </div>
                                                          </div>
@@ -139,7 +143,7 @@
                                                          </div>
                                                          <div class="course-list__info">
                                                             <div class="course__info-author">Giảng viên:
-                                                               <a class="t-link -color-default -decoration-reversed" href="course-detail.html">Đỗ Trường Quân</a>
+                                                               <a class="t-link -color-default -decoration-reversed" href="{{route('course.detail')}}">Đỗ Trường Quân</a>
                                                             </div>
                                                             <div class="course__info-author">Thời lượng: 100 giờ 30 phút
                                                             </div>
@@ -152,12 +156,12 @@
                                                                   <div aria-label="User stats" class="userStats">
                                                                      <ul class="sc-ministats-group">
                                                                         <li title="330 học viên" class="sc-ministats-item">
-                                                                           <a href="course-detail.html" rel="nofollow" class="sc-ministats sc-ministats-small sc-ministats-followers">
+                                                                           <a href="{{route('course.detail')}}" rel="nofollow" class="sc-ministats sc-ministats-small sc-ministats-followers">
                                                                            <span class="sc-visuallyhidden">330 học viên</span><span aria-hidden="true">330</span>
                                                                            </a>
                                                                         </li>
                                                                         <li title="7 tracks" class="sc-ministats-item">
-                                                                           <a href="course-detail.html" rel="nofollow" class="sc-ministats sc-ministats-small sc-ministats-sounds">
+                                                                           <a href="{{route('course.detail')}}" rel="nofollow" class="sc-ministats sc-ministats-small sc-ministats-sounds">
                                                                            <span class="sc-visuallyhidden">550 quan tâm</span><span aria-hidden="true">550</span>
                                                                            </a>
                                                                         </li>
@@ -196,25 +200,29 @@
                                                       <div class="course-list__item-thumbnail">
                                                          <div class="item-thumbnail">
                                                             <div class="item-thumbnail__image">
-                                                               <a class="js-google-analytics__list-event-trigger" href="course-detail.html">
+                                                               <a class="js-google-analytics__list-event-trigger" href="{{route('course.detail')}}">
                                                                <img src="{{'templates/default/assets/images/courses/cad/csharp2-thumb.jpg'}}" border="0" height="80" width="150" alt="Moti App PSD Landing Page PSD Template - ThemeForest Item for Sale" title="" class="preload no_preview landscape-image-magnifier" data-tooltip="Moti App PSD Landing Page PSD Template">
                                                                </a>
                                                                <div class="item-thumbnail__preview">
-                                                                  <a target="_blank" href="course-detail.html">Xem giới thiệu</a>
+                                                                  <a target="_blank" href="{{route('course.detail')}}">
+                                                                  <div class="" ng-show="showPlaceholderPlayButton" style="">
+                                                                     <div class="play-button play-button--initially-visible" data-purpose="video-play-button-initial"></div>
+                                                                  </div>
+                                                                  </a>
                                                                </div>
                                                             </div>
                                                          </div>
                                                       </div>
                                                       <div class="course-list__adjacent-thumbnail">
                                                          <h3 class="course-list__heading">
-                                                            <a class="js-google-analytics__list-event-trigger t-link -color-inherit -decoration-reversed" href="course-detail.html">Khóa học lập trình AutoCAD với C# - trình độ nâng cao</a>
+                                                            <a class="js-google-analytics__list-event-trigger t-link -color-inherit -decoration-reversed" href="{{route('course.detail')}}">Khóa học lập trình AutoCAD với C# - trình độ nâng cao</a>
                                                          </h3>
                                                          <div class="course-list__price">
                                                             <p class="t-body -size-m -color-inherit -weight-bold h-m0">$10</p>
                                                          </div>
                                                          <div class="course-list__info">
                                                             <div class="course__info-author">Giảng viên:
-                                                               <a class="t-link -color-default -decoration-reversed" href="course-detail.html">Đỗ Trường Quân</a>
+                                                               <a class="t-link -color-default -decoration-reversed" href="{{route('course.detail')}}">Đỗ Trường Quân</a>
                                                             </div>
                                                             <div class="course__info-author">Thời lượng: 100 giờ 30 phút
                                                             </div>
@@ -227,12 +235,12 @@
                                                                   <div aria-label="User stats" class="userStats">
                                                                      <ul class="sc-ministats-group">
                                                                         <li title="330 học viên" class="sc-ministats-item">
-                                                                           <a href="course-detail.html" rel="nofollow" class="sc-ministats sc-ministats-small sc-ministats-followers">
+                                                                           <a href="{{route('course.detail')}}" rel="nofollow" class="sc-ministats sc-ministats-small sc-ministats-followers">
                                                                            <span class="sc-visuallyhidden">330 học viên</span><span aria-hidden="true">330</span>
                                                                            </a>
                                                                         </li>
                                                                         <li title="7 tracks" class="sc-ministats-item">
-                                                                           <a href="course-detail.html" rel="nofollow" class="sc-ministats sc-ministats-small sc-ministats-sounds">
+                                                                           <a href="{{route('course.detail')}}" rel="nofollow" class="sc-ministats sc-ministats-small sc-ministats-sounds">
                                                                            <span class="sc-visuallyhidden">550 quan tâm</span><span aria-hidden="true">550</span>
                                                                            </a>
                                                                         </li>
@@ -270,25 +278,29 @@
                                                       <div class="course-list__item-thumbnail">
                                                          <div class="item-thumbnail">
                                                             <div class="item-thumbnail__image">
-                                                               <a class="js-google-analytics__list-event-trigger" href="course-detail.html">
+                                                               <a class="js-google-analytics__list-event-trigger" href="{{route('course.detail')}}">
                                                                <img src="{{'templates/default/assets/images/thumb.jpg'}}" border="0" height="80" width="150" alt="Moti App PSD Landing Page PSD Template - ThemeForest Item for Sale" title="" class="preload no_preview landscape-image-magnifier" data-tooltip="Moti App PSD Landing Page PSD Template">
                                                                </a>
                                                                <div class="item-thumbnail__preview">
-                                                                  <a target="_blank" href="course-detail.html">Xem giới thiệu</a>
+                                                                  <a target="_blank" href="{{route('course.detail')}}">
+                                                                  <div class="" ng-show="showPlaceholderPlayButton" style="">
+                                                                     <div class="play-button play-button--initially-visible" data-purpose="video-play-button-initial"></div>
+                                                                  </div>
+                                                                  </a>
                                                                </div>
                                                             </div>
                                                          </div>
                                                       </div>
                                                       <div class="course-list__adjacent-thumbnail">
                                                          <h3 class="course-list__heading">
-                                                            <a class="js-google-analytics__list-event-trigger t-link -color-inherit -decoration-reversed" href="course-detail.html">Tính toán và thiết kế mố trụ cầu</a>
+                                                            <a class="js-google-analytics__list-event-trigger t-link -color-inherit -decoration-reversed" href="{{route('course.detail')}}">Tính toán và thiết kế mố trụ cầu</a>
                                                          </h3>
                                                          <div class="course-list__price">
                                                             <p class="t-body -size-m -color-inherit -weight-bold h-m0">$10</p>
                                                          </div>
                                                          <div class="course-list__info">
                                                             <div class="course__info-author">Giảng viên:
-                                                               <a class="t-link -color-default -decoration-reversed" href="course-detail.html">Trần Anh Tuấn</a>
+                                                               <a class="t-link -color-default -decoration-reversed" href="{{route('course.detail')}}">Trần Anh Tuấn</a>
                                                             </div>
                                                             <div class="course__info-author">Thời lượng: 100 giờ 30 phút
                                                             </div>
@@ -301,12 +313,12 @@
                                                                   <div aria-label="User stats" class="userStats">
                                                                      <ul class="sc-ministats-group">
                                                                         <li title="330 học viên" class="sc-ministats-item">
-                                                                           <a href="course-detail.html" rel="nofollow" class="sc-ministats sc-ministats-small sc-ministats-followers">
+                                                                           <a href="{{route('course.detail')}}" rel="nofollow" class="sc-ministats sc-ministats-small sc-ministats-followers">
                                                                            <span class="sc-visuallyhidden">330 học viên</span><span aria-hidden="true">330</span>
                                                                            </a>
                                                                         </li>
                                                                         <li title="7 tracks" class="sc-ministats-item">
-                                                                           <a href="course-detail.html" rel="nofollow" class="sc-ministats sc-ministats-small sc-ministats-sounds">
+                                                                           <a href="{{route('course.detail')}}" rel="nofollow" class="sc-ministats sc-ministats-small sc-ministats-sounds">
                                                                            <span class="sc-visuallyhidden">550 quan tâm</span><span aria-hidden="true">550</span>
                                                                            </a>
                                                                         </li>
@@ -344,25 +356,29 @@
                                                       <div class="course-list__item-thumbnail">
                                                          <div class="item-thumbnail">
                                                             <div class="item-thumbnail__image">
-                                                               <a class="js-google-analytics__list-event-trigger" href="course-detail.html">
+                                                               <a class="js-google-analytics__list-event-trigger" href="{{route('course.detail')}}">
                                                                <img src="{{'templates/default/assets/images/thumb.jpg'}}" border="0" height="80" width="150" alt="Moti App PSD Landing Page PSD Template - ThemeForest Item for Sale" title="" class="preload no_preview landscape-image-magnifier" data-tooltip="Moti App PSD Landing Page PSD Template">
                                                                </a>
                                                                <div class="item-thumbnail__preview">
-                                                                  <a target="_blank" href="course-detail.html">Xem giới thiệu</a>
+                                                                  <a target="_blank" href="{{route('course.detail')}}">
+                                                                  <div class="" ng-show="showPlaceholderPlayButton" style="">
+                                                                     <div class="play-button play-button--initially-visible" data-purpose="video-play-button-initial"></div>
+                                                                  </div>
+                                                                  </a>
                                                                </div>
                                                             </div>
                                                          </div>
                                                       </div>
                                                       <div class="course-list__adjacent-thumbnail">
                                                          <h3 class="course-list__heading">
-                                                            <a class="js-google-analytics__list-event-trigger t-link -color-inherit -decoration-reversed" href="course-detail.html">Tính toán và thiết kế cầu BTCT DƯL - Dầm giản đơn</a>
+                                                            <a class="js-google-analytics__list-event-trigger t-link -color-inherit -decoration-reversed" href="{{route('course.detail')}}">Tính toán và thiết kế cầu BTCT DƯL - Dầm giản đơn</a>
                                                          </h3>
                                                          <div class="course-list__price">
                                                             <p class="t-body -size-m -color-inherit -weight-bold h-m0">$10</p>
                                                          </div>
                                                          <div class="course-list__info">
                                                             <div class="course__info-author">Giảng viên:
-                                                               <a class="t-link -color-default -decoration-reversed" href="course-detail.html">Nguyễn Xuân Lam</a>
+                                                               <a class="t-link -color-default -decoration-reversed" href="{{route('course.detail')}}">Nguyễn Xuân Lam</a>
                                                             </div>
                                                             <div class="course__info-author">Thời lượng: 100 giờ 30 phút
                                                             </div>
@@ -375,12 +391,12 @@
                                                                   <div aria-label="User stats" class="userStats">
                                                                      <ul class="sc-ministats-group">
                                                                         <li title="330 học viên" class="sc-ministats-item">
-                                                                           <a href="course-detail.html" rel="nofollow" class="sc-ministats sc-ministats-small sc-ministats-followers">
+                                                                           <a href="{{route('course.detail')}}" rel="nofollow" class="sc-ministats sc-ministats-small sc-ministats-followers">
                                                                            <span class="sc-visuallyhidden">330 học viên</span><span aria-hidden="true">330</span>
                                                                            </a>
                                                                         </li>
                                                                         <li title="7 tracks" class="sc-ministats-item">
-                                                                           <a href="course-detail.html" rel="nofollow" class="sc-ministats sc-ministats-small sc-ministats-sounds">
+                                                                           <a href="{{route('course.detail')}}" rel="nofollow" class="sc-ministats sc-ministats-small sc-ministats-sounds">
                                                                            <span class="sc-visuallyhidden">550 quan tâm</span><span aria-hidden="true">550</span>
                                                                            </a>
                                                                         </li>
@@ -418,25 +434,29 @@
                                                       <div class="course-list__item-thumbnail">
                                                          <div class="item-thumbnail">
                                                             <div class="item-thumbnail__image">
-                                                               <a class="js-google-analytics__list-event-trigger" href="course-detail.html">
+                                                               <a class="js-google-analytics__list-event-trigger" href="{{route('course.detail')}}">
                                                                <img src="{{'templates/default/assets/images/thumb.jpg'}}" border="0" height="80" width="150" alt="Moti App PSD Landing Page PSD Template - ThemeForest Item for Sale" title="" class="preload no_preview landscape-image-magnifier" data-tooltip="Moti App PSD Landing Page PSD Template">
                                                                </a>
                                                                <div class="item-thumbnail__preview">
-                                                                  <a target="_blank" href="course-detail.html">Xem giới thiệu</a>
+                                                                  <a target="_blank" href="{{route('course.detail')}}">
+                                                                  <div class="" ng-show="showPlaceholderPlayButton" style="">
+                                                                     <div class="play-button play-button--initially-visible" data-purpose="video-play-button-initial"></div>
+                                                                  </div>
+                                                                  </a>
                                                                </div>
                                                             </div>
                                                          </div>
                                                       </div>
                                                       <div class="course-list__adjacent-thumbnail">
                                                          <h3 class="course-list__heading">
-                                                            <a class="js-google-analytics__list-event-trigger t-link -color-inherit -decoration-reversed" href="course-detail.html">Sử dụng VnRoad trong thiết kế đường</a>
+                                                            <a class="js-google-analytics__list-event-trigger t-link -color-inherit -decoration-reversed" href="{{route('course.detail')}}">Sử dụng VnRoad trong thiết kế đường</a>
                                                          </h3>
                                                          <div class="course-list__price">
                                                             <p class="t-body -size-m -color-inherit -weight-bold h-m0">$10</p>
                                                          </div>
                                                          <div class="course-list__info">
                                                             <div class="course__info-author">Giảng viên:
-                                                               <a class="t-link -color-default -decoration-reversed" href="course-detail.html">Bùi Minh Hoàng</a>
+                                                               <a class="t-link -color-default -decoration-reversed" href="{{route('course.detail')}}">Bùi Minh Hoàng</a>
                                                             </div>
                                                             <div class="course__info-author">Thời lượng: 100 giờ 30 phút
                                                             </div>
@@ -449,12 +469,12 @@
                                                                   <div aria-label="User stats" class="userStats">
                                                                      <ul class="sc-ministats-group">
                                                                         <li title="330 học viên" class="sc-ministats-item">
-                                                                           <a href="course-detail.html" rel="nofollow" class="sc-ministats sc-ministats-small sc-ministats-followers">
+                                                                           <a href="{{route('course.detail')}}" rel="nofollow" class="sc-ministats sc-ministats-small sc-ministats-followers">
                                                                            <span class="sc-visuallyhidden">330 học viên</span><span aria-hidden="true">330</span>
                                                                            </a>
                                                                         </li>
                                                                         <li title="7 tracks" class="sc-ministats-item">
-                                                                           <a href="course-detail.html" rel="nofollow" class="sc-ministats sc-ministats-small sc-ministats-sounds">
+                                                                           <a href="{{route('course.detail')}}" rel="nofollow" class="sc-ministats sc-ministats-small sc-ministats-sounds">
                                                                            <span class="sc-visuallyhidden">550 quan tâm</span><span aria-hidden="true">550</span>
                                                                            </a>
                                                                         </li>
@@ -492,25 +512,29 @@
                                                       <div class="course-list__item-thumbnail">
                                                          <div class="item-thumbnail">
                                                             <div class="item-thumbnail__image">
-                                                               <a class="js-google-analytics__list-event-trigger" href="course-detail.html">
+                                                               <a class="js-google-analytics__list-event-trigger" href="{{route('course.detail')}}">
                                                                <img src="{{'templates/default/assets/images/thumb.jpg'}}" border="0" height="80" width="150" alt="Moti App PSD Landing Page PSD Template - ThemeForest Item for Sale" title="" class="preload no_preview landscape-image-magnifier" data-tooltip="Moti App PSD Landing Page PSD Template">
                                                                </a>
                                                                <div class="item-thumbnail__preview">
-                                                                  <a target="_blank" href="course-detail.html">Xem giới thiệu</a>
+                                                                  <a target="_blank" href="{{route('course.detail')}}">
+                                                                  <div class="" ng-show="showPlaceholderPlayButton" style="">
+                                                                     <div class="play-button play-button--initially-visible" data-purpose="video-play-button-initial"></div>
+                                                                  </div>
+                                                                  </a>
                                                                </div>
                                                             </div>
                                                          </div>
                                                       </div>
                                                       <div class="course-list__adjacent-thumbnail">
                                                          <h3 class="course-list__heading">
-                                                            <a class="js-google-analytics__list-event-trigger t-link -color-inherit -decoration-reversed" href="course-detail.html">Kiểm toán đất yếu bằng GEO Slope</a>
+                                                            <a class="js-google-analytics__list-event-trigger t-link -color-inherit -decoration-reversed" href="{{route('course.detail')}}">Kiểm toán đất yếu bằng GEO Slope</a>
                                                          </h3>
                                                          <div class="course-list__price">
                                                             <p class="t-body -size-m -color-inherit -weight-bold h-m0">$10</p>
                                                          </div>
                                                          <div class="course-list__info">
                                                             <div class="course__info-author">Giảng viên:
-                                                               <a class="t-link -color-default -decoration-reversed" href="course-detail.html">Nguyễn Văn Linh</a>
+                                                               <a class="t-link -color-default -decoration-reversed" href="{{route('course.detail')}}">Nguyễn Văn Linh</a>
                                                             </div>
                                                             <div class="course__info-author">Thời lượng: 100 giờ 30 phút
                                                             </div>
@@ -523,12 +547,12 @@
                                                                   <div aria-label="User stats" class="userStats">
                                                                      <ul class="sc-ministats-group">
                                                                         <li title="330 học viên" class="sc-ministats-item">
-                                                                           <a href="course-detail.html" rel="nofollow" class="sc-ministats sc-ministats-small sc-ministats-followers">
+                                                                           <a href="{{route('course.detail')}}" rel="nofollow" class="sc-ministats sc-ministats-small sc-ministats-followers">
                                                                            <span class="sc-visuallyhidden">330 học viên</span><span aria-hidden="true">330</span>
                                                                            </a>
                                                                         </li>
                                                                         <li title="7 tracks" class="sc-ministats-item">
-                                                                           <a href="course-detail.html" rel="nofollow" class="sc-ministats sc-ministats-small sc-ministats-sounds">
+                                                                           <a href="{{route('course.detail')}}" rel="nofollow" class="sc-ministats sc-ministats-small sc-ministats-sounds">
                                                                            <span class="sc-visuallyhidden">550 quan tâm</span><span aria-hidden="true">550</span>
                                                                            </a>
                                                                         </li>
@@ -566,25 +590,29 @@
                                                       <div class="course-list__item-thumbnail">
                                                          <div class="item-thumbnail">
                                                             <div class="item-thumbnail__image">
-                                                               <a class="js-google-analytics__list-event-trigger" href="course-detail.html">
+                                                               <a class="js-google-analytics__list-event-trigger" href="{{route('course.detail')}}">
                                                                <img src="{{'templates/default/assets/images/thumb.jpg'}}" border="0" height="80" width="150" alt="Moti App PSD Landing Page PSD Template - ThemeForest Item for Sale" title="" class="preload no_preview landscape-image-magnifier" data-tooltip="Moti App PSD Landing Page PSD Template">
                                                                </a>
                                                                <div class="item-thumbnail__preview">
-                                                                  <a target="_blank" href="course-detail.html">Xem giới thiệu</a>
+                                                                  <a target="_blank" href="{{route('course.detail')}}">
+                                                                  <div class="" ng-show="showPlaceholderPlayButton" style="">
+                                                                     <div class="play-button play-button--initially-visible" data-purpose="video-play-button-initial"></div>
+                                                                  </div>
+                                                                  </a>
                                                                </div>
                                                             </div>
                                                          </div>
                                                       </div>
                                                       <div class="course-list__adjacent-thumbnail">
                                                          <h3 class="course-list__heading">
-                                                            <a class="js-google-analytics__list-event-trigger t-link -color-inherit -decoration-reversed" href="course-detail.html">Khóa học lập trình AutoCAD với C# - trình độ cơ bản</a>
+                                                            <a class="js-google-analytics__list-event-trigger t-link -color-inherit -decoration-reversed" href="{{route('course.detail')}}">Khóa học lập trình AutoCAD với C# - trình độ cơ bản</a>
                                                          </h3>
                                                          <div class="course-list__price">
                                                             <p class="t-body -size-m -color-inherit -weight-bold h-m0">$10</p>
                                                          </div>
                                                          <div class="course-list__info">
                                                             <div class="course__info-author">Giảng viên:
-                                                               <a class="t-link -color-default -decoration-reversed" href="course-detail.html">Đỗ Trường Quân</a>
+                                                               <a class="t-link -color-default -decoration-reversed" href="{{route('course.detail')}}">Đỗ Trường Quân</a>
                                                             </div>
                                                             <div class="course__info-author">Thời lượng: 100 giờ 30 phút
                                                             </div>
@@ -597,12 +625,12 @@
                                                                   <div aria-label="User stats" class="userStats">
                                                                      <ul class="sc-ministats-group">
                                                                         <li title="330 học viên" class="sc-ministats-item">
-                                                                           <a href="course-detail.html" rel="nofollow" class="sc-ministats sc-ministats-small sc-ministats-followers">
+                                                                           <a href="{{route('course.detail')}}" rel="nofollow" class="sc-ministats sc-ministats-small sc-ministats-followers">
                                                                            <span class="sc-visuallyhidden">330 học viên</span><span aria-hidden="true">330</span>
                                                                            </a>
                                                                         </li>
                                                                         <li title="7 tracks" class="sc-ministats-item">
-                                                                           <a href="course-detail.html" rel="nofollow" class="sc-ministats sc-ministats-small sc-ministats-sounds">
+                                                                           <a href="{{route('course.detail')}}" rel="nofollow" class="sc-ministats sc-ministats-small sc-ministats-sounds">
                                                                            <span class="sc-visuallyhidden">550 quan tâm</span><span aria-hidden="true">550</span>
                                                                            </a>
                                                                         </li>
@@ -640,25 +668,29 @@
                                                       <div class="course-list__item-thumbnail">
                                                          <div class="item-thumbnail">
                                                             <div class="item-thumbnail__image">
-                                                               <a class="js-google-analytics__list-event-trigger" href="course-detail.html">
+                                                               <a class="js-google-analytics__list-event-trigger" href="{{route('course.detail')}}">
                                                                <img src="{{'templates/default/assets/images/thumb.jpg'}}" border="0" height="80" width="150" alt="Moti App PSD Landing Page PSD Template - ThemeForest Item for Sale" title="" class="preload no_preview landscape-image-magnifier" data-tooltip="Moti App PSD Landing Page PSD Template">
                                                                </a>
                                                                <div class="item-thumbnail__preview">
-                                                                  <a target="_blank" href="course-detail.html">Xem giới thiệu</a>
+                                                                  <a target="_blank" href="{{route('course.detail')}}">
+                                                                  <div class="" ng-show="showPlaceholderPlayButton" style="">
+                                                                     <div class="play-button play-button--initially-visible" data-purpose="video-play-button-initial"></div>
+                                                                  </div>
+                                                                  </a>
                                                                </div>
                                                             </div>
                                                          </div>
                                                       </div>
                                                       <div class="course-list__adjacent-thumbnail">
                                                          <h3 class="course-list__heading">
-                                                            <a class="js-google-analytics__list-event-trigger t-link -color-inherit -decoration-reversed" href="course-detail.html">Khóa học lập trình AutoCAD với C# - trình độ cơ bản</a>
+                                                            <a class="js-google-analytics__list-event-trigger t-link -color-inherit -decoration-reversed" href="{{route('course.detail')}}">Khóa học lập trình AutoCAD với C# - trình độ cơ bản</a>
                                                          </h3>
                                                          <div class="course-list__price">
                                                             <p class="t-body -size-m -color-inherit -weight-bold h-m0">$10</p>
                                                          </div>
                                                          <div class="course-list__info">
                                                             <div class="course__info-author">Giảng viên:
-                                                               <a class="t-link -color-default -decoration-reversed" href="course-detail.html">Đỗ Trường Quân</a>
+                                                               <a class="t-link -color-default -decoration-reversed" href="{{route('course.detail')}}">Đỗ Trường Quân</a>
                                                             </div>
                                                             <div class="course__info-author">Thời lượng: 100 giờ 30 phút
                                                             </div>
@@ -671,12 +703,12 @@
                                                                   <div aria-label="User stats" class="userStats">
                                                                      <ul class="sc-ministats-group">
                                                                         <li title="330 học viên" class="sc-ministats-item">
-                                                                           <a href="course-detail.html" rel="nofollow" class="sc-ministats sc-ministats-small sc-ministats-followers">
+                                                                           <a href="{{route('course.detail')}}" rel="nofollow" class="sc-ministats sc-ministats-small sc-ministats-followers">
                                                                            <span class="sc-visuallyhidden">330 học viên</span><span aria-hidden="true">330</span>
                                                                            </a>
                                                                         </li>
                                                                         <li title="7 tracks" class="sc-ministats-item">
-                                                                           <a href="course-detail.html" rel="nofollow" class="sc-ministats sc-ministats-small sc-ministats-sounds">
+                                                                           <a href="{{route('course.detail')}}" rel="nofollow" class="sc-ministats sc-ministats-small sc-ministats-sounds">
                                                                            <span class="sc-visuallyhidden">550 quan tâm</span><span aria-hidden="true">550</span>
                                                                            </a>
                                                                         </li>
@@ -714,25 +746,29 @@
                                                       <div class="course-list__item-thumbnail">
                                                          <div class="item-thumbnail">
                                                             <div class="item-thumbnail__image">
-                                                               <a class="js-google-analytics__list-event-trigger" href="course-detail.html">
+                                                               <a class="js-google-analytics__list-event-trigger" href="{{route('course.detail')}}">
                                                                <img src="{{'templates/default/assets/images/thumb.jpg'}}" border="0" height="80" width="150" alt="Moti App PSD Landing Page PSD Template - ThemeForest Item for Sale" title="" class="preload no_preview landscape-image-magnifier" data-tooltip="Moti App PSD Landing Page PSD Template">
                                                                </a>
                                                                <div class="item-thumbnail__preview">
-                                                                  <a target="_blank" href="course-detail.html">Xem giới thiệu</a>
+                                                                  <a target="_blank" href="{{route('course.detail')}}">
+                                                                  <div class="" ng-show="showPlaceholderPlayButton" style="">
+                                                                     <div class="play-button play-button--initially-visible" data-purpose="video-play-button-initial"></div>
+                                                                  </div>
+                                                                  </a>
                                                                </div>
                                                             </div>
                                                          </div>
                                                       </div>
                                                       <div class="course-list__adjacent-thumbnail">
                                                          <h3 class="course-list__heading">
-                                                            <a class="js-google-analytics__list-event-trigger t-link -color-inherit -decoration-reversed" href="course-detail.html">Khóa học lập trình AutoCAD với C# - trình độ cơ bản</a>
+                                                            <a class="js-google-analytics__list-event-trigger t-link -color-inherit -decoration-reversed" href="{{route('course.detail')}}">Khóa học lập trình AutoCAD với C# - trình độ cơ bản</a>
                                                          </h3>
                                                          <div class="course-list__price">
                                                             <p class="t-body -size-m -color-inherit -weight-bold h-m0">$10</p>
                                                          </div>
                                                          <div class="course-list__info">
                                                             <div class="course__info-author">Giảng viên:
-                                                               <a class="t-link -color-default -decoration-reversed" href="course-detail.html">Đỗ Trường Quân</a>
+                                                               <a class="t-link -color-default -decoration-reversed" href="{{route('course.detail')}}">Đỗ Trường Quân</a>
                                                             </div>
                                                             <div class="course__info-author">Thời lượng: 100 giờ 30 phút
                                                             </div>
@@ -745,12 +781,12 @@
                                                                   <div aria-label="User stats" class="userStats">
                                                                      <ul class="sc-ministats-group">
                                                                         <li title="330 học viên" class="sc-ministats-item">
-                                                                           <a href="course-detail.html" rel="nofollow" class="sc-ministats sc-ministats-small sc-ministats-followers">
+                                                                           <a href="{{route('course.detail')}}" rel="nofollow" class="sc-ministats sc-ministats-small sc-ministats-followers">
                                                                            <span class="sc-visuallyhidden">330 học viên</span><span aria-hidden="true">330</span>
                                                                            </a>
                                                                         </li>
                                                                         <li title="7 tracks" class="sc-ministats-item">
-                                                                           <a href="course-detail.html" rel="nofollow" class="sc-ministats sc-ministats-small sc-ministats-sounds">
+                                                                           <a href="{{route('course.detail')}}" rel="nofollow" class="sc-ministats sc-ministats-small sc-ministats-sounds">
                                                                            <span class="sc-visuallyhidden">550 quan tâm</span><span aria-hidden="true">550</span>
                                                                            </a>
                                                                         </li>
@@ -788,25 +824,29 @@
                                                       <div class="course-list__item-thumbnail">
                                                          <div class="item-thumbnail">
                                                             <div class="item-thumbnail__image">
-                                                               <a class="js-google-analytics__list-event-trigger" href="course-detail.html">
+                                                               <a class="js-google-analytics__list-event-trigger" href="{{route('course.detail')}}">
                                                                <img src="{{'templates/default/assets/images/thumb.jpg'}}" border="0" height="80" width="150" alt="Moti App PSD Landing Page PSD Template - ThemeForest Item for Sale" title="" class="preload no_preview landscape-image-magnifier" data-tooltip="Moti App PSD Landing Page PSD Template">
                                                                </a>
                                                                <div class="item-thumbnail__preview">
-                                                                  <a target="_blank" href="course-detail.html">Xem giới thiệu</a>
+                                                                  <a target="_blank" href="{{route('course.detail')}}">
+                                                                  <div class="" ng-show="showPlaceholderPlayButton" style="">
+                                                                     <div class="play-button play-button--initially-visible" data-purpose="video-play-button-initial"></div>
+                                                                  </div>
+                                                                  </a>
                                                                </div>
                                                             </div>
                                                          </div>
                                                       </div>
                                                       <div class="course-list__adjacent-thumbnail">
                                                          <h3 class="course-list__heading">
-                                                            <a class="js-google-analytics__list-event-trigger t-link -color-inherit -decoration-reversed" href="course-detail.html">Khóa học lập trình AutoCAD với C# - trình độ cơ bản</a>
+                                                            <a class="js-google-analytics__list-event-trigger t-link -color-inherit -decoration-reversed" href="{{route('course.detail')}}">Khóa học lập trình AutoCAD với C# - trình độ cơ bản</a>
                                                          </h3>
                                                          <div class="course-list__price">
                                                             <p class="t-body -size-m -color-inherit -weight-bold h-m0">$10</p>
                                                          </div>
                                                          <div class="course-list__info">
                                                             <div class="course__info-author">Giảng viên:
-                                                               <a class="t-link -color-default -decoration-reversed" href="course-detail.html">Đỗ Trường Quân</a>
+                                                               <a class="t-link -color-default -decoration-reversed" href="{{route('course.detail')}}">Đỗ Trường Quân</a>
                                                             </div>
                                                             <div class="course__info-author">Thời lượng: 100 giờ 30 phút
                                                             </div>
@@ -819,12 +859,12 @@
                                                                   <div aria-label="User stats" class="userStats">
                                                                      <ul class="sc-ministats-group">
                                                                         <li title="330 học viên" class="sc-ministats-item">
-                                                                           <a href="course-detail.html" rel="nofollow" class="sc-ministats sc-ministats-small sc-ministats-followers">
+                                                                           <a href="{{route('course.detail')}}" rel="nofollow" class="sc-ministats sc-ministats-small sc-ministats-followers">
                                                                            <span class="sc-visuallyhidden">330 học viên</span><span aria-hidden="true">330</span>
                                                                            </a>
                                                                         </li>
                                                                         <li title="7 tracks" class="sc-ministats-item">
-                                                                           <a href="course-detail.html" rel="nofollow" class="sc-ministats sc-ministats-small sc-ministats-sounds">
+                                                                           <a href="{{route('course.detail')}}" rel="nofollow" class="sc-ministats sc-ministats-small sc-ministats-sounds">
                                                                            <span class="sc-visuallyhidden">550 quan tâm</span><span aria-hidden="true">550</span>
                                                                            </a>
                                                                         </li>
@@ -862,25 +902,29 @@
                                                       <div class="course-list__item-thumbnail">
                                                          <div class="item-thumbnail">
                                                             <div class="item-thumbnail__image">
-                                                               <a class="js-google-analytics__list-event-trigger" href="course-detail.html">
+                                                               <a class="js-google-analytics__list-event-trigger" href="{{route('course.detail')}}">
                                                                <img src="{{'templates/default/assets/images/thumb.jpg'}}" border="0" height="80" width="150" alt="Moti App PSD Landing Page PSD Template - ThemeForest Item for Sale" title="" class="preload no_preview landscape-image-magnifier" data-tooltip="Moti App PSD Landing Page PSD Template">
                                                                </a>
                                                                <div class="item-thumbnail__preview">
-                                                                  <a target="_blank" href="course-detail.html">Xem giới thiệu</a>
+                                                                  <a target="_blank" href="{{route('course.detail')}}">
+                                                                  <div class="" ng-show="showPlaceholderPlayButton" style="">
+                                                                     <div class="play-button play-button--initially-visible" data-purpose="video-play-button-initial"></div>
+                                                                  </div>
+                                                                  </a>
                                                                </div>
                                                             </div>
                                                          </div>
                                                       </div>
                                                       <div class="course-list__adjacent-thumbnail">
                                                          <h3 class="course-list__heading">
-                                                            <a class="js-google-analytics__list-event-trigger t-link -color-inherit -decoration-reversed" href="course-detail.html">Khóa học lập trình AutoCAD với C# - trình độ cơ bản</a>
+                                                            <a class="js-google-analytics__list-event-trigger t-link -color-inherit -decoration-reversed" href="{{route('course.detail')}}">Khóa học lập trình AutoCAD với C# - trình độ cơ bản</a>
                                                          </h3>
                                                          <div class="course-list__price">
                                                             <p class="t-body -size-m -color-inherit -weight-bold h-m0">$10</p>
                                                          </div>
                                                          <div class="course-list__info">
                                                             <div class="course__info-author">Giảng viên:
-                                                               <a class="t-link -color-default -decoration-reversed" href="course-detail.html">Đỗ Trường Quân</a>
+                                                               <a class="t-link -color-default -decoration-reversed" href="{{route('course.detail')}}">Đỗ Trường Quân</a>
                                                             </div>
                                                             <div class="course__info-author">Thời lượng: 100 giờ 30 phút
                                                             </div>
@@ -893,12 +937,12 @@
                                                                   <div aria-label="User stats" class="userStats">
                                                                      <ul class="sc-ministats-group">
                                                                         <li title="330 học viên" class="sc-ministats-item">
-                                                                           <a href="course-detail.html" rel="nofollow" class="sc-ministats sc-ministats-small sc-ministats-followers">
+                                                                           <a href="{{route('course.detail')}}" rel="nofollow" class="sc-ministats sc-ministats-small sc-ministats-followers">
                                                                            <span class="sc-visuallyhidden">330 học viên</span><span aria-hidden="true">330</span>
                                                                            </a>
                                                                         </li>
                                                                         <li title="7 tracks" class="sc-ministats-item">
-                                                                           <a href="course-detail.html" rel="nofollow" class="sc-ministats sc-ministats-small sc-ministats-sounds">
+                                                                           <a href="{{route('course.detail')}}" rel="nofollow" class="sc-ministats sc-ministats-small sc-ministats-sounds">
                                                                            <span class="sc-visuallyhidden">550 quan tâm</span><span aria-hidden="true">550</span>
                                                                            </a>
                                                                         </li>
@@ -936,25 +980,29 @@
                                                       <div class="course-list__item-thumbnail">
                                                          <div class="item-thumbnail">
                                                             <div class="item-thumbnail__image">
-                                                               <a class="js-google-analytics__list-event-trigger" href="course-detail.html">
+                                                               <a class="js-google-analytics__list-event-trigger" href="{{route('course.detail')}}">
                                                                <img src="{{'templates/default/assets/images/thumb.jpg'}}" border="0" height="80" width="150" alt="Moti App PSD Landing Page PSD Template - ThemeForest Item for Sale" title="" class="preload no_preview landscape-image-magnifier" data-tooltip="Moti App PSD Landing Page PSD Template">
                                                                </a>
                                                                <div class="item-thumbnail__preview">
-                                                                  <a target="_blank" href="course-detail.html">Xem giới thiệu</a>
+                                                                  <a target="_blank" href="{{route('course.detail')}}">
+                                                                  <div class="" ng-show="showPlaceholderPlayButton" style="">
+                                                                     <div class="play-button play-button--initially-visible" data-purpose="video-play-button-initial"></div>
+                                                                  </div>
+                                                                  </a>
                                                                </div>
                                                             </div>
                                                          </div>
                                                       </div>
                                                       <div class="course-list__adjacent-thumbnail">
                                                          <h3 class="course-list__heading">
-                                                            <a class="js-google-analytics__list-event-trigger t-link -color-inherit -decoration-reversed" href="course-detail.html">Khóa học lập trình AutoCAD với C# - trình độ cơ bản</a>
+                                                            <a class="js-google-analytics__list-event-trigger t-link -color-inherit -decoration-reversed" href="{{route('course.detail')}}">Khóa học lập trình AutoCAD với C# - trình độ cơ bản</a>
                                                          </h3>
                                                          <div class="course-list__price">
                                                             <p class="t-body -size-m -color-inherit -weight-bold h-m0">$10</p>
                                                          </div>
                                                          <div class="course-list__info">
                                                             <div class="course__info-author">Giảng viên:
-                                                               <a class="t-link -color-default -decoration-reversed" href="course-detail.html">Đỗ Trường Quân</a>
+                                                               <a class="t-link -color-default -decoration-reversed" href="{{route('course.detail')}}">Đỗ Trường Quân</a>
                                                             </div>
                                                             <div class="course__info-author">Thời lượng: 100 giờ 30 phút
                                                             </div>
@@ -967,12 +1015,12 @@
                                                                   <div aria-label="User stats" class="userStats">
                                                                      <ul class="sc-ministats-group">
                                                                         <li title="330 học viên" class="sc-ministats-item">
-                                                                           <a href="course-detail.html" rel="nofollow" class="sc-ministats sc-ministats-small sc-ministats-followers">
+                                                                           <a href="{{route('course.detail')}}" rel="nofollow" class="sc-ministats sc-ministats-small sc-ministats-followers">
                                                                            <span class="sc-visuallyhidden">330 học viên</span><span aria-hidden="true">330</span>
                                                                            </a>
                                                                         </li>
                                                                         <li title="7 tracks" class="sc-ministats-item">
-                                                                           <a href="course-detail.html" rel="nofollow" class="sc-ministats sc-ministats-small sc-ministats-sounds">
+                                                                           <a href="{{route('course.detail')}}" rel="nofollow" class="sc-ministats sc-ministats-small sc-ministats-sounds">
                                                                            <span class="sc-visuallyhidden">550 quan tâm</span><span aria-hidden="true">550</span>
                                                                            </a>
                                                                         </li>
@@ -1010,25 +1058,29 @@
                                                       <div class="course-list__item-thumbnail">
                                                          <div class="item-thumbnail">
                                                             <div class="item-thumbnail__image">
-                                                               <a class="js-google-analytics__list-event-trigger" href="course-detail.html">
+                                                               <a class="js-google-analytics__list-event-trigger" href="{{route('course.detail')}}">
                                                                <img src="{{'templates/default/assets/images/thumb.jpg'}}" border="0" height="80" width="150" alt="Moti App PSD Landing Page PSD Template - ThemeForest Item for Sale" title="" class="preload no_preview landscape-image-magnifier" data-tooltip="Moti App PSD Landing Page PSD Template">
                                                                </a>
                                                                <div class="item-thumbnail__preview">
-                                                                  <a target="_blank" href="course-detail.html">Xem giới thiệu</a>
+                                                                  <a target="_blank" href="{{route('course.detail')}}">
+                                                                  <div class="" ng-show="showPlaceholderPlayButton" style="">
+                                                                     <div class="play-button play-button--initially-visible" data-purpose="video-play-button-initial"></div>
+                                                                  </div>
+                                                                  </a>
                                                                </div>
                                                             </div>
                                                          </div>
                                                       </div>
                                                       <div class="course-list__adjacent-thumbnail">
                                                          <h3 class="course-list__heading">
-                                                            <a class="js-google-analytics__list-event-trigger t-link -color-inherit -decoration-reversed" href="course-detail.html">Khóa học lập trình AutoCAD với C# - trình độ cơ bản</a>
+                                                            <a class="js-google-analytics__list-event-trigger t-link -color-inherit -decoration-reversed" href="{{route('course.detail')}}">Khóa học lập trình AutoCAD với C# - trình độ cơ bản</a>
                                                          </h3>
                                                          <div class="course-list__price">
                                                             <p class="t-body -size-m -color-inherit -weight-bold h-m0">$10</p>
                                                          </div>
                                                          <div class="course-list__info">
                                                             <div class="course__info-author">Giảng viên:
-                                                               <a class="t-link -color-default -decoration-reversed" href="course-detail.html">Đỗ Trường Quân</a>
+                                                               <a class="t-link -color-default -decoration-reversed" href="{{route('course.detail')}}">Đỗ Trường Quân</a>
                                                             </div>
                                                             <div class="course__info-author">Thời lượng: 100 giờ 30 phút
                                                             </div>
@@ -1041,12 +1093,12 @@
                                                                   <div aria-label="User stats" class="userStats">
                                                                      <ul class="sc-ministats-group">
                                                                         <li title="330 học viên" class="sc-ministats-item">
-                                                                           <a href="course-detail.html" rel="nofollow" class="sc-ministats sc-ministats-small sc-ministats-followers">
+                                                                           <a href="{{route('course.detail')}}" rel="nofollow" class="sc-ministats sc-ministats-small sc-ministats-followers">
                                                                            <span class="sc-visuallyhidden">330 học viên</span><span aria-hidden="true">330</span>
                                                                            </a>
                                                                         </li>
                                                                         <li title="7 tracks" class="sc-ministats-item">
-                                                                           <a href="course-detail.html" rel="nofollow" class="sc-ministats sc-ministats-small sc-ministats-sounds">
+                                                                           <a href="{{route('course.detail')}}" rel="nofollow" class="sc-ministats sc-ministats-small sc-ministats-sounds">
                                                                            <span class="sc-visuallyhidden">550 quan tâm</span><span aria-hidden="true">550</span>
                                                                            </a>
                                                                         </li>
@@ -1084,25 +1136,29 @@
                                                       <div class="course-list__item-thumbnail">
                                                          <div class="item-thumbnail">
                                                             <div class="item-thumbnail__image">
-                                                               <a class="js-google-analytics__list-event-trigger" href="course-detail.html">
+                                                               <a class="js-google-analytics__list-event-trigger" href="{{route('course.detail')}}">
                                                                <img src="{{'templates/default/assets/images/thumb.jpg'}}" border="0" height="80" width="150" alt="Moti App PSD Landing Page PSD Template - ThemeForest Item for Sale" title="" class="preload no_preview landscape-image-magnifier" data-tooltip="Moti App PSD Landing Page PSD Template">
                                                                </a>
                                                                <div class="item-thumbnail__preview">
-                                                                  <a target="_blank" href="course-detail.html">Xem giới thiệu</a>
+                                                                  <a target="_blank" href="{{route('course.detail')}}">
+                                                                  <div class="" ng-show="showPlaceholderPlayButton" style="">
+                                                                     <div class="play-button play-button--initially-visible" data-purpose="video-play-button-initial"></div>
+                                                                  </div>
+                                                                  </a>
                                                                </div>
                                                             </div>
                                                          </div>
                                                       </div>
                                                       <div class="course-list__adjacent-thumbnail">
                                                          <h3 class="course-list__heading">
-                                                            <a class="js-google-analytics__list-event-trigger t-link -color-inherit -decoration-reversed" href="course-detail.html">Khóa học lập trình AutoCAD với C# - trình độ cơ bản</a>
+                                                            <a class="js-google-analytics__list-event-trigger t-link -color-inherit -decoration-reversed" href="{{route('course.detail')}}">Khóa học lập trình AutoCAD với C# - trình độ cơ bản</a>
                                                          </h3>
                                                          <div class="course-list__price">
                                                             <p class="t-body -size-m -color-inherit -weight-bold h-m0">$10</p>
                                                          </div>
                                                          <div class="course-list__info">
                                                             <div class="course__info-author">Giảng viên:
-                                                               <a class="t-link -color-default -decoration-reversed" href="course-detail.html">Đỗ Trường Quân</a>
+                                                               <a class="t-link -color-default -decoration-reversed" href="{{route('course.detail')}}">Đỗ Trường Quân</a>
                                                             </div>
                                                             <div class="course__info-author">Thời lượng: 100 giờ 30 phút
                                                             </div>
@@ -1115,12 +1171,12 @@
                                                                   <div aria-label="User stats" class="userStats">
                                                                      <ul class="sc-ministats-group">
                                                                         <li title="330 học viên" class="sc-ministats-item">
-                                                                           <a href="course-detail.html" rel="nofollow" class="sc-ministats sc-ministats-small sc-ministats-followers">
+                                                                           <a href="{{route('course.detail')}}" rel="nofollow" class="sc-ministats sc-ministats-small sc-ministats-followers">
                                                                            <span class="sc-visuallyhidden">330 học viên</span><span aria-hidden="true">330</span>
                                                                            </a>
                                                                         </li>
                                                                         <li title="7 tracks" class="sc-ministats-item">
-                                                                           <a href="course-detail.html" rel="nofollow" class="sc-ministats sc-ministats-small sc-ministats-sounds">
+                                                                           <a href="{{route('course.detail')}}" rel="nofollow" class="sc-ministats sc-ministats-small sc-ministats-sounds">
                                                                            <span class="sc-visuallyhidden">550 quan tâm</span><span aria-hidden="true">550</span>
                                                                            </a>
                                                                         </li>

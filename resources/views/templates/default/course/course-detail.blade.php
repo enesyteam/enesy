@@ -24,7 +24,7 @@ Enesy | Khóa học lập trình AutoCAD với C# trình độ cơ bản
             </h1>
          </div>
          <div class="item-header__price">
-            <a class="js-item-header__cart-button e-btn--3d -color-primary -size-m" rel="nofollow" title="Add to Cart" data-view="modalAjax" href="/cart/configure_before_adding/17695406?license=regular&amp;size=source&amp;support=bundle_6month">
+            <a class="js-item-header__cart-button e-btn--3d -color-primary -size-m" rel="nofollow" title="Add to Cart" data-view="modalAjax" href="">
             <span class="item-header__cart-button-icon">
             <i class="e-icon -icon-cart -margin-right"></i>
             </span>
@@ -73,15 +73,18 @@ Enesy | Khóa học lập trình AutoCAD với C# trình độ cơ bản
       <div class="content-s">
          <div class="box--no-padding">
             <div class="item-preview -preview-live">
-               <a target="_blank" href="/item/edulearn-education-school-courses-html-template/full_screen_preview/17695406"><img alt="EduLearn - Education, School &amp; Courses HTML Template - Business Corporate" itemprop="image" src="{{url('templates/default/assets/images/courses/preview-images/course-preview-image.jpg')}}"></a>
+               <a target="_blank" href=""><img alt="EduLearn - Education, School &amp; Courses HTML Template - Business Corporate" itemprop="image" src="{{url('templates/default/assets/images/courses/preview-images/course-preview-image.jpg')}}">
+                              <div class="" ng-show="showPlaceholderPlayButton" style="">
+                        <div class="play-button play-button--initially-visible" data-purpose="video-play-button-initial"></div>
+                    </div></a>
                <div class="item-preview__actions">
                   <div id="fullscreen" class="item-preview__preview-buttons">
-                     <a data-view="crossDomainGoogleAnalyticsLink" href="#" role="button" class="btn-icon live-preview" target="_blank" rel="nofollow">2,000 học viên</a><a data-view="screenshotGallery" href="/item/edulearn-education-school-courses-html-template/screenshots/17695406" role="button" class="btn-icon screenshots" target="_blank">48 giờ học</a>
+                     <a data-view="crossDomainGoogleAnalyticsLink" href="#" role="button" class="btn-icon live-preview" target="_blank" rel="nofollow">2,000 học viên</a><a data-view="screenshotGallery" href="" role="button" class="btn-icon screenshots" target="_blank">48 giờ học</a>
                   </div>
                   <div class="item-preview__preview-buttons--social" data-view="socialButtons">
                      <div class="btn-group">
                         <div class="btn btn--label btn--group-item">Chia sẻ</div>
-                        <a class="btn btn--group-item" data-social-network-link="" href="https://www.facebook.com/sharer/sharer.php?display=popup&amp;u=https%3A%2F%2Fthemeforest.net%2Fitem%2Fedulearn-education-school-courses-html-template%2F17695406%3Futm_source%3Dsharefb"><i class="e-icon -icon-facebook -size-medium -line-height-small"><span class="e-icon__alt">Facebook</span></i></a>
+                        <a class="btn btn--group-item" data-social-network-link="" href=""><i class="e-icon -icon-facebook -size-medium -line-height-small"><span class="e-icon__alt">Facebook</span></i></a>
                         <a class="btn btn--group-item" data-social-network-link="" href="https://plus.google.com/share?url=https%3A%2F%2Fthemeforest.net%2Fitem%2Fedulearn-education-school-courses-html-template%2F17695406%3Futm_source%3Dsharegp"><i class="e-icon -icon-google-plus -size-medium -line-height-small"><span class="e-icon__alt">Google Plus</span></i></a>
                         <a class="btn btn--group-item" data-social-network-link="" href="https://twitter.com/intent/tweet?text=Check+out+%27EduLearn+-+Education%2C+School+%26+Courses+HTML+Template%27+on+%23EnvatoMarket+by+%40cowthemes+%23themeforest&amp;url=https%3A%2F%2Fthemeforest.net%2Fitem%2Fedulearn-education-school-courses-html-template%2F17695406%3Futm_source%3Dsharetw"><i class="e-icon -icon-twitter -size-medium -line-height-small"><span class="e-icon__alt">Twitter</span></i></a>
                         <a class="btn btn--group-item" data-social-network-link="" href="http://pinterest.com/pin/create/button?description=EduLearn+-+Education%2C+School+%26+Courses+HTML+Template&amp;media=http%3A%2F%2F0.s3.envato.com%2Ffiles%2F208388954%2FTheme%2520Preview%2F01-theme-preview.__large_preview.jpg&amp;url=https%3A%2F%2Fthemeforest.net%2Fitem%2Fedulearn-education-school-courses-html-template%2F17695406%3Futm_source%3Dsharepi"><i class="e-icon -icon-pinterest -size-medium -line-height-small"><span class="e-icon__alt">Pinterest</span></i></a>
@@ -123,7 +126,7 @@ Enesy | Khóa học lập trình AutoCAD với C# trình độ cơ bản
             </div>
             <div>
                <p class="t-body -size-m">
-                  <a class="t-link-decoration-reversed" href="/user/cowthemes/portfolio">Xem hồ sơ giảng viên</a>
+                  <a class="t-link-decoration-reversed" href="#">Xem hồ sơ giảng viên</a>
                </p>
             </div>
          </section>
@@ -211,14 +214,14 @@ Enesy | Khóa học lập trình AutoCAD với C# trình độ cơ bản
             <div class="media">
                <div class="media__item">
                   <div class="avatar-wrapper tooltip-advanced">
-                     <a class="avatar" title="cowthemes" href="/user/cowthemes">
+                     <a class="avatar" title="cowthemes" href="">
                      <img width="80" height="80" alt="cowthemes" src="{{url('templates/default/assets/images/authors/default-user-thumb.png')}}">
                      </a>
                   </div>
                </div>
                <div class="media__body">
                   <h2 class="t-heading -size-s">
-                     <a rel="author" class="t-link -color-dark -decoration-none" href="/user/cowthemes">Đỗ Trường Quân</a>
+                     <a rel="author" class="t-link -color-dark -decoration-none" href="">Đỗ Trường Quân</a>
                   </h2>
                   <div class="author-desc">
                      Kỹ sư cầu đường với 05 năm kinh nghiệm thiết kế các dự án lớn như: Hầm đường bộ qua Đèo Cả, mở rộng hầm hải Vân. Chuyên gia lập trình AutoCAD .NET với hơn 8 năm làm việc với các ngôn ngữ lập trình AutoCAD như: AutoLISP, VBA, C#, C++
@@ -226,7 +229,7 @@ Enesy | Khóa học lập trình AutoCAD với C# trình độ cơ bản
                </div>
             </div>
             <div class="h-mt1">
-               <a class="e-btn--3d -color-light -width-full" href="/user/cowthemes/portfolio">Xem hồ sơ giảng viên</a>
+               <a class="e-btn--3d -color-light -width-full" href="">Xem hồ sơ giảng viên</a>
             </div>
          </div>
 
