@@ -159,7 +159,7 @@ a.sc-ministats {
 
 /*Course detail*/
 .media__body .author-desc{
-    font-size: 12px;
+    font-size: 14px;
 }
 .item-preview .play-button--initially-visible {
     visibility: visible;
@@ -172,7 +172,7 @@ a.sc-ministats {
     height: 100%;
     position: absolute;
     background: url(../images/watch-now.svg) no-repeat;
-    background-size: auto 40%;
+    background-size: auto 30%;
     background-position: center;
     visibility: hidden;
     opacity: 0;
@@ -193,7 +193,7 @@ a.sc-ministats {
     height: 100%;
     position: absolute;
     background: url(../images/watch-now.svg) no-repeat;
-    background-size: auto 40%;
+    background-size: auto 30%;
     background-position: center;
     visibility: hidden;
     opacity: 0;
@@ -210,6 +210,37 @@ a.sc-ministats {
 .item-preview .play-button--initially-visible {
     visibility: visible;
     opacity: .5;
+}
+.btn-icon.live-preview, .btn-icon.screenshots,.btn--label.btn--group-item,.btn-icon.like,.btn-icon.share,.btn-icon.time,.btn-icon.list{
+    background:transparent;
+    color:#666666;
+}
+.btn-icon.live-preview:before{
+    background-image: url(../images/enroller.svg);
+    background-size: 18px 18px;
+}
+.btn-icon.like:before{
+    background-image: url(../images/like.svg);
+    background-size: 18px 18px;
+}
+.btn-icon.share:before{
+    background-image: url(../images/share.svg);
+    background-size: 18px 18px;
+}
+.btn-icon.list:before{
+    background-image: url(../images/list.svg);
+    background-size: 18px 18px;
+}
+.btn-icon.time:before{
+    background-image: url(../images/clock.svg);
+    background-size: 18px 18px;
+}
+.btn-icon:before {
+    content: "";
+    float: left;
+    height: 17px;
+    margin: 1px 10px 0 0;
+    width: 17px;
 }
 .item-preview.-preview-live>a:hover .play-button, 
 .item-preview.-preview-screenshot>a:hover .play-button,
@@ -276,17 +307,7 @@ a.sc-ministats {
 .cur-list td {
     vertical-align: middle !important;
 }
-.udi {
-    font-family: UdemyIcons!important;
-    speak: none;
-    font-style: normal;
-    font-weight: 400;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
+
 .udi {
     vertical-align: -8%;
 }
@@ -351,4 +372,43 @@ a.sc-ministats {
     background-color: #17aa1c;
     border-color: transparent;
 }
+.course-detail .tab-title{
+    font-weight: bold;
+    font-size: 18px;
+    display: inline-block;
+    margin-top: 0;
+    padding-bottom: 0 !important;
 
+}
+.course-detail p{
+    font-size: 16px;
+    padding:0;
+    margin-bottom: 10.5px;
+}
+.regular-list {
+    list-style: disc;
+    margin-left: 10px;
+    padding-left: 10px;
+}
+#curriculum h2{
+    margin-top: 15px;
+}
+.course-detail .course-lecture-video-icon{
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: url(../images/watch-now.svg) no-repeat;
+    background-size: auto 40%;
+    background-position: center;
+    -moz-transition: opacity 150ms ease-in-out;
+    -ms-transition: opacity 150ms ease-in-out;
+    -webkit-transition: opacity 150ms ease-in-out;
+    -o-transition: opacity 150ms ease-in-out;
+    transition: opacity 150ms ease-in-out;
+    -webkit-transition: -webkit-transform 150ms ease-in-out;
+    -moz-transition: -moz-transform 150ms ease-in-out;
+    -o-transition: -o-transform 150ms ease-in-out;
+    transition: transform 150ms ease-in-out;
+}

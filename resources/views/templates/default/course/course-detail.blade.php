@@ -4,6 +4,7 @@ Enesy | Khóa học lập trình AutoCAD với C# trình độ cơ bản
 @stop
 @section ('head.css')
 <link href="{{'templates/default/assets/css/course.css'}}" rel="stylesheet" type="text/css" />
+<link href="{{'templates/default/assets/css/icon.css'}}" rel="stylesheet" type="text/css" />
 @stop
 @section ('body.content')
 <div class="context-header ">
@@ -40,7 +41,7 @@ Enesy | Khóa học lập trình AutoCAD với C# trình độ cơ bản
             <li class="selected"><a class="t-link -decoration-none" href="#">Thông tin khóa học</a></li>
             <li><a class="t-link -decoration-none" href="#">Đánh giá</a></li>
             <li><a class="t-link -decoration-none" href="#">Bình luận</a></li>
-            <li><a class="t-link -decoration-none" href="#">Hỗ trợ</a></li>
+            <li><a class="t-link -decoration-none" href="#">Hỗ trợ khóa học</a></li>
          </ul>
       </div>
       <!-- Table or below Item Navigation -->
@@ -59,7 +60,7 @@ Enesy | Khóa học lập trình AutoCAD với C# trình độ cơ bản
                   <option selected="selected" data-url="#">Thông tin khóa học</option>
                   <option data-url="#">Đánh giá</option>
                   <option data-url="#">Bình luận</option>
-                  <option data-url="#">Hỗ trợ</option>
+                  <option data-url="#">Hỗ trợ khóa học</option>
                </select>
             </div>
          </div>
@@ -81,38 +82,57 @@ Enesy | Khóa học lập trình AutoCAD với C# trình độ cơ bản
                </a>
                <div class="item-preview__actions">
                   <div id="fullscreen" class="item-preview__preview-buttons">
-                     <a data-view="crossDomainGoogleAnalyticsLink" href="#" role="button" class="btn-icon live-preview" target="_blank" rel="nofollow">2,000 học viên</a><a data-view="screenshotGallery" href="" role="button" class="btn-icon screenshots" target="_blank">48 giờ học</a>
-                  </div>
-                  <div class="item-preview__preview-buttons--social" data-view="socialButtons">
-                     <div class="btn-group">
-                        <div class="btn btn--label btn--group-item">Chia sẻ</div>
-                        <a class="btn btn--group-item" data-social-network-link="" href=""><i class="e-icon -icon-facebook -size-medium -line-height-small"><span class="e-icon__alt">Facebook</span></i></a>
-                        <a class="btn btn--group-item" data-social-network-link="" href="https://plus.google.com/share?url=https%3A%2F%2Fthemeforest.net%2Fitem%2Fedulearn-education-school-courses-html-template%2F17695406%3Futm_source%3Dsharegp"><i class="e-icon -icon-google-plus -size-medium -line-height-small"><span class="e-icon__alt">Google Plus</span></i></a>
-                        <a class="btn btn--group-item" data-social-network-link="" href="https://twitter.com/intent/tweet?text=Check+out+%27EduLearn+-+Education%2C+School+%26+Courses+HTML+Template%27+on+%23EnvatoMarket+by+%40cowthemes+%23themeforest&amp;url=https%3A%2F%2Fthemeforest.net%2Fitem%2Fedulearn-education-school-courses-html-template%2F17695406%3Futm_source%3Dsharetw"><i class="e-icon -icon-twitter -size-medium -line-height-small"><span class="e-icon__alt">Twitter</span></i></a>
-                        <a class="btn btn--group-item" data-social-network-link="" href="http://pinterest.com/pin/create/button?description=EduLearn+-+Education%2C+School+%26+Courses+HTML+Template&amp;media=http%3A%2F%2F0.s3.envato.com%2Ffiles%2F208388954%2FTheme%2520Preview%2F01-theme-preview.__large_preview.jpg&amp;url=https%3A%2F%2Fthemeforest.net%2Fitem%2Fedulearn-education-school-courses-html-template%2F17695406%3Futm_source%3Dsharepi"><i class="e-icon -icon-pinterest -size-medium -line-height-small"><span class="e-icon__alt">Pinterest</span></i></a>
-                     </div>
+                     <a data-view="crossDomainGoogleAnalyticsLink" href="#" role="button" class="btn-icon live-preview" target="_blank" rel="nofollow">2,000</a>
+                     <a data-view="crossDomainGoogleAnalyticsLink" href="#" role="button" class="btn-icon like" target="_blank" rel="nofollow">1,000</a>
+                     <a data-view="crossDomainGoogleAnalyticsLink" href="#" role="button" class="btn-icon share" target="_blank" rel="nofollow">Chia sẻ</a>
+                     <a data-view="crossDomainGoogleAnalyticsLink" href="#" role="button" class="btn-icon list" target="_blank" rel="nofollow">85</a>
+                     <a data-view="crossDomainGoogleAnalyticsLink" href="#" role="button" class="btn-icon time" target="_blank" rel="nofollow">50h</a>
                   </div>
                </div>
             </div>
          </div>
          <div data-view="toggleItemDescription">
             <div class="js-item-description item-description has-toggle" itemprop="description">
-               <div class="user-html">
+               <div class="course-detail">
+               <h4 class="tab-title">
+                Mô tả khóa học
+               </h4>
+               <p style="">      HI! Welcome to the course; 3D Animation: Basics To Full Body and Creature Mechanics! My name is Charlie Grubel and I am a freelance studio animator, instructor, game developer and 3D Artist. I have been animating for years and now I get to share my knowledge with you! When you become a student you will get a personal critique of your work! So send in your animation you learned from my class and receive as much help as you need. In here I will demo all 12 principles of animation, a ball bounce, overlap with a tail, a full body character walk cycle and a zombie crawl! You can watch my entire animation process, from blocking to polishing. There are hours of work here and you get to animate right alongside me. So join the course and learn what the pros had to learn. Hope to see you there!  </p>
+               <h4 class="tab-title">
+                Các yêu cầu của khóa học
+               </h4>
+               <ul class="regular-list">
+                
+                    <li>Máy tính có cài đặt phần mềm AutoCAD</li>
+                
+                    <li>Your Imagination!</li>
+                
+               </ul>
+               <h4 class="tab-title">
+                Lợi ích từ khóa học
+               </h4>
+               <ul class="regular-list">
+                
+                    <li>Sử dụng AutoCAD ở cấp độ chuyên gia</li>
+                
+                    <li>Your Imagination!</li>
+                
+               </ul>
                   <div id="curriculum" class="top-space-for-scroll clearfix" data-purpose="course-curriculum">
-                     <h1>
-                        Curriculum
-                     </h1>
+                     <h2>
+                        Nội dung
+                     </h2>
                      <div class="table-responsive b0-xs">
                         <table class="cur-list table table-hover" curriculum-loader="" course-id="21323" has-more-to-load="1" num-displayed-items="100" is-seo-traffic="0">
                            <tbody>
                               <tr class="cur-list-title">
                                  <th colspan="4" class="w30 tal hm">
-                                    Section 1: Introduction
+                                    Phần 1: Giới thiệu khóa học
                                  </th>
                               </tr>
                               <tr class="cur-list-row cur-list-row-wo-desc " data-purpose="lecture-row-1">
                                  <td class="lec-icon tac hm cur-icon wa-force-xs">
-                                    <i class="udi udi-file-o"></i>
+                                    <i class="udi udi-play-circle"></i>
                                  </td>
                                  <td class="count wa-force-xs" data-purpose="lecture-name-1">
                                     Lecture 1
@@ -125,7 +145,7 @@ Enesy | Khóa học lập trình AutoCAD với C# trình độ cơ bản
                                        <a open-modal="" data-template-url="/new-lecture/231183/popup/" data-course-id="21323" data-lecture-id="231183" data-purpose="lecture-preview-btn-1" class="btn btn-sm ud-courseimpressiontracker preview-btn ml15
                                           btn-primary
                                           " data-tracking-type="lecture-preview">
-                                       Preview
+                                       Xem trước
                                        </a>
                                     </div>
                                  </td>
@@ -148,7 +168,7 @@ Enesy | Khóa học lập trình AutoCAD với C# trình độ cơ bản
                                        <a open-modal="" data-template-url="/new-lecture/102817/popup/" data-course-id="21323" data-lecture-id="102817" data-purpose="lecture-preview-btn-2" class="btn btn-sm ud-courseimpressiontracker preview-btn ml15
                                           btn-primary
                                           " data-tracking-type="lecture-preview">
-                                       Preview
+                                       Xem trước
                                        </a>
                                     </div>
                                  </td>
@@ -176,7 +196,7 @@ Enesy | Khóa học lập trình AutoCAD với C# trình độ cơ bản
                                        <a open-modal="" data-template-url="/new-lecture/103078/popup/" data-course-id="21323" data-lecture-id="103078" data-purpose="lecture-preview-btn-3" class="btn btn-sm ud-courseimpressiontracker preview-btn ml15
                                           btn-primary
                                           " data-tracking-type="lecture-preview">
-                                       Preview
+                                       Xem trước
                                        </a>
                                     </div>
                                  </td>
@@ -199,7 +219,7 @@ Enesy | Khóa học lập trình AutoCAD với C# trình độ cơ bản
                                        <a open-modal="" data-template-url="/new-lecture/102818/popup/" data-course-id="21323" data-lecture-id="102818" data-purpose="lecture-preview-btn-4" class="btn btn-sm ud-courseimpressiontracker preview-btn ml15
                                           btn-primary
                                           " data-tracking-type="lecture-preview">
-                                       Preview
+                                       Xem trước
                                        </a>
                                     </div>
                                  </td>
@@ -227,7 +247,7 @@ Enesy | Khóa học lập trình AutoCAD với C# trình độ cơ bản
                                        <a open-modal="" data-template-url="/new-lecture/102820/popup/" data-course-id="21323" data-lecture-id="102820" data-purpose="lecture-preview-btn-5" class="btn btn-sm ud-courseimpressiontracker preview-btn ml15
                                           btn-primary
                                           " data-tracking-type="lecture-preview">
-                                       Preview
+                                       Xem trước
                                        </a>
                                     </div>
                                  </td>
@@ -1783,7 +1803,7 @@ Enesy | Khóa học lập trình AutoCAD với C# trình độ cơ bản
                            <div class="purchase-form__selection">
                               <span class="purchase-form__license-type">
                               <span data-view="flyout" class="flyout">
-                              <span class="js-license-selector__chosen-license">Bạn sẽ học gì?</span>
+                              <span class="js-license-selector__chosen-license">Các lợi ích từ khóa học</span>
                               </span>
                               </span>
                               <div class="js-purchase-heading purchase-form__price t-heading -size-xxl">
@@ -1847,7 +1867,7 @@ Enesy | Khóa học lập trình AutoCAD với C# trình độ cơ bản
                </div>
             </div>
          </div>
-         <div class="box -radius-all">
+         <div class="box">
             <div class="media">
                <div class="media__item">
                   <div class="avatar-wrapper tooltip-advanced">

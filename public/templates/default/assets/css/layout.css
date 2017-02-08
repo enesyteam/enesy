@@ -2985,7 +2985,6 @@ li.is-active .search-facet-single-select-panel__title-inner:before {
     color: #666666;
     margin-bottom: 20px;
     padding: 5px;
-    border-radius: 4px;
     border: 1px solid #e1e8ed
 }
 
@@ -3039,7 +3038,6 @@ li.is-active .search-facet-single-select-panel__title-inner:before {
     background-color: #fafafa;
     color: #666666;
     margin-bottom: 20px;
-    border-radius: 4px;
     border: 1px solid #e1e8ed
 }
 

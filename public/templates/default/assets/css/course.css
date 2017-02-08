@@ -3935,7 +3935,7 @@ input[type=checkbox].wordy-checkbox {
 
 .item-preview {
     min-height: 245px;
-    padding: 12px;
+    padding: 0 0 12px;
     position: relative;
     text-align: center
 }
@@ -3963,6 +3963,8 @@ input[type=checkbox].wordy-checkbox {
     width: 100%;
     background: rgba(0, 0, 0, 0.7) url(../images/watch-now.svg) no-repeat center center;
 }*/
+
+
 
 .item-preview.-preview-screenshot>a:hover:after {
     content: "";
@@ -8032,7 +8034,6 @@ input.withdrawal-amount__input:disabled {
     background: white;
     padding: 15px 25px;
     border: 1px solid #e1e8ed;
-    border-radius: 4px;
     margin-bottom: 16px
 }
 
@@ -9216,7 +9217,6 @@ input.withdrawal-amount__input:disabled {
     color: #666666;
     margin-bottom: 20px;
     padding: 5px;
-    border-radius: 4px;
     border: 1px solid #e1e8ed
 }
 
@@ -9270,7 +9270,6 @@ input.withdrawal-amount__input:disabled {
     background-color: #fafafa;
     color: #666666;
     margin-bottom: 20px;
-    border-radius: 4px;
     border: 1px solid #e1e8ed
 }
 
