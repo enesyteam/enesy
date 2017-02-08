@@ -7040,8 +7040,8 @@ button.disabled, [role=button].disabled, [type=submit].disabled {
     background-position: -117px -97px;
 }
 .btn-icon.live-preview:after {
-    background-image: url(//public-assets.envato-static.com/assets/generated_sprites/common-31faa1249ec80c0744df246be56c9be2.png);
-    background-position: 0px -137px;
+    background-image: url(../images/enroller.png);
+    background-size: 18px 18px;
 }
 .btn-icon.new-thread:after {
     background-image: url(//public-assets.envato-static.com/assets/generated_sprites/common-31faa1249ec80c0744df246be56c9be2.png);

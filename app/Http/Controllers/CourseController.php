@@ -7,6 +7,9 @@ use Illuminate\Http\Request;
 class CourseController extends Controller
 {
     public function index(){
-    	return "Hiển thị tất cả khóa học!";
+    	return view('templates.default.course.index');
+    }
+    public function detail(){
+    	return view('templates.default.course.course-detail');
     }
 }

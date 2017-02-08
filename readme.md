@@ -10,6 +10,10 @@ ENESY is an E-learing system Framework built on top of [Laravel 5](http://larave
 
 > **Note:** ENESY is in active development and NOT ready for production.
 
+##Install
+
+### Step 1: Install ENESY with [Composer](https://getcomposer.org/download/).
+
 ## Official Documentation
 
 Documentation for the framework can be found on the [Laravel website](http://laravel.com/docs).

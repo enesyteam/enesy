@@ -132,7 +132,7 @@
                                                       </div>
                                                       <div class="course-list__adjacent-thumbnail">
                                                          <h3 class="course-list__heading">
-                                                            <a class="js-google-analytics__list-event-trigger t-link -color-inherit -decoration-reversed" href="course-detail.html">Khóa học lập trình AutoCAD với C# - trình độ cơ bản</a>
+                                                            <a class="js-google-analytics__list-event-trigger t-link -color-inherit -decoration-reversed" href="{{route('course.detail')}}">Khóa học lập trình AutoCAD với C# - trình độ cơ bản</a>
                                                          </h3>
                                                          <div class="course-list__price">
                                                             <p class="t-body -size-m -color-inherit -weight-bold h-m0">$10</p>

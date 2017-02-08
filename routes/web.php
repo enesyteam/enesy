@@ -21,6 +21,10 @@ Route::get('khoa-hoc',[
 	'as' 	=>	'courses.index',
 	'uses'	=>	'CourseController@index'
 	]);
+Route::get('chi-tiet-khoa-hoc',[
+	'as' 	=>	'course.detail',
+	'uses'	=>	'CourseController@detail'
+	]);
 
 /*Help*/
 Route::get('tro-giup-hoc-vien',[
