@@ -219,3 +219,134 @@ a.sc-ministats {
     -o-transform:scale(1.2);
     transform:scale(1.2)
 }
+/*Curriculum*/
+.table-responsive {
+    overflow-x: auto;
+    min-height: .01%;
+}
+.table {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 21px;
+}
+.table {
+    display: table;
+    width: 100%;
+    margin: 0;
+}
+.table {
+    background-color: transparent;
+}
+.table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+.cur-list .cur-list-title {
+    height: 44px;
+}
+.cur-list .cur-list-title th {
+    font-weight: 600;
+    padding-top: 30px;
+}
+.table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td {
+    padding: 8px;
+    line-height: 1.43;
+    vertical-align: top;
+    border-top: 1px solid #ddd;
+}
+.w30 {
+    width: 30px;
+}
+.tal {
+    text-align: left;
+}
+.cur-list .cur-list-row {
+    height: 40px;
+}
+.cur-list .cur-list-row .cur-icon {
+    width: 20px;
+    padding-right: 0;
+    padding-left: 0;
+}
+.cur-list i {
+    color: #999FA3;
+}
+.cur-list td {
+    vertical-align: middle !important;
+}
+.udi {
+    font-family: UdemyIcons!important;
+    speak: none;
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.udi {
+    vertical-align: -8%;
+}
+.udi-file-o:before {
+    content: "\F016";
+}
+.cur-list .cur-list-row .count {
+    font-weight: normal;
+    width: 115px;
+}
+.fx-dif, .dif, .inline-flex {
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display: -moz-inline-flex;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+}
+.fx-vc, .aic {
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.aic {
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.dif {
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+}
+.fx {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -moz-flex: 1;
+    -ms-flex: 1;
+    -o-flex: 1;
+    flex: 1;
+    min-width: 1px;
+}
+.flex, .fx {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    min-width: 1px;
+}
+.ml15 {
+    margin-left: 15px;
+}
+.btn-sm, .btn-group-sm>.btn {
+    padding: 6px 10px;
+    font-size: 15px;
+    line-height: 1.35135;
+    border-radius: 2px;
+}
+.btn-primary {
+    color: #ffffff !important;
+    background-color: #17aa1c;
+    border-color: transparent;
+}
+
