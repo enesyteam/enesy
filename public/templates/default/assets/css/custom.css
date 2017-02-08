@@ -211,7 +211,9 @@ a.sc-ministats {
     visibility: visible;
     opacity: .5;
 }
-.item-preview.-preview-live>a:hover .play-button, .item-preview.-preview-screenshot>a:hover .play-button{
+.item-preview.-preview-live>a:hover .play-button, 
+.item-preview.-preview-screenshot>a:hover .play-button,
+.course-list>li:hover .play-button{
     visibility:visible;
     opacity:1;
     -webkit-transform:scale(1.2);
