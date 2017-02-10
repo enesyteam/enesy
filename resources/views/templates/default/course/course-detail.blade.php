@@ -6,6 +6,14 @@ Enesy | Khóa học lập trình AutoCAD với C# trình độ cơ bản
 <link href="{{'templates/default/assets/css/course.css'}}" rel="stylesheet" type="text/css" />
 <link href="{{'templates/default/assets/css/icon.css'}}" rel="stylesheet" type="text/css" />
 @stop
+
+@section('head.js')
+<!--JqueryModal-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="{{'templates/default/assets/vender/jquery-modal/jquery.modal.js'}}" type="text/javascript" charset="utf-8"></script>
+<script src="{{'templates/default/assets/vender/jquery-modal/highlight/highlight.pack.js'}}" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" charset="utf-8"> hljs.initHighlightingOnLoad(); </script>
+@stop
 @section ('body.content')
 <div class="context-header ">
    <div class="grid-container ">
@@ -74,7 +82,7 @@ Enesy | Khóa học lập trình AutoCAD với C# trình độ cơ bản
       <div class="content-s">
          <div class="box--no-padding no-border">
             <div class="item-preview -preview-live">
-               <a target="_blank" href="">
+               <a target="_blank" href="{{route('course.preview')}}" rel="modal:open">
                   <img alt="EduLearn - Education, School &amp; Courses HTML Template - Business Corporate" itemprop="image" src="{{url('templates/default/assets/images/courses/preview-images/course-preview-image.jpg')}}">
                   <div class="" ng-show="showPlaceholderPlayButton" style="">
                      <div class="play-button play-button--initially-visible" data-purpose="video-play-button-initial"></div>
@@ -142,9 +150,8 @@ Enesy | Khóa học lập trình AutoCAD với C# trình độ cơ bản
                                        <div class="lec-title fx" data-purpose="lecture-title-1">
                                           Giới thiệu khóa học Lập trình AutoCAD với C# - Trình độ cơ bản
                                        </div>
-                                       <a open-modal="" data-template-url="/new-lecture/231183/popup/" data-course-id="21323" data-lecture-id="231183" data-purpose="lecture-preview-btn-1" class="btn btn-sm ud-courseimpressiontracker preview-btn ml15
-                                          btn-primary
-                                          " data-tracking-type="lecture-preview">
+                                       <a class="btn btn-sm ud-courseimpressiontracker preview-btn ml15 btn-primary
+                                          " target="_blank" href="{{route('course.preview')}}" rel="modal:open">
                                        Xem trước
                                        </a>
                                     </div>
@@ -165,9 +172,8 @@ Enesy | Khóa học lập trình AutoCAD với C# trình độ cơ bản
                                        <div class="lec-title fx" data-purpose="lecture-title-2">
                                           Sử dụng các tập tin của khóa học
                                        </div>
-                                       <a open-modal="" data-template-url="/new-lecture/102817/popup/" data-course-id="21323" data-lecture-id="102817" data-purpose="lecture-preview-btn-2" class="btn btn-sm ud-courseimpressiontracker preview-btn ml15
-                                          btn-primary
-                                          " data-tracking-type="lecture-preview">
+                                       <a class="btn btn-sm ud-courseimpressiontracker preview-btn ml15 btn-primary
+                                          " target="_blank" href="{{route('course.preview')}}" rel="modal:open">
                                        Xem trước
                                        </a>
                                     </div>
@@ -193,9 +199,8 @@ Enesy | Khóa học lập trình AutoCAD với C# trình độ cơ bản
                                        <div class="lec-title fx" data-purpose="lecture-title-3">
                                           Làm quen với AutoCAD .NET API
                                        </div>
-                                       <a open-modal="" data-template-url="/new-lecture/103078/popup/" data-course-id="21323" data-lecture-id="103078" data-purpose="lecture-preview-btn-3" class="btn btn-sm ud-courseimpressiontracker preview-btn ml15
-                                          btn-primary
-                                          " data-tracking-type="lecture-preview">
+                                       <a class="btn btn-sm ud-courseimpressiontracker preview-btn ml15 btn-primary
+                                          " target="_blank" href="{{route('course.preview')}}" rel="modal:open">
                                        Xem trước
                                        </a>
                                     </div>
@@ -216,9 +221,8 @@ Enesy | Khóa học lập trình AutoCAD với C# trình độ cơ bản
                                        <div class="lec-title fx" data-purpose="lecture-title-4">
                                           Cài đặt Template
                                        </div>
-                                       <a open-modal="" data-template-url="/new-lecture/102818/popup/" data-course-id="21323" data-lecture-id="102818" data-purpose="lecture-preview-btn-4" class="btn btn-sm ud-courseimpressiontracker preview-btn ml15
-                                          btn-primary
-                                          " data-tracking-type="lecture-preview">
+                                       <a class="btn btn-sm ud-courseimpressiontracker preview-btn ml15 btn-primary
+                                          " target="_blank" href="{{route('course.preview')}}" rel="modal:open">
                                        Xem trước
                                        </a>
                                     </div>
@@ -239,9 +243,8 @@ Enesy | Khóa học lập trình AutoCAD với C# trình độ cơ bản
                                        <div class="lec-title fx" data-purpose="lecture-title-4">
                                           Cấu trúc một dự án C#
                                        </div>
-                                       <a open-modal="" data-template-url="/new-lecture/102818/popup/" data-course-id="21323" data-lecture-id="102818" data-purpose="lecture-preview-btn-4" class="btn btn-sm ud-courseimpressiontracker preview-btn ml15
-                                          btn-primary
-                                          " data-tracking-type="lecture-preview">
+                                       <a class="btn btn-sm ud-courseimpressiontracker preview-btn ml15 btn-primary
+                                          " target="_blank" href="{{route('course.preview')}}" rel="modal:open">
                                        Xem trước
                                        </a>
                                     </div>
@@ -262,9 +265,8 @@ Enesy | Khóa học lập trình AutoCAD với C# trình độ cơ bản
                                        <div class="lec-title fx" data-purpose="lecture-title-4">
                                           Netload và Debug
                                        </div>
-                                       <a open-modal="" data-template-url="/new-lecture/102818/popup/" data-course-id="21323" data-lecture-id="102818" data-purpose="lecture-preview-btn-4" class="btn btn-sm ud-courseimpressiontracker preview-btn ml15
-                                          btn-primary
-                                          " data-tracking-type="lecture-preview">
+                                       <a class="btn btn-sm ud-courseimpressiontracker preview-btn ml15 btn-primary
+                                          " target="_blank" href="{{route('course.preview')}}" rel="modal:open">
                                        Xem trước
                                        </a>
                                     </div>
@@ -290,9 +292,8 @@ Enesy | Khóa học lập trình AutoCAD với C# trình độ cơ bản
                                        <div class="lec-title fx" data-purpose="lecture-title-5">
                                           Entering And Running A   Program In Windows
                                        </div>
-                                       <a open-modal="" data-template-url="/new-lecture/102820/popup/" data-course-id="21323" data-lecture-id="102820" data-purpose="lecture-preview-btn-5" class="btn btn-sm ud-courseimpressiontracker preview-btn ml15
-                                          btn-primary
-                                          " data-tracking-type="lecture-preview">
+                                       <a class="btn btn-sm ud-courseimpressiontracker preview-btn ml15 btn-primary
+                                          " target="_blank" href="{{route('course.preview')}}" rel="modal:open">
                                        Xem trước
                                        </a>
                                     </div>

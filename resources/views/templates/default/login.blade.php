@@ -20,7 +20,7 @@
   <form class="js-sign-in__session-form" action="/sso/verify_token" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="authenticity_token" value="JEduv5FyPa6XLaxOBYWkX9Zt4RHd45ShW9MNUemlEkkfBn+6qLWKz3Fdnp2ZHLeO1avCiUmTkej7pVXWJwXTrg==">
     <input type="hidden" name="token" id="token" class="js-sign-in__session-token">
 </form>
-  <form id="sign-in-form" class="simple_form js-sign-in__form e-form -layout-vertical-inline" action="https://account.envato.com/sign_in?to=themeforest" accept-charset="UTF-8" method="post" novalidate="novalidate"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="authenticity_token" value="QmRArvMpgbvN9ceCX95oQHjTQL67WtZiDoj0uoqMHcF5JVGryu422iuF9VHDR3uRexVjJi8q0yuu/qw9RCzcJg==">
+  <form id="sign-in-form" class="simple_form js-sign-in__form e-form -layout-vertical-inline" action="#" accept-charset="UTF-8" method="post" novalidate="novalidate"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="authenticity_token">
 
     <div class="e-form -layout-vertical-inline">
       <div class="e-form__group"><div class="e-form__label"><label for="sso_sign_in_form_username">Tên đăng nhập</label></div><div class="e-form__input"><input class="f-input -type-string js-sign-in__username -width-full" type="text" name="sso_sign_in_form[username]" id="sso_sign_in_form_username"></div><div class="e-form__hint"><a class="t-link -decoration-reversed h-pull-right" tabindex="-1" href="#">Remind me</a></div></div>

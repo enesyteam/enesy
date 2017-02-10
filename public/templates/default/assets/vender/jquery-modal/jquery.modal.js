@@ -49,7 +49,7 @@
         this.open();
       //AJAX
       } else {
-        this.$elm = $('<div>');
+        this.$elm = $('<div class="mfp-wrap mfp-auto-cursor mfp-fade mfp-ready" tabindex="-1" style="overflow: hidden;">');
         this.$body.append(this.$elm);
         remove = function(event, modal) { modal.elm.remove(); };
         this.showSpinner();
@@ -111,7 +111,6 @@
 
     block: function() {
       this.$elm.trigger($.modal.BEFORE_BLOCK, [this._ctx()]);
-      /*this.$body.css('overflow','hidden');*/
       this.$blocker = $('<div class="jquery-modal blocker current"></div>').appendTo(this.$body);
       selectCurrent();
       if(this.options.doFade) {
@@ -139,7 +138,7 @@
         this.closeButton = $('<a href="#close-modal" rel="modal:close" class="close-modal ' + this.options.closeClass + '">' + this.options.closeText + '</a>');
         this.$elm.append(this.closeButton);
       }
-      this.$elm.addClass(this.options.modalClass).appendTo(this.$blocker);
+      //this.$elm.addClass(this.options.modalClass).appendTo(this.$blocker);
       if(this.options.doFade) {
         this.$elm.css('opacity',0).show().animate({opacity: 1}, this.options.fadeDuration);
       } else {

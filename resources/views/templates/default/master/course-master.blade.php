@@ -21,6 +21,7 @@
             <link href="{{'templates/default/assets/css/custom.css'}}" rel="stylesheet" type="text/css" />
             <link href="{{'templates/default/assets/css/layout.css'}}" rel="stylesheet" type="text/css" />
             @yield('head.css')
+            @yield('head.js')
          </head>
          <!-- #HEAD -->
          <body>
