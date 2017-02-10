@@ -21,6 +21,11 @@
             <link href="{{'templates/default/assets/css/style.css'}}" rel="stylesheet" type="text/css" />
             <link href="{{'templates/default/assets/css/custom.css'}}" rel="stylesheet" type="text/css" />
             <link href="{{'templates/default/assets/css/layout.css'}}" rel="stylesheet" type="text/css" />
+            <!--JqueryModal-->
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+            <script src="{{'templates/default/assets/vender/jquery-modal/jquery.modal.min.js'}}" type="text/javascript" charset="utf-8"></script>
+              <script src="{{'templates/default/assets/vender/jquery-modal/highlight/highlight.pack.js'}}" type="text/javascript" charset="utf-8"></script>
+               <script type="text/javascript" charset="utf-8"> hljs.initHighlightingOnLoad(); </script>
          </head>
          <!-- #HEAD -->
          <body>
@@ -125,7 +130,7 @@
                                                                <img src="{{'templates/default/assets/images/courses/cad/csharp-thumb.jpg'}}" border="0" height="80" width="150" alt="Moti App PSD Landing Page PSD Template - ThemeForest Item for Sale" title="" class="preload no_preview landscape-image-magnifier" data-tooltip="Moti App PSD Landing Page PSD Template">
                                                                </a>
                                                                <div class="item-thumbnail__preview">
-                                                                  <a target="_blank" href="{{route('course.detail')}}">
+                                                                  <a target="_blank" href="{{route('course.preview')}}" rel="modal:open">
                                                                   <div class="" ng-show="showPlaceholderPlayButton" style="">
                                                                      <div class="play-button play-button--initially-visible" data-purpose="video-play-button-initial"></div>
                                                                   </div>
@@ -149,28 +154,7 @@
                                                             </div>
                                                          </div>
                                                       </div>
-                                                      <div class="h-clear">
-                                                         <div class="course-list__item-thumbnail-actions">
-                                                            <div class="item-thumbnail-actions -width-full">
-                                                               <div class="userBadge-stats">
-                                                                  <div aria-label="User stats" class="userStats">
-                                                                     <ul class="sc-ministats-group">
-                                                                        <li title="330 học viên" class="sc-ministats-item">
-                                                                           <a href="{{route('course.detail')}}" rel="nofollow" class="sc-ministats sc-ministats-small sc-ministats-followers">
-                                                                           <span class="sc-visuallyhidden">330 học viên</span><span aria-hidden="true">330</span>
-                                                                           </a>
-                                                                        </li>
-                                                                        <li title="7 tracks" class="sc-ministats-item">
-                                                                           <a href="{{route('course.detail')}}" rel="nofollow" class="sc-ministats sc-ministats-small sc-ministats-sounds">
-                                                                           <span class="sc-visuallyhidden">550 quan tâm</span><span aria-hidden="true">550</span>
-                                                                           </a>
-                                                                        </li>
-                                                                     </ul>
-                                                                  </div>
-                                                               </div>
-                                                            </div>
-                                                         </div>
-                                                      </div>
+                                                      @include ('templates.default.course.partials.course-list-actions-bar')
                                                    </div>
                                                    <div class="course-list__column-category">
                                                       <p class="t-body -size-s h-m0">
@@ -228,28 +212,7 @@
                                                             </div>
                                                          </div>
                                                       </div>
-                                                      <div class="h-clear">
-                                                         <div class="course-list__item-thumbnail-actions">
-                                                            <div class="item-thumbnail-actions -width-full">
-                                                               <div class="userBadge-stats">
-                                                                  <div aria-label="User stats" class="userStats">
-                                                                     <ul class="sc-ministats-group">
-                                                                        <li title="330 học viên" class="sc-ministats-item">
-                                                                           <a href="{{route('course.detail')}}" rel="nofollow" class="sc-ministats sc-ministats-small sc-ministats-followers">
-                                                                           <span class="sc-visuallyhidden">330 học viên</span><span aria-hidden="true">330</span>
-                                                                           </a>
-                                                                        </li>
-                                                                        <li title="7 tracks" class="sc-ministats-item">
-                                                                           <a href="{{route('course.detail')}}" rel="nofollow" class="sc-ministats sc-ministats-small sc-ministats-sounds">
-                                                                           <span class="sc-visuallyhidden">550 quan tâm</span><span aria-hidden="true">550</span>
-                                                                           </a>
-                                                                        </li>
-                                                                     </ul>
-                                                                  </div>
-                                                               </div>
-                                                            </div>
-                                                         </div>
-                                                      </div>
+                                                      @include ('templates.default.course.partials.course-list-actions-bar')
                                                    </div>
                                                    <div class="course-list__column-category">
                                                       <p class="t-body -size-s h-m0">
@@ -306,28 +269,7 @@
                                                             </div>
                                                          </div>
                                                       </div>
-                                                      <div class="h-clear">
-                                                         <div class="course-list__item-thumbnail-actions">
-                                                            <div class="item-thumbnail-actions -width-full">
-                                                               <div class="userBadge-stats">
-                                                                  <div aria-label="User stats" class="userStats">
-                                                                     <ul class="sc-ministats-group">
-                                                                        <li title="330 học viên" class="sc-ministats-item">
-                                                                           <a href="{{route('course.detail')}}" rel="nofollow" class="sc-ministats sc-ministats-small sc-ministats-followers">
-                                                                           <span class="sc-visuallyhidden">330 học viên</span><span aria-hidden="true">330</span>
-                                                                           </a>
-                                                                        </li>
-                                                                        <li title="7 tracks" class="sc-ministats-item">
-                                                                           <a href="{{route('course.detail')}}" rel="nofollow" class="sc-ministats sc-ministats-small sc-ministats-sounds">
-                                                                           <span class="sc-visuallyhidden">550 quan tâm</span><span aria-hidden="true">550</span>
-                                                                           </a>
-                                                                        </li>
-                                                                     </ul>
-                                                                  </div>
-                                                               </div>
-                                                            </div>
-                                                         </div>
-                                                      </div>
+                                                      @include ('templates.default.course.partials.course-list-actions-bar')
                                                    </div>
                                                    <div class="course-list__column-category">
                                                       <p class="t-body -size-s h-m0">
@@ -384,28 +326,7 @@
                                                             </div>
                                                          </div>
                                                       </div>
-                                                      <div class="h-clear">
-                                                         <div class="course-list__item-thumbnail-actions">
-                                                            <div class="item-thumbnail-actions -width-full">
-                                                               <div class="userBadge-stats">
-                                                                  <div aria-label="User stats" class="userStats">
-                                                                     <ul class="sc-ministats-group">
-                                                                        <li title="330 học viên" class="sc-ministats-item">
-                                                                           <a href="{{route('course.detail')}}" rel="nofollow" class="sc-ministats sc-ministats-small sc-ministats-followers">
-                                                                           <span class="sc-visuallyhidden">330 học viên</span><span aria-hidden="true">330</span>
-                                                                           </a>
-                                                                        </li>
-                                                                        <li title="7 tracks" class="sc-ministats-item">
-                                                                           <a href="{{route('course.detail')}}" rel="nofollow" class="sc-ministats sc-ministats-small sc-ministats-sounds">
-                                                                           <span class="sc-visuallyhidden">550 quan tâm</span><span aria-hidden="true">550</span>
-                                                                           </a>
-                                                                        </li>
-                                                                     </ul>
-                                                                  </div>
-                                                               </div>
-                                                            </div>
-                                                         </div>
-                                                      </div>
+                                                      @include ('templates.default.course.partials.course-list-actions-bar')
                                                    </div>
                                                    <div class="course-list__column-category">
                                                       <p class="t-body -size-s h-m0">
@@ -462,28 +383,7 @@
                                                             </div>
                                                          </div>
                                                       </div>
-                                                      <div class="h-clear">
-                                                         <div class="course-list__item-thumbnail-actions">
-                                                            <div class="item-thumbnail-actions -width-full">
-                                                               <div class="userBadge-stats">
-                                                                  <div aria-label="User stats" class="userStats">
-                                                                     <ul class="sc-ministats-group">
-                                                                        <li title="330 học viên" class="sc-ministats-item">
-                                                                           <a href="{{route('course.detail')}}" rel="nofollow" class="sc-ministats sc-ministats-small sc-ministats-followers">
-                                                                           <span class="sc-visuallyhidden">330 học viên</span><span aria-hidden="true">330</span>
-                                                                           </a>
-                                                                        </li>
-                                                                        <li title="7 tracks" class="sc-ministats-item">
-                                                                           <a href="{{route('course.detail')}}" rel="nofollow" class="sc-ministats sc-ministats-small sc-ministats-sounds">
-                                                                           <span class="sc-visuallyhidden">550 quan tâm</span><span aria-hidden="true">550</span>
-                                                                           </a>
-                                                                        </li>
-                                                                     </ul>
-                                                                  </div>
-                                                               </div>
-                                                            </div>
-                                                         </div>
-                                                      </div>
+                                                      @include ('templates.default.course.partials.course-list-actions-bar')
                                                    </div>
                                                    <div class="course-list__column-category">
                                                       <p class="t-body -size-s h-m0">
@@ -540,28 +440,7 @@
                                                             </div>
                                                          </div>
                                                       </div>
-                                                      <div class="h-clear">
-                                                         <div class="course-list__item-thumbnail-actions">
-                                                            <div class="item-thumbnail-actions -width-full">
-                                                               <div class="userBadge-stats">
-                                                                  <div aria-label="User stats" class="userStats">
-                                                                     <ul class="sc-ministats-group">
-                                                                        <li title="330 học viên" class="sc-ministats-item">
-                                                                           <a href="{{route('course.detail')}}" rel="nofollow" class="sc-ministats sc-ministats-small sc-ministats-followers">
-                                                                           <span class="sc-visuallyhidden">330 học viên</span><span aria-hidden="true">330</span>
-                                                                           </a>
-                                                                        </li>
-                                                                        <li title="7 tracks" class="sc-ministats-item">
-                                                                           <a href="{{route('course.detail')}}" rel="nofollow" class="sc-ministats sc-ministats-small sc-ministats-sounds">
-                                                                           <span class="sc-visuallyhidden">550 quan tâm</span><span aria-hidden="true">550</span>
-                                                                           </a>
-                                                                        </li>
-                                                                     </ul>
-                                                                  </div>
-                                                               </div>
-                                                            </div>
-                                                         </div>
-                                                      </div>
+                                                      @include ('templates.default.course.partials.course-list-actions-bar')
                                                    </div>
                                                    <div class="course-list__column-category">
                                                       <p class="t-body -size-s h-m0">
@@ -618,28 +497,7 @@
                                                             </div>
                                                          </div>
                                                       </div>
-                                                      <div class="h-clear">
-                                                         <div class="course-list__item-thumbnail-actions">
-                                                            <div class="item-thumbnail-actions -width-full">
-                                                               <div class="userBadge-stats">
-                                                                  <div aria-label="User stats" class="userStats">
-                                                                     <ul class="sc-ministats-group">
-                                                                        <li title="330 học viên" class="sc-ministats-item">
-                                                                           <a href="{{route('course.detail')}}" rel="nofollow" class="sc-ministats sc-ministats-small sc-ministats-followers">
-                                                                           <span class="sc-visuallyhidden">330 học viên</span><span aria-hidden="true">330</span>
-                                                                           </a>
-                                                                        </li>
-                                                                        <li title="7 tracks" class="sc-ministats-item">
-                                                                           <a href="{{route('course.detail')}}" rel="nofollow" class="sc-ministats sc-ministats-small sc-ministats-sounds">
-                                                                           <span class="sc-visuallyhidden">550 quan tâm</span><span aria-hidden="true">550</span>
-                                                                           </a>
-                                                                        </li>
-                                                                     </ul>
-                                                                  </div>
-                                                               </div>
-                                                            </div>
-                                                         </div>
-                                                      </div>
+                                                      @include ('templates.default.course.partials.course-list-actions-bar')
                                                    </div>
                                                    <div class="course-list__column-category">
                                                       <p class="t-body -size-s h-m0">
@@ -696,28 +554,7 @@
                                                             </div>
                                                          </div>
                                                       </div>
-                                                      <div class="h-clear">
-                                                         <div class="course-list__item-thumbnail-actions">
-                                                            <div class="item-thumbnail-actions -width-full">
-                                                               <div class="userBadge-stats">
-                                                                  <div aria-label="User stats" class="userStats">
-                                                                     <ul class="sc-ministats-group">
-                                                                        <li title="330 học viên" class="sc-ministats-item">
-                                                                           <a href="{{route('course.detail')}}" rel="nofollow" class="sc-ministats sc-ministats-small sc-ministats-followers">
-                                                                           <span class="sc-visuallyhidden">330 học viên</span><span aria-hidden="true">330</span>
-                                                                           </a>
-                                                                        </li>
-                                                                        <li title="7 tracks" class="sc-ministats-item">
-                                                                           <a href="{{route('course.detail')}}" rel="nofollow" class="sc-ministats sc-ministats-small sc-ministats-sounds">
-                                                                           <span class="sc-visuallyhidden">550 quan tâm</span><span aria-hidden="true">550</span>
-                                                                           </a>
-                                                                        </li>
-                                                                     </ul>
-                                                                  </div>
-                                                               </div>
-                                                            </div>
-                                                         </div>
-                                                      </div>
+                                                      @include ('templates.default.course.partials.course-list-actions-bar')
                                                    </div>
                                                    <div class="course-list__column-category">
                                                       <p class="t-body -size-s h-m0">
@@ -774,28 +611,7 @@
                                                             </div>
                                                          </div>
                                                       </div>
-                                                      <div class="h-clear">
-                                                         <div class="course-list__item-thumbnail-actions">
-                                                            <div class="item-thumbnail-actions -width-full">
-                                                               <div class="userBadge-stats">
-                                                                  <div aria-label="User stats" class="userStats">
-                                                                     <ul class="sc-ministats-group">
-                                                                        <li title="330 học viên" class="sc-ministats-item">
-                                                                           <a href="{{route('course.detail')}}" rel="nofollow" class="sc-ministats sc-ministats-small sc-ministats-followers">
-                                                                           <span class="sc-visuallyhidden">330 học viên</span><span aria-hidden="true">330</span>
-                                                                           </a>
-                                                                        </li>
-                                                                        <li title="7 tracks" class="sc-ministats-item">
-                                                                           <a href="{{route('course.detail')}}" rel="nofollow" class="sc-ministats sc-ministats-small sc-ministats-sounds">
-                                                                           <span class="sc-visuallyhidden">550 quan tâm</span><span aria-hidden="true">550</span>
-                                                                           </a>
-                                                                        </li>
-                                                                     </ul>
-                                                                  </div>
-                                                               </div>
-                                                            </div>
-                                                         </div>
-                                                      </div>
+                                                      @include ('templates.default.course.partials.course-list-actions-bar')
                                                    </div>
                                                    <div class="course-list__column-category">
                                                       <p class="t-body -size-s h-m0">
@@ -852,28 +668,7 @@
                                                             </div>
                                                          </div>
                                                       </div>
-                                                      <div class="h-clear">
-                                                         <div class="course-list__item-thumbnail-actions">
-                                                            <div class="item-thumbnail-actions -width-full">
-                                                               <div class="userBadge-stats">
-                                                                  <div aria-label="User stats" class="userStats">
-                                                                     <ul class="sc-ministats-group">
-                                                                        <li title="330 học viên" class="sc-ministats-item">
-                                                                           <a href="{{route('course.detail')}}" rel="nofollow" class="sc-ministats sc-ministats-small sc-ministats-followers">
-                                                                           <span class="sc-visuallyhidden">330 học viên</span><span aria-hidden="true">330</span>
-                                                                           </a>
-                                                                        </li>
-                                                                        <li title="7 tracks" class="sc-ministats-item">
-                                                                           <a href="{{route('course.detail')}}" rel="nofollow" class="sc-ministats sc-ministats-small sc-ministats-sounds">
-                                                                           <span class="sc-visuallyhidden">550 quan tâm</span><span aria-hidden="true">550</span>
-                                                                           </a>
-                                                                        </li>
-                                                                     </ul>
-                                                                  </div>
-                                                               </div>
-                                                            </div>
-                                                         </div>
-                                                      </div>
+                                                      @include ('templates.default.course.partials.course-list-actions-bar')
                                                    </div>
                                                    <div class="course-list__column-category">
                                                       <p class="t-body -size-s h-m0">
@@ -930,28 +725,7 @@
                                                             </div>
                                                          </div>
                                                       </div>
-                                                      <div class="h-clear">
-                                                         <div class="course-list__item-thumbnail-actions">
-                                                            <div class="item-thumbnail-actions -width-full">
-                                                               <div class="userBadge-stats">
-                                                                  <div aria-label="User stats" class="userStats">
-                                                                     <ul class="sc-ministats-group">
-                                                                        <li title="330 học viên" class="sc-ministats-item">
-                                                                           <a href="{{route('course.detail')}}" rel="nofollow" class="sc-ministats sc-ministats-small sc-ministats-followers">
-                                                                           <span class="sc-visuallyhidden">330 học viên</span><span aria-hidden="true">330</span>
-                                                                           </a>
-                                                                        </li>
-                                                                        <li title="7 tracks" class="sc-ministats-item">
-                                                                           <a href="{{route('course.detail')}}" rel="nofollow" class="sc-ministats sc-ministats-small sc-ministats-sounds">
-                                                                           <span class="sc-visuallyhidden">550 quan tâm</span><span aria-hidden="true">550</span>
-                                                                           </a>
-                                                                        </li>
-                                                                     </ul>
-                                                                  </div>
-                                                               </div>
-                                                            </div>
-                                                         </div>
-                                                      </div>
+                                                      @include ('templates.default.course.partials.course-list-actions-bar')
                                                    </div>
                                                    <div class="course-list__column-category">
                                                       <p class="t-body -size-s h-m0">
@@ -1008,28 +782,7 @@
                                                             </div>
                                                          </div>
                                                       </div>
-                                                      <div class="h-clear">
-                                                         <div class="course-list__item-thumbnail-actions">
-                                                            <div class="item-thumbnail-actions -width-full">
-                                                               <div class="userBadge-stats">
-                                                                  <div aria-label="User stats" class="userStats">
-                                                                     <ul class="sc-ministats-group">
-                                                                        <li title="330 học viên" class="sc-ministats-item">
-                                                                           <a href="{{route('course.detail')}}" rel="nofollow" class="sc-ministats sc-ministats-small sc-ministats-followers">
-                                                                           <span class="sc-visuallyhidden">330 học viên</span><span aria-hidden="true">330</span>
-                                                                           </a>
-                                                                        </li>
-                                                                        <li title="7 tracks" class="sc-ministats-item">
-                                                                           <a href="{{route('course.detail')}}" rel="nofollow" class="sc-ministats sc-ministats-small sc-ministats-sounds">
-                                                                           <span class="sc-visuallyhidden">550 quan tâm</span><span aria-hidden="true">550</span>
-                                                                           </a>
-                                                                        </li>
-                                                                     </ul>
-                                                                  </div>
-                                                               </div>
-                                                            </div>
-                                                         </div>
-                                                      </div>
+                                                      @include ('templates.default.course.partials.course-list-actions-bar')
                                                    </div>
                                                    <div class="course-list__column-category">
                                                       <p class="t-body -size-s h-m0">
@@ -1086,28 +839,7 @@
                                                             </div>
                                                          </div>
                                                       </div>
-                                                      <div class="h-clear">
-                                                         <div class="course-list__item-thumbnail-actions">
-                                                            <div class="item-thumbnail-actions -width-full">
-                                                               <div class="userBadge-stats">
-                                                                  <div aria-label="User stats" class="userStats">
-                                                                     <ul class="sc-ministats-group">
-                                                                        <li title="330 học viên" class="sc-ministats-item">
-                                                                           <a href="{{route('course.detail')}}" rel="nofollow" class="sc-ministats sc-ministats-small sc-ministats-followers">
-                                                                           <span class="sc-visuallyhidden">330 học viên</span><span aria-hidden="true">330</span>
-                                                                           </a>
-                                                                        </li>
-                                                                        <li title="7 tracks" class="sc-ministats-item">
-                                                                           <a href="{{route('course.detail')}}" rel="nofollow" class="sc-ministats sc-ministats-small sc-ministats-sounds">
-                                                                           <span class="sc-visuallyhidden">550 quan tâm</span><span aria-hidden="true">550</span>
-                                                                           </a>
-                                                                        </li>
-                                                                     </ul>
-                                                                  </div>
-                                                               </div>
-                                                            </div>
-                                                         </div>
-                                                      </div>
+                                                      @include ('templates.default.course.partials.course-list-actions-bar')
                                                    </div>
                                                    <div class="course-list__column-category">
                                                       <p class="t-body -size-s h-m0">
@@ -1164,28 +896,7 @@
                                                             </div>
                                                          </div>
                                                       </div>
-                                                      <div class="h-clear">
-                                                         <div class="course-list__item-thumbnail-actions">
-                                                            <div class="item-thumbnail-actions -width-full">
-                                                               <div class="userBadge-stats">
-                                                                  <div aria-label="User stats" class="userStats">
-                                                                     <ul class="sc-ministats-group">
-                                                                        <li title="330 học viên" class="sc-ministats-item">
-                                                                           <a href="{{route('course.detail')}}" rel="nofollow" class="sc-ministats sc-ministats-small sc-ministats-followers">
-                                                                           <span class="sc-visuallyhidden">330 học viên</span><span aria-hidden="true">330</span>
-                                                                           </a>
-                                                                        </li>
-                                                                        <li title="7 tracks" class="sc-ministats-item">
-                                                                           <a href="{{route('course.detail')}}" rel="nofollow" class="sc-ministats sc-ministats-small sc-ministats-sounds">
-                                                                           <span class="sc-visuallyhidden">550 quan tâm</span><span aria-hidden="true">550</span>
-                                                                           </a>
-                                                                        </li>
-                                                                     </ul>
-                                                                  </div>
-                                                               </div>
-                                                            </div>
-                                                         </div>
-                                                      </div>
+                                                      @include ('templates.default.course.partials.course-list-actions-bar')
                                                    </div>
                                                    <div class="course-list__column-category">
                                                       <p class="t-body -size-s h-m0">

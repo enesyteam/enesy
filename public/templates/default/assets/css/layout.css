@@ -2418,7 +2418,7 @@ li.is-active .search-facet-single-select-panel__title-inner:before {
 .item-thumbnail-actions {
     position: relative;
     display: table;
-    width: 150px;
+    /*width: 150px;*/
     margin: 8px auto 0 auto;
     color: #bababa;
     background: transparent;
@@ -3039,6 +3039,9 @@ li.is-active .search-facet-single-select-panel__title-inner:before {
     color: #666666;
     margin-bottom: 20px;
     border: 1px solid #e1e8ed
+}
+.no-border{
+    border: none !important;
 }
 
 .box--no-padding:after {
@@ -4700,8 +4703,8 @@ pre {
 }
 
 .course-list__item-thumbnail-actions {
-    max-width: 200px;
-    margin-left: 70px
+    /*max-width: 200px;*/
+    /*margin-left: 70px*/
 }
 
 @media (min-width: 1025px) {

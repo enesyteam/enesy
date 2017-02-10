@@ -12,4 +12,7 @@ class CourseController extends Controller
     public function detail(){
     	return view('templates.default.course.course-detail');
     }
+    public function preview(){
+		return view('templates.default.course.course-preview');
+    }
 }

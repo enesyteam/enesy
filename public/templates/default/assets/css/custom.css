@@ -75,11 +75,7 @@ a.sc-ministats {
 }
 .sc-ministats-small.sc-ministats-followers:before {
     background-size: 18px 18px;
-    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAQAAABKfvVzAAAAsElEQVQ4y+WRKw6DUBBFr8d0Ce0CSJBIkq4Cxw5AV6Gw6JOQPIl/G2IJLGEqgFea8PPMVZPcM1/p7kHCgGEMJNeAyW4YgyQRk5MT7wO20pMUPyu9AjxoAtDsAWOwj9IVwAXASZQBKPevtACJdGEHiRbDaOesORxIkqgxjHrOIjyeaNuaUeHC4xwVmUSP37YXfyddVJDj6fiQ89r78VoDEf28eHde/9dj0vus/lGPe8UX4E70SZJ80VEAAAAASUVORK5CYII=);
-}
-.sc-ministats.sc-ministats-small:before {
-    width: 18px;
-    height: 14px;
+    background-image: url(../images/enroller.svg);
 }
 .sc-ministats:before {
     display: inline-block;
@@ -102,7 +98,7 @@ a.sc-ministats {
 }
 .sc-ministats-small {
     color: #999;
-    font-size: 11px;
+    font-size: 12px;
     line-height: 16px;
 }
 .sc-ministats {
@@ -130,10 +126,14 @@ a.sc-ministats {
 }
 .sc-ministats-small.sc-ministats-sounds:before {
     background-size: 18px 18px;
-    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAJFBMVEUAAACZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZnSZt8QAAAAC3RSTlMAECBgcICPn8/f72wH4AkAAABOSURBVHjanY5BCsAwCARXo0mq//9v0YDxWDqHhR1kEf8gUSWQqtDp5u6bd2Qa9eDJlBDLL1oXXXATjECqx0RfWfXJzD5xGeY20OHJ+MgLDHIDxo6IojMAAAAASUVORK5CYII=);
+    background-image: url(../images/like.svg);
+}
+.sc-ministats-small.sc-ministats-share:before {
+    background-size: 18px 18px;
+    background-image: url(../images/share.svg);
 }
 .sc-ministats.sc-ministats-small:before {
-    width: 18px;
+    width: 16px;
     height: 14px;
 }
 .sc-ministats:before {
@@ -242,15 +242,22 @@ a.sc-ministats {
     margin: 1px 10px 0 0;
     width: 17px;
 }
+.btn-icon:hover:before,
+.sc-ministats.sc-ministats-small:hover:before{
+    -webkit-transform:scale(1.2);
+    -ms-transform:scale(1.2);
+    -o-transform:scale(1.2);
+    transform:scale(1.2)
+}
 .item-preview.-preview-live>a:hover .play-button, 
 .item-preview.-preview-screenshot>a:hover .play-button,
 .course-list>li:hover .play-button{
     visibility:visible;
     opacity:1;
-    -webkit-transform:scale(1.2);
-    -ms-transform:scale(1.2);
-    -o-transform:scale(1.2);
-    transform:scale(1.2)
+    -webkit-transform:scale(1.1);
+    -ms-transform:scale(1.1);
+    -o-transform:scale(1.1);
+    transform:scale(1.1)
 }
 /*Curriculum*/
 .table-responsive {
@@ -372,6 +379,10 @@ a.sc-ministats {
     background-color: #17aa1c;
     border-color: transparent;
 }
+.btn-primary:hover,.btn-primary:active {
+    background-color: #159d1a;
+    border-color: transparent;
+}
 .course-detail .tab-title{
     font-weight: bold;
     font-size: 18px;
@@ -411,4 +422,16 @@ a.sc-ministats {
     -moz-transition: -moz-transform 150ms ease-in-out;
     -o-transition: -o-transform 150ms ease-in-out;
     transition: transform 150ms ease-in-out;
+}
+/*Modal*/
+a.close-modal {
+  position: fixed;
+  top: 20px;
+  right: 10px;
+  z-index: 1043;
+  display: block;
+  width: 30px;
+  height: 30px;
+  text-indent: -9999px;
+  background: url(../images/x.svg) no-repeat 0 0;
 }

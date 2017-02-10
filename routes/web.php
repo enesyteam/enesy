@@ -25,6 +25,10 @@ Route::get('chi-tiet-khoa-hoc',[
 	'as' 	=>	'course.detail',
 	'uses'	=>	'CourseController@detail'
 	]);
+Route::get('xem-truoc-khoa-hoc',[
+	'as' 	=>	'course.preview',
+	'uses'	=>	'CourseController@preview'
+	]);
 
 /*Help*/
 Route::get('tro-giup-hoc-vien',[

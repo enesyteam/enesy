@@ -68,7 +68,7 @@
                      </a>
                   </div>
                   <div class="header-logo-account__user-nav-item">
-                     <a rel="nofollow" class="header-logo-account__user-nav-main-link--omega" href="{{route('user.login')}}">Đăng nhập</a>
+                     <a class="header-logo-account__user-nav-main-link--omega" target="_blank" href="{{route('user.login')}}" rel="modal:open">Đăng nhập</a>
                   </div>
                </div>
             </nav>
