@@ -30,6 +30,12 @@ Route::get('xem-truoc-khoa-hoc',[
 	'uses'	=>	'CourseController@preview'
 	]);
 
+/*share*/
+Route::get('chia-se',[
+	'as'	=>	'course.share',
+	'uses'	=>	'CourseController@share'
+	]);
+
 /*Help*/
 Route::get('tro-giup-hoc-vien',[
 	'as'	=>	'help.enrollers',

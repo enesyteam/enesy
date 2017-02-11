@@ -15,8 +15,8 @@
                      </a>
                   </li>
                   <li title="7 tracks" class="sc-ministats-item">
-                     <a href="{{route('course.detail')}}" rel="nofollow" class="sc-ministats sc-ministats-small sc-ministats-share">
-                     <span class="sc-visuallyhidden">550 quan tâm</span><span aria-hidden="true">Chia sẻ</span>
+                     <a target="_blank" href="{{route('course.share')}}" rel="modal:open" class="sc-ministats sc-ministats-small sc-ministats-share">
+                     <span class="sc-visuallyhidden">Chia sẻ khóa học</span><span aria-hidden="true">Chia sẻ</span>
                      </a>
                   </li>
                </ul>

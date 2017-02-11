@@ -15,4 +15,7 @@ class CourseController extends Controller
     public function preview(){
 		return view('templates.default.course.course-preview');
     }
+    public function share(){
+    	return view('templates.default.course.course-share');
+    }
 }
