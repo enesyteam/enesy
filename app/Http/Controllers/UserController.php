@@ -9,4 +9,7 @@ class UserController extends Controller
     public function login(){
     	return view('templates.default.login');
     }
+    public function register(){
+	return view('templates.default.register');
+    }
 }

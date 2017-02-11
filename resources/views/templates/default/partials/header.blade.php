@@ -56,7 +56,7 @@
                <div class="header-logo-account__user-nav">
                   <div class="header-logo-account__user-nav-item">
                      <strong>
-                     <a class="header-logo-account__user-nav-main-link--alpha" data-view="modalAjax" href="/sign_up"><span>Trở thành giảng viên</span></a>
+                     <a class="header-logo-account__user-nav-main-link--alpha" href="{{route('user.register')}}" target="_blank" href="{{route('user.login')}}" rel="modal:open"><span>Đăng ký thành viên</span></a>
                      </strong>
                   </div>
                   <div class="header-logo-account__user-nav-item">

@@ -51,4 +51,10 @@ Route::get('dang-nhap',[
 	'as'	=>	'user.login',
 	'uses'	=>	'UserController@login'
 	]);
+Route::get('dang-ky',[
+	'as'	=>	'user.register',
+	'uses'	=>	'UserController@register'
+	]);
+
+
 
