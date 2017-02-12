@@ -836,3 +836,21 @@ Stack trace:
 #50 C:\Users\CaCom\Documents\GitHub\enesy\public\index.php(54): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
 #51 C:\Users\CaCom\Documents\GitHub\enesy\server.php(21): require_once('C:\\Users\\CaCom\\...')
 #52 {main}  
+[2017-02-11 15:25:57] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected ';'' in C:\Users\CaCom\Documents\GitHub\enesy\storage\framework\views\cee75d9774669e143dd61e22854ff1b019425666.php:1
+Stack trace:
+#0 {main}  
+[2017-02-11 15:26:06] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected ';'' in C:\Users\CaCom\Documents\GitHub\enesy\storage\framework\views\cee75d9774669e143dd61e22854ff1b019425666.php:1
+Stack trace:
+#0 {main}  
+[2017-02-11 15:35:13] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected 'default' (T_DEFAULT)' in C:\Users\CaCom\Documents\GitHub\enesy\storage\framework\views\cee75d9774669e143dd61e22854ff1b019425666.php:2
+Stack trace:
+#0 {main}  
+[2017-02-11 15:35:39] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected 'default' (T_DEFAULT)' in C:\Users\CaCom\Documents\GitHub\enesy\storage\framework\views\cee75d9774669e143dd61e22854ff1b019425666.php:1
+Stack trace:
+#0 {main}  
+[2017-02-11 15:35:53] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'Html' not found' in C:\Users\CaCom\Documents\GitHub\enesy\storage\framework\views\cee75d9774669e143dd61e22854ff1b019425666.php:1
+Stack trace:
+#0 {main}  
+[2017-02-11 15:36:30] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'Html' not found' in C:\Users\CaCom\Documents\GitHub\enesy\storage\framework\views\cee75d9774669e143dd61e22854ff1b019425666.php:1
+Stack trace:
+#0 {main}  

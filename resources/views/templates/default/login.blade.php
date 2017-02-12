@@ -1,5 +1,6 @@
 <div class="mfp-bg mfp-fade mfp-ready"></div>
-<div class="mfp-wrap mfp-auto-cursor mfp-fade mfp-ready" tabindex="-1" style="overflow: hidden;"><div class="mfp-container mfp-s-ready mfp-inline-holder"><div class="mfp-content"><div class="e-modal -width-s" data-view="modalInternalControls" data-google-analytics-page-title="direct_sign_in">
+<div class="mfp-wrap mfp-auto-cursor mfp-fade mfp-ready" tabindex="-1" style="overflow: hidden;">
+<div class="mfp-container mfp-s-ready mfp-inline-holder"><div class="mfp-content"><div class="e-modal -width-s" data-view="modalInternalControls" data-google-analytics-page-title="direct_sign_in">
   <header class="e-modal__header -background-dark -padding-m">
     <div class="h-image-svg h-text-align-center" width="130px" height="25px">
       <img alt="Envato" width="130" class="is-hidden--no-svg is-hidden--no-js" src="{{url('templates/default/assets/images/logo.svg')}}">

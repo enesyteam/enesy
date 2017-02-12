@@ -1,3 +1,5 @@
+@extends('templates.default.master.modal-master')
+@section('body.content')
 <div class="mfp-bg mfp-fade mfp-ready"></div>
 <div class="modal g-z-index-modal-background g-opacity-transition g-z-index-overlay modalWhiteout showBackground" tabindex="-1" id="dropdown-button-197" style="outline: none; padding-right: 0px;">
 <div class="modal__modal sc-border-box g-z-index-modal-content transparentBackground" style="width: 550px; left: 493px; margin-top: 76px; height: auto;">
@@ -78,22 +80,16 @@
 
     <div class="socialButtonsPanel"><ul class="sc-list-nostyle sc-clearfix">
     <li class="socialButtonsPanel__shareButton">
-      <a class="shareButton sc-social-icon-32x32 sc-social-icon-twitter-32x32" tabindex="0" href="https://twitter.com/share?url=https%3A//soundcloud.com/mamlukmusic/sourtaste-alcia-jose-charles-sauce%3Futm_source%3Dsoundcloud%26utm_campaign%3Dshare%26utm_medium%3Dtwitter&amp;text=Have%20you%20heard%20%E2%80%98Sourtaste%2C%20Alcia%20Jose%20%26%20John%20Charles%20-%20Sauce%E2%80%99%20by%20Mamluk.com%20on%20%23SoundCloud%3F%20%23np&amp;related=soundcloud" target="_blank" title="Share on Twitter">Share on Twitter</a>
+      <a class="shareButton sc-social-icon-32x32 sc-social-icon-twitter-32x32" tabindex="0" href="" target="_blank" title="Share on Twitter">Share on Twitter</a>
     </li>
     <li class="socialButtonsPanel__shareButton">
-      <a class="shareButton sc-social-icon-32x32 sc-social-icon-facebook-32x32" tabindex="0" href="https://www.facebook.com/sharer/sharer.php?u=https%3A//soundcloud.com/mamlukmusic/sourtaste-alcia-jose-charles-sauce%3Futm_source%3Dsoundcloud%26utm_campaign%3Dshare%26utm_medium%3Dfacebook" target="_blank" title="Share on Facebook">Share on Facebook</a>
+      <a class="shareButton sc-social-icon-32x32 sc-social-icon-facebook-32x32" tabindex="0" href="">Share on Facebook</a>
     </li>
     <li class="socialButtonsPanel__shareButton">
-      <a class="shareButton sc-social-icon-32x32 sc-social-icon-tumblr-32x32" tabindex="0" href="https://www.tumblr.com/widgets/share/tool?canonicalUrl=https%3A//soundcloud.com/mamlukmusic/sourtaste-alcia-jose-charles-sauce%3Futm_source%3Dsoundcloud%26utm_campaign%3Dshare%26utm_medium%3Dtumblr&amp;posttype=audio&amp;tags=SoundCloud%2Cmusic%2CMamluk.com&amp;caption=(%3Ca%20href%3D'https%3A//soundcloud.com/mamlukmusic/sourtaste-alcia-jose-charles-sauce%3Futm_source%3Dsoundcloud%26utm_campaign%3Dshare%26utm_medium%3Dtumblr'%3EMamluk.com%3C/a%3E)" target="_blank" title="Share on Tumblr">Share on Tumblr</a>
+      <a class="shareButton sc-social-icon-32x32 sc-social-icon-googleplus-32x32" tabindex="0" href="" target="_blank" title="Share on Google+">Share on Google+</a>
     </li>
     <li class="socialButtonsPanel__shareButton">
-      <a class="shareButton sc-social-icon-32x32 sc-social-icon-googleplus-32x32" tabindex="0" href="https://plus.google.com/share?url=https%3A//soundcloud.com/mamlukmusic/sourtaste-alcia-jose-charles-sauce%3Futm_source%3Dsoundcloud%26utm_campaign%3Dshare%26utm_medium%3Dgoogleplus" target="_blank" title="Share on Google+">Share on Google+</a>
-    </li>
-    <li class="socialButtonsPanel__shareButton">
-      <a class="shareButton sc-social-icon-32x32 sc-social-icon-pinterest-32x32" tabindex="0" href="http://pinterest.com/pin/create/button/?url=https%3A//soundcloud.com/mamlukmusic/sourtaste-alcia-jose-charles-sauce%3Futm_source%3Dsoundcloud%26utm_campaign%3Dshare%26utm_medium%3Dpinterest&amp;media=https%3A//i1.sndcdn.com/artworks-000207134876-myne80-t500x500.jpg&amp;description=Sourtaste%2C%20Alcia%20Jose%20%26amp%3B%20John%20Charles%20-%20Sauce%20by%20Mamluk.com%20on%20SoundCloud&amp;is_video=true" target="_blank" title="Share on Pinterest">Share on Pinterest</a>
-    </li>
-    <li class="socialButtonsPanel__shareButton">
-      <a class="shareButton sc-social-icon-32x32 sc-social-icon-email-32x32" tabindex="0" href="mailto:?subject=Sourtaste%2C%20Alcia%20Jose%20%26%20John%20Charles%20-%20Sauce%20-%20SoundCloud&amp;body=https%3A//soundcloud.com/mamlukmusic/sourtaste-alcia-jose-charles-sauce%3Futm_source%3Dsoundcloud%26utm_campaign%3Dshare%26utm_medium%3Demail" target="_blank" title="Share via email">Share via email</a>
+      <a class="shareButton sc-social-icon-32x32 sc-social-icon-email-32x32" tabindex="0" href="" target="_blank" title="Share via email">Share via email</a>
     </li>
 </ul>
 </div>
@@ -114,3 +110,4 @@
 </div></div>
 </div>
 </div>
+@stop
