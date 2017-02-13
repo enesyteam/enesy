@@ -56,5 +56,12 @@ Route::get('dang-ky',[
 	'uses'	=>	'UserController@register'
 	]);
 
+/*Author*/
+Route::get('giang-vien',[
+	'as'	=>	'user.author',
+	'uses'	=>	'UserController@author'
+	]);
+
+
 
 
