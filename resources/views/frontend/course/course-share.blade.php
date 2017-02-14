@@ -1,4 +1,4 @@
-@extends('frontend.master.modal-master')
+@extends('templates.default.master.modal-master')
 @section('body.content')
 <div class="mfp-bg mfp-fade mfp-ready"></div>
 <div class="modal g-z-index-modal-background g-opacity-transition g-z-index-overlay modalWhiteout showBackground" tabindex="-1" id="dropdown-button-197" style="outline: none; padding-right: 0px;">
