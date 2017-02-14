@@ -53,40 +53,19 @@
                         </li>
 
 
-                         <!-- nguyen van quang -->
+                         
                     
 
                         <li >
                             <a href="{{ url ('admin/member') }}"><i class="glyphicon glyphicon-user"></i> Members</a>
                         </li>
-                         <li >
-                            <a href="{{ url ('admin/mentorlist') }}"><i class="glyphicon glyphicon-sunglasses"></i> Mentors</a>
-                        </li>
 
-                         <li >
-                            <a href="{{ url ('admin/workshoplist') }}"><i class="glyphicon glyphicon-book"></i> Workshops</a>
-                        </li>
 
                          <li >
                             <a href="{{ url ('admin/category/all') }}"><i class="fa fa-list-alt fa-fw"></i> Categories</a>
                         </li>   
 
-                       <li>
-                            <a href="#"><i class="fa fa-book fa-fw"></i> Exam<span class="fa arrow"></span></a>
-                            <ul class="nav nav-second-level">
-                                <li>
-                                    <a  href="{{ url ('admin/exam') }}"><i class="fa fa-th-list"></i> List</a>
-                                </li>
-                                <li>
-                                    <a  href="{{ url ('admin/exam/add') }}"> <i class="fa fa-plus-square"></i> Add New</a>
-                                </li>
-                                <li>
-                                    <a  href="{{ url ('admin/exam/list-result') }}"><i class="fa fa-th-list"></i> List Result</a>
-                                </li>
-
-                            </ul>
-                            <!-- /.nav-second-level -->
-                        </li>      
+                 
 
                          <li>
                             <a href="#"><i class="fa fa-graduation-cap fa-fw"></i> Course<span class="fa arrow"></span></a>
@@ -102,41 +81,7 @@
                             <!-- /.nav-second-level -->
                         </li>                                                                     
 
-                        <li >
-                            <a href="{{ url ('admin/recruitmentlist') }}"><i class="fa fa-graduation-cap fa-fw"></i> Recruitments</a>
-                        </li>
-
-
-                        <li>
-                            <a href="#"><i class="fa fa-globe fa-fw"></i> Discussions<span class="fa arrow"></span></a>
-                            <ul class="nav nav-second-level">
-                                <li {{ (Request::is('*panels') ? 'class="active"' : '') }}>
-                                    <a href="{{ url ('admin/listDiscussions?page=1') }}"><i class="fa fa-user"></i> List Discussions</a>
-                                </li>
-                                <li {{ (Request::is('*buttons') ? 'class="active"' : '') }}>
-                                    <a href="{{ url ('admin/listDiscussionsComment' ) }}"><i class="fa fa-comments-o">+</i> List Comment</a>
-                                </li>
-                            </ul>
-                            <!-- /.nav-second-level -->
-                        </li>
-
-                      
-                       <li>
-                            <a href="#"><i class="fa fa-hacker-news"></i> Articles<span class="fa arrow"></span></a>
-                            <ul class="nav nav-second-level">
-                                <li>
-                                    <a  href="{{ url ('admin/articles') }}"><i class="fa fa-th-list"></i> List Articles</a>
-                                </li>
-                                <li>
-                                    <a  href="{{ url ('admin/articles/add') }}"> <i class="fa fa-plus-square"></i> Add New Articles</a>
-                                </li>
-
-                            </ul>
-                            <!-- /.nav-second-level -->
-                        </li>  
-                        <li >
-                            <a href="{{ url ('admin/notificationlist') }}"><i class="glyphicon glyphicon-bell"></i> Notifications</a>
-                        </li>
+                        
          
                         <li>
                             <a href="#"><i class="fa fa-users fa-fw"></i> Admin System<span class="fa arrow"></span></a>
