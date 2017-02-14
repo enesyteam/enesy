@@ -19,6 +19,7 @@ Route::group(['prefix' => 'admin','middleware' => 'guest'], function () {
 Route::group(array('namespace' => 'backend', 'prefix' => 'admin', 'middleware' => 'auth'), function () {
 
     Route::get('/logout' , 'LoginController@getLogout');
+    Route::get('/' , 'HomeController@index');
 
     //List User
     Route::get('/adminManager','UserController@getAllAdminUser');
