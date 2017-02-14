@@ -9,7 +9,7 @@
           <div >
              
                 <div class="row">
-                <form method="get" action="{{URL::route('exam')}}" novalidate="">        
+                <form method="get" action="{{URL::route('course')}}" novalidate="">        
                     <div class="col-md-3">
                         <div class="form-group">
                             <label>Title:</label>
