@@ -4,7 +4,7 @@
 @stop
 
 @section('head.css')
-	<link href="{{'templates/default/assets/css/author.css'}}" rel="stylesheet" type="text/css" />
+	<link href="{{'frontend/templates/default/assets/css/author.css'}}" rel="stylesheet" type="text/css" />
 @stop
 
 @section('body.content')
@@ -14,7 +14,7 @@
   <div class="grid-container">
     <div class="user-info-header h-mb0">
       <div class="user-info-header__user-details">
-    <img width="80" height="80" alt="congcd4" src="{{url('templates/default/assets/images/authors/default-user-thumb.png')}}">
+    <img width="80" height="80" alt="congcd4" src="{{url('frontend/templates/default/assets/images/authors/default-user-thumb.png')}}">
 
 
   <div class="user-info-header__content h-ml2">

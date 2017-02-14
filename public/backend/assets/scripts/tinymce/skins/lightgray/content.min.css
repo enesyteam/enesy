@@ -1,0 +1,183 @@
+.mceContentBody img {
+    max-width: 640px;
+}
+.mce-content-body img {
+    max-width: 100%;
+}
+
+body {
+    background-color: #FFFFFF;
+    color: #000000;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 16px;
+    scrollbar-3dlight-color: #F0F0EE;
+    scrollbar-arrow-color: #676662;
+    scrollbar-base-color: #F0F0EE;
+    scrollbar-darkshadow-color: #DDDDDD;
+    scrollbar-face-color: #E0E0DD;
+    scrollbar-highlight-color: #F0F0EE;
+    scrollbar-shadow-color: #F0F0EE;
+    scrollbar-track-color: #F5F5F5;
+}
+.th_pCaption {
+    text-align: center;  
+    padding-bottom: 5px;
+    padding-top: 5px; 
+}
+
+td,th {
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 13px;
+}
+.th_caption {
+    color: #444444;
+    font-size: 13px;
+    font-style: italic;
+    line-height: 20px;
+    padding: 8px;
+    text-align: center;
+}
+
+.mce-object {
+    border: 1px dotted #3A3A3A;
+    background: #d5d5d5 url(img/object.gif) no-repeat center;
+}
+
+.mce-pagebreak {
+    cursor: default;
+    display: block;
+    border: 0;
+    width: 100%;
+    height: 5px;
+    border: 1px dashed #666;
+    margin-top: 15px;
+    page-break-before: always;
+}
+
+@media print {
+    .mce-pagebreak {
+        border: 0px;
+    }
+}
+
+.mce-item-anchor {
+    cursor: default;
+    display: inline-block;
+    -webkit-user-select: all;
+    -webkit-user-modify: read-only;
+    -moz-user-select: all;
+    -moz-user-modify: read-only;
+    user-select: all;
+    user-modify: read-only;
+    width: 9px !important;
+    height: 9px !important;
+    border: 1px dotted #3A3A3A;
+    background: #d5d5d5 url(img/anchor.gif) no-repeat center;
+}
+
+.mce-nbsp {
+    background: #AAA;
+}
+
+hr {
+    cursor: default;
+}
+
+.mce-match-marker {
+    background: #AAA;
+    color: #fff;
+}
+
+.mce-match-marker-selected {
+    background: #3399ff;
+    color: #fff;
+}
+
+.mce-spellchecker-word {
+    border-bottom: 2px solid #F00;
+    cursor: default;
+}
+
+.mce-spellchecker-grammar {
+    border-bottom: 2px solid #008000;
+    cursor: default;
+}
+
+.mce-item-table,.mce-item-table td,.mce-item-table th,.mce-item-table caption {
+    border: 1px dashed #BBB;
+}
+
+td.mce-item-selected,th.mce-item-selected {
+    background-color: #3399ff !important;
+}
+
+.mce-edit-focus {
+    outline: 1px dotted #333;
+}
+p {
+    text-align: justify;
+}
+
+/*------------------------------------------------------------------------*/
+.clearfix:after {clear: both;content: " ";display: block;font-size: 0;height: 0;visibility: hidden}
+.box_sports{background:#f0f0f0;padding:18px 0 18px 18px;margin-bottom:10px}
+.title_sport{background:#1a1a1a;margin-right:18px}
+.title_sport ul li{float:left;margin-right:25px}
+.scroll ul, .title_sport ul{list-style: none outside none;margin: 0;padding: 0}
+.title_sport ul{padding-left:18px;}
+.title_sport ul li a{color:#fff;font-size:14px;font-weight:bold;display:block;padding:10px 0}
+.title_sport ul li a.active,.title_sport ul li a:hover{color:#f8ee05;border-bottom:2px solid #f8ee05;text-decoration:none}
+.match_list{background:#fff}
+.matches_header{background:#eaeaea;text-align:center;font-weight:bold;font-size:12px;color:#333;padding:8px 0;margin:0 18px 2px 0}
+.scroll ul li{border-bottom:1px solid #dcdcdc}
+.scroll ul li a{display:table;font-size:12px;table-layout:fixed;width:100%;color:#333;text-decoration:none}
+.scroll ul li a:hover{background:#eceaea}
+.matches_item {color: #333;display: table-cell;height: 36px;overflow: hidden;text-align: center;vertical-align: middle;white-space: nowrap;}
+.matches_teamscores {border-spacing: 1px;}
+.matches_side {background:#d6181f;border-radius: 2px;color: white;display: table-cell;text-align: center;vertical-align: middle; width:30px;height:22px;font-weight:bold}
+
+.matches_date {color: #b2392c;display: block;text-align: center;font-weight:bold}
+.txt-right{text-align:right}
+.scroll{height:400px;overflow-y:auto;padding:12px 0 12px 18px}
+.scroll ul{margin-right:18px}
+.tab ul li{float:left;background:url(../images/icons.png) no-repeat right -747px;margin-right:10px}
+.tab ul{background:#eaeaea;padding:8px 0 8px 6px}
+.tab ul li a{font-size:12px;font-weight:bold;color:#333;padding-right:10px}
+.tab ul li.last{margin:0 !important}
+.tab{display:inline-block;padding:12px 0 10px;position:absolute;top:0;background:#fff}
+table.tblview tr td{ border-bottom: 1px solid #dcdcdc;border-right: 1px solid #dcdcdc;padding:7px;text-align:center;font-size:12px;color:#333}
+table.tblview tr th{font-size:12px;color:#b2392c;padding:5px;border-bottom: 1px solid #dcdcdc}
+.scr_table{padding:12px 0 12px 5px}
+.scr_table table.tblview{margin-right:5px}
+.no_borr{border-right:none !important}
+.title_style{background:url(../images/bg_tab.png) repeat-x 0 0;padding:10px 18px 7px;margin-right:16px;box-shadow:0 2px 3px -1px #c0c0c0;;border-bottom:1px solid #c0c0c0}
+.title_style a{background:url(../images/icons.png) no-repeat 0 -770px;font-size:16px;font-weight:bold;color:#333;padding-left:13px;display:block}
+.magb2{margin-bottom:2px}
+@media screen and (max-width:1200px) {
+    #video #wrapper {margin:0; width:100%}
+    footer ,.wapper_video{width:100%}
+    .top_video article.result_video{width:55%;margin-right:0 !important}
+    .left_video article.result_video{width:20%;margin:0 0 18px 10px !important}
+    .menu_video{width:10%}
+    .col_right{width:20%}
+    .col_left{width:76%}
+    .video_section article.result_video{width:29%}
+    .video_section{width:85%}.hotnews {display:none}.col_right .left_video article.result_video{width:100%}
+}
+
+@media screen and (max-width:980px){.video_section{width:86%} .video_section article.result_video{width:30%}}
+@media screen and (max-width:1060px){ .nav-hozital{display:none}a.btn_navbar{display:block;float:left;margin:6px 0 0 10px} .nav-hozital{z-index:99;background:#fff;left:0;width:100%;top:41px;position:absolute}#index_open ul li{float:none;border-bottom:1px solid #F3F3F3}
+    #index_open ul li a.active, #index_open ul li a:hover,#index_open ul li a{color:#333;padding:8px 8px 9px 11px}
+    #index_open .subcate ul{width:auto;position:inherit;border:none;clear:both}
+    #index_open ul li .subcate ul li{padding-left:20px}
+    #index_open ul li .subcate ul li:hover{background:#f4f9fa !important}
+    .ic_arrow{display:block}
+    #moving-boxes .topic{width:265px}
+    .main-left{width:74%}
+    .sidebar{width:23%}
+    .like_social{width:90%}
+    .slide_left{width:62%}
+    .col6{width:47%}
+    .slide_right{width:34%}
+    #containers{padding:0 10px}
+}

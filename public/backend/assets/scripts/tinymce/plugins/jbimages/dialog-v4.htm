@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Upload an image</title>
+        <script type="text/javascript" src="js/dialog-v4.js"></script>
+        <link href="css/dialog-v4.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+
+        <form class="form-inline" id="upl" name="upl" action="ci/index.php/upload/english" method="post" enctype="multipart/form-data" target="upload_target" onsubmit="jbImagesDialog.inProgress();">
+
+            <div id="upload_in_progress" class="upload_infobar"><img src="img/spinner.gif" width="16" height="16" class="spinner">Upload in progress&hellip; <div id="upload_additional_info"></div></div>
+            <div id="upload_infobar" class="upload_infobar"></div>	
+
+            <table>
+                <tr>
+                    <td width="40%" style="text-align: left;"><strong style="font-size: 12px;">Đóng dấu ảnh này:</strong></td>
+                    <td width="60%" style="text-align: left;">
+                        <p>
+                            <input type="radio" name="th_watermark" value="1"/>Có
+                            <input type="radio" name="th_watermark" value="0" checked="checked"/>Không
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: left;"><strong style="font-size: 12px;">Căn hình ảnh:</strong></td>
+                    <td style="text-align: left;">
+                        <p>
+                            <input type="radio" name="th_img_align" value="left"/>Trái
+                            <input type="radio" name="th_img_align" value="center" checked="checked"/>Giữa
+                            <input type="radio" name="th_img_align" value="right"/>Phải
+                        </p>
+                    </td>
+                </tr>                    <tr>
+                    <td style="text-align: left;"><strong style="font-size: 12px;">Chú thích ảnh:</strong></td>
+                    <td style="text-align: left;">
+                        <p><input style="width: 395px; height: 25px;font-size: 12px;" type="text" name="th_con_img" /></p> 
+                    </td>
+                </tr>                    
+                <tr>
+                    <td style="text-align: left;"><strong style="font-size: 12px;">Chọn ảnh từ máy tính</strong></td>
+                    <td style="text-align: left;">
+
+                        <p><input id="uploader" name="userfile" type="file" class="jbFilebox" /></p>
+                    </td>
+                </tr>                    
+                <tr>
+                    <td style="text-align: left;">&nbsp;</td>
+                    <td style="text-align: left;">
+                        <p><input type="submit" value="Chèn ảnh" class="jbButton" /></p>
+                        <p id="upload_form_container"></p>
+                    </td>
+                </tr> 
+            </table>
+        </form>
+        <iframe id="upload_target" name="upload_target" src="ci/index.php/blank"></iframe>
+    </body>
+</html>

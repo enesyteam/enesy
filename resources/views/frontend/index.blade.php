@@ -17,14 +17,14 @@
             <meta content="Đào tạo Kỹ sư chuyên nghiệp"
                name="description" />
             <meta content="" name="author" />
-            <link href="{{'templates/default/assets/css/normalize.css'}}" rel="stylesheet" type="text/css" />
-            <link href="{{'templates/default/assets/css/style.css'}}" rel="stylesheet" type="text/css" />
-            <link href="{{'templates/default/assets/css/custom.css'}}" rel="stylesheet" type="text/css" />
-            <link href="{{'templates/default/assets/css/layout.css'}}" rel="stylesheet" type="text/css" />
+            <link href="{{'frontend/templates/default/assets/css/normalize.css'}}" rel="stylesheet" type="text/css" />
+            <link href="{{'frontend/templates/default/assets/css/style.css'}}" rel="stylesheet" type="text/css" />
+            <link href="{{'frontend/templates/default/assets/css/custom.css'}}" rel="stylesheet" type="text/css" />
+            <link href="{{'frontend/templates/default/assets/css/layout.css'}}" rel="stylesheet" type="text/css" />
             <!--JqueryModal-->
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-            <script src="{{'templates/default/assets/vender/jquery-modal/jquery.modal.js'}}" type="text/javascript" charset="utf-8"></script>
-              <script src="{{'templates/default/assets/vender/jquery-modal/highlight/highlight.pack.js'}}" type="text/javascript" charset="utf-8"></script>
+            <script src="{{'frontend/templates/default/assets/vender/jquery-modal/jquery.modal.js'}}" type="text/javascript" charset="utf-8"></script>
+              <script src="{{'frontend/templates/default/assets/vender/jquery-modal/highlight/highlight.pack.js'}}" type="text/javascript" charset="utf-8"></script>
                <script type="text/javascript" charset="utf-8"> hljs.initHighlightingOnLoad(); </script>
          </head>
          <!-- #HEAD -->
@@ -127,7 +127,7 @@
                                                          <div class="item-thumbnail">
                                                             <div class="item-thumbnail__image">
                                                                <a class="js-google-analytics__list-event-trigger" href="{{route('course.detail')}}">
-                                                               <img src="{{'templates/default/assets/images/courses/cad/csharp-thumb.jpg'}}" border="0" height="80" width="150" alt="Moti App PSD Landing Page PSD Template - ThemeForest Item for Sale" title="" class="preload no_preview landscape-image-magnifier" data-tooltip="Moti App PSD Landing Page PSD Template">
+                                                               <img src="{{'frontend/templates/default/assets/images/courses/cad/csharp-thumb.jpg'}}" border="0" height="80" width="150" alt="Moti App PSD Landing Page PSD Template - ThemeForest Item for Sale" title="" class="preload no_preview landscape-image-magnifier" data-tooltip="Moti App PSD Landing Page PSD Template">
                                                                </a>
                                                                <div class="item-thumbnail__preview">
                                                                   <a target="_blank" href="{{route('course.preview')}}" rel="modal:open">
@@ -185,7 +185,7 @@
                                                          <div class="item-thumbnail">
                                                             <div class="item-thumbnail__image">
                                                                <a class="js-google-analytics__list-event-trigger" href="{{route('course.detail')}}">
-                                                               <img src="{{'templates/default/assets/images/courses/cad/csharp2-thumb.jpg'}}" border="0" height="80" width="150" alt="Moti App PSD Landing Page PSD Template - ThemeForest Item for Sale" title="" class="preload no_preview landscape-image-magnifier" data-tooltip="Moti App PSD Landing Page PSD Template">
+                                                               <img src="{{'frontend/templates/default/assets/images/courses/cad/csharp2-thumb.jpg'}}" border="0" height="80" width="150" alt="Moti App PSD Landing Page PSD Template - ThemeForest Item for Sale" title="" class="preload no_preview landscape-image-magnifier" data-tooltip="Moti App PSD Landing Page PSD Template">
                                                                </a>
                                                                <div class="item-thumbnail__preview">
                                                                   <a target="_blank" href="{{route('course.preview')}}" rel="modal:open">
@@ -242,7 +242,7 @@
                                                          <div class="item-thumbnail">
                                                             <div class="item-thumbnail__image">
                                                                <a class="js-google-analytics__list-event-trigger" href="{{route('course.detail')}}">
-                                                               <img src="{{'templates/default/assets/images/thumb.jpg'}}" border="0" height="80" width="150" alt="Moti App PSD Landing Page PSD Template - ThemeForest Item for Sale" title="" class="preload no_preview landscape-image-magnifier" data-tooltip="Moti App PSD Landing Page PSD Template">
+                                                               <img src="{{'frontend/templates/default/assets/images/thumb.jpg'}}" border="0" height="80" width="150" alt="Moti App PSD Landing Page PSD Template - ThemeForest Item for Sale" title="" class="preload no_preview landscape-image-magnifier" data-tooltip="Moti App PSD Landing Page PSD Template">
                                                                </a>
                                                                <div class="item-thumbnail__preview">
                                                                   <a target="_blank" href="{{route('course.preview')}}" rel="modal:open">
@@ -299,7 +299,7 @@
                                                          <div class="item-thumbnail">
                                                             <div class="item-thumbnail__image">
                                                                <a class="js-google-analytics__list-event-trigger" href="{{route('course.detail')}}">
-                                                               <img src="{{'templates/default/assets/images/thumb.jpg'}}" border="0" height="80" width="150" alt="Moti App PSD Landing Page PSD Template - ThemeForest Item for Sale" title="" class="preload no_preview landscape-image-magnifier" data-tooltip="Moti App PSD Landing Page PSD Template">
+                                                               <img src="{{'frontend/templates/default/assets/images/thumb.jpg'}}" border="0" height="80" width="150" alt="Moti App PSD Landing Page PSD Template - ThemeForest Item for Sale" title="" class="preload no_preview landscape-image-magnifier" data-tooltip="Moti App PSD Landing Page PSD Template">
                                                                </a>
                                                                <div class="item-thumbnail__preview">
                                                                   <a target="_blank" href="{{route('course.preview')}}" rel="modal:open">
@@ -356,7 +356,7 @@
                                                          <div class="item-thumbnail">
                                                             <div class="item-thumbnail__image">
                                                                <a class="js-google-analytics__list-event-trigger" href="{{route('course.detail')}}">
-                                                               <img src="{{'templates/default/assets/images/thumb.jpg'}}" border="0" height="80" width="150" alt="Moti App PSD Landing Page PSD Template - ThemeForest Item for Sale" title="" class="preload no_preview landscape-image-magnifier" data-tooltip="Moti App PSD Landing Page PSD Template">
+                                                               <img src="{{'frontend/templates/default/assets/images/thumb.jpg'}}" border="0" height="80" width="150" alt="Moti App PSD Landing Page PSD Template - ThemeForest Item for Sale" title="" class="preload no_preview landscape-image-magnifier" data-tooltip="Moti App PSD Landing Page PSD Template">
                                                                </a>
                                                                <div class="item-thumbnail__preview">
                                                                   <a target="_blank" href="{{route('course.preview')}}" rel="modal:open">
@@ -413,7 +413,7 @@
                                                          <div class="item-thumbnail">
                                                             <div class="item-thumbnail__image">
                                                                <a class="js-google-analytics__list-event-trigger" href="{{route('course.detail')}}">
-                                                               <img src="{{'templates/default/assets/images/thumb.jpg'}}" border="0" height="80" width="150" alt="Moti App PSD Landing Page PSD Template - ThemeForest Item for Sale" title="" class="preload no_preview landscape-image-magnifier" data-tooltip="Moti App PSD Landing Page PSD Template">
+                                                               <img src="{{'frontend/templates/default/assets/images/thumb.jpg'}}" border="0" height="80" width="150" alt="Moti App PSD Landing Page PSD Template - ThemeForest Item for Sale" title="" class="preload no_preview landscape-image-magnifier" data-tooltip="Moti App PSD Landing Page PSD Template">
                                                                </a>
                                                                <div class="item-thumbnail__preview">
                                                                   <a target="_blank" href="{{route('course.preview')}}" rel="modal:open">
@@ -470,7 +470,7 @@
                                                          <div class="item-thumbnail">
                                                             <div class="item-thumbnail__image">
                                                                <a class="js-google-analytics__list-event-trigger" href="{{route('course.detail')}}">
-                                                               <img src="{{'templates/default/assets/images/thumb.jpg'}}" border="0" height="80" width="150" alt="Moti App PSD Landing Page PSD Template - ThemeForest Item for Sale" title="" class="preload no_preview landscape-image-magnifier" data-tooltip="Moti App PSD Landing Page PSD Template">
+                                                               <img src="{{'frontend/templates/default/assets/images/thumb.jpg'}}" border="0" height="80" width="150" alt="Moti App PSD Landing Page PSD Template - ThemeForest Item for Sale" title="" class="preload no_preview landscape-image-magnifier" data-tooltip="Moti App PSD Landing Page PSD Template">
                                                                </a>
                                                                <div class="item-thumbnail__preview">
                                                                   <a target="_blank" href="{{route('course.preview')}}" rel="modal:open">
@@ -527,7 +527,7 @@
                                                          <div class="item-thumbnail">
                                                             <div class="item-thumbnail__image">
                                                                <a class="js-google-analytics__list-event-trigger" href="{{route('course.detail')}}">
-                                                               <img src="{{'templates/default/assets/images/thumb.jpg'}}" border="0" height="80" width="150" alt="Moti App PSD Landing Page PSD Template - ThemeForest Item for Sale" title="" class="preload no_preview landscape-image-magnifier" data-tooltip="Moti App PSD Landing Page PSD Template">
+                                                               <img src="{{'frontend/templates/default/assets/images/thumb.jpg'}}" border="0" height="80" width="150" alt="Moti App PSD Landing Page PSD Template - ThemeForest Item for Sale" title="" class="preload no_preview landscape-image-magnifier" data-tooltip="Moti App PSD Landing Page PSD Template">
                                                                </a>
                                                                <div class="item-thumbnail__preview">
                                                                   <a target="_blank" href="{{route('course.preview')}}" rel="modal:open">
@@ -584,7 +584,7 @@
                                                          <div class="item-thumbnail">
                                                             <div class="item-thumbnail__image">
                                                                <a class="js-google-analytics__list-event-trigger" href="{{route('course.detail')}}">
-                                                               <img src="{{'templates/default/assets/images/thumb.jpg'}}" border="0" height="80" width="150" alt="Moti App PSD Landing Page PSD Template - ThemeForest Item for Sale" title="" class="preload no_preview landscape-image-magnifier" data-tooltip="Moti App PSD Landing Page PSD Template">
+                                                               <img src="{{'frontend/templates/default/assets/images/thumb.jpg'}}" border="0" height="80" width="150" alt="Moti App PSD Landing Page PSD Template - ThemeForest Item for Sale" title="" class="preload no_preview landscape-image-magnifier" data-tooltip="Moti App PSD Landing Page PSD Template">
                                                                </a>
                                                                <div class="item-thumbnail__preview">
                                                                   <a target="_blank" href="{{route('course.preview')}}" rel="modal:open">
@@ -641,7 +641,7 @@
                                                          <div class="item-thumbnail">
                                                             <div class="item-thumbnail__image">
                                                                <a class="js-google-analytics__list-event-trigger" href="{{route('course.detail')}}">
-                                                               <img src="{{'templates/default/assets/images/thumb.jpg'}}" border="0" height="80" width="150" alt="Moti App PSD Landing Page PSD Template - ThemeForest Item for Sale" title="" class="preload no_preview landscape-image-magnifier" data-tooltip="Moti App PSD Landing Page PSD Template">
+                                                               <img src="{{'frontend/templates/default/assets/images/thumb.jpg'}}" border="0" height="80" width="150" alt="Moti App PSD Landing Page PSD Template - ThemeForest Item for Sale" title="" class="preload no_preview landscape-image-magnifier" data-tooltip="Moti App PSD Landing Page PSD Template">
                                                                </a>
                                                                <div class="item-thumbnail__preview">
                                                                   <a target="_blank" href="{{route('course.preview')}}" rel="modal:open">
@@ -698,7 +698,7 @@
                                                          <div class="item-thumbnail">
                                                             <div class="item-thumbnail__image">
                                                                <a class="js-google-analytics__list-event-trigger" href="{{route('course.detail')}}">
-                                                               <img src="{{'templates/default/assets/images/thumb.jpg'}}" border="0" height="80" width="150" alt="Moti App PSD Landing Page PSD Template - ThemeForest Item for Sale" title="" class="preload no_preview landscape-image-magnifier" data-tooltip="Moti App PSD Landing Page PSD Template">
+                                                               <img src="{{'frontend/templates/default/assets/images/thumb.jpg'}}" border="0" height="80" width="150" alt="Moti App PSD Landing Page PSD Template - ThemeForest Item for Sale" title="" class="preload no_preview landscape-image-magnifier" data-tooltip="Moti App PSD Landing Page PSD Template">
                                                                </a>
                                                                <div class="item-thumbnail__preview">
                                                                   <a target="_blank" href="{{route('course.preview')}}" rel="modal:open">
@@ -755,7 +755,7 @@
                                                          <div class="item-thumbnail">
                                                             <div class="item-thumbnail__image">
                                                                <a class="js-google-analytics__list-event-trigger" href="{{route('course.detail')}}">
-                                                               <img src="{{'templates/default/assets/images/thumb.jpg'}}" border="0" height="80" width="150" alt="Moti App PSD Landing Page PSD Template - ThemeForest Item for Sale" title="" class="preload no_preview landscape-image-magnifier" data-tooltip="Moti App PSD Landing Page PSD Template">
+                                                               <img src="{{'frontend/templates/default/assets/images/thumb.jpg'}}" border="0" height="80" width="150" alt="Moti App PSD Landing Page PSD Template - ThemeForest Item for Sale" title="" class="preload no_preview landscape-image-magnifier" data-tooltip="Moti App PSD Landing Page PSD Template">
                                                                </a>
                                                                <div class="item-thumbnail__preview">
                                                                   <a target="_blank" href="{{route('course.preview')}}" rel="modal:open">
@@ -812,7 +812,7 @@
                                                          <div class="item-thumbnail">
                                                             <div class="item-thumbnail__image">
                                                                <a class="js-google-analytics__list-event-trigger" href="{{route('course.detail')}}">
-                                                               <img src="{{'templates/default/assets/images/thumb.jpg'}}" border="0" height="80" width="150" alt="Moti App PSD Landing Page PSD Template - ThemeForest Item for Sale" title="" class="preload no_preview landscape-image-magnifier" data-tooltip="Moti App PSD Landing Page PSD Template">
+                                                               <img src="{{'frontend/templates/default/assets/images/thumb.jpg'}}" border="0" height="80" width="150" alt="Moti App PSD Landing Page PSD Template - ThemeForest Item for Sale" title="" class="preload no_preview landscape-image-magnifier" data-tooltip="Moti App PSD Landing Page PSD Template">
                                                                </a>
                                                                <div class="item-thumbnail__preview">
                                                                   <a target="_blank" href="{{route('course.preview')}}" rel="modal:open">
@@ -869,7 +869,7 @@
                                                          <div class="item-thumbnail">
                                                             <div class="item-thumbnail__image">
                                                                <a class="js-google-analytics__list-event-trigger" href="{{route('course.detail')}}">
-                                                               <img src="{{'templates/default/assets/images/thumb.jpg'}}" border="0" height="80" width="150" alt="Moti App PSD Landing Page PSD Template - ThemeForest Item for Sale" title="" class="preload no_preview landscape-image-magnifier" data-tooltip="Moti App PSD Landing Page PSD Template">
+                                                               <img src="{{'frontend/templates/default/assets/images/thumb.jpg'}}" border="0" height="80" width="150" alt="Moti App PSD Landing Page PSD Template - ThemeForest Item for Sale" title="" class="preload no_preview landscape-image-magnifier" data-tooltip="Moti App PSD Landing Page PSD Template">
                                                                </a>
                                                                <div class="item-thumbnail__preview">
                                                                   <a target="_blank" href="{{route('course.preview')}}" rel="modal:open">
