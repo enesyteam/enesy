@@ -4,17 +4,21 @@ namespace App;
 
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
-class User extends Authenticatable
+class MemberOther extends Authenticatable
 {
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
-    protected  $table = 'tbl_user';
+    protected  $table = 'tbl_member';
+
+    const CREATED_AT = 'create_date';
+    
+    const UPDATED_AT = 'modify_date';
 
     protected $fillable = [
-        'name', 'email', 'password',
+        'username', 'email', 'password','last_name', 'first_name'
     ];
 
     /**
