@@ -3955,12 +3955,12 @@ input[type=text].footer-subscribe__input:focus::-webkit-input-placeholder, input
     position: relative;
     text-indent: -9999px;
     height: 18px;
-    width: 152px;
+    width: 102px;
     top: 18px;
 }
 .svg .header-logo-account__logo>span {
     background: url(../images/logo.svg);
-    background-size: 152px 18px;
+    background-size: 102px 18px;
 }
 .no-svg .header-logo-account__logo>span {
     background-image: url(//public-assets.envato-static.com/assets/generated_sprites/logos-5f4dcfa850f3886d51029366bfa93098.png);
