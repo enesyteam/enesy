@@ -95,8 +95,6 @@ Route::group(array('namespace' => 'backend', 'prefix' => 'admin', 'middleware' =
     // end course
 });
 Route::group(array('namespace' => 'frontend'), function () {
-	});
-
 	Route::get('/', [
 		'as'	=>	'home',
 		'uses'	=>	'PagesController@index'
@@ -147,6 +145,10 @@ Route::group(array('namespace' => 'frontend'), function () {
 		'as'	=>	'user.author',
 		'uses'	=>	'UserController@author'
 		]);
+
+	
+	});
+
 
 
 
