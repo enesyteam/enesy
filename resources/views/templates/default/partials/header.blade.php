@@ -1,3 +1,27 @@
+<!----Mobile header-->
+<div class="site-header__mini is-hidden-desktop">
+   <div class="header-mini">
+      <div class="header-mini__button--account">
+         <a class="btn btn--square" href="#account">
+         <i class="e-icon -icon-person"></i>
+         <span class="is-hidden">Account</span>
+         </a>  
+      </div>
+      <div class="header-mini__button--categories">
+         <a class="btn btn--square" href="#categories">
+         <i class="e-icon -icon-hamburger"></i>
+         <span class="is-hidden">Sites, Search &amp; Categories</span>
+         </a>    
+      </div>
+      <div data-loading="1" style="display: none;"></div>
+      <div data-variant="0" style="">
+         <div class="header-mini__logo">
+            <a class="header-mini__logo--enesy" href="#">Enesy</a>
+         </div>
+      </div>
+   </div>
+</div>
+<!----Mobile header-->
 <div class="site-header__logo-and-account is-hidden-tablet-and-below">
    <div class="header-logo-account">
       <div class="grid-container">

@@ -23,7 +23,7 @@
             selected = false;
         for (i=modals.length-1; i>=0; i--) {
           if (modals[i].$blocker) {
-            modals[i].$blocker.toggleClass('mfp-ready',!selected).toggleClass('behind',selected);
+            modals[i].$blocker.toggleClass('current',!selected).toggleClass('behind',selected);
             selected = true;
           }
         }
@@ -49,7 +49,7 @@
         this.open();
       //AJAX
       } else {
-        this.$elm = $('<div class="mfp-wrap mfp-auto-cursor mfp-fade mfp-ready" tabindex="-1">');
+        this.$elm = $('<div>');
         this.$body.append(this.$elm);
         remove = function(event, modal) { modal.elm.remove(); };
         this.showSpinner();
@@ -111,7 +111,7 @@
 
     block: function() {
       this.$elm.trigger($.modal.BEFORE_BLOCK, [this._ctx()]);
-      this.$body.css('overflow','hidden');
+      //this.$body.css('overflow','hidden');
       this.$blocker = $('<div class="jquery-modal blocker current"></div>').appendTo(this.$body);
       selectCurrent();
       if(this.options.doFade) {

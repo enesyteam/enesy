@@ -4,14 +4,14 @@
          <div class="grid-container">
             <div class="footer-top">
                <div class="footer-top__left">
-                  <a class="footer-top__market-logo" href="index.html">Enesy</a>
+                  <a class="footer-top__market-logo" href="{{route('home')}}">Enesy</a>
                </div>
                <div class="footer-top__right is-hidden-tablet-and-below">
                   <div class="market-stats">
                      <div class="market-stats__stat">
                         <p class="t-body -color-light h-m0">
                            2,500
-                           <span>học viên thường xuyên</span>
+                           <span>học viên</span>
                         </p>
                      </div>
                      <div class="market-stats__stat">

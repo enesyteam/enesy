@@ -96,7 +96,7 @@
 
     <section class="shareContent__link">
       <div class="shareLink sc-clearfix m-showPositionOption"><label for="shareLink__field" class="sc-visuallyhidden">Link</label>
-<input type="text" value="https://soundcloud.com/mamlukmusic/sourtaste-alcia-jose-charles-sauce" class="shareLink__field sc-input" id="shareLink__field" readonly="readonly">
+<input type="text" value="" class="shareLink__field sc-input" id="shareLink__field" readonly="readonly">
   <input type="text" value="0:00" class="shareLink__fromField sc-input" vk_18530="subscribed">
   <label class="checkbox sc-checkbox shareLink__from"><input type="checkbox" name="share_from" class="sc-checkbox-input sc-visuallyhidden">
 <div class="sc-checkbox-check"></div>
