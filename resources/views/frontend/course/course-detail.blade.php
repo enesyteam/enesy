@@ -3,15 +3,15 @@
 Enesy | Khóa học lập trình AutoCAD với C# trình độ cơ bản
 @stop
 @section ('head.css')
-<link href="{{'templates/default/assets/css/course.css'}}" rel="stylesheet" type="text/css" />
-<link href="{{'templates/default/assets/css/icon.css'}}" rel="stylesheet" type="text/css" />
+<link href="{{'frontend/css/course.css'}}" rel="stylesheet" type="text/css" />
+<link href="{{'frontend/css/icon.css'}}" rel="stylesheet" type="text/css" />
 @stop
 
 @section('head.js')
 <!--JqueryModal-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-<script src="{{'templates/default/assets/vender/jquery-modal/jquery.modal.js'}}" type="text/javascript" charset="utf-8"></script>
-<script src="{{'templates/default/assets/vender/jquery-modal/highlight/highlight.pack.js'}}" type="text/javascript" charset="utf-8"></script>
+<script src="{{'frontend/vender/jquery-modal/jquery.modal.js'}}" type="text/javascript" charset="utf-8"></script>
+<script src="{{'frontend/vender/jquery-modal/highlight/highlight.pack.js'}}" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript" charset="utf-8"> hljs.initHighlightingOnLoad(); </script>
 @stop
 @section ('body.content')
@@ -83,7 +83,7 @@ Enesy | Khóa học lập trình AutoCAD với C# trình độ cơ bản
          <div class="box--no-padding no-border">
             <div class="item-preview -preview-live">
                <a target="_blank" href="{{route('course.preview')}}" rel="modal:open">
-                  <img alt="EduLearn - Education, School &amp; Courses HTML Template - Business Corporate" itemprop="image" src="{{url('templates/default/assets/images/courses/preview-images/course-preview-image.jpg')}}">
+                  <img alt="EduLearn - Education, School &amp; Courses HTML Template - Business Corporate" itemprop="image" src="{{url('frontend/images/courses/preview-images/course-preview-image.jpg')}}">
                   <div class="" ng-show="showPlaceholderPlayButton" style="">
                      <div class="play-button play-button--initially-visible" data-purpose="video-play-button-initial"></div>
                   </div>
@@ -628,7 +628,7 @@ Enesy | Khóa học lập trình AutoCAD với C# trình độ cơ bản
                <div class="media__item">
                   <div class="avatar-wrapper tooltip-advanced">
                      <a class="avatar" title="cowthemes" href="">
-                     <img width="80" height="80" alt="cowthemes" src="{{url('templates/default/assets/images/authors/default-user-thumb.png')}}">
+                     <img width="80" height="80" alt="cowthemes" src="{{url('frontend/images/authors/default-user-thumb.png')}}">
                      </a>
                   </div>
                </div>
