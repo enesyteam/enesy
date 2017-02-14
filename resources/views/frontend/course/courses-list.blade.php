@@ -55,7 +55,7 @@
                   </div>
                </div>
             </div>
-            @include ('templates.default.course.partials.course-list-actions-bar')
+            @include ('frontend.course.partials.course-list-actions-bar')
          </div>
          <div class="course-list__column-category">
             <p class="t-body -size-s h-m0">
@@ -113,7 +113,7 @@
                   </div>
                </div>
             </div>
-            @include ('templates.default.course.partials.course-list-actions-bar')
+            @include ('frontend.course.partials.course-list-actions-bar')
          </div>
          <div class="course-list__column-category">
             <p class="t-body -size-s h-m0">
@@ -170,7 +170,7 @@
                   </div>
                </div>
             </div>
-            @include ('templates.default.course.partials.course-list-actions-bar')
+            @include ('frontend.course.partials.course-list-actions-bar')
          </div>
          <div class="course-list__column-category">
             <p class="t-body -size-s h-m0">
@@ -227,7 +227,7 @@
                   </div>
                </div>
             </div>
-            @include ('templates.default.course.partials.course-list-actions-bar')
+            @include ('frontend.course.partials.course-list-actions-bar')
          </div>
          <div class="course-list__column-category">
             <p class="t-body -size-s h-m0">
@@ -284,7 +284,7 @@
                   </div>
                </div>
             </div>
-            @include ('templates.default.course.partials.course-list-actions-bar')
+            @include ('frontend.course.partials.course-list-actions-bar')
          </div>
          <div class="course-list__column-category">
             <p class="t-body -size-s h-m0">
@@ -341,7 +341,7 @@
                   </div>
                </div>
             </div>
-            @include ('templates.default.course.partials.course-list-actions-bar')
+            @include ('frontend.course.partials.course-list-actions-bar')
          </div>
          <div class="course-list__column-category">
             <p class="t-body -size-s h-m0">
@@ -398,7 +398,7 @@
                   </div>
                </div>
             </div>
-            @include ('templates.default.course.partials.course-list-actions-bar')
+            @include ('frontend.course.partials.course-list-actions-bar')
          </div>
          <div class="course-list__column-category">
             <p class="t-body -size-s h-m0">
@@ -455,7 +455,7 @@
                   </div>
                </div>
             </div>
-            @include ('templates.default.course.partials.course-list-actions-bar')
+            @include ('frontend.course.partials.course-list-actions-bar')
          </div>
          <div class="course-list__column-category">
             <p class="t-body -size-s h-m0">
@@ -512,7 +512,7 @@
                   </div>
                </div>
             </div>
-            @include ('templates.default.course.partials.course-list-actions-bar')
+            @include ('frontend.course.partials.course-list-actions-bar')
          </div>
          <div class="course-list__column-category">
             <p class="t-body -size-s h-m0">
@@ -569,7 +569,7 @@
                   </div>
                </div>
             </div>
-            @include ('templates.default.course.partials.course-list-actions-bar')
+            @include ('frontend.course.partials.course-list-actions-bar')
          </div>
          <div class="course-list__column-category">
             <p class="t-body -size-s h-m0">
@@ -626,7 +626,7 @@
                   </div>
                </div>
             </div>
-            @include ('templates.default.course.partials.course-list-actions-bar')
+            @include ('frontend.course.partials.course-list-actions-bar')
          </div>
          <div class="course-list__column-category">
             <p class="t-body -size-s h-m0">
@@ -683,7 +683,7 @@
                   </div>
                </div>
             </div>
-            @include ('templates.default.course.partials.course-list-actions-bar')
+            @include ('frontend.course.partials.course-list-actions-bar')
          </div>
          <div class="course-list__column-category">
             <p class="t-body -size-s h-m0">
@@ -740,7 +740,7 @@
                   </div>
                </div>
             </div>
-            @include ('templates.default.course.partials.course-list-actions-bar')
+            @include ('frontend.course.partials.course-list-actions-bar')
          </div>
          <div class="course-list__column-category">
             <p class="t-body -size-s h-m0">
@@ -797,7 +797,7 @@
                   </div>
                </div>
             </div>
-            @include ('templates.default.course.partials.course-list-actions-bar')
+            @include ('frontend.course.partials.course-list-actions-bar')
          </div>
          <div class="course-list__column-category">
             <p class="t-body -size-s h-m0">
