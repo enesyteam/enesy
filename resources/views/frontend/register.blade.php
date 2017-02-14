@@ -2,7 +2,7 @@
 <div class="mfp-wrap mfp-auto-cursor mfp-fade mfp-ready" tabindex="-1" style="overflow-x: hidden; overflow-y: auto;"><div class="mfp-container mfp-s-ready mfp-inline-holder"><div class="mfp-content"><div class="e-modal -width-s" data-view="modalInternalControls" data-google-analytics-page-title="direct_sign_up">
   <header class="e-modal__header -background-dark -padding-m">
     <div class="h-image-svg h-text-align-center" width="130px" height="25px">
-      <img alt="Envato" width="130" class="is-hidden--no-svg is-hidden--no-js" src="{{url('templates/default/assets/images/logo.svg')}}">
+      <img alt="Enesy" width="130" class="is-hidden--no-svg is-hidden--no-js" src="{{url('templates/default/assets/images/logo.svg')}}">
       <h1 class="t-heading -size-l -color-light h-m0 is-hidden--svg">Enesy</h1>
     </div>
   </header>
@@ -145,7 +145,7 @@
   <p class="t-body -size-m -color-mid">We've just sent you a confirmation email. Check it out so that we can start getting to know each other.</p>
 
   <p class="t-body -size-m">
-    Didn't receive it? <a href="https://account.envato.com/confirm">Send a new email.</a>
+    Didn't receive it? <a href="#">Send a new email.</a>
   </p>
 </fieldset>
 
@@ -162,7 +162,7 @@
 </div>
 
 
-          <a class="e-btn--3d -color-primary -size-m h-mt1" href="https://account.envato.com/sign_up?to=themeforest">Create an Envato account</a>
+          <a class="e-btn--3d -color-primary -size-m h-mt1" href="https://account.envato.com/sign_up?to=themeforest">Create an Enesy account</a>
         </div>
       </div>
     </div>

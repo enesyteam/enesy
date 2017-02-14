@@ -4,7 +4,7 @@
 @stop
 
 @section('head.css')
-	<link href="{{'frontend/templates/default/assets/css/author.css'}}" rel="stylesheet" type="text/css" />
+	<link href="{{'frontend/css/author.css'}}" rel="stylesheet" type="text/css" />
 @stop
 
 @section('body.content')
@@ -14,7 +14,7 @@
   <div class="grid-container">
     <div class="user-info-header h-mb0">
       <div class="user-info-header__user-details">
-    <img width="80" height="80" alt="congcd4" src="{{url('frontend/templates/default/assets/images/authors/default-user-thumb.png')}}">
+    <img width="80" height="80" alt="congcd4" src="{{url('frontend/images/authors/default-user-thumb.png')}}">
 
 
   <div class="user-info-header__content h-ml2">
@@ -60,28 +60,13 @@
         <a class="t-link -decoration-none" href="/user/congcd4">Hồ sơ</a>
       </li>
       <li class="">
-        <a class="t-link -decoration-none" href="/user/congcd4/followers">Người theo dõi <span class="e-text-label -color-grey-medium -size-s">0</span></a>
-      </li>
-      <li class="">
-        <a class="t-link -decoration-none" href="/user/congcd4/following">Đang theo dõi <span class="e-text-label -color-grey-medium -size-s">0</span></a>
-      </li>
-      <li class="">
-        <a class="t-link -decoration-none" href="/user/congcd4/edit">Cài đặt</a>
+        <a class="t-link -decoration-none" href="/user/congcd4/followers">Học viên của bạn <span class="e-text-label -color-grey-medium -size-s">50</span></a>
       </li>
       <li class="">
         <a class="t-link -decoration-none" href="/user/congcd4/reviews">Đánh giá</a>
       </li>
       <li class="">
-        <a class="t-link -decoration-none" href="/refund_requests/open">Refunds</a>
-      </li>
-      <li class="">
-        <a class="t-link -decoration-none" href="/accounts/withdrawal/new">Withdrawals</a>
-      </li>
-      <li class="">
-        <a class="t-link -decoration-none" href="/user/congcd4/earnings">Earnings</a>
-      </li>
-      <li class="">
-        <a class="t-link -decoration-none" href="/user/congcd4/statement">Statements</a>
+        <a class="t-link -decoration-none" href="/user/congcd4/earnings">Lợi nhuận?</a>
       </li>
   </ul>
 
