@@ -53,10 +53,10 @@
                               </div>
                            </div>
                            <!--Main Header-->
-                           @include('templates.default.partials.header')
+                           @include('frontend.partials.header')
                            <!--#Main Header-->
                            <!--Sub header-->
-                           @include('templates.default.partials.navbar')
+                           @include('frontend.partials.navbar')
                            <!--#Sub header-->
                         </div>
                         <!--#site_header-->
@@ -70,7 +70,7 @@
                         @yield('body.content')
                         <!--#Content-->
                         <!--Footer-->
-                        @include('templates.default.partials.footer')
+                        @include('frontend.partials.footer')
                         <!--#Footer-->
                      </div>
                      <!--#canvas body-->

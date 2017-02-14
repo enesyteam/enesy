@@ -7,12 +7,12 @@ use Illuminate\Http\Request;
 class UserController extends Controller
 {
     public function login(){
-    	return view('templates.default.login');
+    	return view('frontend.login');
     }
     public function register(){
-		return view('templates.default.register');
+		return view('frontend.register');
     }
     public function author(){
-    	return view('templates.default.author.index');
+    	return view('frontend.author.index');
     }
 }

@@ -1,4 +1,4 @@
-@extends('templates.default.master.course-master')
+@extends('frontend.master.course-master')
 @section('head.title')
 	Enesy | Trang giảng viên
 @stop

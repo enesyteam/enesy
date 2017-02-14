@@ -1,4 +1,4 @@
-@extends ('templates.default.master.course-master')
+@extends ('frontend.master.course-master')
 @section ('head.title')
 Enesy | Khóa học lập trình AutoCAD với C# trình độ cơ bản
 @stop
