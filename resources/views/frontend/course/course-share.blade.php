@@ -24,8 +24,8 @@
     <div role="group" class="sound streamContext" aria-label="Track: Sourtaste, Alcia Jose &amp;amp; John Charles - Sauce by Mamluk.com">
 <div class="sound__body">
     <div class="sound__artwork">
-      <a class="sound__coverArt" href="/mamlukmusic/sourtaste-alcia-jose-charles-sauce">
-        <div class="image m-sound image__lightOutline readOnly customImage sc-artwork sc-artwork-placeholder-3 m-loaded" style="height: 100%; width: 100%;"><span style="width: 100%; height: 100%; opacity: 1; background-image: url(&quot;https://i1.sndcdn.com/artworks-000207134876-myne80-t500x500.jpg&quot;);" class="sc-artwork sc-artwork-placeholder-3  image__full g-opacity-transition" aria-label="Sourtaste, Alcia Jose &amp; John Charles - Sauce" aria-role="img"></span>
+      <a class="course__cover" href="/mamlukmusic/sourtaste-alcia-jose-charles-sauce">
+        <div class="image m-sound image__lightOutline readOnly customImage sc-artwork sc-artwork-placeholder-3 m-loaded" style="height: 100%; width: 100%;"><span style="width: 100%; height: 100%; opacity: 1; background-image: url(frontend/images/courses/cad/csharp-thumb.jpg);" class="sc-artwork sc-artwork-placeholder-3  image__full g-opacity-transition" aria-label="Sourtaste, Alcia Jose &amp; John Charles - Sauce" aria-role="img"></span>
 
 </div>
       </a>
@@ -33,50 +33,14 @@
     </div>
 
   <div class="sound__content">
-      <div class="sound__header">
-          <div class="soundTitle sc-clearfix sc-hyphenate sc-type-h2 streamContext"><div class="soundTitle__titleContainer">
-    <div class="soundTitle__playButton  ">
-        <button class="sc-button-play playButton sc-button sc-button-xlarge" tabindex="0" title="Play">Play</button>
-    </div>
-
-  <div class="soundTitle__usernameTitleContainer">
-      <div class="sc-type-light soundTitle__secondary ">
-        <a href="/mamlukmusic" class="soundTitle__username
-              sc-link-light
-            ">
-          <span class="soundTitle__usernameText">Mamluk.com</span>
-        </a>
-              </div>
-        <a class="soundTitle__title sc-link-dark" href="/mamlukmusic/sourtaste-alcia-jose-charles-sauce">
-            <span class="">Sourtaste, Alcia Jose &amp; John Charles - Sauce</span>
-        </a>
-  </div>
-  <div class="soundTitle__additionalContainer">
-      <div class="soundTitle__uploadTime">
-        <time class="relativeTime" title="Posted on 10 February 2017 18:35" datetime="2017-02-10T11:35:03.000Z"><span class="sc-visuallyhidden">Posted 3 hours ago</span><span aria-hidden="true">3 hours</span></time>
-      </div>
-      <div class="soundTitle__tagContainer">
-          <span class="sc-snippet-badge sc-snippet-badge-medium sc-snippet-badge-grey sc-hidden"></span>
-          <span class="sc-snippet-badge sc-snippet-badge-small sc-snippet-badge-grey sc-hidden"></span>
-      </div>
-  </div>
-</div>
-</div>
-      </div>
-
-    <div class="sound__waveform">
-        <div class="waveform loaded"><div class="waveform__layer waveform__scene"><canvas aria-hidden="true" class="g-box-full sceneLayer" width="325" height="60"></canvas><canvas aria-hidden="true" class="g-box-full sceneLayer" width="325" height="60"></canvas></div>
-</div>
-    </div>
-
-
+      Lập trình AutoCAD là một trong những kỹ năng nâng cao nhất của người sử dụng AutoCAD. Lập trình AutoCAD là một trong những kỹ năng nâng cao nhất của người sử dụng AutoCAD. Lập trình AutoCAD là một trong những kỹ năng nâng cao nhất của người sử dụng AutoCAD. Lập trình AutoCAD là một trong những kỹ năng nâng cao nhất của người sử dụng AutoCAD.
   </div>
 </div>
 </div>
   </section>
 
   <section class="g-modal-section sc-clearfix">
-      <h2 class="shareContent__heading g-modal-title-h2">Share</h2>
+      <h2 class="shareContent__heading g-modal-title-h2">Chia sẻ qua</h2>
 
     <div class="socialButtonsPanel"><ul class="sc-list-nostyle sc-clearfix">
     <li class="socialButtonsPanel__shareButton">

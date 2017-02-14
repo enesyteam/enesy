@@ -570,7 +570,8 @@ a.close-modal {
 .g-modal-section {
     background: #FFF;
     padding: 25px;
-    margin-bottom: 5px;
+    /*margin-bottom: 5px;*/
+    border-bottom: 1px solid #ededed;
 }
 .g-tabs-link, .g-tabs-link:visited {
     cursor: pointer;
@@ -620,6 +621,9 @@ img, svg, .sc-artwork {
     -ms-flex: 1;
     flex: 1;
     overflow-x: hidden;
+    font-size: 14px;
+    line-height: 18px;
+    max-height: 150px;
 }
 .image__full, .image {
     text-align: center;
@@ -630,11 +634,11 @@ img, svg, .sc-artwork {
     position: relative;
     margin-right: 15px;
 }
-.sound__coverArt {
+.course__cover {
     background: center center/contain no-repeat;
     display: block;
-    width: 160px;
-    height: 160px;
+    width: 200px;
+    height: 150px;
     z-index: 2;
 }
 .sound__tierIndicator {
