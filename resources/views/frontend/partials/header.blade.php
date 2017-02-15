@@ -71,11 +71,13 @@
                   </li>
                </ul>
                <div class="header-logo-account__user-nav">
-                  <div class="header-logo-account__user-nav-item">
-                     <strong>
-                     <a class="header-logo-account__user-nav-main-link--alpha" href="{{route('user.register')}}" target="_blank" href="{{route('user.login')}}" rel="modal:open"><span>Đăng ký thành viên</span></a>
-                     </strong>
-                  </div>
+                  @if(!Auth::check())
+                     <div class="header-logo-account__user-nav-item">
+                        <strong>
+                        <a class="header-logo-account__user-nav-main-link--alpha" href="{{route('user.register')}}"><span>Đăng ký thành viên</span></a>
+                        </strong>
+                     </div>
+                  @endif
                   <div class="header-logo-account__user-nav-item">
                      <a class="header-logo-account__user-nav-main-link--cart" rel="nofollow" href="//#/cart">
                         <div class="shopping-cart-summary is-empty" data-view="cartCount">
@@ -85,7 +87,11 @@
                      </a>
                   </div>
                   <div class="header-logo-account__user-nav-item">
-                     <a class="header-logo-account__user-nav-main-link--omega" target="_blank" href="{{route('user.login')}}" rel="modal:open">Đăng nhập</a>
+                     @if(Auth::check())
+                        <a class="header-logo-account__user-nav-main-link--omega" href="{{route('user.logout')}}">Thoát</a>
+                     @else
+                        <a class="header-logo-account__user-nav-main-link--omega" href="{{route('user.login')}}" >Đăng nhập</a>
+                     @endif
                   </div>
                </div>
             </nav>
