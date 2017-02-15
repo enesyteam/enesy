@@ -1,5 +1,5 @@
 <?php
-namespace App\Http\Models\backend;
+namespace App\Http\Models;
 /**
  * Created by PhpStorm.
  * User: Dungtd
@@ -18,36 +18,36 @@ class Category extends Model
 
      public function getCategories(){
 
-            $categories=Category::where('parent_id',0)->get();
+        $categories=Category::where('parent_id',0)->get();
 
-            $categories=$this->addRelation($categories);
+        $categories=$this->addRelation($categories);
 
-            return $categories;
+        return $categories;
 
-        }
+    }
 
-        protected function selectChild($id)
-        {
-            $categories=Category::where('parent_id',$id)->get();
+    protected function selectChild($id)
+    {
+        $categories=Category::where('parent_id',$id)->get();
 
-            $categories=$this->addRelation($categories);
+        $categories=$this->addRelation($categories);
 
-            return $categories;
+        return $categories;
 
-        }
+    }
 
-        protected function addRelation($categories){
+    protected function addRelation($categories){
 
-            $categories->map(function ($item, $key) {
-                
-                $sub=$this->selectChild($item->id); 
-                
-                return $item=array_add($item,'subCategory',$sub);
+        $categories->map(function ($item, $key) {
+            
+            $sub=$this->selectChild($item->id); 
+            
+            return $item=array_add($item,'subCategory',$sub);
 
-            });
+        });
 
-            return $categories;
-        }
+        return $categories;
+    }
 
     public function articles()
     {
