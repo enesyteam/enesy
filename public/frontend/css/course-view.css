@@ -98,4 +98,170 @@
     height: 0;
     visibility: hidden;
 }
+#player-playlist .playlist-title {
+    color: #fff;
+    display: inline;
+    font-size: 15px;
+    font-weight: normal;
+}
+#player-playlist .playlist-title a {
+    color: inherit;
+}
+#player-playlist .playlist-details>li {
+    display: inline-block;
+}
+#player-playlist .author-attribution {
+    font-size: 11px;
+}
+#player-playlist .author-attribution a {
+    color: inherit;
+}
+#player-playlist .playlist-info {
+    overflow: hidden;
+    white-space: nowrap;
+    word-wrap: normal;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+}
+#player-playlist .playlist-header-content {
+    font-size: 11px;
+    height: 37px;
+    line-height: 1.5;
+    padding: 15px 5px 8px;
+}
+#player-playlist .playlist-details>li:after {
+    content: '\002022';
+}
+hr, html, i, iframe, img, ins, kbd, label, legend, li, menu, object, ol, p, pre, q, s, samp, small, span, strike, strong, sub {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    background: transparent;
+}
+a {
+    color: #167ac6;
+    cursor: pointer;
+    text-decoration: none;
+}
+#player-playlist .playlist-videos-container {
+    clear: both;
+}
+#player-playlist .playlist-videos-list {
+    background-color: #222;
+    bottom: 0;
+    counter-reset: playlist-video-section;
+    left: 0;
+    overflow: auto;
+    right: 0;
+    position: absolute;
+    top: 60px;
+}
+#player-playlist .playlist-videos-list li {
+    overflow: hidden;
+    padding: 10px 10px 10px 0;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+#player-playlist .playlist-videos-list li .index {
+    font-size: 10px;
+    float: left;
+    line-height: 41px;
+    margin: 0 2px;
+    text-align: center;
+    width: 24px;
+}
+
+#player-playlist .playlist-video {
+    display: block;
+    height: 41px;
+    position: relative;
+}
+#player-playlist .playlist-video .video-thumb {
+    float: left;
+    margin-left: 0;
+    margin-right: 8px;
+}
+.video-thumb {
+    position: relative;
+}
+.yt-thumb-72 {
+    width: 72px;
+}
+.yt-thumb {
+    overflow: hidden;
+    background: #f1f1f1;
+    font-size: 0;
+    vertical-align: middle;
+    display: inline-block;
+}
+.yt-thumb-default {
+    padding-bottom: 56.25%;
+}
+.yt-thumb-poster, .yt-thumb-square, .yt-thumb-feed, .yt-thumb-related-playlist, .yt-thumb-default {
+    display: block;
+    height: auto;
+}
+.yt-thumb-clip {
+    position: absolute;
+    _position: static;
+    bottom: -100px;
+    top: -100px;
+    left: -100px;
+    right: -100px;
+    text-align: center;
+    white-space: nowrap;
+    word-break: normal;
+}
+.yt-thumb-clip img, .yt-thumb-clip .vertical-align {
+    display: inline-block;
+    vertical-align: middle;
+}
+.yt-thumb img {
+    font-size: 13px;
+    outline: none;
+}
+.yt-thumb-clip img, .yt-thumb-clip .vertical-align {
+    display: inline-block;
+    vertical-align: middle;
+}
+.yt-thumb .vertical-align {
+    height: 100%;
+}
+#player-playlist .playlist-video-description {
+    overflow: hidden;
+    position: relative;
+    top: -2px;
+}
+#player-playlist .playlist-video h4 {
+    color: #cacaca;
+    font-size: 13px;
+    font-weight: normal;
+}
+#player-playlist .playlist-videos-list .yt-ui-ellipsis {
+    background-color: #222;
+}
+.webkit .yt-ui-ellipsis-2 {
+    -webkit-line-clamp: 2;
+}
+.webkit .yt-ui-ellipsis {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
+.yt-ui-ellipsis-2 {
+    max-height: 2.6em;
+}
+#player-playlist .video-uploader-byline {
+    color: #767676;
+    font-size: 11px;
+}
+.playlist-videos-list .video-uploader-byline {
+    font-size: 11px;
+    color: #767676;
+}
+#player-playlist .playlist-videos-list li:hover,
+#player-playlist .playlist-videos-list li:hover .yt-ui-ellipsis{background-color:#525252}
+/*Scrollbar*/
+.yt-scrollbar ::-webkit-scrollbar{width:9px;height:9px}.yt-scrollbar ::-webkit-scrollbar-thumb{background:#ccc}.yt-scrollbar ::-webkit-scrollbar-thumb:hover{background:#777}.yt-scrollbar-dark ::-webkit-scrollbar{width:10px;height:9px}.yt-scrollbar-dark ::-webkit-scrollbar-track{border-left-color:#434343;background:#434343;-webkit-box-shadow:inset 0 0 1px #434343}.yt-scrollbar-dark ::-webkit-scrollbar-thumb{border-left-color:#8e8e8e;background:#8e8e8e}.yt-scrollbar-dark ::-webkit-scrollbar-track:hover{-webkit-box-shadow:inset 0 0 1px #000}.yt-scrollbar-dark ::-webkit-scrollbar-thumb:hover{background:#1b1b1b}.yt-scrollbar-wide ::-webkit-scrollbar{width:18px}
+
 
