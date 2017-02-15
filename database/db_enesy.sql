@@ -3,9 +3,9 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 15, 2017 at 07:24 AM
+-- Generation Time: Feb 15, 2017 at 04:05 PM
 -- Server version: 10.1.19-MariaDB
--- PHP Version: 7.0.13
+-- PHP Version: 5.6.28
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -59,6 +59,7 @@ INSERT INTO `tbl_categories` (`id`, `parent_id`, `title`, `alias`, `description`
 CREATE TABLE `tbl_course` (
   `id` int(11) NOT NULL,
   `parent_cat_id` int(11) NOT NULL,
+  `picture` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `cat_id` int(11) NOT NULL,
   `title` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `introtext` varchar(500) COLLATE utf8_unicode_ci NOT NULL,
@@ -76,11 +77,11 @@ CREATE TABLE `tbl_course` (
 -- Dumping data for table `tbl_course`
 --
 
-INSERT INTO `tbl_course` (`id`, `parent_cat_id`, `cat_id`, `title`, `introtext`, `content`, `price`, `love`, `num_of_learn`, `time_learn`, `mentor_id`, `create_date`, `updated_at`) VALUES
-(1, 0, 2, '1111 đã edit', '1111- đã edit', '11111- đã edit', 0, 0, 0, 0, 0, 1484621541, 1484621566),
-(2, 0, 1, 'dfdsf', 'sdfdsf', 'dfds', 0, 0, 0, 0, 0, 1484621584, 0),
-(3, 0, 1, 'ểwr', 'ểwr', 'ểwr', 0, 0, 0, 0, 0, 1484621603, 0),
-(4, 1, 2, 'lập trình F.U.C.K Linh miu', 'fuck là một nghệ thuật...', 'fuck là một nghệ thuật và người fuck là một nghệ sĩ', NULL, NULL, NULL, NULL, 11, 1487136918, 1487138150);
+INSERT INTO `tbl_course` (`id`, `parent_cat_id`, `picture`, `cat_id`, `title`, `introtext`, `content`, `price`, `love`, `num_of_learn`, `time_learn`, `mentor_id`, `create_date`, `updated_at`) VALUES
+(1, 0, '', 2, '1111 đã edit', '1111- đã edit', '11111- đã edit', 0, 0, 0, 0, 0, 1484621541, 1484621566),
+(2, 0, '', 1, 'dfdsf', 'sdfdsf', 'dfds', 0, 0, 0, 0, 0, 1484621584, 0),
+(3, 0, '', 1, 'ểwr', 'ểwr', 'ểwr', 0, 0, 0, 0, 0, 1484621603, 0),
+(4, 1, '', 2, 'lập trình F.U.C.K Linh miu', 'fuck là một nghệ thuật...', 'fuck là một nghệ thuật và người fuck là một nghệ sĩ', NULL, NULL, NULL, NULL, 11, 1487136918, 1487138150);
 
 -- --------------------------------------------------------
 
@@ -152,8 +153,8 @@ CREATE TABLE `tbl_member` (
   `username` varchar(256) DEFAULT NULL,
   `password` varchar(256) DEFAULT NULL,
   `last_name` varchar(255) DEFAULT NULL,
-  `first_name` varchar(255) NOT NULL,
-  `middle_name` varchar(255) NOT NULL,
+  `first_name` varchar(255) DEFAULT NULL,
+  `middle_name` varchar(255) DEFAULT NULL,
   `updated_at` date DEFAULT NULL,
   `status` tinyint(4) DEFAULT '2' COMMENT '1.approved 2.waiting review 3.in review 4. rejected',
   `information_status` tinyint(2) DEFAULT '0' COMMENT '1. Da cap nhat thong tin 2.Chua cap nhat thong tin',
