@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 14, 2017 at 10:44 AM
+-- Generation Time: Feb 15, 2017 at 03:31 AM
 -- Server version: 10.1.19-MariaDB
 -- PHP Version: 7.0.13
 
@@ -55,11 +55,17 @@ INSERT INTO `tbl_categories` (`id`, `parent_id`, `title`, `alias`, `description`
 --
 
 CREATE TABLE `tbl_course` (
+  `cat_id1` int(11) NOT NULL,
   `id` int(11) NOT NULL,
   `cat_id` int(11) NOT NULL,
   `title` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `introtext` varchar(500) COLLATE utf8_unicode_ci NOT NULL,
   `content` text COLLATE utf8_unicode_ci NOT NULL,
+  `price` double NOT NULL,
+  `love` int(11) NOT NULL,
+  `num_of_learn` int(11) NOT NULL,
+  `time_learn` int(11) NOT NULL,
+  `mentor_id` int(11) NOT NULL,
   `create_date` int(11) NOT NULL,
   `updated_at` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
@@ -68,10 +74,10 @@ CREATE TABLE `tbl_course` (
 -- Dumping data for table `tbl_course`
 --
 
-INSERT INTO `tbl_course` (`id`, `cat_id`, `title`, `introtext`, `content`, `create_date`, `updated_at`) VALUES
-(1, 2, '1111 đã edit', '1111- đã edit', '11111- đã edit', 1484621541, 1484621566),
-(2, 1, 'dfdsf', 'sdfdsf', 'dfds', 1484621584, 0),
-(3, 1, 'ểwr', 'ểwr', 'ểwr', 1484621603, 0);
+INSERT INTO `tbl_course` (`cat_id1`, `id`, `cat_id`, `title`, `introtext`, `content`, `price`, `love`, `num_of_learn`, `time_learn`, `mentor_id`, `create_date`, `updated_at`) VALUES
+(0, 1, 2, '1111 đã edit', '1111- đã edit', '11111- đã edit', 0, 0, 0, 0, 0, 1484621541, 1484621566),
+(0, 2, 1, 'dfdsf', 'sdfdsf', 'dfds', 0, 0, 0, 0, 0, 1484621584, 0),
+(0, 3, 1, 'ểwr', 'ểwr', 'ểwr', 0, 0, 0, 0, 0, 1484621603, 0);
 
 -- --------------------------------------------------------
 
@@ -170,7 +176,6 @@ CREATE TABLE `tbl_member` (
   `language_navite` varchar(225) DEFAULT NULL,
   `short_int` varchar(500) DEFAULT NULL,
   `long_int` varchar(500) DEFAULT NULL,
-  `tbl_membercol` varchar(45) DEFAULT NULL,
   `graduate_from` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -178,19 +183,19 @@ CREATE TABLE `tbl_member` (
 -- Dumping data for table `tbl_member`
 --
 
-INSERT INTO `tbl_member` (`id`, `email`, `username`, `password`, `last_name`, `first_name`, `middle_name`, `updated_at`, `status`, `information_status`, `info`, `create_date`, `create_user`, `modify_date`, `modify_user`, `remember_token`, `avatar`, `is_teaching`, `is_learning`, `sex`, `dob`, `local_time_id`, `location_id`, `currency`, `social`, `phone`, `address`, `technical_skill`, `japanese_skill`, `language_navite`, `short_int`, `long_int`, `tbl_membercol`, `graduate_from`) VALUES
-(2, 'dannt@gmail.com', 'dannt', '$2y$10$TCc1RO0i2gU2P3OMJ62o5uAk.02UFipaRCptEhjZx2EfXbmWgnZee', 'Nguyen', 'Dan', 'The', NULL, 2, 1, NULL, 2016, NULL, 2016, NULL, NULL, 'upload/image/2016/12/30/1482963782-thumbnail.jpg', 1, 0, 'Male', '1988-04-14', NULL, NULL, 'VND', NULL, '0987654321', 'Yen My, Hung Yen', 'C++', 'N3', NULL, 'I am a IT engineer', 'I graduated HUST in 2010 and have more than 5 years experience working with C++', NULL, 'Hanoi University of Scientist and Technology'),
-(4, 'davidnguyen@gmail.com', 'david', '$2y$10$0GMr7RYgtE2jmYlt3NWAJ.7nQ0MKZYENt6LqbrI.RBP9NjzIUKCIi', 'Nguyen', 'David', 'Sandro', NULL, 1, 1, NULL, 2016, NULL, 2017, NULL, NULL, 'upload/image/2017/01/13/1482963782-thumbnail.jpg', 0, 1, 'Female', '1987-09-08', NULL, 1, 'VND', NULL, '0123456789', 'Thanh xuan, Ha noi', 'Java', 'N1', NULL, 'ajggjaga', NULL, NULL, 'FPT'),
-(5, 'ducnvna@gmail.com', 'ducnv', '$2y$10$gwiqKsKkdSseJj8ZAxmJi.nRKF.0UvkevolcOgLH7Tf7Zbvre5S6K', 'Duc', 'Nguyen', 'Van', NULL, 2, 1, NULL, 2016, NULL, 2016, NULL, NULL, 'backend/image/default_avatar_male.jpg', 1, 0, 'Male', '2016-12-06', NULL, NULL, 'VND', NULL, '0976460950', 'Ha Noi', 'blue', 'N2', NULL, NULL, NULL, NULL, 'Công nghệ thông tin'),
-(6, 'ducnvna2@gmail.com', 'ducnvna', '$2y$10$xhSPpPPYc52K5mHLGf4o4ORHcKW0GhMkTAgAdhjqKIG9z4vaOU8lC', 'Duc1', 'Nguyen', 'Van', NULL, 2, 1, NULL, 2016, NULL, 2016, NULL, NULL, 'backend/image/default_avatar_male.jpg', 0, 1, 'Male', '2016-12-08', 1, 1, 'USD', '322', '1111', 'dfdsf', 'Java', 'N2', NULL, '4324324', '34324324', NULL, 'df'),
-(7, 'tungsonchelsea@gmail.com', 'tungson', '$2y$10$r1d50gRbQggVSbVmUlhP9OpqCpyOWJhMehMd9.TDfnH1lbgAYDMcC', 'tung son', 'nguyen', 'tung', NULL, 2, 1, NULL, 2016, NULL, 2016, NULL, NULL, 'backend/image/default_avatar_male.jpg', 0, 1, 'Male', '1998-12-02', NULL, NULL, 'VND', NULL, '0984246691', 'Ha Noi', 'blue', 'N2', NULL, NULL, NULL, NULL, 'PTIT'),
-(8, 'dungtd1308@gmail.com', 'dungtd13', '$2y$10$9VNQhXCsLvnA/rAAe52xJ.UYlQGDEkAsidzcPXFlgjtaUZmcLB43a', 'Dung', 'Tran Duc', '3213123', NULL, 2, 1, NULL, 2016, NULL, 2017, NULL, NULL, 'upload/image/2017/01/03/dungtd2_1483428167.jpg', 0, 1, 'Male', '1970-01-01', NULL, NULL, 'VND', NULL, '213123123', '321312312', '1', 'N1', NULL, NULL, NULL, NULL, '3123123'),
-(9, 'ds90@gmail.com', 'ds90', '$2y$10$OlmI10kIo0JkgieSmbFmkuG7gsji4tG04OFqcLInSVVhfTeovNGgm', 'Đỗ Hoàng', 'Sơn', 'dsadsadas', NULL, 2, 1, NULL, 2017, NULL, 2017, NULL, NULL, 'backend/image/default_avatar_male.jpg', 0, 1, 'Male', '1990-08-08', NULL, 1, 'VND', NULL, '011111111111', 'dasdasdasd', '2', 'N2', NULL, 'đâs', NULL, NULL, 'dsdasdsad'),
-(10, 'ducnv1@gmail.com', 'ducnv1', '$2y$10$vh9qY34ES.HfQ5B6svImxOjm0dOCeqmlC1hpBAoO3SK4LJ/81Kib6', 'Van', 'Nguyen', 'Duc', NULL, 2, 1, NULL, 2017, NULL, 2017, NULL, NULL, 'backend/image/default_avatar_male.jpg', 0, 1, 'Male', '1970-01-01', NULL, NULL, 'VND', NULL, '0976460950', 'Cầu giấy - Hà Nội', '2', 'N2', NULL, NULL, NULL, NULL, 'dđ'),
-(11, 'ttanhst@gmail.com', 'anhtt', '$2y$10$D3vTQtpUboKyxUSvT.Xnse723bzo7W6lijds9qUlQxrzVUMVyCiPa', 'Anh', 'Tran', 'Tuan', NULL, 1, 1, '', 20170109, 'ducnvna', 2017, 'ducnvna@gmail.com', 'anhtt', 'upload/image/2017/01/09/anhtt_1483949505.jpg', 1, 0, 'Male', '1977-01-01', NULL, NULL, 'VND', NULL, '0123', 'My dinh', '1', 'N1', NULL, NULL, NULL, NULL, 'Hanoi'),
-(14, 'nguyendatbn90@gmail.com', 'kenbn9x', '$2y$10$s19ZTJlroZtX2k3DvbfWNeGSK8ZUzHV/ULwjSrhZ7aolJW.r2DZs.', 'Nguyễn', 'Nguyễn', 'Tiến', NULL, 2, 1, NULL, 2017, NULL, 2017, NULL, NULL, 'upload/image/2017/01/18/kenbn9x_1484728515.jpg', 1, 0, 'Male', '1990-03-10', NULL, NULL, 'VND', NULL, '0987654321', 'Bắc Ninh', '1', 'N5', NULL, NULL, NULL, NULL, 'HUMG'),
-(15, 'datkzz@gmail.com', 'nguyen', '$2y$10$5NGCq59BtXHDy5rk/tTKtu5HfJSUNFZPL2JzwmOYm0iPCmJ7CWyWW', 'nguyen', 'dat', '', NULL, 1, 0, NULL, 2017, NULL, 2017, NULL, NULL, 'backend/image/default_avatar_male.jpg', 0, 1, NULL, NULL, NULL, NULL, 'VND', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(16, 'dungtd130892@gmail.com', 'dungtd', '$2y$10$Jlwd5XYZM74R5N9ypHqPK.bSSZUgHmPEHda1VNFw6DriOAp0lMsxi', 'Dung', 'Tran Duc', 'opkljkjkj', NULL, 2, 1, NULL, 2017, NULL, 2017, NULL, NULL, 'backend/image/default_avatar_male.jpg', 0, 1, 'Male', '1970-01-01', NULL, NULL, 'VND', NULL, '987654321', 'HN', '1', 'N2', NULL, NULL, NULL, NULL, 'PTIT');
+INSERT INTO `tbl_member` (`id`, `email`, `username`, `password`, `last_name`, `first_name`, `middle_name`, `updated_at`, `status`, `information_status`, `info`, `create_date`, `create_user`, `modify_date`, `modify_user`, `remember_token`, `avatar`, `is_teaching`, `is_learning`, `sex`, `dob`, `local_time_id`, `location_id`, `currency`, `social`, `phone`, `address`, `technical_skill`, `japanese_skill`, `language_navite`, `short_int`, `long_int`, `graduate_from`) VALUES
+(2, 'dannt@gmail.com', 'dannt', '$2y$10$TCc1RO0i2gU2P3OMJ62o5uAk.02UFipaRCptEhjZx2EfXbmWgnZee', 'Nguyen', 'Dan', 'The', NULL, 2, 1, NULL, 2016, NULL, 2016, NULL, NULL, 'upload/image/2016/12/30/1482963782-thumbnail.jpg', 1, 0, 'Male', '1988-04-14', NULL, NULL, 'VND', NULL, '0987654321', 'Yen My, Hung Yen', 'C++', 'N3', NULL, 'I am a IT engineer', 'I graduated HUST in 2010 and have more than 5 years experience working with C++', 'Hanoi University of Scientist and Technology'),
+(4, 'davidnguyen@gmail.com', 'david', '$2y$10$0GMr7RYgtE2jmYlt3NWAJ.7nQ0MKZYENt6LqbrI.RBP9NjzIUKCIi', 'Nguyen', 'David', 'Sandro', NULL, 1, 1, NULL, 2016, NULL, 2017, NULL, NULL, 'upload/image/2017/01/13/1482963782-thumbnail.jpg', 0, 1, 'Female', '1987-09-08', NULL, 1, 'VND', NULL, '0123456789', 'Thanh xuan, Ha noi', 'Java', 'N1', NULL, 'ajggjaga', NULL, 'FPT'),
+(5, 'ducnvna@gmail.com', 'ducnv', '$2y$10$gwiqKsKkdSseJj8ZAxmJi.nRKF.0UvkevolcOgLH7Tf7Zbvre5S6K', 'Duc', 'Nguyen', 'Van', NULL, 2, 1, NULL, 2016, NULL, 2016, NULL, NULL, 'backend/image/default_avatar_male.jpg', 1, 0, 'Male', '2016-12-06', NULL, NULL, 'VND', NULL, '0976460950', 'Ha Noi', 'blue', 'N2', NULL, NULL, NULL, 'Công nghệ thông tin'),
+(6, 'ducnvna2@gmail.com', 'ducnvna', '$2y$10$xhSPpPPYc52K5mHLGf4o4ORHcKW0GhMkTAgAdhjqKIG9z4vaOU8lC', 'Duc1', 'Nguyen', 'Van', NULL, 2, 1, NULL, 2016, NULL, 2016, NULL, NULL, 'backend/image/default_avatar_male.jpg', 0, 1, 'Male', '2016-12-08', 1, 1, 'USD', '322', '1111', 'dfdsf', 'Java', 'N2', NULL, '4324324', '34324324', 'df'),
+(7, 'tungsonchelsea@gmail.com', 'tungson', '$2y$10$r1d50gRbQggVSbVmUlhP9OpqCpyOWJhMehMd9.TDfnH1lbgAYDMcC', 'tung son', 'nguyen', 'tung', NULL, 2, 1, NULL, 2016, NULL, 2016, NULL, NULL, 'backend/image/default_avatar_male.jpg', 0, 1, 'Male', '1998-12-02', NULL, NULL, 'VND', NULL, '0984246691', 'Ha Noi', 'blue', 'N2', NULL, NULL, NULL, 'PTIT'),
+(8, 'dungtd1308@gmail.com', 'dungtd13', '$2y$10$9VNQhXCsLvnA/rAAe52xJ.UYlQGDEkAsidzcPXFlgjtaUZmcLB43a', 'Dung', 'Tran Duc', '3213123', NULL, 2, 1, NULL, 2016, NULL, 2017, NULL, NULL, 'upload/image/2017/01/03/dungtd2_1483428167.jpg', 0, 1, 'Male', '1970-01-01', NULL, NULL, 'VND', NULL, '213123123', '321312312', '1', 'N1', NULL, NULL, NULL, '3123123'),
+(9, 'ds90@gmail.com', 'ds90', '$2y$10$OlmI10kIo0JkgieSmbFmkuG7gsji4tG04OFqcLInSVVhfTeovNGgm', 'Đỗ Hoàng', 'Sơn', 'dsadsadas', NULL, 2, 1, NULL, 2017, NULL, 2017, NULL, NULL, 'backend/image/default_avatar_male.jpg', 0, 1, 'Male', '1990-08-08', NULL, 1, 'VND', NULL, '011111111111', 'dasdasdasd', '2', 'N2', NULL, 'đâs', NULL, 'dsdasdsad'),
+(10, 'ducnv1@gmail.com', 'ducnv1', '$2y$10$vh9qY34ES.HfQ5B6svImxOjm0dOCeqmlC1hpBAoO3SK4LJ/81Kib6', 'Van', 'Nguyen', 'Duc', NULL, 2, 1, NULL, 2017, NULL, 2017, NULL, NULL, 'backend/image/default_avatar_male.jpg', 0, 1, 'Male', '1970-01-01', NULL, NULL, 'VND', NULL, '0976460950', 'Cầu giấy - Hà Nội', '2', 'N2', NULL, NULL, NULL, 'dđ'),
+(11, 'ttanhst@gmail.com', 'anhtt', '$2y$10$D3vTQtpUboKyxUSvT.Xnse723bzo7W6lijds9qUlQxrzVUMVyCiPa', 'Anh', 'Tran', 'Tuan', NULL, 1, 1, '', 20170109, 'ducnvna', 2017, 'ducnvna@gmail.com', 'anhtt', 'upload/image/2017/01/09/anhtt_1483949505.jpg', 1, 0, 'Male', '1977-01-01', NULL, NULL, 'VND', NULL, '0123', 'My dinh', '1', 'N1', NULL, NULL, NULL, 'Hanoi'),
+(14, 'nguyendatbn90@gmail.com', 'kenbn9x', '$2y$10$s19ZTJlroZtX2k3DvbfWNeGSK8ZUzHV/ULwjSrhZ7aolJW.r2DZs.', 'Nguyễn', 'Nguyễn', 'Tiến', NULL, 2, 1, NULL, 2017, NULL, 2017, NULL, NULL, 'upload/image/2017/01/18/kenbn9x_1484728515.jpg', 1, 0, 'Male', '1990-03-10', NULL, NULL, 'VND', NULL, '0987654321', 'Bắc Ninh', '1', 'N5', NULL, NULL, NULL, 'HUMG'),
+(15, 'datkzz@gmail.com', 'nguyen', '$2y$10$5NGCq59BtXHDy5rk/tTKtu5HfJSUNFZPL2JzwmOYm0iPCmJ7CWyWW', 'nguyen', 'dat', '', NULL, 1, 0, NULL, 2017, NULL, 2017, NULL, NULL, 'backend/image/default_avatar_male.jpg', 0, 1, NULL, NULL, NULL, NULL, 'VND', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(16, 'dungtd130892@gmail.com', 'dungtd', '$2y$10$Jlwd5XYZM74R5N9ypHqPK.bSSZUgHmPEHda1VNFw6DriOAp0lMsxi', 'Dung', 'Tran Duc', 'opkljkjkj', NULL, 2, 1, NULL, 2017, NULL, 2017, NULL, NULL, 'backend/image/default_avatar_male.jpg', 0, 1, 'Male', '1970-01-01', NULL, NULL, 'VND', NULL, '987654321', 'HN', '1', 'N2', NULL, NULL, NULL, 'PTIT');
 
 -- --------------------------------------------------------
 
@@ -224,7 +229,7 @@ CREATE TABLE `tbl_user` (
 
 INSERT INTO `tbl_user` (`id`, `email`, `mobile`, `username`, `password`, `full_name`, `updated_at`, `active`, `info`, `create_date`, `create_user`, `modify_date`, `modify_user`, `remember_token`, `type_admin`, `permission`, `avatar`) VALUES
 (1, 'cc@gmail.com', '', 'dungtd', '$2y$10$jukLMuBDS8bNuWfHXWuwe.RAyqZyFA6OUclOgPl3vQZQAapfvP.YW', NULL, '2016-07-08', 1, NULL, NULL, NULL, NULL, NULL, 'pWYe1tPoEVRsIHSyYOQ09lNVb3kitLfAy6Q7ha2Z4UnA1M1v6ueDaxmu6sF5', NULL, 0, ''),
-(2, 'ducnvna@gmail.com', '', 'ducnvna', '$2y$10$wBqR1wNApDE6mZEJtmqzYOf04DYrAMd7Q3qRWPCTEGzGlE2HmRcee', 'Nguyen Van Duc', '2017-01-18', 0, 'xxxxxxxxxxxxxxxxxxxx', 2016, NULL, 2016, 'ducnvna', 'kh1zHJXOO5toCVlRcjQ5JfZtjWgmIrPLqFBu01S9K7Iz4q05TniMbZEoISV6', NULL, 0, '2016/07/12/T033092141_Avatar_3.jpg'),
+(2, 'ducnvna@gmail.com', '', 'ducnvna', '$2y$10$wBqR1wNApDE6mZEJtmqzYOf04DYrAMd7Q3qRWPCTEGzGlE2HmRcee', 'Nguyen Van Duc', '2017-01-18', 0, 'xxxxxxxxxxxxxxxxxxxx', 2016, NULL, 2016, 'ducnvna', '2qANTX3ixV4TNpCFycVnLiyXV7AuOEHpzkVNHHHbQ24zGcTtOuabRcom9Kjm', NULL, 0, '2016/07/12/T033092141_Avatar_3.jpg'),
 (3, 'ducnvn1a@gmail.com', '', 'ducnv1', '$2y$10$B8SSZy07BJSidgrjSiy50u2mvSZHxGCaWDdec6f8n1vjvWW9nbBmy', '113234324', NULL, 0, '', 2016, 'ducnvna', 2016, 'ducnvna', NULL, NULL, 0, '');
 
 --
