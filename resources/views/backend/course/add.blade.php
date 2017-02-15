@@ -44,7 +44,8 @@
 
       <div class="form-group">
         <label class="required">Introtext</label>
-        <input class="form-control" name="introtext" type="text" id="introtext" min="1" data-bind="value:introtext" required="">
+       <!-- <input class="form-control" name="introtext" type="text" id="introtext" min="1" data-bind="value:introtext" required=""> -->
+       <textarea class="form-control" name="introtext"  id="introtext"  data-bind="value:introtext" required=""></textarea>
         <div class="form-group has-error">
           <label lass="control-label" for="inputError" style="color:red;" >{{ $errors->first('introtext') }}</label>
         </div>              
@@ -52,7 +53,7 @@
 
       <div class="form-group">
         <label class="required">Content</label>
-        <input class="form-control" name="content" type="text" id="content" min="1" data-bind="value:exam_time" required="">
+        <textarea class="form-control" name="content"  id="content"  data-bind="value:content"></textarea>
         <div class="form-group has-error">
           <label lass="control-label" for="inputError" style="color:red;" >{{ $errors->first('content') }}</label>
         </div>              
