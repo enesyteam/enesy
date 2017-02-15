@@ -161,6 +161,11 @@ Route::group(array('namespace' => 'frontend' , 'middleware' => 'web'), function 
 		'uses'	=>	'UserController@register'
 		]);
 
+	Route::post('doRegister',[
+		'as'	=>	'user.doregister',
+		'uses'	=>	'UserController@doRegister'
+		]);
+
 	/*Author*/
 	Route::get('giang-vien',[
 		'as'	=>	'user.author',

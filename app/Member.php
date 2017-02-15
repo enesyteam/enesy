@@ -9,6 +9,7 @@
 namespace App;
 
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Validator;
 
 class Member extends Authenticatable
 {
@@ -35,4 +36,18 @@ class Member extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+     protected function  validatordoRegister(array $data){
+        $rules = [
+            'first_name' => 'required',
+            'last_name' => 'required',
+            'middle_name' => 'required',
+            'username' => 'required',
+            'email' => 'required|email',
+            'password' => 'required|min:6|max:12',
+            'confirm-password' => 'required|min:6|max:12|same:password',
+        ];
+
+        return Validator::make($data , $rules);
+    }
 }

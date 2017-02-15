@@ -62,10 +62,19 @@ class UserController extends Controller
     {
         $data_return = [];
 
-        $data = Request::only('email' , 'password' , 'username', 'first_name' , 'last_name' , 'middle_name');
+        $data = Request::only('email' , 'password' , 'username', 'first_name' , 'last_name' , 'middle_name' , 'confirm-password');
+
+        
+
+        $validator = Member::validatordoRegister($data);
+
+        if($validator->fails()){
+            return Redirect::route('user.register')
+                ->withErrors($validator)
+                ->withInput(Input::except('password'));
+        }
 
         $data['password'] = Hash::make($data['password']);
-
         try{
             $checkStatus = Member::create($data);
 

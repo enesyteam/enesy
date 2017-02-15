@@ -125,9 +125,6 @@
                                 </div>
                                 {{--<input type="submit" name="commit" value="Đăng nhập hệ thống" class="js-sign-in__submit e-btn--3d -color-primary -size-m -width-full h-mb2 h-mt1">--}}
                                 {{ Form::submit('Đăng nhập hệ thống' , array('class' => 'js-sign-in__submit e-btn--3d -color-primary -size-m -width-full h-mb2 h-mt1' , 'id'=>'loginButton')) }}
-                                <p>
-
-                                </p>
                             </div>
                             <div class="sso-form__fallback">
                                 <a class="e-btn--3d -color-primary -size-m" href="#">Đăng nhập hệ thống</a>
