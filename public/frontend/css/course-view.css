@@ -261,7 +261,176 @@ a {
 }
 #player-playlist .playlist-videos-list li:hover,
 #player-playlist .playlist-videos-list li:hover .yt-ui-ellipsis{background-color:#525252}
+.grid-container .watch{margin-top: -35px;}
+#player-playlist :not(.watch-queue-nav) .playlist-videos-list li.currently-playing {
+    background-color: #3a3a3a;
+    height: 61px;
+}
+#player-playlist :not(.watch-queue-nav) .playlist-videos-list li.currently-playing .yt-ui-ellipsis{background-color:#3a3a3a}
 /*Scrollbar*/
 .yt-scrollbar ::-webkit-scrollbar{width:9px;height:9px}.yt-scrollbar ::-webkit-scrollbar-thumb{background:#ccc}.yt-scrollbar ::-webkit-scrollbar-thumb:hover{background:#777}.yt-scrollbar-dark ::-webkit-scrollbar{width:10px;height:9px}.yt-scrollbar-dark ::-webkit-scrollbar-track{border-left-color:#434343;background:#434343;-webkit-box-shadow:inset 0 0 1px #434343}.yt-scrollbar-dark ::-webkit-scrollbar-thumb{border-left-color:#8e8e8e;background:#8e8e8e}.yt-scrollbar-dark ::-webkit-scrollbar-track:hover{-webkit-box-shadow:inset 0 0 1px #000}.yt-scrollbar-dark ::-webkit-scrollbar-thumb:hover{background:#1b1b1b}.yt-scrollbar-wide ::-webkit-scrollbar{width:18px}
-
+/*Watch header*/
+#watch-header {
+    min-height: 150px;
+    padding-bottom: 5px;
+    position: relative;
+}
+.yt-card.yt-card-has-padding {
+    padding: 15px;
+}
+.yt-card {
+    margin: 0 0 10px;
+    border: 0;
+    background: #fff;
+    box-shadow: 0 1px 2px rgba(0,0,0,.1);
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+#watch7-main {
+    position: relative;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+#watch7-content {
+    width: 640px;
+}
+#watch7-content {
+    z-index: 0;
+}
+.watch-main-col {
+    clear: left;
+    float: left;
+    width: 640px;
+}
+#watch7-headline h1 {
+    line-height: normal;
+    word-wrap: break-word;
+}
+.watch-title-container {
+    vertical-align: top;
+    display: inline-block;
+    /*width: 75%;*/
+}
+#watch7-headline h1 {
+    font-size: 20px;
+    font-weight: normal;
+    color: #000;
+    line-height: normal;
+    word-wrap: break-word;
+}
+/*User header*/
+#watch7-user-header {
+    position: relative;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    overflow: hidden;
+}
+#watch-header .yt-user-photo {
+    float: left;
+}
+.video-thumb {
+    position: relative;
+}
+.yt-thumb-48 {
+    width: 48px;
+}
+.yt-thumb {
+    overflow: hidden;
+    background: #f1f1f1;
+    font-size: 0;
+    vertical-align: middle;
+    display: inline-block;
+}
+.yt-thumb-square {
+    padding-bottom: 100%;
+}
+.yt-thumb-poster, .yt-thumb-square, .yt-thumb-feed, .yt-thumb-related-playlist, .yt-thumb-default {
+    display: block;
+    height: auto;
+}
+.yt-thumb-clip img, .yt-thumb-clip .vertical-align {
+    display: inline-block;
+    vertical-align: middle;
+}
+.yt-thumb img {
+    font-size: 13px;
+    outline: none;
+}
+#watch-header .yt-user-info a {
+    display: inline-block;
+    height: 22px;
+    color: #333;
+    font-weight: 500;
+    max-width: 315px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: top;
+}
+#watch-header .yt-user-info {
+    margin-left: 58px;
+    font-size: 13px;
+    white-space: nowrap;
+    width: 380px;
+}
+#watch-header .yt-user-info a {
+    display: inline-block;
+    height: 22px;
+    color: #333;
+    font-weight: 500;
+    max-width: 315px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: top;
+}
+/*Watch description*/
+#watch-description {
+    color: #333;
+    line-height: 14px;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+.watch-time-text {
+    vertical-align: middle;
+    font-size: 14px;
+}
+#watch-description-text{
+    font-size: 13px;
+    margin-top: 10px;
+    line-height: 18px;
+}
+/*Comments*/
+.comment-section-header-renderer {
+    padding: 0 0 20px;
+    text-transform: uppercase;
+    font-size: 13px;
+    color: #555;
+}
+strong, b {
+    font-weight: 500;
+}
+.comment-section-header-renderer .alternate-content-link {
+    margin-left: 15px;
+}
+#browse-items-primary .item-section>li>.yt-lockup-tile, .branded-page-box, .branded-page-box-padding {
+    padding: 15px;
+}
+/*Sidebar*/
+#watch7-sidebar {
+    margin-left: 650px;
+}
+#watch7-sidebar {
+    margin-bottom: 20px;
+    margin-top: -340px;
+    position: relative;
+    float: left;
+}
+#watch7-sidebar .watch-sidebar-section:last-child {
+    margin-bottom: 0;
+}
+#watch7-sidebar .watch-sidebar-section {
+    position: relative;
+    z-index: 2;
+    margin: 0 0 15px 5px;
+}
 
