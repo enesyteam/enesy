@@ -8958,4 +8958,8 @@ canvas.round {
   display: table-cell;
   max-width: 220px;
 }
+.required:after {
+    content: " *";
+    color: #f00;
+}
 /*# sourceMappingURL=styles.css.map */

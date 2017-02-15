@@ -4,11 +4,12 @@ namespace App\Http\Controllers\backend;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input as Input;
-use App\Http\Models\backend\Category;
+use App\Http\Models\Category;
+use App\Http\Models\Member;
 use Illuminate\Support\Facades\View;
-use App\Http\Models\backend\Course;
-use App\Http\Models\backend\Lesson;
-use App\Http\Models\backend\LessonDoc;
+use App\Http\Models\Course;
+use App\Http\Models\Lesson;
+use App\Http\Models\LessonDoc;
 use Illuminate\Support\Facades\Redirect;
 use DB;
 use Cache;
@@ -62,16 +63,32 @@ class CourseController extends Controller
     function add(Request $request) {
 
         $this->layout->meta_title='Add New Course';
-
-        $Category = new Category;
-        $all_category = $Category->getCategories(); 
-
+        /*get list category*/
+        $all_category = Category::where('status', 1)->orderBy('parent_id','ASC')->orderBy('id','DESC')->get(); 
+        $listCat = array();
+        foreach ($all_category as $cat) {
+            if($cat->parent_id == 0) {
+                $listCat[$cat->id]["title"] = $cat->title;
+            } else {
+                $listCat[$cat->parent_id]['data'][] = $cat;
+            }
+            
+        }
+        /*get list teacher*/
+        $listTeacher = Member::select('id','last_name','first_name','middle_name')
+                        ->where('status',1)
+                        ->where('is_teaching',1)
+                        ->orderBy('id','ASC')
+                        ->get();
 
        if($request->isMethod('post')){
-            $data                   = $request->all();
+            $data                     = $request->all();
+            $cat                      = explode("-",$data['category']);
             $course                   = new Course(); 
             $course->title            = $data["title"];      
-            $course->cat_id           = $data["category"];     
+            $course->parent_cat_id    = $cat[0];  
+            $course->cat_id           = $cat[1];
+            $course->mentor_id        = $data['mentor_id'];       
             $course->introtext        = $data["introtext"];      
             $course->content          = $data["content"];
             $course->create_date      = time();
@@ -82,34 +99,49 @@ class CourseController extends Controller
 
        }
 
-        $this->layout->content = View::make('backend.course.add',array('all_category' => $all_category));
+        $this->layout->content = View::make('backend.course.add',array('listCat' => $listCat, 'listTeacher'=>$listTeacher));
     }
 
      function edit($id,Request $request) {
         $data = array();
-        $category     = new Category;
-        $all_category = $category->getCategories(); 
-        $data['all_category'] = $all_category;
-        $course                 = Course::find($id);
+        /*get list category*/
+        $all_category = Category::where('status', 1)->orderBy('parent_id','ASC')->orderBy('id','DESC')->get(); 
+        $listCat = array();
+        foreach ($all_category as $cat) {
+            if($cat->parent_id == 0) {
+                $listCat[$cat->id]["title"] = $cat->title;
+            } else {
+                $listCat[$cat->parent_id]['data'][] = $cat;
+            }
+            
+        }
+        /*get list teacher*/
+        $listTeacher = Member::select('id','last_name','first_name','middle_name')
+                        ->where('status',1)
+                        ->where('is_teaching',1)
+                        ->orderBy('id','ASC')
+                        ->get();
+        $course = Course::find($id);
         if(!$course){
             echo "Not found Record!!";
             exit();
-        }
-        $data['course'] = $course;         
+        }        
 
         if($request->isMethod('post')){
-           $data                     = $request->all();
-           $course->id               = $data["id"];   
-           $course->title            = $data["title"];      
-           $course->cat_id           = $data["category"];      
-           $course->introtext        = $data["introtext"];      
-           $course->content          = $data["content"];
-           $course->updated_at       = time();
-           $course->save(['timestamps' => false]);
+            $data                     = $request->all();
+            $cat                      = explode("-",$data['category']);
+            $course->title            = $data["title"];      
+            $course->parent_cat_id    = $cat[0];  
+            $course->cat_id           = $cat[1];
+            $course->mentor_id        = $data['mentor_id'];       
+            $course->introtext        = $data["introtext"];      
+            $course->content          = $data["content"];
+            $course->updated_at       = time();
+            $course->save(['timestamps' => false]);
             return Redirect::to('/admin/course');
        }
         $this->layout->meta_title='Edit Course';
-        $this->layout->content = View::make('backend.course.edit',$data);
+        $this->layout->content = View::make('backend.course.edit',['listCat'=>$listCat,'listTeacher'=>$listTeacher,'course'=>$course]);
     }   
 
     function deleteById() {
