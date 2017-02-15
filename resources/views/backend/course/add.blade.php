@@ -44,7 +44,7 @@
 
       <div class="form-group">
         <label class="required">Introtext</label>
-        <input class="form-control" name="introtext" type="text" id="introtext" min="1" data-bind="value:num_of_question" required="">
+        <input class="form-control" name="introtext" type="text" id="introtext" min="1" data-bind="value:introtext" required="">
         <div class="form-group has-error">
           <label lass="control-label" for="inputError" style="color:red;" >{{ $errors->first('introtext') }}</label>
         </div>              
@@ -67,7 +67,8 @@
     </div>
   </div>                      
 </form>
-
+<script rel="text/javascript" src="{{ asset('backend/assets/scripts/tinymce/tinymce.js') }}" ></script>
+<script rel="text/javascript" src="{{ asset('backend/assets/scripts/tinymce_des.js') }}" ></script> 
 @endsection
 @include('backend.widgets.panel', array('header'=>true, 'as'=>'table'))
 </div>

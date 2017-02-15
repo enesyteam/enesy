@@ -68,7 +68,8 @@
              </div>
             
         </form>
-
+        <script rel="text/javascript" src="{{ asset('backend/assets/scripts/tinymce/tinymce.js') }}" ></script>
+        <script rel="text/javascript" src="{{ asset('backend/assets/scripts/tinymce_des.js') }}" ></script> 
         @endsection
         @include('backend.widgets.panel', array('header'=>true, 'as'=>'table'))
     </div>
