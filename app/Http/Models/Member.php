@@ -1,5 +1,5 @@
 <?php
-namespace App\Http\Models\backend;
+namespace App\Http\Models;
 /**
  * Created by PhpStorm.
  * User: Dungtd
