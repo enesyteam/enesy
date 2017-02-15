@@ -1,0 +1,101 @@
+#player {
+    top: 10px;
+    width: 100%;
+}
+#placeholder-player {
+    margin-bottom: 10px;
+    z-index: 0;
+}
+#theater-background {
+    background-color: transparent;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    -moz-transition: background-color .3s ease;
+    -webkit-transition: background-color .3s ease;
+    transition: background-color .3s ease;
+}
+.player-height {
+    height: 360px;
+}
+#player .player-api {
+    position: absolute;
+    z-index: 5;
+}
+.player-width {
+    width: 640px;
+}
+.player-api {
+    background: #000;
+}
+#player, #placeholder-player {
+    color: #fff;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    -moz-transition: background-color .3s ease-in-out,background-image .3s ease-in-out;
+    -webkit-transition: background-color .3s ease-in-out,background-image .3s ease-in-out;
+    transition: background-color .3s ease-in-out,background-image .3s ease-in-out;
+}
+.html5-video-player {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    overflow: hidden;
+    outline: 0;
+    font-family: Roboto,Arial,Helvetica,sans-serif;
+    color: #eee;
+    text-align: left;
+    direction: ltr;
+    font-size: 11px;
+    line-height: 1.3;
+    -webkit-font-smoothing: antialiased;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    touch-action: manipulation;
+    contain: strict;
+}
+#player-playlist {
+    position: relative;
+}
+#player-playlist .watch-playlist {
+    margin-left: -10px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 3;
+    -moz-transition: transform .3s ease-in-out;
+    -webkit-transition: transform .3s ease-in-out;
+    transition: transform .3s ease-in-out;
+}
+#player-playlist .watch-playlist {
+    left: 650px;
+}
+.watch-playlist {
+    background: #1a1a1a;
+    color: #b8b8b8;
+    margin-bottom: 10px;
+    position: relative;
+}
+.watch-playlist .main-content {
+    overflow: hidden;
+}
+#player-playlist .playlist-header {
+    padding: 0 10px;
+}
+#player-playlist .playlist-header-content {
+    font-size: 11px;
+    height: 37px;
+    line-height: 1.5;
+    padding: 15px 5px 8px;
+}
+#player-playlist .appbar-playlist-controls {
+    float: right;
+}
+.clearfix:before {
+    content: '.';
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+

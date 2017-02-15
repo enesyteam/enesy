@@ -110,6 +110,10 @@ Route::group(array('namespace' => 'frontend'), function () {
 		'as' 	=>	'course.detail',
 		'uses'	=>	'CourseController@detail'
 		]);
+	Route::get('xem',[
+		'as' 	=>	'course.view',
+		'uses'	=>	'CourseController@view'
+		]);
 	Route::get('xem-truoc-khoa-hoc',[
 		'as' 	=>	'course.preview',
 		'uses'	=>	'CourseController@preview'
@@ -146,8 +150,6 @@ Route::group(array('namespace' => 'frontend'), function () {
 		'as'	=>	'user.author',
 		'uses'	=>	'UserController@author'
 		]);
-
-	
 	});
 
 

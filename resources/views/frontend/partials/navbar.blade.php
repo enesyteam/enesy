@@ -159,6 +159,9 @@
                      <li>
                         <a class="hub-header-dropdown__top" href="{{route('user.author')}}">Giảng viên</a>
                      </li>
+                     <li>
+                        <a class="hub-header-dropdown__top" href="{{route('course.view')}}">Học</a>
+                     </li>
                   </ul>
                </div>
             </li>

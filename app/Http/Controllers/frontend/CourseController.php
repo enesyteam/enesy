@@ -15,6 +15,9 @@ class CourseController extends Controller
     public function preview(){
 		return view('frontend.course.course-preview');
     }
+    public function view(){
+        return view('frontend.course.course-view');
+    }
     public function share(){
     	return view('frontend.course.course-share');
     }
