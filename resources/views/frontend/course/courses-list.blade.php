@@ -1,3 +1,5 @@
+@extends('frontend.layouts.dashboard')
+@section('section')
 <!--Filter bar-->
 <div class="is-hidden--no-js search-facet-horizontal-form -border-bottom">
    <div class="inline-select-wrapper">
@@ -838,3 +840,4 @@
    </ul>
 </nav>
 <!--#Pagination-->
+ @stop

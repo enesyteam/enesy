@@ -1,4 +1,4 @@
-@extends('backend.layouts.plane')
+@extends('frontend.layouts.plane')
 
 @section('body')
              <div class="page">
