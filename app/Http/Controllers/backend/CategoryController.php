@@ -4,9 +4,10 @@ namespace App\Http\Controllers\backend;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input as Input;
-use App\Http\Models\backend\Category;
+use App\Http\Models\Category;
 use App\Http\Requests;
 use Config;
+use DB;
 
 
 class CategoryController extends Controller
@@ -75,9 +76,14 @@ class CategoryController extends Controller
 
     function add() {
 
-    	$all_category = Category::get(array('id', 'parent_id', 'title'));      
+    	$all_category = Category::get(array('id', 'parent_id', 'title')); 
+        $query  = DB::table('tbl_categories')
+        ->orderBy('id', 'desc')
+        ->select('id','title');  
+        $query   = $query->where('parent_id', '=', 0);
+        $parents = $query->get();
     	
-    	return view('backend.category.add', array('parents' => $all_category));
+    	return view('backend.category.add', array('parents' => $parents));
     }
 
     function executeAdd(Request $req) {
@@ -88,6 +94,7 @@ class CategoryController extends Controller
     	$cate = new Category;    	
     	
     	$cate->title = $req->title;
+        $cate->parent_id = $req->parent_id;
     	$cate->description = $req->description;
     	$date = date('Y').date('m').date('d');	
     	$cate->create_date = $date;
