@@ -2,7 +2,7 @@
 @section('page_heading','Add new category')
 @section('section')
     <div class="col-sm-12">
-         @section ('table_panel_title','&nbsp;')
+        @section ('table_panel_title','&nbsp;')
         @section ('table_panel_body')
 
        

@@ -13,7 +13,15 @@
                 <label>Name:</label>
                 <input class="form-control" name="title" value="{{ $category->title }}">              
             </div>
-           
+             <div class="form-group">
+                <label>Parent:</label>
+                 <select name="parent_id">
+                 <option value="0"></option>
+                   @foreach($parents as $value)
+                   <option <?php if ($value->id == $category->parent_id ) { ?> selected <?php }?> value="{{$value->id}}">{{$value->title}}</option>
+                   @endforeach
+                 </select>       
+            </div>             
            
             <div class="form-group">
                 <label>Description:</label>

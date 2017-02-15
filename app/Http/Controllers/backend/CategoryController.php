@@ -76,7 +76,6 @@ class CategoryController extends Controller
 
     function add() {
 
-    	$all_category = Category::get(array('id', 'parent_id', 'title')); 
         $query  = DB::table('tbl_categories')
         ->orderBy('id', 'desc')
         ->select('id','title');  
@@ -94,6 +93,7 @@ class CategoryController extends Controller
     	$cate = new Category;    	
     	
     	$cate->title = $req->title;
+        $cate->alias = $req->title;
         $cate->parent_id = $req->parent_id;
     	$cate->description = $req->description;
     	$date = date('Y').date('m').date('d');	
@@ -108,6 +108,8 @@ class CategoryController extends Controller
     	$img_url = CategoryController::getImageUrl($req);
         if (!is_null($img_url)) {
             $cate->picture = $img_url;
+        } else {
+           $cate->picture = ''; 
         }       
     	$cate->save();
     	
@@ -117,12 +119,15 @@ class CategoryController extends Controller
     function edit($id) {
 
     	$cate = Category::find($id);    	
-    	$all_category = Category::get(array('id', 'parent_id', 'title'));   
+
     	if ($cate != null) {
-    	
-        $currentParent = $cate->title;
-    		return view('backend.category.edit', array('category'=>$cate));
-    	}
+            $query  = DB::table('tbl_categories')
+            ->orderBy('id', 'desc')
+            ->select('id','title');  
+            $query   = $query->where('parent_id', '=', 0);
+            $parents = $query->get();    	
+        	return view('backend.category.edit', array('category'=>$cate,'parents'=>$parents));
+        }
     	return \Redirect::route('allCategory');
     }
 
