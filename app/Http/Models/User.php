@@ -20,6 +20,15 @@ class User extends Model
         'username'
     ];
 
+    protected function  validatordoLogin(array $data){
+        $rules = [
+            'username' => 'required|min:6|max:12',
+            'password' => 'required|max:12',
+        ];
+
+        return Validator::make($data , $rules);
+    }
+
     protected function validatorCreate(array $data ){
         $rules = [
             'email' => 'required|email|max:255|checkemail',

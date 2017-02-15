@@ -95,7 +95,12 @@ Route::group(array('namespace' => 'backend', 'prefix' => 'admin', 'middleware' =
 
     // end course
 });
-Route::group(array('namespace' => 'frontend'), function () {
+
+Route::group(array('namespace' => 'frontend' , 'middleware' => 'web|auth'), function () {
+
+});
+
+Route::group(array('namespace' => 'frontend' , 'middleware' => 'web'), function () {
 	Route::get('/', [
 		'as'	=>	'home',
 		'uses'	=>	'PagesController@index'
@@ -132,10 +137,21 @@ Route::group(array('namespace' => 'frontend'), function () {
 		]);
 
 	/*User*/
-	Route::get('dang-nhap',[
+	Route::get('doLogin',[
 		'as'	=>	'user.login',
 		'uses'	=>	'UserController@login'
 		]);
+
+	Route::get('doLogout',[
+		'as'	=>	'user.logout',
+		'uses'	=>	'UserController@doLogout'
+		]);
+
+	Route::post('doLogin',[
+		'as'	=>	'user.login',
+		'uses'	=>	'UserController@doLogin'
+		]);
+
 	Route::get('dang-ky',[
 		'as'	=>	'user.register',
 		'uses'	=>	'UserController@register'
