@@ -69,6 +69,7 @@ class CourseController extends Controller
         foreach ($all_category as $cat) {
             if($cat->parent_id == 0) {
                 $listCat[$cat->id]["title"] = $cat->title;
+                $listCat[$cat->id]['data'] = array();
             } else {
                 $listCat[$cat->parent_id]['data'][] = $cat;
             }
@@ -110,6 +111,7 @@ class CourseController extends Controller
         foreach ($all_category as $cat) {
             if($cat->parent_id == 0) {
                 $listCat[$cat->id]["title"] = $cat->title;
+                $listCat[$cat->id]['data'] = array();
             } else {
                 $listCat[$cat->parent_id]['data'][] = $cat;
             }
