@@ -3959,7 +3959,7 @@ input[type=text].footer-subscribe__input:focus::-webkit-input-placeholder, input
     top: 18px;
 }
 .svg .header-logo-account__logo>span {
-    background: url(../images/logo.svg);
+    background: url(../images/logo.png);
     background-size: 102px 18px;
 }
 .no-svg .header-logo-account__logo>span {

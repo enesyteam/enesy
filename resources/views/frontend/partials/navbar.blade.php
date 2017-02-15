@@ -150,6 +150,18 @@
                   </ul>
                </div>
             </li>
+            <li class="header-categories__links-item menu-demo-only">
+               <a class="header-categories__main-link" href="#">
+               Html pages
+               </a>  
+               <div class="header-categories__links-dropdown js-categories-6-dropdown">
+                  <ul class="hub-header-dropdown">
+                     <li>
+                        <a class="hub-header-dropdown__top" href="{{route('user.author')}}">Giảng viên</a>
+                     </li>
+                  </ul>
+               </div>
+            </li>
          </ul>
       </div>
    </div>

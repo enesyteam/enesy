@@ -54,14 +54,7 @@
                      </div>
                      </li>-->
                   <li class="header-logo-account__sundry-item">
-                     <a class="header-logo-account__sundry-main-link" data-view="touchOnlyDropdown" data-dropdown-target=".js-sundry-3-dropdown" href="#">Giới thiệu</a>
-                     <div class="header-logo-account__sundry-dropdown js-sundry-3-dropdown">
-                        <ul class="hub-header-dropdown">
-                           <li>
-                              <a class="header-logo-account__sundry-sub-link" href="#">Về Enesy</a>
-                           </li>
-                        </ul>
-                     </div>
+                     <a class="header-logo-account__sundry-main-link" data-view="touchOnlyDropdown" data-dropdown-target=".js-sundry-3-dropdown" href="#">Giới thiệu Enesy</a>
                   </li>
                   <li class="header-logo-account__sundry-item">
                      <a class="header-logo-account__sundry-main-link" href="#">Trợ giúp</a>
