@@ -8,7 +8,7 @@
 
 namespace App\Http\Controllers\backend;
 
-use App\Http\Models\backend\User;
+use App\Http\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
 use Config;

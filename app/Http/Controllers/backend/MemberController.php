@@ -4,7 +4,7 @@ namespace App\Http\Controllers\backend;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input as Input;
-use App\Http\Models\backend\Member;
+use App\Http\Models\Member;
 use App\Http\Requests;
 use Config;
 
