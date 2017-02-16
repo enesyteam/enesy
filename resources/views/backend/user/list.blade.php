@@ -12,9 +12,8 @@
         @section ('table_panel_title','Admin List')
         @section ('table_panel_body')
             <div class="col-sm-12">
-                <div class="col-xs-1">
-                </div>
-                <div id="formSearch" class="col-xs-10">
+   
+                <div id="formSearch">
                     <div class="row">
                         <div class="col-md-2">
                             <div class="form-group">
@@ -51,8 +50,7 @@
                         <input type="hidden" value="{{ URL::to('admin/adminManager?sort=username'.$url)  }}" />
                     </div>
                 </div>
-                <div class="col-xs-1">
-                </div>
+
             </div>
                 <table class="table tableList">
                     <thead>
