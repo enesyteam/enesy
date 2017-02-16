@@ -92,6 +92,8 @@ class CourseController extends Controller
             $course->mentor_id        = $data['mentor_id'];       
             $course->introtext        = $data["introtext"];      
             $course->content          = $data["content"];
+            $course->love             = 0;
+            $course->num_of_learn     = 0;
             $course->create_date      = time();
             $course->updated_at       = time();
         
