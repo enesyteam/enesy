@@ -15,7 +15,7 @@ use Session;
 class UserController extends Controller
 {
     public function login(){
-        if ( Auth::check() ){
+        if ( Auth::guard('frontend')->check() ){
             return Redirect::route('home');
         }
     	return view('frontend.login');
@@ -37,7 +37,7 @@ class UserController extends Controller
         );
 
         // attempt to do the login
-        if ( Auth::attempt($userdata) ){
+        if ( Auth::guard('frontend')->attempt($userdata) ){
             return Redirect::route('home');
         }else{
             Session::flash('message_error', 'Login Failed'); 
@@ -46,14 +46,14 @@ class UserController extends Controller
     }
 
     public function doLogout(){
-        Auth::logout();
+        Auth::guard('frontend')->logout();
         return Redirect::route('home');
     }
 
     //Register
     public function register()
     {
-        if ( Auth::check() ){
+        if ( Auth::guard('frontend')->check() ){
             return Redirect::route('home');
         }
         return view('frontend.register');

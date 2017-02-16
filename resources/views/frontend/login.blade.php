@@ -61,11 +61,6 @@
 
                             {{ Form::open(array('url' => 'doLogin' , 'class'=>'simple_form js-sign-in__form e-form -layout-vertical-inline','id'=>'login_form')) }}
                             <div class="sso-form--sign-in">
-
-                                <!--   <form class="js-sign-in__session-form" action="/sso/verify_token" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="authenticity_token" value="JEduv5FyPa6XLaxOBYWkX9Zt4RHd45ShW9MNUemlEkkfBn+6qLWKz3Fdnp2ZHLeO1avCiUmTkej7pVXWJwXTrg==">
-                                    <input type="hidden" name="token" id="token" class="js-sign-in__session-token">
-                                  </form> -->
-
                                 <input type="hidden" value="{{ URL::to('doLogin') }}" id="actionLogin">
                                 <div class="e-form -layout-vertical-inline">
                                     <div class="e-form__group">

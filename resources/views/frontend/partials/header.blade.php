@@ -71,7 +71,7 @@
                   </li>
                </ul>
                <div class="header-logo-account__user-nav">
-                  @if(!Auth::check())
+                  @if(!Auth::guard('frontend')->check())
                   <div class="header-logo-account__user-nav-item">
                      <strong>
                      <a class="header-logo-account__user-nav-main-link--alpha" href="{{route('user.register')}}"><span>Đăng ký thành viên</span></a>
@@ -121,7 +121,7 @@
                      </a>
                   </div>
                   <div class="header-logo-account__user-nav-item">
-                     @if(Auth::check())
+                     @if(Auth::guard('frontend')->check())
                      <a class="header-logo-account__user-nav-main-link--omega" href="{{route('user.logout')}}">Thoát</a>
                      @else
                      <a class="header-logo-account__user-nav-main-link--omega" href="{{route('user.login')}}" >Đăng nhập</a>
