@@ -3825,11 +3825,12 @@ input[type=text].footer-subscribe__input:focus::-webkit-input-placeholder, input
     margin: 0;
 }
 }.svg .footer-top__market-logo {
-    background: url(../images/logo.svg);
-    background-size: 152px 18px;
+    background: url(../images/logo__footer.png);
+    background-size: 102px 18px;
+    background-repeat: no-repeat;
 }
 .no-svg .footer-top__market-logo {
-    background-image: url(../images/logo.svg);
+    background-image: url(../images/logo__footer.png);
     background-position: -380px -392px;
 }
 @media (min-width: 1025px) {

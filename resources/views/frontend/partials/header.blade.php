@@ -72,11 +72,46 @@
                </ul>
                <div class="header-logo-account__user-nav">
                   @if(!Auth::check())
-                     <div class="header-logo-account__user-nav-item">
-                        <strong>
-                        <a class="header-logo-account__user-nav-main-link--alpha" href="{{route('user.register')}}"><span>Đăng ký thành viên</span></a>
-                        </strong>
+                  <div class="header-logo-account__user-nav-item">
+                     <strong>
+                     <a class="header-logo-account__user-nav-main-link--alpha" href="{{route('user.register')}}"><span>Đăng ký thành viên</span></a>
+                     </strong>
+                  </div>
+                  @else
+                  <div class="header-logo-account__user-nav-item">
+                     <a class="header-logo-account__user-nav-main-link--alpha-with-dropdown" data-view="touchOnlyDropdown" data-dropdown-target="#user-nav-dropdown" href="https://themeforest.net/author_dashboard">
+                     <span id="user_username">congcd4</span>
+                     <strong class="header-logo-account__balance">$0.00</strong>
+                     </a>
+                     <div class="header-logo-account__user-nav-dropdown" id="user-nav-dropdown">
+                        <ul class="hub-header-dropdown">
+                           <li>
+                              <a href="#">
+                              Tài khoản
+                              <i class="e-icon -icon-person"></i>
+                              </a>          
+                           </li>
+                           <li>
+                              <a href="#">
+                              Khóa học của bạn
+                              <i class="e-icon "></i>
+                              </a>          
+                           </li>
+                           <li>
+                              <a href="#">
+                              XXX
+                              <i class="e-icon "></i>
+                              </a>          
+                           </li>
+                           <li>
+                              <a href="#">
+                              Thiết lập
+                              <i class="e-icon -icon-cog"></i>
+                              </a>          
+                           </li>
+                        </ul>
                      </div>
+                  </div>
                   @endif
                   <div class="header-logo-account__user-nav-item">
                      <a class="header-logo-account__user-nav-main-link--cart" rel="nofollow" href="//#/cart">
@@ -88,9 +123,9 @@
                   </div>
                   <div class="header-logo-account__user-nav-item">
                      @if(Auth::check())
-                        <a class="header-logo-account__user-nav-main-link--omega" href="{{route('user.logout')}}">Thoát</a>
+                     <a class="header-logo-account__user-nav-main-link--omega" href="{{route('user.logout')}}">Thoát</a>
                      @else
-                        <a class="header-logo-account__user-nav-main-link--omega" href="{{route('user.login')}}" >Đăng nhập</a>
+                     <a class="header-logo-account__user-nav-main-link--omega" href="{{route('user.login')}}" >Đăng nhập</a>
                      @endif
                   </div>
                </div>
@@ -98,5 +133,4 @@
          </div>
       </div>
    </div>
-
 </div>

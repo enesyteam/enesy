@@ -39,7 +39,7 @@
                 <header class="e-modal__header -background-dark -padding-m">
                     <div class="h-image-svg h-text-align-center" width="130px" height="25px">
                         <img alt="Enesy" width="130" class="is-hidden--no-svg is-hidden--no-js"
-                             src="{{url('templates/default/assets/images/logo.svg')}}">
+                             src="{{url('frontend/images/logo.png')}}">
                         <h1 class="t-heading -size-l -color-light h-m0 is-hidden--svg">Enesy</h1>
                     </div>
                 </header>
@@ -62,11 +62,11 @@
 
                                         <div class="h-text-align-center">
                                             <h2 class="t-heading -size-m">
-                                                Đăng ký thành viên
+                                                Gia nhập hệ thống Enesy
                                             </h2>
-                                            <p class="t-body -size-m -color-mid">
+                                            <!--<p class="t-body -size-m -color-mid">
                                                 Hoàn thành các bước đăng ký để trở thành thành viên của Enesy.
-                                            </p>
+                                            </p>-->
 
                                              <div id="error_message" style="color: red">
                                                 {{ $errors->first('first_name') }}
