@@ -14,6 +14,7 @@ Enesy | Khóa học lập trình AutoCAD với C# trình độ cơ bản
 <script src="{{'frontend/vender/jquery-modal/highlight/highlight.pack.js'}}" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript" charset="utf-8"> hljs.initHighlightingOnLoad(); </script>
 @stop
+
 @section ('body.content')
 <div class="context-header ">
    <div class="grid-container ">

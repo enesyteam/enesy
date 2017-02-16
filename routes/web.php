@@ -95,7 +95,12 @@ Route::group(array('namespace' => 'backend', 'prefix' => 'admin', 'middleware' =
 
     // end course
 });
-Route::group(array('namespace' => 'frontend'), function () {
+
+Route::group(array('namespace' => 'frontend' , 'middleware' => 'web|auth'), function () {
+
+});
+
+Route::group(array('namespace' => 'frontend' , 'middleware' => 'web'), function () {
 	Route::get('/', [
 		'as'	=>	'home',
 		'uses'	=>	'PagesController@index'
@@ -109,6 +114,10 @@ Route::group(array('namespace' => 'frontend'), function () {
 	Route::get('chi-tiet-khoa-hoc',[
 		'as' 	=>	'course.detail',
 		'uses'	=>	'CourseController@detail'
+		]);
+	Route::get('xem',[
+		'as' 	=>	'course.view',
+		'uses'	=>	'CourseController@view'
 		]);
 	Route::get('xem-truoc-khoa-hoc',[
 		'as' 	=>	'course.preview',
@@ -132,13 +141,29 @@ Route::group(array('namespace' => 'frontend'), function () {
 		]);
 
 	/*User*/
-	Route::get('dang-nhap',[
+	Route::get('doLogin',[
 		'as'	=>	'user.login',
 		'uses'	=>	'UserController@login'
 		]);
+
+	Route::get('doLogout',[
+		'as'	=>	'user.logout',
+		'uses'	=>	'UserController@doLogout'
+		]);
+
+	Route::post('doLogin',[
+		'as'	=>	'user.login',
+		'uses'	=>	'UserController@doLogin'
+		]);
+
 	Route::get('dang-ky',[
 		'as'	=>	'user.register',
 		'uses'	=>	'UserController@register'
+		]);
+
+	Route::post('doRegister',[
+		'as'	=>	'user.doregister',
+		'uses'	=>	'UserController@doRegister'
 		]);
 
 	/*Author*/
@@ -146,8 +171,6 @@ Route::group(array('namespace' => 'frontend'), function () {
 		'as'	=>	'user.author',
 		'uses'	=>	'UserController@author'
 		]);
-
-	
 	});
 
 
