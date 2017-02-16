@@ -26,6 +26,12 @@
     <script src="{{'frontend/vender/jquery-modal/jquery.modal.js'}}" type="text/javascript" charset="utf-8"></script>
     <script src="{{'frontend/vender/jquery-modal/highlight/highlight.pack.js'}}" type="text/javascript" charset="utf-8"></script>
     <script type="text/javascript" charset="utf-8"> hljs.initHighlightingOnLoad(); </script>
+
+    <style type="text/css">
+        .error_message{
+            color: red;
+        }
+    </style>
 </head>
 <!-- #HEAD -->
 <body>
@@ -69,6 +75,7 @@
                                         <div class="e-form__input">
                                             {{--<input class="f-input -type-string js-sign-in__username -width-full" type="text" name="sso_sign_in_form[username]" id="sso_sign_in_form_username">--}}
                                             {{ Form::text('username', Input::old('username'), array('placeholder' => 'User Name' , 'class'=>'f-input -type-string js-sign-in__username -width-full' , 'id'=>'sso_sign_in_form_username')) }}
+                                            <p class="error_message"> {{ $errors->first('username') }}</p>
                                         </div>
                                         <div class="e-form__hint">
                                             <a class="t-link -decoration-reversed h-pull-right" tabindex="-1" href="#">Remind
@@ -82,6 +89,7 @@
                                         <div class="e-form__input">
                                             {{--<input class="f-input -type-password js-sign-in__password -width-full" type="password" name="sso_sign_in_form[password]" id="sso_sign_in_form_password">--}}
                                             {{ Form::password('password' , array('placeholder'=>'Password','class'=>'f-input -type-password js-sign-in__password -width-full' , 'id'=>'sso_sign_in_form_password')) }}
+                                            <p class="error_message"> {{ $errors->first('password') }}</p>
                                         </div>
                                         <div class="e-form__hint">
                                             <a class="t-link -decoration-reversed h-pull-right" tabindex="-1" href="#">Reset</a>
@@ -121,10 +129,11 @@
                                     </div>
                                 </div>
 
-                                <div id="error_message" style="color: red">
-                                    {{ $errors->first('username') }}
-                                    {{ $errors->first('password') }}
-                                </div>
+                                @if(Session::has('message_error'))
+                                    <div class="error_message">
+                                        <h2 class="error_message">{{ Session::get('message_error') }}</h2>
+                                    </div>
+                                @endif
                                 {{--<input type="submit" name="commit" value="Đăng nhập hệ thống" class="js-sign-in__submit e-btn--3d -color-primary -size-m -width-full h-mb2 h-mt1">--}}
                                 {{ Form::submit('Đăng nhập hệ thống' , array('class' => 'js-sign-in__submit e-btn--3d -color-primary -size-m -width-full h-mb2 h-mt1' , 'id'=>'loginButton')) }}
                             </div>

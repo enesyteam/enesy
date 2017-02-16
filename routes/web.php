@@ -11,6 +11,7 @@
 |
 */
 Route::group(['prefix' => 'admin','middleware' => 'guest'], function () {
+	
     Route::get('/login', 'backend\LoginController@getLogin');
     Route::post('/postLogin' , 'backend\LoginController@postLogin');
 
@@ -100,7 +101,7 @@ Route::group(array('namespace' => 'frontend' , 'middleware' => 'web|auth'), func
 
 });
 
-Route::group(array('namespace' => 'frontend' , 'middleware' => 'web'), function () {
+Route::group(array('namespace' => 'frontend' , 'middleware' => 'frontend.auth'), function () {
 	Route::get('/', [
 		'as'	=>	'home',
 		'uses'	=>	'PagesController@index'

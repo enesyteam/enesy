@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use App\Member;
+use Session;
 
 class UserController extends Controller
 {
@@ -38,10 +39,10 @@ class UserController extends Controller
         // attempt to do the login
         if ( Auth::attempt($userdata) ){
             return Redirect::route('home');
+        }else{
+            Session::flash('message_error', 'Login Failed'); 
+            return Redirect::route('user.login');
         }
-        return Redirect::route('user.login')
-                    ->withInput()
-                    ->with('message', 'Login Failed');;
     }
 
     public function doLogout(){
@@ -64,8 +65,6 @@ class UserController extends Controller
 
         $data = Request::only('email' , 'password' , 'username', 'first_name' , 'last_name' , 'middle_name' , 'confirm-password');
 
-        
-
         $validator = Member::validatordoRegister($data);
 
         if($validator->fails()){
@@ -79,22 +78,11 @@ class UserController extends Controller
             $checkStatus = Member::create($data);
 
         }catch (Exception $e){
-            return response()->json([
-                'error' => 'User already exists.'
-            ], HttpResponse::HTTP_CONFLICT);
+            return Redirect::route('user.register')
+                            ->withInput()
+                            ->with('message', 'Register Failed');
         }
 
-        $token = JWTAuth::fromUser($checkStatus);
-
-        $information_status = MemberOther::where('email' , $data['email'])->value('information_status');
-        $user = MemberOther::where('email' , $data['email'])->first();
-
-        $data_return = [
-            'token' => $token,
-            'information_status' => $information_status,
-            'user' => $user
-        ];
-        return response()->json($data_return);
     }
 
     public function author(){

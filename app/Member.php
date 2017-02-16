@@ -20,9 +20,13 @@ class Member extends Authenticatable
      */
     protected  $table = 'tbl_member';
 
+    protected $dateFormat = 'U';
+
     const CREATED_AT = 'create_date';
 
     const UPDATED_AT = 'modify_date';
+
+
 
     protected $fillable = [
         'username', 'email', 'password','last_name', 'first_name'
