@@ -178,7 +178,17 @@ Route::group(array('namespace' => 'frontend' , 'middleware' => 'web'), function 
 		'uses'	=>	'PagesController@about'
 		]);
 	});
-
+	
+	/*terms of use*/
+	Route::get('dieu-khoan-su-dung'
+		'as'	=>	'home.terms',
+		'uses'	=>	'PagesController@terms'
+		);
+	/*Privacy policy*/
+	Route::get('chinh-sach-bao-mat'
+		'as'	=>	'home.terms',
+		'uses'	=>	'PagesController@privacy_policy'
+		);
 
 
 

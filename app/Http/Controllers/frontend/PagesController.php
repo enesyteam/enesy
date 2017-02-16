@@ -28,4 +28,10 @@ class PagesController extends Controller
     public function about(){
     	return view('frontend.about');
     }
+    public function terms(){
+        return view('frontend.terms');
+    }
+    public function privacy_policy(){
+        return view('frontend.privacy-policy');
+    }
 }
