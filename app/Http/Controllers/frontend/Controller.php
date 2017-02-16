@@ -39,6 +39,8 @@ class Controller extends BaseController
        View::share ( 'list_cat_parent', $list_cat_parent );
        View::share ( 'list_cat_child', $list_cat_child );
        // end menu
+       View::share ( 'meta_title','Enesy | Đào tạo Kỹ sư chuyên nghiệp' );
+       View::share ( 'meta_des','Đào tạo Kỹ sư chuyên nghiệp' );
 
     }
 

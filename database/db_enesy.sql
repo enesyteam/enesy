@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 16, 2017 at 09:50 AM
+-- Generation Time: Feb 16, 2017 at 11:29 AM
 -- Server version: 10.1.19-MariaDB
 -- PHP Version: 7.0.13
 
@@ -152,8 +152,8 @@ INSERT INTO `tbl_lesson_doc` (`id`, `cat_id`, `course_id`, `lesson_id`, `title`,
 
 CREATE TABLE `tbl_member` (
   `id` int(11) NOT NULL,
-  `email` varchar(256) NOT NULL,
-  `username` varchar(256) DEFAULT NULL,
+  `email` varchar(255) NOT NULL,
+  `username` varchar(255) DEFAULT NULL,
   `password` varchar(256) DEFAULT NULL,
   `last_name` varchar(255) DEFAULT NULL,
   `first_name` varchar(255) DEFAULT NULL,
@@ -175,24 +175,6 @@ CREATE TABLE `tbl_member` (
   `phone` varchar(15) DEFAULT NULL,
   `address` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `tbl_member`
---
-
-INSERT INTO `tbl_member` (`id`, `email`, `username`, `password`, `last_name`, `first_name`, `middle_name`, `updated_at`, `status`, `information_status`, `info`, `create_date`, `create_user`, `modify_date`, `modify_user`, `remember_token`, `avatar`, `is_teaching`, `sex`, `dob`, `social`, `phone`, `address`) VALUES
-(2, 'dannt@gmail.com', 'dannt', '$2y$10$TCc1RO0i2gU2P3OMJ62o5uAk.02UFipaRCptEhjZx2EfXbmWgnZee', 'Nguyen', 'Dan', 'The', NULL, 2, 1, NULL, 2016, NULL, 2016, NULL, NULL, 'upload/image/2016/12/30/1482963782-thumbnail.jpg', 1, 'Male', '1988-04-14', NULL, '0987654321', 'Yen My, Hung Yen'),
-(4, 'davidnguyen@gmail.com', 'david', '$2y$10$0GMr7RYgtE2jmYlt3NWAJ.7nQ0MKZYENt6LqbrI.RBP9NjzIUKCIi', 'Nguyen', 'David', 'Sandro', NULL, 1, 1, NULL, 2016, NULL, 2017, NULL, NULL, 'upload/image/2017/01/13/1482963782-thumbnail.jpg', 0, 'Female', '1987-09-08', NULL, '0123456789', 'Thanh xuan, Ha noi'),
-(5, 'ducnvna@gmail.com', 'ducnv', '$2y$10$gwiqKsKkdSseJj8ZAxmJi.nRKF.0UvkevolcOgLH7Tf7Zbvre5S6K', 'Duc', 'Nguyen', 'Van', NULL, 2, 1, NULL, 2016, NULL, 2016, NULL, 'XInYTvo6kNtZFqiShM6UwPVKMdw5zAW2sFlovqxACXQV3ewwWYZmAxQIsmv9', 'backend/image/default_avatar_male.jpg', 1, 'Male', '2016-12-06', NULL, '0976460950', 'Ha Noi'),
-(6, 'ducnvna2@gmail.com', 'ducnvna', '$2y$10$xhSPpPPYc52K5mHLGf4o4ORHcKW0GhMkTAgAdhjqKIG9z4vaOU8lC', 'Duc1', 'Nguyen', 'Van', NULL, 2, 1, NULL, 2016, NULL, 2016, NULL, NULL, 'backend/image/default_avatar_male.jpg', 0, 'Male', '2016-12-08', '322', '1111', 'dfdsf'),
-(7, 'tungsonchelsea@gmail.com', 'tungson', '$2y$10$r1d50gRbQggVSbVmUlhP9OpqCpyOWJhMehMd9.TDfnH1lbgAYDMcC', 'tung son', 'nguyen', 'tung', NULL, 2, 1, NULL, 2016, NULL, 2016, NULL, NULL, 'backend/image/default_avatar_male.jpg', 0, 'Male', '1998-12-02', NULL, '0984246691', 'Ha Noi'),
-(8, 'dungtd1308@gmail.com', 'dungtd13', '$2y$10$9VNQhXCsLvnA/rAAe52xJ.UYlQGDEkAsidzcPXFlgjtaUZmcLB43a', 'Dung', 'Tran Duc', '3213123', NULL, 2, 1, NULL, 2016, NULL, 2017, NULL, NULL, 'upload/image/2017/01/03/dungtd2_1483428167.jpg', 0, 'Male', '1970-01-01', NULL, '213123123', '321312312'),
-(9, 'ds90@gmail.com', 'ds90', '$2y$10$OlmI10kIo0JkgieSmbFmkuG7gsji4tG04OFqcLInSVVhfTeovNGgm', 'Đỗ Hoàng', 'Sơn', 'dsadsadas', NULL, 2, 1, NULL, 2017, NULL, 2017, NULL, NULL, 'backend/image/default_avatar_male.jpg', 0, 'Male', '1990-08-08', NULL, '011111111111', 'dasdasdasd'),
-(10, 'ducnv1@gmail.com', 'ducnv1', '$2y$10$vh9qY34ES.HfQ5B6svImxOjm0dOCeqmlC1hpBAoO3SK4LJ/81Kib6', 'Van', 'Nguyen', 'Duc', NULL, 2, 1, NULL, 2017, NULL, 2017, NULL, NULL, 'backend/image/default_avatar_male.jpg', 0, 'Male', '1970-01-01', NULL, '0976460950', 'Cầu giấy - Hà Nội'),
-(11, 'ttanhst@gmail.com', 'anhtt', '$2y$10$D3vTQtpUboKyxUSvT.Xnse723bzo7W6lijds9qUlQxrzVUMVyCiPa', 'Anh', 'Tran', 'Tuan', NULL, 1, 1, '', 20170109, 'ducnvna', 2017, 'ducnvna@gmail.com', 'anhtt', 'upload/image/2017/01/09/anhtt_1483949505.jpg', 1, 'Male', '1977-01-01', NULL, '0123', 'My dinh'),
-(14, 'nguyendatbn90@gmail.com', 'kenbn9x', '$2y$10$s19ZTJlroZtX2k3DvbfWNeGSK8ZUzHV/ULwjSrhZ7aolJW.r2DZs.', 'Nguyễn', 'Nguyễn', 'Tiến', NULL, 2, 1, NULL, 2017, NULL, 2017, NULL, NULL, 'upload/image/2017/01/18/kenbn9x_1484728515.jpg', 1, 'Male', '1990-03-10', NULL, '0987654321', 'Bắc Ninh'),
-(15, 'datkzz@gmail.com', 'nguyen', '$2y$10$5NGCq59BtXHDy5rk/tTKtu5HfJSUNFZPL2JzwmOYm0iPCmJ7CWyWW', 'nguyen', 'dat', '', NULL, 1, 0, NULL, 2017, NULL, 2017, NULL, NULL, 'backend/image/default_avatar_male.jpg', 0, NULL, NULL, NULL, NULL, NULL),
-(16, 'dungtd130892@gmail.com', 'dungtd', '$2y$10$Jlwd5XYZM74R5N9ypHqPK.bSSZUgHmPEHda1VNFw6DriOAp0lMsxi', 'Dung', 'Tran Duc', 'opkljkjkj', NULL, 2, 1, NULL, 2017, NULL, 2017, NULL, NULL, 'backend/image/default_avatar_male.jpg', 0, 'Male', '1970-01-01', NULL, '987654321', 'HN');
 
 -- --------------------------------------------------------
 
@@ -265,6 +247,8 @@ ALTER TABLE `tbl_lesson_doc`
 --
 ALTER TABLE `tbl_member`
   ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `email` (`email`),
+  ADD UNIQUE KEY `username` (`username`),
   ADD KEY `active` (`status`);
 
 --
@@ -303,7 +287,7 @@ ALTER TABLE `tbl_lesson_doc`
 -- AUTO_INCREMENT for table `tbl_member`
 --
 ALTER TABLE `tbl_member`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 --
 -- AUTO_INCREMENT for table `tbl_user`
 --
