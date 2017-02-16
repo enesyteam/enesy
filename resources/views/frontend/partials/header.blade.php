@@ -54,20 +54,15 @@
                      </div>
                      </li>-->
                   <li class="header-logo-account__sundry-item">
-                     <a class="header-logo-account__sundry-main-link" data-view="touchOnlyDropdown" data-dropdown-target=".js-sundry-3-dropdown" href="{{route('home.about')}}">Giới thiệu Enesy</a>
+                     <a class="header-logo-account__sundry-main-link" href="{{route('home.about')}}">Giới thiệu</a>
+                  </li>
+                  <li class="header-logo-account__sundry-item">
+                     <strong>
+                     <a class="header-logo-account__sundry-main-link" href="{{route('home.become_instructor')}}">Hợp tác giảng dạy</a>
+                     </strong>
                   </li>
                   <li class="header-logo-account__sundry-item">
                      <a class="header-logo-account__sundry-main-link" href="#">Trợ giúp</a>
-                     <div class="header-logo-account__sundry-dropdown js-sundry-5-dropdown">
-                        <ul class="hub-header-dropdown">
-                           <li>
-                              <a class="header-logo-account__sundry-sub-link" href="{{route('help.enrollers')}}">Trợ giúp học viên</a>
-                           </li>
-                           <li>
-                              <a class="header-logo-account__sundry-sub-link" href="{{route('help.authors')}}">Dành cho giảng viên</a>
-                           </li>
-                        </ul>
-                     </div>
                   </li>
                </ul>
                <div class="header-logo-account__user-nav">

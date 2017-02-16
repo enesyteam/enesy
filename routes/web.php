@@ -178,6 +178,11 @@ Route::group(array('namespace' => 'frontend' , 'middleware' => 'frontend.auth'),
 		'as'	=>	'home.about',
 		'uses'	=>	'PagesController@about'
 		]);
+	/*Become Instructor*/
+	Route::get('hop-tac-giang-day',[
+		'as'	=>	'home.become_instructor',
+		'uses'	=>	'PagesController@become_instructor'
+		]);
 	/*terms of use*/
 	Route::get('dieu-khoan-su-dung',[
 		'as'	=>	'home.terms',

@@ -1,0 +1,80 @@
+#header-wrap {
+    color: #fff;
+    background-color: #262626;
+    padding: 0 0 13px 0;
+    position: fixed;
+    width: 100%;
+    z-index: 1002;
+}
+.clearheader {
+    background: none;
+    box-shadow: none;
+}
+header#header {
+    padding-top: 13px;
+}
+.container {
+    position: relative;
+    width: 960px;
+    margin: 0 auto;
+    padding: 0;
+}
+.grid-container .three.columns {
+    width: 160px;
+}
+.grid-container .column, .grid-container .columns {
+    float: left;
+    display: inline;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+#header-wrap #logo img {
+	display: block;
+    height: 18px;
+    margin-top: 10px;
+}
+.grid-container .thirteen.columns {
+    width: 760px;
+}
+ul.nav {
+    margin-bottom: 0;
+}
+.clearfix:before, .clearfix:after, .row:before, .row:after, .comment-form:before, .comment-form:after {
+    content: '\0020';
+    display: block;
+    overflow: hidden;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}
+.nav li {
+    margin-bottom: 0;
+}
+li {
+    line-height: 18px;
+    margin-bottom: 12px;
+}
+header .nav li a {
+    float: right;
+    margin-left: 5px;
+}
+.nav li a {
+    font-size: 12px !important;
+}
+.nav li a {
+    background: none;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    color: #FFFFFF;
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 8px 12px;
+}
+#site-wrapper {
+    clear: both;
+}
+#page {
+    padding-top: 0;
+}

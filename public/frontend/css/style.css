@@ -8001,6 +8001,7 @@ img.mfp-img {
     max-width: 85%}
 .mfp-fade.mfp-wrap.mfp-ready .mfp-content {
     opacity: 1;
+    margin: 80px auto;
 }
 .mfp-fade.mfp-wrap.mfp-removing .mfp-content {
     opacity: 0;

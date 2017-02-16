@@ -30,6 +30,11 @@ class PagesController extends Controller
           View::share ( 'meta_des','Đào tạo Kỹ sư chuyên nghiệp' );
     	return view('frontend.about');
     }
+    public function become_instructor(){
+          View::share ( 'meta_title','Hợp tác giảng dạy | Enesy' );
+          View::share ( 'meta_des','Đào tạo Kỹ sư chuyên nghiệp' );
+        return view('frontend.become-instructor');
+    }
     public function terms(){
           View::share ( 'meta_title','Enesy | Điều khoản sử dụng' );
           View::share ( 'meta_des','Đào tạo Kỹ sư chuyên nghiệp' );
