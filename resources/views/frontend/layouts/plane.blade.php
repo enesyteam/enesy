@@ -6,10 +6,10 @@
 <!--<![endif]-->
      <head>
         <meta charset="utf-8" />
-        <title>Enesy | Đào tạo Kỹ sư chuyên nghiệp</title>
+        <title> {{ $meta_title }} </title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta content="width=device-width, initial-scale=1" name="viewport" />
-        <meta content="Đào tạo Kỹ sư chuyên nghiệp" name="description" />
+        <meta content="{{ $meta_des }}" name="description" />
         <meta content="Enesy.vn" name="author" />
         <link href="{{'frontend/css/normalize.css'}}" rel="stylesheet" type="text/css" />
         <link href="{{'frontend/css/style.css'}}" rel="stylesheet" type="text/css" />
