@@ -29,9 +29,13 @@ class PagesController extends Controller
     	return view('frontend.about');
     }
     public function terms(){
+          View::share ( 'meta_title','Enesy | Điều khoản sử dụng' );
+          View::share ( 'meta_des','Đào tạo Kỹ sư chuyên nghiệp' );
         return view('frontend.terms');
     }
     public function privacy_policy(){
+          View::share ( 'meta_title','Enesy | Chính sách bảo mật' );
+          View::share ( 'meta_des','Đào tạo Kỹ sư chuyên nghiệp' );
         return view('frontend.privacy-policy');
     }
 }
