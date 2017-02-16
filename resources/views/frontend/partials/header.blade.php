@@ -54,7 +54,7 @@
                      </div>
                      </li>-->
                   <li class="header-logo-account__sundry-item">
-                     <a class="header-logo-account__sundry-main-link" data-view="touchOnlyDropdown" data-dropdown-target=".js-sundry-3-dropdown" href="#">Giới thiệu Enesy</a>
+                     <a class="header-logo-account__sundry-main-link" data-view="touchOnlyDropdown" data-dropdown-target=".js-sundry-3-dropdown" href="{{route('home.about')}}">Giới thiệu Enesy</a>
                   </li>
                   <li class="header-logo-account__sundry-item">
                      <a class="header-logo-account__sundry-main-link" href="#">Trợ giúp</a>

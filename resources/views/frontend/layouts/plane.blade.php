@@ -16,6 +16,7 @@
         <link href="{{'frontend/css/style.css'}}" rel="stylesheet" type="text/css" />
         <link href="{{'frontend/css/custom.css'}}" rel="stylesheet" type="text/css" />
         <link href="{{'frontend/css/layout.css'}}" rel="stylesheet" type="text/css" />
+        @yield('head.css')
         <!--JqueryModal-->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
         <script src="{{'frontend/vender/jquery-modal/jquery.modal.js'}}" type="text/javascript" charset="utf-8"></script>

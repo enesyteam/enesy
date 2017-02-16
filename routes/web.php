@@ -171,6 +171,12 @@ Route::group(array('namespace' => 'frontend' , 'middleware' => 'web'), function 
 		'as'	=>	'user.author',
 		'uses'	=>	'UserController@author'
 		]);
+
+	/*about*/
+	Route::get('gioi-thieu-enesy',[
+		'as'	=>	'home.about',
+		'uses'	=>	'PagesController@about'
+		]);
 	});
 
 

@@ -9,4 +9,7 @@ class PagesController extends Controller
     public function index(){
     	return view('frontend.course.courses-list');
     }
+    public function about(){
+    	return view('frontend.about');
+    }
 }
