@@ -62,11 +62,11 @@
 
                                         <div class="h-text-align-center">
                                             <h2 class="t-heading -size-m">
-                                                Đăng ký thành viên
+                                                Gia nhập hệ thống Enesy
                                             </h2>
-                                            <p class="t-body -size-m -color-mid">
+                                            <!--<p class="t-body -size-m -color-mid">
                                                 Hoàn thành các bước đăng ký để trở thành thành viên của Enesy.
-                                            </p>
+                                            </p>-->
 
                                              <div id="error_message" style="color: red">
                                                 {{ $errors->first('first_name') }}
