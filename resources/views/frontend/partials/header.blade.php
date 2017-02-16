@@ -81,7 +81,6 @@
                   <div class="header-logo-account__user-nav-item">
                      <a class="header-logo-account__user-nav-main-link--alpha-with-dropdown" data-view="touchOnlyDropdown" data-dropdown-target="#user-nav-dropdown" href="">
                      <span id="user_username">congcd4</span>
-                     <strong class="header-logo-account__balance">$0.00</strong>
                      </a>
                      <div class="header-logo-account__user-nav-dropdown" id="user-nav-dropdown">
                         <ul class="hub-header-dropdown">
