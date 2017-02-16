@@ -62,7 +62,7 @@
                               <div class="item-thumbnail">
                                  <div class="item-thumbnail__image">
                                     <a title="{{$item->title}}" class="js-google-analytics__list-event-trigger" href="{{$link_detail}}">
-                                    <img src="{{$item->picture}}" border="0" height="80" width="150" alt="Moti App PSD Landing Page PSD Template - ThemeForest Item for Sale" title="" class="preload no_preview landscape-image-magnifier" data-tooltip="Moti App PSD Landing Page PSD Template">
+                                    <img src="<?php if($item->picture != '') echo $item->picture; else echo asset('frontend/images/img_default.png'); ?>" border="0" height="80" width="150" alt="Moti App PSD Landing Page PSD Template - ThemeForest Item for Sale" title="" class="preload no_preview landscape-image-magnifier" data-tooltip="Moti App PSD Landing Page PSD Template">
                                     </a>
                                     <!--<div class="item-thumbnail__preview">
                                        <a target="_blank" href="{{route('course.preview')}}" rel="modal:open">
@@ -79,7 +79,7 @@
                                  <a title="{{$item->title}}" class="js-google-analytics__list-event-trigger t-link -color-inherit -decoration-reversed" href="{{$link_detail}}">{{$item->title}}</a>
                               </h3>
                               <div class="course-list__price">
-                                 <p class="t-body -size-m -color-inherit -weight-bold h-m0">$10</p>
+                                 <p class="t-body -size-m -color-inherit -weight-bold h-m0">{{number_format($item->price)}}<sup>k</sup></p>
                               </div>
                               <div class="course-list__info">
                                  <div class="course__info-author">Giảng viên:
@@ -119,20 +119,7 @@
                </ul>
                 </div>
                <!--Pagination-->
-               <nav class="js-pagination pagination">
-                  <ul class="pagination__list">
-                     <li><span class="pagination__previous--disabled js-pagination-previous "><b>Trang trước</b></span></li>
-                     <li><span class="pagination__summary">Trang 1 trong tổng số 60 trang</span></li>
-                     <li><span class="pagination__page--current">1</span></li>
-                     <li><a rel="next" class="pagination__page" href="#">2</a></li>
-                     <li><a class="pagination__page" href="#">3</a></li>
-                     <li><a class="pagination__page" href="#">4</a></li>
-                     <li><a class="pagination__page" href="#">5</a></li>
-                     <li><span class="pagination__gap">…</span></li>
-                     <li><a class="pagination__page" href="#">60</a></li>
-                     <li><a class="pagination__next js-pagination-next" rel="next" href="#"><b>Trang sau</b></a></li>
-                  </ul>
-               </nav>
+               {{$listCourse->render()}}
                <!--#Pagination-->                                       
                <!--#Courses List-->
             </div>

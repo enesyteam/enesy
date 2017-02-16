@@ -6418,30 +6418,32 @@ button.search-field__button:active {
     text-align: right;
     width: auto;
 }
-}.pagination__list {
+}.pagination__list, ul.pagination {
     list-style: none;
     display: table-row;
 }
-.pagination__list>li {
+.pagination__list>li, ul.pagination>li {
     display: table-cell;
 }
-.pagination__list>li:first-child, .pagination__list>li:last-child {
+.pagination__list>li:first-child, .pagination__list>li:last-child,
+ul.pagination>li:first-child, ul.pagination>li:last-child {
     width: 30px;
 }
 @media (min-width: 1025px) {
-    .pagination__list {
+    .pagination__list, ul.pagination {
     display: block;
 }
-.pagination__list>li {
+.pagination__list>li, ul.pagination>li {
     display: inline-block;
 }
-.pagination__list>li:first-child, .pagination__list>li:last-child {
+.pagination__list>li:first-child, .pagination__list>li:last-child,
+ul.pagination>li:first-child, ul.pagination>li:last-child {
     width: auto;
 }
-.pagination__list>li:last-child {
+.pagination__list>li:last-child, ul.pagination>li:last-child {
     margin-right: -4px;
 }
-}.pagination__page, .pagination__page--current, .pagination__summary, .pagination__gap, .pagination__next, .pagination__next--disabled, .pagination__previous, .pagination__previous--disabled {
+}ul.pagination>li>a[rel="next"], li.active span, ul.pagination>li>a, .pagination__page, .pagination__page--current, .pagination__summary, .pagination__gap, .pagination__next, .pagination__next--disabled, .pagination__previous, .pagination__previous--disabled {
     /*border-radius: 4px;*/
     display: none;
     font-size: 14px;
@@ -6450,22 +6452,22 @@ button.search-field__button:active {
     text-align: center;
 }
 @media (min-width: 1025px) {
-    .pagination__page, .pagination__page--current, .pagination__summary, .pagination__gap, .pagination__next, .pagination__next--disabled, .pagination__previous, .pagination__previous--disabled {
+    ul.pagination>li>a[rel="next"], li.active span, ul.pagination>li>a, .pagination__page, .pagination__page--current, .pagination__summary, .pagination__gap, .pagination__next, .pagination__next--disabled, .pagination__previous, .pagination__previous--disabled {
     display: block;
     font-size: 12px;
     height: 30px;
     padding: 0 9px;
 }
-}.pagination__page {
+}.pagination__page, ul.pagination>li>a {
     color: #999999;
     text-decoration: none;
 }
-.pagination__page:hover {
+.pagination__page:hover, ul.pagination>li>a:hover {
     background: #e1e8ed;
     color: #454545;
     text-decoration: none;
 }
-.pagination__page--current {
+li.active span, .pagination__page--current {
     background: #ededed;
     border: 1px solid #e1e8ed;
     color: #454545;
@@ -6485,7 +6487,21 @@ button.search-field__button:active {
     color: #999999;
     padding: 0 2px;
 }
-}.pagination__next, .pagination__next--disabled, .pagination__previous, .pagination__previous--disabled {
+}
+ul.pagination>li>a[rel="next"], ul.pagination>li>a[rel="prev"]{visibility: hidden;}
+ul.pagination>li>a[rel="next"]:after, ul.pagination>li>a[rel="prev"]:after{
+    visibility: visible;
+    background: #454545; 
+    border: 1px solid #454545;
+    padding: 0 10px;
+}
+ul.pagination>li>a[rel="next"]:hover:after, ul.pagination>li>a[rel="prev"]:hover:after{
+    visibility: visible;
+    background: #0084B4; 
+    border: 1px solid #0084B4;
+    padding: 0 10px;
+}
+ul.pagination>li>a[rel="next"], ul.pagination>li>a[rel="prev"], .pagination__next, .pagination__next--disabled, .pagination__previous, .pagination__previous--disabled {
     display: block;
     text-decoration: none;
     background: #454545;
@@ -6494,17 +6510,18 @@ button.search-field__button:active {
     padding: 0 25px;
     position: relative;
 }
+ul.pagination>li.disabled { display: none; }
 @media (min-width: 1025px) {
-    .pagination__next, .pagination__next--disabled, .pagination__previous, .pagination__previous--disabled {
+    ul.pagination>li>a[rel="next"], ul.pagination>li>a[rel="prev"], .pagination__next, .pagination__next--disabled, .pagination__previous, .pagination__previous--disabled {
     padding: 0 10px;
 }
-}.pagination__next:hover, .pagination__next--disabled:hover, .pagination__previous:hover, .pagination__previous--disabled:hover, .pagination__next:focus, .pagination__next--disabled:focus, .pagination__previous:focus, .pagination__previous--disabled:focus {
+}ul.pagination>li>a[rel="next"]:hover, ul.pagination>li>a[rel="prev"]:hover, .pagination__next:hover, .pagination__next--disabled:hover, .pagination__previous:hover, .pagination__previous--disabled:hover, .pagination__next:focus, .pagination__next--disabled:focus, .pagination__previous:focus, .pagination__previous--disabled:focus {
     background: #0084B4;
     border: 1px solid #0084B4;
     color: white;
     text-decoration: none;
 }
-.pagination__next:after, .pagination__next--disabled:after, .pagination__previous:after, .pagination__previous--disabled:after {
+ul.pagination>li>a[rel="next"]:after, ul.pagination>li>a[rel="prev"]:after, .pagination__next:after, .pagination__next--disabled:after, .pagination__previous:after, .pagination__previous--disabled:after {
     font-family: marketplace-glyphs;
     font-style: normal;
     font-weight: normal;
@@ -6524,19 +6541,19 @@ button.search-field__button:active {
     .pagination__next--disabled, .pagination__previous--disabled {
     display: none;
 }
-}.pagination__next, .pagination__next--disabled {
+}ul.pagination>li>a[rel="next"], .pagination__next, .pagination__next--disabled {
     margin-right: 4px;
 }
-.pagination__next:after, .pagination__next--disabled:after {
+ul.pagination>li>a[rel="next"]:after, .pagination__next:after, .pagination__next--disabled:after {
     content: ""}
-.pagination__previous, .pagination__previous--disabled {
+ul.pagination>li>a[rel="prev"], .pagination__previous, .pagination__previous--disabled {
     position: relative;
     left: 4px;
 }
 .pagination__previous.-arrows-only, .-arrows-only.pagination__previous--disabled {
     left: 0;
 }
-.pagination__previous:after, .pagination__previous--disabled:after {
+ul.pagination>li>a[rel="prev"]:after, .pagination__previous:after, .pagination__previous--disabled:after {
     content: "";
     left: -1px;
 }
