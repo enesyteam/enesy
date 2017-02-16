@@ -3,9 +3,9 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 15, 2017 at 04:05 PM
+-- Generation Time: Feb 16, 2017 at 09:50 AM
 -- Server version: 10.1.19-MariaDB
--- PHP Version: 5.6.28
+-- PHP Version: 7.0.13
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -31,7 +31,7 @@ CREATE TABLE `tbl_categories` (
   `parent_id` int(11) NOT NULL,
   `title` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `alias` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `description` varchar(500) COLLATE utf8_unicode_ci NOT NULL,
+  `description` varchar(500) COLLATE utf8_unicode_ci DEFAULT NULL,
   `picture` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `create_user` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `create_date` int(11) NOT NULL,
@@ -47,8 +47,11 @@ CREATE TABLE `tbl_categories` (
 INSERT INTO `tbl_categories` (`id`, `parent_id`, `title`, `alias`, `description`, `picture`, `create_user`, `create_date`, `level`, `ordering`, `status`) VALUES
 (1, 0, 'Java1111', '', 'thảo luận về ngôn ngữ lập trình Java', '/2016/12/30/images.png', 'ducnvna@gmail.com', 20161230, 0, 0, 1),
 (2, 0, 'Japanese', '', 'to talk about Japanese issues', '', 'ducnvna@gmail.com', 20161230, 0, 0, 1),
-(3, 2, 'dfdsfds - dfkdsfsd', 'dfdsfds - dfkdsfsd', 'dfdsf', '', 'ducnvna@gmail.com', 20170215, 0, 0, 0),
-(4, 1, 'quá ongn', 'quá ongn', 'dfd', '', 'ducnvna@gmail.com', 20170215, 0, 0, 0);
+(3, 2, 'Văn Hóa Nhật', 'dfdsfds - dfkdsfsd', 'dfdsf', '', 'ducnvna@gmail.com', 20170216, 0, 0, 1),
+(4, 1, 'Giới thiệu', 'quá ongn', 'dfd', '', 'ducnvna@gmail.com', 20170216, 0, 0, 1),
+(5, 1, 'Hướng đối tượng', 'Hướng đối tượng', 'dfdsf', '', 'ducnvna@gmail.com', 20170216, 0, 0, 1),
+(6, 1, 'Xã Hội', 'Xã Hội', 'df', '', 'ducnvna@gmail.com', 20170216, 0, 0, 1),
+(7, 0, 'Cầu Đường', 'Cầu Đường', '1111', '', 'ducnvna@gmail.com', 20170216, 0, 0, 1);
 
 -- --------------------------------------------------------
 
@@ -180,7 +183,7 @@ CREATE TABLE `tbl_member` (
 INSERT INTO `tbl_member` (`id`, `email`, `username`, `password`, `last_name`, `first_name`, `middle_name`, `updated_at`, `status`, `information_status`, `info`, `create_date`, `create_user`, `modify_date`, `modify_user`, `remember_token`, `avatar`, `is_teaching`, `sex`, `dob`, `social`, `phone`, `address`) VALUES
 (2, 'dannt@gmail.com', 'dannt', '$2y$10$TCc1RO0i2gU2P3OMJ62o5uAk.02UFipaRCptEhjZx2EfXbmWgnZee', 'Nguyen', 'Dan', 'The', NULL, 2, 1, NULL, 2016, NULL, 2016, NULL, NULL, 'upload/image/2016/12/30/1482963782-thumbnail.jpg', 1, 'Male', '1988-04-14', NULL, '0987654321', 'Yen My, Hung Yen'),
 (4, 'davidnguyen@gmail.com', 'david', '$2y$10$0GMr7RYgtE2jmYlt3NWAJ.7nQ0MKZYENt6LqbrI.RBP9NjzIUKCIi', 'Nguyen', 'David', 'Sandro', NULL, 1, 1, NULL, 2016, NULL, 2017, NULL, NULL, 'upload/image/2017/01/13/1482963782-thumbnail.jpg', 0, 'Female', '1987-09-08', NULL, '0123456789', 'Thanh xuan, Ha noi'),
-(5, 'ducnvna@gmail.com', 'ducnv', '$2y$10$gwiqKsKkdSseJj8ZAxmJi.nRKF.0UvkevolcOgLH7Tf7Zbvre5S6K', 'Duc', 'Nguyen', 'Van', NULL, 2, 1, NULL, 2016, NULL, 2016, NULL, NULL, 'backend/image/default_avatar_male.jpg', 1, 'Male', '2016-12-06', NULL, '0976460950', 'Ha Noi'),
+(5, 'ducnvna@gmail.com', 'ducnv', '$2y$10$gwiqKsKkdSseJj8ZAxmJi.nRKF.0UvkevolcOgLH7Tf7Zbvre5S6K', 'Duc', 'Nguyen', 'Van', NULL, 2, 1, NULL, 2016, NULL, 2016, NULL, 'XInYTvo6kNtZFqiShM6UwPVKMdw5zAW2sFlovqxACXQV3ewwWYZmAxQIsmv9', 'backend/image/default_avatar_male.jpg', 1, 'Male', '2016-12-06', NULL, '0976460950', 'Ha Noi'),
 (6, 'ducnvna2@gmail.com', 'ducnvna', '$2y$10$xhSPpPPYc52K5mHLGf4o4ORHcKW0GhMkTAgAdhjqKIG9z4vaOU8lC', 'Duc1', 'Nguyen', 'Van', NULL, 2, 1, NULL, 2016, NULL, 2016, NULL, NULL, 'backend/image/default_avatar_male.jpg', 0, 'Male', '2016-12-08', '322', '1111', 'dfdsf'),
 (7, 'tungsonchelsea@gmail.com', 'tungson', '$2y$10$r1d50gRbQggVSbVmUlhP9OpqCpyOWJhMehMd9.TDfnH1lbgAYDMcC', 'tung son', 'nguyen', 'tung', NULL, 2, 1, NULL, 2016, NULL, 2016, NULL, NULL, 'backend/image/default_avatar_male.jpg', 0, 'Male', '1998-12-02', NULL, '0984246691', 'Ha Noi'),
 (8, 'dungtd1308@gmail.com', 'dungtd13', '$2y$10$9VNQhXCsLvnA/rAAe52xJ.UYlQGDEkAsidzcPXFlgjtaUZmcLB43a', 'Dung', 'Tran Duc', '3213123', NULL, 2, 1, NULL, 2016, NULL, 2017, NULL, NULL, 'upload/image/2017/01/03/dungtd2_1483428167.jpg', 0, 'Male', '1970-01-01', NULL, '213123123', '321312312'),
@@ -280,7 +283,7 @@ ALTER TABLE `tbl_user`
 -- AUTO_INCREMENT for table `tbl_categories`
 --
 ALTER TABLE `tbl_categories`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 --
 -- AUTO_INCREMENT for table `tbl_course`
 --
