@@ -20,6 +20,7 @@
 <!--#Filter bar-->
 <div>
 <ul class="course-list">
+   @foreach($listCourse as $item)
    <!--Course-->
    <li class="js-google-analytics__list-event-container">
       <div class="course-list__columns-container">
@@ -78,6 +79,7 @@
       </div>
    </li>
    <!--#Course-->
+   @endforeach
    <!--Course-->
    <li class="js-google-analytics__list-event-container">
       <div class="course-list__columns-container">
