@@ -137,8 +137,8 @@
 
                                         <div class="h-text-align-center">
                                             <p class="t-body -size-m -color-mid h-m0">
-                                                Bằng việc tạo tài khoản, coi như bạn đã đồng ý với các <a href="">Điều
-                                                    khoản sử dụng</a> của Enesy.
+                                                Bằng việc tạo tài khoản, coi như bạn đã đồng ý với các <a href="{{route('home.terms')}}">Điều
+                                                    khoản sử dụng</a> và <a href="{{route('home.privacy_policy')}}"> Chính sách bảo mật</a> của Enesy.
 
                                             </p>
                                         </div>
