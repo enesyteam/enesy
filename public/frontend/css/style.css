@@ -8030,8 +8030,9 @@ img.mfp-img {
 .site-footer ul>li {
     color: #999;
     display: inline-block;
-    margin-right: 20px;
     font-size: 12px;
     line-height: 17px;
     right: 0;
 }
+.site-footer ul>li:after{content:'\002022';margin-right: 5px}
+.site-footer ul>li:last-child:after{content:''}

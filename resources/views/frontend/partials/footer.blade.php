@@ -28,6 +28,11 @@
                      Chính sách bảo mật
                      </a>
                   </li>
+                  <li>
+                     <a href="#" class="gray-text" data-purpose="contact-link">
+                     Liên hệ
+                     </a>
+                  </li>
                </ul>
             </div>
          </div>

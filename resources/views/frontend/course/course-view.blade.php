@@ -363,7 +363,7 @@ Enesy | Đang xem Khóa học lập trình AutoCAD với C# trình độ cơ b�
                                                        <span class="yt-thumb-square">
                                                          <span class="yt-thumb-clip">
                                                            
-                                                     <img src="https://yt3.ggpht.com/-aXj7xPhcslM/AAAAAAAAAAI/AAAAAAAAAAA/doIHJE8nKkc/s32-c-k-no-mo-rj-c0xffffff/photo.jpg" tabindex="0" data-ytimg="1" height="32" onload=";__ytRIL(this)" width="32" alt="TIN TỨC 24H" role="img">
+                                                     <img src="https://yt3.ggpht.com/-aXj7xPhcslM/AAAAAAAAAAI/AAAAAAAAAAA/doIHJE8nKkc/s32-c-k-no-mo-rj-c0xffffff/photo.jpg" tabindex="0" data-ytimg="1" height="32" width="32" alt="TIN TỨC 24H" role="img">
 
                                                            <span class="vertical-align"></span>
                                                          </span>
