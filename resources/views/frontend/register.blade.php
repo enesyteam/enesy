@@ -38,9 +38,11 @@
                  data-google-analytics-page-title="direct_sign_up">
                 <header class="e-modal__header -background-dark -padding-m">
                     <div class="h-image-svg h-text-align-center" width="130px" height="25px">
-                        <img alt="Enesy" width="130" class="is-hidden--no-svg is-hidden--no-js"
-                             src="{{url('frontend/images/logo.png')}}">
-                        <h1 class="t-heading -size-l -color-light h-m0 is-hidden--svg">Enesy</h1>
+                        <a href="{{route('home')}}">
+                            <img alt="Enesy" width="130" class="is-hidden--no-svg is-hidden--no-js"
+                                 src="{{url('frontend/images/logo.png')}}">
+                            <h1 class="t-heading -size-l -color-light h-m0 is-hidden--svg">Enesy</h1>
+                        </a>
                     </div>
                 </header>
                 <div class="e-modal__section -padding-none -radius-bottom">

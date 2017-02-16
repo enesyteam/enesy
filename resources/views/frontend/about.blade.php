@@ -18,9 +18,10 @@
 </section>
 <section class="c_section">
     <div class="container grid-container container--small">
-        <h2 class="c_section__title">Section 2</h2>
+        <h2 class="c_section__title">Enesy là gì?</h2>
         <p class="p_home__desc container--xsmall">
-            This is section 2 This is section 2 This is section 2 This is section 2 This is section 2 This is section 2 This is section 2 This is section 2 This is section 2 This is section 2 This is section 2 This is section 2 This is section 2 This is section 2 This is section 2 .        </p>
+        	Enesy là viết tắt của cụm từ "ENgineering Education SYstem" - Một hệ thống đào tạo Kỹ sư chuyên nghiệp, với các khóa học được hợp tác sản xuất bởi các chuyên gia giỏi, nhiều kinh nghiệm. Tham gia các khóa học tại Enesy, bạn sẽ được học hỏi những kinh nghiệm quý báu từ các chuyên gia hàng đầu trong lĩnh vực của bạn. Ngoài ra, các khóa học tại Enesy đều gắn liền với các dự án thực tiễn, điều đó giúp bạn dễ dàng tiếp thu và ứng dụng hơn.    
+        </p>
                     <ul class="p_home__mosaic">
                             <li style="background-image: url('frontend/images/about__section01.jpg');">
                 </li>
