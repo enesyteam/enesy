@@ -26,6 +26,8 @@ class PagesController extends Controller
     	return view('frontend.course.courses-list',['listCourse'=>$listCourse]);
     }
     public function about(){
+          View::share ( 'meta_title','Enesy | Giới thiệu về Enesy' );
+          View::share ( 'meta_des','Đào tạo Kỹ sư chuyên nghiệp' );
     	return view('frontend.about');
     }
     public function terms(){

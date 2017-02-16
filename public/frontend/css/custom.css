@@ -774,3 +774,9 @@ img, svg, .sc-artwork {
 .menu-demo-only{
     border: 1px solid red;
 }
+/*footer*/
+.site-footer .gray-text {
+    color: #999;
+    display: inline-block;
+    margin-right: 20px;
+}

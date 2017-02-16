@@ -3559,7 +3559,6 @@ iframe[name=google_conversion_frame] {
 @media (min-width: 1025px) {
     .footer-bottom {
     padding-bottom: 0;
-    padding-top: 24px;
     text-align: left;
 }
 }.footer-box {
@@ -3802,7 +3801,9 @@ input[type=text].footer-subscribe__input:focus::-webkit-input-placeholder, input
 }
 }.footer-top {
     *zoom: 1;
-    padding-bottom: 20px;
+}
+.footer-top {
+    padding-bottom: 10px;
 }
 .footer-top:after {
     content: "";
@@ -3811,7 +3812,7 @@ input[type=text].footer-subscribe__input:focus::-webkit-input-placeholder, input
 }
 @media (min-width: 1025px) {
     .footer-top {
-    /*border-bottom: 1px solid #454545;*/
+    border-bottom: 1px solid #454545;
 }
 }.footer-top__market-logo {
     display: block;
@@ -8015,4 +8016,22 @@ img.mfp-img {
     border-radius: none;
     font-size: 10px;
     background-color: rgba(43, 51, 63, 0.7);
+}
+/*Footer*/
+.mt10 {
+    margin-top: 10px;
+}
+.mb10{
+    margin-bottom: 10px;
+}
+.fxw {
+    display: flex;
+}
+.site-footer ul>li {
+    color: #999;
+    display: inline-block;
+    margin-right: 20px;
+    font-size: 12px;
+    line-height: 17px;
+    right: 0;
 }

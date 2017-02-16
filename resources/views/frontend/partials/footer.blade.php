@@ -8,23 +8,29 @@
                </div>
                <div class="footer-top__right is-hidden-tablet-and-below">
                   <div class="market-stats">
-                     <div class="market-stats__stat">
-                        <p class="t-body -color-light h-m0">
-                           2,500
-                           <span>học viên</span>
-                        </p>
-                     </div>
-                     <div class="market-stats__stat">
-                        <p class="t-body -color-light h-m0">
-                           150
-                           <span>khóa học dành cho kỹ sư</span>
-                        </p>
-                     </div>
                   </div>
                </div>
+            </div>
+            <div class="footer-bottom">
+               <ul class="fxw mt10 mb10 hidden-xs">
+                  <li>
+                     <span class="gray-text copyright">
+                     Copyright © 2017 Enesy.
+                     </span>
+                  </li>
+                  <li>
+                     <a href="{{route('home.terms')}}" class="gray-text" data-purpose="terms-link">
+                     Điều khoản sử dụng
+                     </a>
+                  </li>
+                  <li>
+                     <a href="{{route('home.privacy_policy')}}" class="gray-text" data-purpose="privacy-link">
+                     Chính sách bảo mật
+                     </a>
+                  </li>
+               </ul>
             </div>
          </div>
       </div>
    </div>
-
 </footer>
