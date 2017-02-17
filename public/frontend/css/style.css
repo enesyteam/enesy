@@ -5076,7 +5076,7 @@ input[type=text].footer-subscribe__input:focus::-webkit-input-placeholder, input
 @supports (background-blend-mode: overlay) {
     .page-section__background {
     background-blend-mode: overlay;
-    background-image: url(../images/man_mockup_n.jpg);
+    background-image: url(../images/bg-page-section.png);
 }
 }.-theme-3docean .page-section__background {
     background-color: #b31a3d;

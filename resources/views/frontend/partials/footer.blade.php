@@ -29,7 +29,7 @@
                <ul class="fxw mt10 mb10 hidden-xs">
                   <li>
                      <span class="gray-text copyright">
-                     Copyright © 2017 Enesy.
+                     Copyright © 2017 Enesy - Engineering Education System
                      </span>
                   </li>
                   <li>

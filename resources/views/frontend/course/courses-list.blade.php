@@ -1,4 +1,9 @@
 @extends('frontend.layouts.dashboard')
+@section('top-header')
+<!--Top Header-->
+                           @include('frontend.partials.top-header-message')
+                           <!--#Top Header-->
+@stop
 @section('section')
 <!--Search-->
 @include('frontend.partials.searchheader')
@@ -8,7 +13,7 @@
    <div class="content-main--basic">
       <div class="faceted-search js-faceted-search" data-view="pjaxFacetedSearch">
          <div class="grid-container">
-            <div data-view="guestSurveyBanner">
+            <!--<div data-view="guestSurveyBanner">
                <div class="js-system-banner-container">
                   <div class="js-system-banner__guest-survey">
                      <div class="e-alert-box -type-success">
@@ -26,7 +31,7 @@
                      </div>
                   </div>
                </div>
-            </div>
+            </div>-->
             <div class="content-l -size-scale-tablet content-right">
                <!--Courses List-->
                

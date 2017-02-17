@@ -6,6 +6,7 @@
                   <div class="canvas">
                      <div class="canvas__header">
                         <div class="site-header">
+                           @yield('top-header')
                            <!--Main Header-->
                            @include('frontend.partials.header')
                            <!--#Main Header-->
