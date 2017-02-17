@@ -31,35 +31,11 @@
             </a>
             <nav class="header-logo-account__right">
                <ul class="header-logo-account__sundry">
-                  <!-- <li class="header-logo-account__sundry-item">
-                     <a class="header-logo-account__sundry-main-link--brand-color -rounded-corners" target="_blank" href="https://elements.envato.com/?utm_campaign=elements_mkt-headernav_beta-launch_01AUG2016&amp;utm_content=tf_headernav&amp;utm_medium=promos&amp;utm_source=#">Envato Elements</a>
-                     </li>
-                     <li class="header-logo-account__sundry-item">
-                     <a class="header-logo-account__sundry-main-link -rounded-corners" target="_self" href="//#/become-an-author">Start selling</a>
-                     </li>
-                     <li class="header-logo-account__sundry-item">
-                     <a class="header-logo-account__sundry-main-link" data-view="touchOnlyDropdown" data-dropdown-target=".js-sundry-2-dropdown" href="https://forums.envato.com">Forums</a>
-                     <div class="header-logo-account__sundry-dropdown js-sundry-2-dropdown">
-                        <ul class="hub-header-dropdown">
-                           <li>
-                              <a class="header-logo-account__sundry-sub-link" href="https://forums.envato.com">All forums</a>
-                           </li>
-                           <li>
-                              <a class="header-logo-account__sundry-sub-link" href="https://forums.envato.com/c/authoring-on-envato">Authoring on Envato</a>
-                           </li>
-                           <li>
-                              <a class="header-logo-account__sundry-sub-link" href="https://forums.envato.com/c/project-making">Project making</a>
-                           </li>
-                        </ul>
-                     </div>
-                     </li>-->
                   <li class="header-logo-account__sundry-item">
                      <a class="header-logo-account__sundry-main-link" href="{{route('home.about')}}">Giới thiệu</a>
                   </li>
                   <li class="header-logo-account__sundry-item">
-                     <strong>
-                     <a class="header-logo-account__sundry-main-link" href="{{route('home.become_instructor')}}">Hợp tác giảng dạy</a>
-                     </strong>
+                     <a class="header-logo-account__sundry-main-link" href="{{route('home.become_instructor')}}"><strong>Hợp tác giảng dạy</strong></a>
                   </li>
                   <li class="header-logo-account__sundry-item">
                      <a class="header-logo-account__sundry-main-link" href="#">Trợ giúp</a>

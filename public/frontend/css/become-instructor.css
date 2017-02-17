@@ -78,3 +78,98 @@ header .nav li a {
 #page {
     padding-top: 0;
 }
+h3.home_title {
+    color: #000;
+    font-size: 21px;
+    font-weight: 500;
+    margin-top: 30px;
+    text-align: center;
+    width: 100%;
+}
+.number {
+    float: left;
+    text-align: center;
+    margin: 0 5px;
+    width: 230px;
+}
+.number .number {
+    color: #353535;
+    font-size: 48px;
+    font-weight: 500;
+    line-height: 40px;
+    padding: 5px 0;
+}
+.number span {
+    margin-bottom: 5px;
+}
+.number span {
+    display: block;
+    margin-bottom: 10px;
+}
+.row {
+    margin-bottom: 20px;
+}
+.row, .clearfix, .comment-form {
+    zoom: 1;
+}
+.row:after, .clearfix:after, .comment-form:after {
+    clear: both;
+}
+.bg-e9{
+	background-color: #e9e9e9;
+}
+.bg-highlight{
+	background: linear-gradient(#50A253, #4C954D) repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+.color-white{
+	color: white !important;
+}
+.c_section .intro_text{
+	width: 100%;
+    text-align: center;
+}
+.c_section form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.signup_cta form {
+    margin: 0;
+}
+form {
+    margin-bottom: 20px;
+}
+.create-course-form input[type="text"] {
+    background: #fff;
+    border: 1px solid #ccc;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    display: block;
+    font: 13px "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #777;
+    margin: 0 0 10px 0;
+    max-width: 100%;
+    padding: 8px 6px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.c_section input, .c_section button {
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    color: #fff;
+    float: none;
+    font-size: 13px;
+    font-weight: 500;
+    margin: 0 auto 5px;
+    padding: 15px 0;
+    width: 360px;
+}
+.c_section button {
+    background: #4985b8;
+    color: #fff;
+    font-weight: 700;
+    padding: 15px 0;
+}

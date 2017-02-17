@@ -8,6 +8,20 @@
                </div>
                <div class="footer-top__right is-hidden-tablet-and-below">
                   <div class="market-stats">
+                     <!--<ul class="fxw fxwrap right">
+                        <li>
+                           <a href="{{route('home.about')}}" class=" white-text">Về Enesy</a>
+                        </li>
+                        <li>
+                           <a href="{{route('home.become_instructor')}}" class=" white-text" data-purpose="footer.links.teach">Trở thành giảng viên</a>
+                        </li>
+                        <li>
+                           <a href="/affiliate/" class=" white-text" data-purpose="footer.links.affiliates">Affiliates</a>
+                        </li>
+                        <li>
+                           <a href="https://about.udemy.com/blog?ref=footer" class=" white-text" data-purpose="footer.links.blog">Blog</a>
+                        </li>
+                     </ul>-->
                   </div>
                </div>
             </div>

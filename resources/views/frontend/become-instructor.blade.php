@@ -1,61 +1,95 @@
-@extends('frontend.layouts.plane')
+@extends('frontend.master.teach-master')
 @section('head.css')
+<link href="{{'frontend/css/about.css'}}" rel="stylesheet" type="text/css" />
 <link href="{{'frontend/css/become-instructor.css'}}" rel="stylesheet" type="text/css" />
 @stop
-@section('body')
-<div class="page">
-   <div class="page__canvas">
-      <div class="canvas">
-         <div class="js-canvas__body canvas__body">
-            <div class="grid-container">
-            </div>
-            <div class="canvas__header">
-               <div class="site-header">
-                  <div id="header-wrap" class="clearheader">
-                     <header id="header" class="grid-container">
-                        <a id="logo" class="columns three" href="{{route('home.become_instructor')}}">
-                        <img src="{{'frontend/images/logo_teach.png'}}" class="scale-with-grid">
-                        </a>
-                        <nav id="navigation" class="columns thirteen">
-                           <div class="menu-global-container">
-                              <ul id="menu-global" class="nav clearfix">
-                                 <li id="menu-item-11978" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11978"><a href=""><span>???</span></a></li>
-                                 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8117"><a href="#"><span>Bảo mật khóa học</span></a></li>
-                                 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1254"><a href="#"><span>Quảng bá khóa học</span></a></li>
-                                 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1250"><a href="#"><span>Tạo khóa học</span></a></li>
-                              </ul>
-                           </div>
-                        </nav>
-                        <!-- /navigation -->
-                        <!--        <div class="columns two"> </div>-->
-                     </header>
-                     <!-- /header -->
-                  </div>
-               </div>
-               <!--/site header-->
-            </div>
-            <!--/canvas header-->
-            <div class="js-canvas__body canvas__body">
-            <div class="grid-container">
-                        </div>
-               <div class="content-container">
-               <div class="faceted-search js-faceted-search">
-                  <div class="content-main--basic">
-                     <span style="color: red">content
-                     ád
-                     fas
-                     df
-                     ádf
-                     ádf
-</span>
-                  </div>
-                  </div>
-               </div>
-               @include('frontend.partials.footer')
-            </div>
-            <!--/canvas body-->
-         </div>
+@section('section')
+<section class="c_hero" style="background-image: url('frontend/images/man_learning.jpg');">
+   <div class="container grid-container">
+      <div class="vertical-align">
+         <h2 class="c_hero__title">Viết gì đây?</h2>
+         <p class="c_hero__desc">...blah blah blah blah blah blah blah blah blah blah blah blah blah blah .</p>
       </div>
    </div>
+</section>
+<div class="container grid-container container--small">
+   <section class="c_section">
+      <div class="container">
+         <article class="row w100">
+            <h2 class="c_section__title">Thống kê nhanh Enesy</h2>
+            <div class="intro_text"></div>
+         </article>
+         <div class="row content_number">
+            <div class="number">
+               <!--<img src="{{'frontend/images/icons/person.png'}}">-->
+               <span class="number">200+</span>
+               <span class="description">Giảng viên <br> &amp; Chuyên gia</span>
+            </div>
+            <div class="number">
+               <!--<img src="{{'frontend/images/icons/person.png'}}">-->
+               <span class="number">1,500+</span>
+               <span class="description">Học viên<br>hàng tháng</span>
+            </div>
+            <div class="number">
+               <!--<img src="{{'frontend/images/icons/person.png'}}">-->
+               <span class="number">350+ </span>
+               <span class="description">Khóa học <br> chuyên nghiệp</span>
+            </div>
+            <div class="number">
+               <!--<img src="{{'frontend/images/icons/person.png'}}">-->
+               <span class="number">8tr+</span>
+               <span class="description">Thu nhập trung bình<br> /giảng viên/tháng</span>
+            </div>
+         </div>
+      </div>
+   </section>
 </div>
+<!--Section-->
+<section class="c_section bg-e9">
+   <div class="container">
+      <article class="row w100">
+         <h2 class="c_section__title">Quy trình dành cho giảng viên</h2>
+         <div class="intro_text"></div>
+      </article>
+   </div>
+</section>
+<!--/Section-->
+<!--Section-->
+<section class="c_section">
+   <div class="container">
+      <article class="row w100">
+         <h2 class="c_section__title">Section gì đây?</h2>
+         <div class="intro_text"></div>
+      </article>
+   </div>
+</section>
+<!--/Section-->
+<!--Section-->
+<section class="c_section bg-e9">
+   <div class="container">
+      <article class="row w100">
+         <h2 class="c_section__title">Giảng viên nói gì về Enesy?</h2>
+         <div class="intro_text"></div>
+      </article>
+   </div>
+</section>
+<!--/Section-->
+<!--Section-->
+<section class="c_section bg-highlight">
+   <div class="container">
+      <article class="row w100">
+         <h2 class="c_section__title color-white">Sẵn sàng tạo khóa học của chính bạn?</h2>
+         <div class="intro_text color-white">
+            <p>Đừng lo, bạn chỉ cần nêu ý tưởng, chúng tôi sẽ liên lạc lại ngay!</p>
+         </div>
+      </article>
+      <article class="row w100">
+         <form action="#" class="create-course-form" method="get">
+            <input name="title" type="text" class="middle create-course__input" placeholder="Nhập tiêu đề khóa học" maxlength="60" required="required" vk_1307e="subscribed">
+            <button type="submit" class="middle create_course button">Bắt đầu tạo khóa học</button>
+         </form>
+      </article>
+   </div>
+</section>
+<!--/Section-->
 @stop
