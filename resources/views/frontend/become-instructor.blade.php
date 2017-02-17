@@ -10,6 +10,15 @@
          <h2 class="c_hero__title">Viết gì đây?</h2>
          <p class="c_hero__desc">...blah blah blah blah blah blah blah blah blah blah blah blah blah blah .</p>
       </div>
+      <section id="sliderCTA" class="clearfix">
+            <div class="box_padding">
+    <h3>Tạo khóa học của bạn</h3>
+    <p>Nhập tiêu đề và bắt đầu lên ý tưởng cho khóa học</p>
+    <form action="#" class="create-course-form" method="get">
+                <input name="title" type="text" class="middle create-course__input" placeholder="Tiêu đề cho khóa học" maxlength="60" required="required" oninvalid="this.setCustomValidity('Vui lòng nhập tiêu đề khóa học')" oninput="setCustomValidity('')" vk_1ecd7="subscribed" vk_1ef21="subscribed">
+        <button type="submit" class="middle create_course button">Tạo khóa học</button>
+    </form>
+</div>        </section>
    </div>
 </section>
 <div class="container grid-container container--small">
@@ -49,7 +58,44 @@
    <div class="container">
       <article class="row w100">
          <h2 class="c_section__title">Quy trình dành cho giảng viên</h2>
-         <div class="intro_text"></div>
+         <ul class="home-section-marketing__item_list">
+        <li class="home-section-marketing__item h-text-align-center">
+          <div class="home-section-marketing__item-image">
+            <img alt="All the themes you need" src="//public-assets.envato-static.com/assets/ingested_content/home/marketing/tf_support-807c98893a7e42e0b03721406f2447aa.png">
+          </div>
+          <p class="t-body"></p><p><h10 class="t-body -weight-bold">Title here here here!.</h10></p><p>Viết gì đây cho nó hay hay tí nhỉ? Viết gì đây cho nó hay hay tí nhỉ? Viết gì đây cho nó hay hay tí nhỉ? .</p><p></p>
+        </li>
+        <li class="home-section-marketing__item h-text-align-center">
+          <div class="home-section-marketing__item-image">
+            <img alt="Know your template" src="//public-assets.envato-static.com/assets/ingested_content/home/marketing/tf_everything-230c90dd918293a5a877eabf493f1af8.png">
+          </div>
+          <p class="t-body"></p><p><h10 class="t-body -weight-bold">Title here here here!.</h10></p><p>Viết gì đây cho nó hay hay tí nhỉ? Viết gì đây cho nó hay hay tí nhỉ? Viết gì đây cho nó hay hay tí nhỉ? .</p><p></p>
+        </li>
+        <li class="home-section-marketing__item h-text-align-center">
+          <div class="home-section-marketing__item-image">
+            <img alt="Everything you need in one place" src="//public-assets.envato-static.com/assets/ingested_content/home/marketing/tf_discover-71af82e66c09d29fd128aa10502b28fb.png">
+          </div>
+          <p class="t-body"></p><p><h10 class="t-body -weight-bold">Title here here here!.</h10></p><p>Viết gì đây cho nó hay hay tí nhỉ? Viết gì đây cho nó hay hay tí nhỉ? Viết gì đây cho nó hay hay tí nhỉ? .</p><p></p>
+        </li>
+        <li class="home-section-marketing__item h-text-align-center">
+          <div class="home-section-marketing__item-image">
+            <img alt="All the themes you need" src="//public-assets.envato-static.com/assets/ingested_content/home/marketing/tf_support-807c98893a7e42e0b03721406f2447aa.png">
+          </div>
+          <p class="t-body"></p><p><h10 class="t-body -weight-bold">Title here here here!.</h10></p><p>Viết gì đây cho nó hay hay tí nhỉ? Viết gì đây cho nó hay hay tí nhỉ? Viết gì đây cho nó hay hay tí nhỉ? .</p><p></p>
+        </li>
+        <li class="home-section-marketing__item h-text-align-center">
+          <div class="home-section-marketing__item-image">
+            <img alt="Know your template" src="//public-assets.envato-static.com/assets/ingested_content/home/marketing/tf_everything-230c90dd918293a5a877eabf493f1af8.png">
+          </div>
+          <p class="t-body"></p><p><h10 class="t-body -weight-bold">Title here here here!.</h10></p><p>Viết gì đây cho nó hay hay tí nhỉ? Viết gì đây cho nó hay hay tí nhỉ? Viết gì đây cho nó hay hay tí nhỉ? .</p><p></p>
+        </li>
+        <li class="home-section-marketing__item h-text-align-center">
+          <div class="home-section-marketing__item-image">
+            <img alt="Everything you need in one place" src="//public-assets.envato-static.com/assets/ingested_content/home/marketing/tf_discover-71af82e66c09d29fd128aa10502b28fb.png">
+          </div>
+          <p class="t-body"></p><p><h10 class="t-body -weight-bold">Title here here here!.</h10></p><p>Viết gì đây cho nó hay hay tí nhỉ? Viết gì đây cho nó hay hay tí nhỉ? Viết gì đây cho nó hay hay tí nhỉ? .</p><p></p>
+        </li>
+    </ul>
       </article>
    </div>
 </section>
@@ -58,8 +104,8 @@
 <section class="c_section">
    <div class="container">
       <article class="row w100">
-         <h2 class="c_section__title">Section gì đây?</h2>
-         <div class="intro_text"></div>
+         <h2 class="c_section__title">Đang nghĩ tiêu đề</h2>
+         <div class="intro_text">Section này sẽ nói về những gì Enesy cần làm để giúp đỡ giảng viên tạo khóa học, Enesy sẽ hiệu chỉnh khóa học như thế nào, các yêu cầu cần đạt được của khóa học như thế nào để ...</div>
       </article>
    </div>
 </section>

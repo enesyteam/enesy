@@ -1,8 +1,8 @@
 @extends('frontend.layouts.dashboard')
 @section('top-header')
 <!--Top Header-->
-                           @include('frontend.partials.top-header-message')
-                           <!--#Top Header-->
+@include('frontend.partials.top-header-message')
+<!--#Top Header-->
 @stop
 @section('section')
 <!--Search-->
