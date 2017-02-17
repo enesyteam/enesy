@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 16, 2017 at 11:29 AM
+-- Generation Time: Feb 17, 2017 at 11:30 AM
 -- Server version: 10.1.19-MariaDB
 -- PHP Version: 7.0.13
 
@@ -73,18 +73,19 @@ CREATE TABLE `tbl_course` (
   `time_learn` int(11) DEFAULT NULL,
   `mentor_id` int(11) NOT NULL,
   `create_date` int(11) NOT NULL,
-  `updated_at` int(11) NOT NULL
+  `updated_at` int(11) NOT NULL,
+  `trending` tinyint(4) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `tbl_course`
 --
 
-INSERT INTO `tbl_course` (`id`, `parent_cat_id`, `picture`, `cat_id`, `title`, `introtext`, `content`, `price`, `love`, `num_of_learn`, `time_learn`, `mentor_id`, `create_date`, `updated_at`) VALUES
-(1, 0, '', 2, '1111 đã edit', '1111- đã edit', '11111- đã edit', 0, 0, 0, 0, 0, 1484621541, 1484621566),
-(2, 0, '', 1, 'dfdsf', 'sdfdsf', 'dfds', 0, 0, 0, 0, 0, 1484621584, 0),
-(3, 0, '', 1, 'ểwr', 'ểwr', 'ểwr', 0, 0, 0, 0, 0, 1484621603, 0),
-(4, 1, '', 2, 'lập trình F.U.C.K Linh miu', 'fuck là một nghệ thuật...', 'fuck là một nghệ thuật và người fuck là một nghệ sĩ', NULL, NULL, NULL, NULL, 11, 1487136918, 1487138150);
+INSERT INTO `tbl_course` (`id`, `parent_cat_id`, `picture`, `cat_id`, `title`, `introtext`, `content`, `price`, `love`, `num_of_learn`, `time_learn`, `mentor_id`, `create_date`, `updated_at`, `trending`) VALUES
+(1, 0, '', 2, '1111 đã edit', '1111- đã edit', '11111- đã edit', 0, 0, 0, 0, 0, 1484621541, 1484621566, 0),
+(2, 0, '', 1, 'dfdsf', 'sdfdsf', 'dfds', 0, 0, 0, 0, 0, 1484621584, 0, 0),
+(3, 0, '', 1, 'ểwr', 'ểwr', 'ểwr', 0, 0, 0, 0, 0, 1484621603, 0, 0),
+(4, 1, '', 2, 'lập trình F.U.C.K Linh miu', 'fuck là một nghệ thuật...', 'fuck là một nghệ thuật và người fuck là một nghệ sĩ', NULL, NULL, NULL, NULL, 11, 1487136918, 1487138150, 0);
 
 -- --------------------------------------------------------
 
@@ -287,7 +288,7 @@ ALTER TABLE `tbl_lesson_doc`
 -- AUTO_INCREMENT for table `tbl_member`
 --
 ALTER TABLE `tbl_member`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `tbl_user`
 --
