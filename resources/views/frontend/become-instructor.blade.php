@@ -70,6 +70,54 @@
       <article class="row w100">
          <h2 class="c_section__title">Giảng viên nói gì về Enesy?</h2>
          <div class="intro_text"></div>
+         <div class="columns eight mt10 mb10">
+            <div class="success_quote">
+               <div class="quote_image columns three alpha"><img src="{{'frontend/images/obama.jpg'}}" alt="Marc Garcia" class="scale-with-grid" style="width: 160px"></div>
+               <div class="quote_content columns five omega">
+                  <h4>Obama</h4>
+                  <div class="quote_box">
+                     <p>“Hợp tác giảng dạy với Enesy đã mở ra cho tôi rất nhiều cánh cửa mới. Tôi làm việc để tích lũy kinh nghiệm, tôi truyền lại kinh nghiệm cho các bạn trẻ”</p>
+                     <p class="quotes_info">xxx | Kỹ sư CNTT | 10 khóa học</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="columns eight mt10 mb10">
+            <div class="success_quote">
+               <div class="quote_image columns three alpha"><img src="{{'frontend/images/putin.jpg'}}" alt="Marc Garcia" class="scale-with-grid" style="width: 160px"></div>
+               <div class="quote_content columns five omega">
+                  <h4>Putin</h4>
+                  <div class="quote_box">
+                     <p>“Hợp tác giảng dạy với Enesy đã mở ra cho tôi rất nhiều cánh cửa mới. Tôi làm việc để tích lũy kinh nghiệm, tôi truyền lại kinh nghiệm cho các bạn trẻ”</p>
+                     <p class="quotes_info">xxx | Kỹ sư CNTT | 10 khóa học</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="columns eight mt10 mb10">
+            <div class="success_quote">
+               <div class="quote_image columns three alpha"><img src="{{'frontend/images/kim.jpg'}}" alt="Marc Garcia" class="scale-with-grid" style="width: 160px"></div>
+               <div class="quote_content columns five omega">
+                  <h4>Kim Yoong Un</h4>
+                  <div class="quote_box">
+                     <p>“Hợp tác giảng dạy với Enesy đã mở ra cho tôi rất nhiều cánh cửa mới. Tôi làm việc để tích lũy kinh nghiệm, tôi truyền lại kinh nghiệm cho các bạn trẻ”</p>
+                     <p class="quotes_info">xxx | Kỹ sư CNTT | 10 khóa học</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="columns eight mt10 mb10">
+            <div class="success_quote">
+               <div class="quote_image columns three alpha"><img src="{{'frontend/images/trinh.jpg'}}" alt="Marc Garcia" class="scale-with-grid" style="width: 160px"></div>
+               <div class="quote_content columns five omega">
+                  <h4>Ngọc Trinh</h4>
+                  <div class="quote_box">
+                     <p>“Hợp tác giảng dạy với Enesy đã mở ra cho tôi rất nhiều cánh cửa mới. Tôi làm việc để tích lũy kinh nghiệm, tôi truyền lại kinh nghiệm cho các bạn trẻ”</p>
+                     <p class="quotes_info">xxx | Kỹ sư CNTT | 10 khóa học</p>
+                  </div>
+               </div>
+            </div>
+         </div>
       </article>
    </div>
 </section>

@@ -93,7 +93,7 @@ h3.home_title {
     width: 230px;
 }
 .number .number {
-    color: #353535;
+    color: #999;
     font-size: 48px;
     font-weight: 500;
     line-height: 40px;
@@ -172,4 +172,37 @@ form {
     color: #fff;
     font-weight: 700;
     padding: 15px 0;
+}
+.container .eight.columns {
+    width: 460px;
+}
+.success_quote {
+    padding: 15px 0px;
+}
+.quotes_info{
+	font-size: 13px;
+    color: #999;
+}
+.container .three.columns {
+    width: 160px;
+}
+.column.alpha, .columns.alpha {
+    margin-left: 0;
+}
+.quote_image img {
+    -moz-border-radius: 175px;
+    -webkit-border-radius: 175px;
+    border-radius: 175px;
+}
+.container .column, .container .columns {
+    float: left;
+    display: inline;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.container .five.columns {
+    width: 270px;
+}
+.column.omega, .columns.omega {
+    margin-right: 0;
 }
