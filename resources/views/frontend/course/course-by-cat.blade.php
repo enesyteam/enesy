@@ -5,9 +5,6 @@
 <!--#Top Header-->
 @stop
 @section('section')
-<!--Search-->
-@include('frontend.partials.searchheader')
-<!--#search-->
 <!--Content-->
 <div class="content-container">
    <div class="content-main--basic">
@@ -35,26 +32,6 @@
             <div class="content-l -size-scale-tablet content-right">
                <!--Courses List-->
                
-               <!--Filter bar-->
-               <div class="is-hidden--no-js search-facet-horizontal-form -border-bottom">
-                  <div class="inline-select-wrapper">
-                     <div class="search-facet-header--horizontal">
-                        <h2><i class="e-icon -icon-sort -margin-right"></i><span class="e-icon__alt">Sắp xếp</span></h2>
-                     </div>
-                     <div class="-border-top-none -border-radius-none inline-select">
-                        <label class="is-visually-hidden" for="sort_horizontal">Sắp xếp</label>
-                        <select name="sort_horizontal" id="sort_horizontal" class="js-search-facet-sort-by" data-pjax="">
-                           <option value="id" @if($sort != "" && $sort == "id") selected @endif>Sắp xếp: Mới nhất</option>
-                           <option value="trending" @if($sort != "" && $sort == "trending") selected @endif>Khóa học xu thế</option>
-                           <option value="num_of_learn" @if($sort != "" && $sort == "num_of_learn") selected @endif>Học nhiều nhất</option>
-                           <option value="love" @if($sort != "" && $sort == "love") selected @endif>Khóa học tốt nhất</option>
-                           <option value="price-asc" @if($sort != "" && $sort == "price-asc") selected @endif>Giá: từ thấp đến cao</option>
-                           <option value="price-desc" @if($sort != "" && $sort == "price-desc") selected @endif>Giá: từ cao đến thấp</option>
-                        </select>
-                     </div>
-                  </div>
-               </div>
-               <!--#Filter bar-->
                <div>
                <ul class="course-list">
                   @foreach($listCourse as $item)
@@ -124,11 +101,7 @@
                </ul>
                 </div>
                <!--Pagination-->
-               @if($sort != '')
-                  {{$listCourse->appends(['sort' => $sort])->render()}}
-               @else
-                  {{$listCourse->render()}}
-               @endif
+               {{$listCourse->render()}}
                <!--#Pagination-->                                       
                <!--#Courses List-->
             </div>

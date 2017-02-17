@@ -124,6 +124,10 @@ Route::group(array('namespace' => 'frontend' , 'middleware' => 'frontend.auth'),
 		'as' 	=>	'course.preview',
 		'uses'	=>	'CourseController@preview'
 		]);
+	Route::get('danh-muc/{id}',[
+		'as' 	=>	'course.listByCat',
+		'uses'	=>	'CourseController@listByCategory'
+		]);
 
 	/*share*/
 	Route::get('chia-se',[
