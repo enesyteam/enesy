@@ -85,7 +85,17 @@ class UserController extends Controller
 
     }
 
+    /*Author*/
     public function author(){
     	return view('frontend.author.index');
+    }
+    public function author_enrollers(){
+        return view('frontend.author.enrollers');
+    }
+    public function author_courses(){
+        return view('frontend.author.courses');
+    }
+    public function author_courses_create(){
+        return view('frontend.author.courses-create');
     }
 }

@@ -176,6 +176,18 @@ Route::group(array('namespace' => 'frontend' , 'middleware' => 'frontend.auth'),
 		'as'	=>	'user.author',
 		'uses'	=>	'UserController@author'
 		]);
+	Route::get('giang-vien/hoc-vien',[
+		'as'	=>	'user.author_enrollers',
+		'uses'	=>	'UserController@author_enrollers'
+		]);
+	Route::get('giang-vien/khoa-hoc',[
+		'as'	=>	'user.author_courses',
+		'uses'	=>	'UserController@author_courses'
+		]);
+	Route::get('giang-vien/khoa-hoc/tao-khoa-hoc',[
+		'as'	=>	'user.author_courses_create',
+		'uses'	=>	'UserController@author_courses_create'
+		]);
 
 	/*about*/
 	Route::get('gioi-thieu-enesy',[

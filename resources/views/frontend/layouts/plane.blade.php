@@ -15,13 +15,19 @@
         <link href="{{asset('frontend/css/style.css')}}" rel="stylesheet" type="text/css" />
         <link href="{{asset('frontend/css/custom.css')}}" rel="stylesheet" type="text/css" />
         <link href="{{asset('frontend/css/layout.css')}}" rel="stylesheet" type="text/css" />
+
+        <link href="{{'frontend/user/assets/css/components.css'}}" rel="stylesheet" type="text/css">
         @yield('head.css')
+        <!--Page Loader-->
+        <script type="text/javascript" src="{{'frontend/user/assets/js/plugins/loaders/pace.min.js'}}"></script>
+        <script type="text/javascript" src="{{'frontend/user/assets/js/core/libraries/jquery.min.js'}}"></script>
+        <!--/Page Loader-->
         <!--JqueryModal-->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
         <script src="{{asset('frontend/vender/jquery-modal/jquery.modal.js')}}" type="text/javascript" charset="utf-8"></script>
         <script src="{{asset('frontend/js/main.js')}}" type="text/javascript" charset="utf-8"></script>
         <script src="{{asset('frontend/vender/jquery-modal/highlight/highlight.pack.js')}}" type="text/javascript" charset="utf-8"></script>
         <script type="text/javascript" charset="utf-8"> hljs.initHighlightingOnLoad(); </script>
+        <!--/JqueryModal-->
      </head>
 <body>
     @yield('body')
