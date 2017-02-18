@@ -9,9 +9,7 @@
   <script src="{{asset('frontend/user/assets/js/plugins/loaders/blockui.min.js')}}" type="text/javascript">
   </script> <!-- /core JS files -->
    <!-- Theme JS files -->
-   
-  <script src="{{asset('frontend/user/assets/js/plugins/forms/wizards/stepy.min.js')}}" type="text/javascript">
-  </script> 
+
   <script src="{{asset('frontend/user/assets/js/plugins/forms/styling/uniform.min.js')}}" type="text/javascript">
   </script> 
   <script src="{{asset('frontend/user/assets/js/core/libraries/jasny_bootstrap.min.js')}}" type="text/javascript">
@@ -23,7 +21,10 @@
   <script src="{{asset('frontend/user/assets/js/plugins/forms/tags/tokenfield.min.js')}}" type="text/javascript">
   </script> 
   <script src="{{asset('frontend/user/assets/js/pages/form_tags_input.js')}}" type="text/javascript">
-  </script> <!-- /theme JS files -->
+  </script> 
+
+<script type="text/javascript" src="{{asset('frontend/user/assets/js/pages/components_popups.js')}}"></script>
+  <!-- /theme JS files -->
   @stop @section('author-body.content') <!-- Content area -->
   <!--Messages-->
   <div class="alert alert-info alert-styled-left alert-bordered">
@@ -39,18 +40,32 @@
               <li>
                 <a data-action="collapse"></a>
               </li>
-              <li>
-                <a data-action="reload"></a>
-              </li>
-              <li>
-                <a data-action="close"></a>
-              </li>
             </ul>
           </div>
         </div>
         <div class="panel-body">
           <form class="form-horizontal">
             <fieldset class="">
+            <!--Status-->
+              <div class="form-group">
+                <div class="control-label col-lg-3">
+                  <label class="control-label">Trạng thái</label>
+                </div>
+                <div class=" col-lg-9">
+                  <label class="radio-inline" data-popup="tooltip" title="" data-placement="bottom" data-original-title="Tạo và xuất bản khóa học">
+                      <input type="radio" name="radio-unstyled-inline-left" checked="checked">
+                      Xuất bản
+                  </label>
+                  <label class="radio-inline" data-popup="tooltip" title="" data-placement="bottom" data-original-title="Khóa học của bạn vẫn xuất hiện trên trang chủ nhưng chưa thể bán cho đến khi bạn hoàn thành nó">
+                      <input type="radio" name="radio-unstyled-inline-left">
+                      Comming soon
+                  </label>
+                  <label class="radio-inline" data-popup="tooltip" title="" data-placement="bottom" data-original-title="Tạo và lưu lại khóa học">
+                      <input type="radio" name="radio-unstyled-inline-left">
+                      Bản nháp
+                  </label>
+                </div>
+              </div><!--/Status-->
               <!--Title-->
               <div class="form-group">
                 <label class="control-label col-lg-3 cursor-pointer" for="clickable-label">Tiêu đề khóa học</label>
@@ -88,21 +103,15 @@
                   </div><small class="display-block mt-10 mb-10">Sử dụng dấu "," để phân chia các tags</small>
                 </div>
               </div><!--/Tags-->
-              <!--Status-->
-              <div class="form-group">
-                <div class="control-label col-lg-3">
-                  <label class="control-label">Trạng thái</label>
-                </div>
-                <div class=" col-lg-9">
-                  <label class="radio-inline"></label>
-                  <div class="choice">
-                    <label class="radio-inline"><span class="checked"><input checked="checked" class="styled" name="radio-inline-left" type="radio"></span></label>
-                  </div><label class="radio-inline">Xuất bản</label> <label class="radio-inline"></label>
-                  <div class="choice">
-                    <label class="radio-inline"><span class=""><input class="styled" name="radio-inline-left" type="radio"></span></label>
-                  </div><label class="radio-inline">Coming soon</label>
-                </div>
-              </div><!--/Status-->
+              <!--Thumb-->
+                  <div class="form-group">
+                    <label class="col-lg-3 control-label">Hình đại diện</label>
+                    <div class="col-lg-9">
+                      <div class="uploader">
+                        <input class="file-styled" type="file"><span class="filename" style="user-select: none;">Chọn file ảnh kích thước 150x80</span><span class="action btn bg-pink-400" style="user-select: none;">Chọn File</span>
+                      </div><span class="help-block">Định dạng cho phép: jpg, png, bmp. Kích thước tối đa 1Mb</span>
+                    </div>
+                  </div><!--/Thumb-->
             </fieldset>
           </form>
         </div>
@@ -115,12 +124,6 @@
             <ul class="icons-list">
               <li>
                 <a data-action="collapse"></a>
-              </li>
-              <li>
-                <a data-action="reload"></a>
-              </li>
-              <li>
-                <a data-action="close"></a>
               </li>
             </ul>
           </div>
@@ -253,12 +256,6 @@
             <ul class="icons-list">
               <li>
                 <a data-action="collapse"></a>
-              </li>
-              <li>
-                <a data-action="reload"></a>
-              </li>
-              <li>
-                <a data-action="close"></a>
               </li>
             </ul>
           </div>

@@ -14,6 +14,7 @@
           <h6 class="panel-title">Khóa học của bạn<a class="heading-elements-toggle"><i class="icon-more"></i></a><a class="heading-elements-toggle"><i class="icon-more"></i></a></h6>
           <div class="heading-elements">
             <span class="label bg-success heading-text">28 active</span>
+            <span class="label label-danger heading-text">Coming soon</span>
             <ul class="icons-list">
               <li class="dropdown">
                 <a data-action="reload" href="#"></a>

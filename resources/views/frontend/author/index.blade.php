@@ -58,12 +58,12 @@
           <div class="row text-center mt-10">
             <div class="col-md-4">
               <div class="content-group">
-                <h5 class="text-semibold no-margin"><i class="icon-calendar5 position-left text-slate"></i> 5,689</h5><span class="text-muted text-size-small">orders hàng tuần</span>
+                <h5 class="text-semibold no-margin"><i class="icon-users position-left text-slate"></i> 5,689</h5><span class="text-muted text-size-small">học viên hàng tuần</span>
               </div>
             </div>
             <div class="col-md-4">
               <div class="content-group">
-                <h5 class="text-semibold no-margin"><i class="icon-calendar52 position-left text-slate"></i> 32,568</h5><span class="text-muted text-size-small">orders hàng tháng</span>
+                <h5 class="text-semibold no-margin"><i class="icon-calendar52 position-left text-slate"></i> 32,568</h5><span class="text-muted text-size-small">học viên hàng tháng</span>
               </div>
             </div>
             <div class="col-md-4">
@@ -85,6 +85,7 @@
           <h6 class="panel-title">Hoạt động trên khóa học<a class="heading-elements-toggle"><i class="icon-more"></i></a></h6>
           <div class="heading-elements">
             <span class="label bg-success heading-text">28 active</span>
+            <span class="label label-danger heading-text">10 comming soon</span>
             <ul class="icons-list">
               <li class="dropdown">
                 <a data-action="reload" href="#"></a>
@@ -115,7 +116,7 @@
                     </div>
                   </div>
                 </td>
-                <td><span class="text-success-600"><i class="icon-stats-growth2 position-left"></i> 1,500</span></td>
+                <td><span class="text-success-600">1,500 <i class="icon-stats-growth2 position-left"></i></span></td>
                 <td>
                   <h6 class="text-semibold">7 triệu</h6>
                 </td>
@@ -154,7 +155,7 @@
                     </div>
                   </div>
                 </td>
-                <td><span class="text-success-600"><i class="icon-stats-growth2 position-left"></i> 2,500</span></td>
+                <td><span class="text-success-600">2,500 <i class="icon-stats-growth2 position-left"></i></span></td>
                 <td>
                   <h6 class="text-semibold">8 triệu</h6>
                 </td>
@@ -193,7 +194,7 @@
                     </div>
                   </div>
                 </td>
-                <td><span class="text-danger"><i class="icon-stats-decline2 position-left"></i> - 500</span></td>
+                <td><span class="text-danger">500 <i class="icon-stats-decline2 position-left"></i></span></td>
                 <td>
                   <h6 class="text-semibold">10 triệu</h6>
                 </td>
@@ -232,7 +233,7 @@
                     </div>
                   </div>
                 </td>
-                <td><span class="text-success-600"><i class="icon-stats-growth2 position-left"></i> 110</span></td>
+                <td><span class="text-success-600">110 <i class="icon-stats-growth2 position-left"></i></span></td>
                 <td>
                   <h6 class="text-semibold">6 triệu</h6>
                 </td>
@@ -271,7 +272,7 @@
                     </div>
                   </div>
                 </td>
-                <td><span class="text-danger"><i class="icon-stats-decline2 position-left"></i> - 250</span></td>
+                <td><span class="text-danger">250 <i class="icon-stats-decline2 position-left"></i></span></td>
                 <td>
                   <h6 class="text-semibold">1 triệu</h6>
                 </td>
@@ -310,7 +311,7 @@
                     </div>
                   </div>
                 </td>
-                <td><span class="text-success-600"><i class="icon-stats-growth2 position-left"></i> 900</span></td>
+                <td><span class="text-success-600">900 <i class="icon-stats-growth2 position-left"></i></span></td>
                 <td>
                   <h6 class="text-semibold">800k</h6>
                 </td>
@@ -349,7 +350,7 @@
                     </div>
                   </div>
                 </td>
-                <td><span class="text-danger"><i class="icon-stats-decline2 position-left"></i> 150</span></td>
+                <td><span class="text-danger">150 <i class="icon-stats-decline2 position-left"></i></span></td>
                 <td>
                   <h6 class="text-semibold">700k</h6>
                 </td>
