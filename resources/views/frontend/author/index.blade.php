@@ -29,23 +29,19 @@
                 <div class="btn-group">
                   <button class="multiselect dropdown-toggle btn btn-link text-semibold" data-toggle="dropdown" title="June, 15 - June, 21" type="button"><span class="multiselect-selected-text"><span class="status-mark border-warning position-left"></span>7 ngày qua</span> <b class="caret"></b></button>
                   <ul class="multiselect-container dropdown-menu pull-right">
-                    <li class="multiselect-item multiselect-group"><label><i class="icon-watch pull-right"></i> Khoảng thời gian</label></li>
                     <li>
                       <a tabindex="0"><label class="radio"></label>
                       <div class="choice">
-                        <label><span><input type="radio" value="val1"></span></label>
                       </div>7 ngày qua</a>
                     </li>
                     <li>
                       <a tabindex="0"><label class="radio"></label>
                       <div class="choice">
-                        <label><span><input type="radio" value="val2"></span></label>
                       </div>30 ngày qua</a>
                     </li>
                     <li>
                       <a tabindex="0"><label class="radio"></label>
                       <div class="choice">
-                        <label><span><input type="radio" value="val3"></span></label>
                       </div>Toàn thời gian</a>
                     </li>
                   </ul>
@@ -415,7 +411,7 @@
                 </td>
                 <td>
                   <div class="media-left media-middle">
-                    <a href="#"><img alt="" class="img-circle img-sm" src="{{'frontend/images/user-no-avatar.png'}}"></a>
+                    <a href="#"><img alt="" class="img-circle img-sm" src="{{asset('frontend/images/user-no-avatar.png')}}"></a>
                   </div>
                   <div class="media-body">
                     <a class="display-inline-block text-default text-semibold letter-icon-title" href="#">Đức Nguyễn</a>

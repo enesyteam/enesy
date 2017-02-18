@@ -1,4 +1,5 @@
-  @extends('frontend.author.master.author-master') @section('author-body.content') <!-- Content area -->
+  @extends('frontend.author.master.author-master') 
+  @section('author-body.content') <!-- Content area -->
   <!--Messages-->
   <div class="alert alert-warning alert-styled-left alert-arrow-left alert-component">
     <button class="close" data-dismiss="alert" type="button"><span>×</span><span class="sr-only">Close</span></button>
@@ -13,8 +14,8 @@
         <div class="panel-heading">
           <h6 class="panel-title">Khóa học của bạn<a class="heading-elements-toggle"><i class="icon-more"></i></a><a class="heading-elements-toggle"><i class="icon-more"></i></a></h6>
           <div class="heading-elements">
-            <span class="label bg-success heading-text">28 active</span>
-            <span class="label label-danger heading-text">Coming soon</span>
+            <span class="label bg-success heading-text">18 active</span>
+            <span class="label label-danger heading-text">10 coming soon</span>
             <ul class="icons-list">
               <li class="dropdown">
                 <a data-action="reload" href="#"></a>
@@ -229,6 +230,30 @@
           </table>
         </div>
       </div><!-- /marketing campaigns -->
+      <!--Pagination-->
+    <ul class="pagination pagination-flat">
+      <li>
+        <a href="#">‹</a>
+      </li>
+      <li class="active">
+        <a href="#">1</a>
+      </li>
+      <li>
+        <a href="#">2</a>
+      </li>
+      <li>
+        <a href="#">3</a>
+      </li>
+      <li class="disabled">
+        <a href="#">4</a>
+      </li>
+      <li>
+        <a href="#">5</a>
+      </li>
+      <li>
+        <a href="#">›</a>
+      </li>
+    </ul><!--/Pagination-->
     </div>
   </div><!-- /content area -->
   @stop

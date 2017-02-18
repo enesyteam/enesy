@@ -9,19 +9,20 @@
   <script src="{{asset('frontend/user/assets/js/plugins/loaders/blockui.min.js')}}" type="text/javascript">
   </script> <!-- /core JS files -->
    <!-- Theme JS files -->
-
   <script src="{{asset('frontend/user/assets/js/plugins/forms/styling/uniform.min.js')}}" type="text/javascript">
   </script> 
-  <script src="{{asset('frontend/user/assets/js/core/libraries/jasny_bootstrap.min.js')}}" type="text/javascript">
-  </script> 
-  <script src="{{asset('frontend/user/assets/js/core/app.js')}}" type="text/javascript">
-  </script> 
-  <script src="{{asset('frontend/user/assets/js/plugins/forms/tags/tagsinput.min.js')}}" type="text/javascript">
-  </script> 
   <script src="{{asset('frontend/user/assets/js/plugins/forms/tags/tokenfield.min.js')}}" type="text/javascript">
+  </script>
+    <script src="{{asset('frontend/user/assets/js/plugins/forms/tags/tagsinput.min.js')}}" type="text/javascript">
+  </script> 
+  <script type="text/javascript" src="{{asset('frontend/user/assets/js/plugins/ui/prism.min.js')}}"></script> 
+  <script type="text/javascript" src="{{asset('frontend/user/assets/js/plugins/forms/inputs/typeahead/typeahead.bundle.min.js')}}"></script>
+
+    <script src="{{asset('frontend/user/assets/js/core/app.js')}}" type="text/javascript">
   </script> 
   <script src="{{asset('frontend/user/assets/js/pages/form_tags_input.js')}}" type="text/javascript">
   </script> 
+
 
 <script type="text/javascript" src="{{asset('frontend/user/assets/js/pages/components_popups.js')}}"></script>
   <!-- /theme JS files -->
@@ -52,18 +53,24 @@
                   <label class="control-label">Trạng thái</label>
                 </div>
                 <div class=" col-lg-9">
-                  <label class="radio-inline" data-popup="tooltip" title="" data-placement="bottom" data-original-title="Tạo và xuất bản khóa học">
+                <div class=" col-lg-4">
+                  <label class="radio-inline" data-popup="tooltip" title="" data-placement="bottom" data-original-title="Tạo và xuất bản khóa học.">
                       <input type="radio" name="radio-unstyled-inline-left" checked="checked">
                       Xuất bản
                   </label>
-                  <label class="radio-inline" data-popup="tooltip" title="" data-placement="bottom" data-original-title="Khóa học của bạn vẫn xuất hiện trên trang chủ nhưng chưa thể bán cho đến khi bạn hoàn thành nó">
+                  </div>
+                  <div class=" col-lg-4">
+                  <label class="radio-inline" data-popup="tooltip" title="" data-placement="bottom" data-original-title="Khóa học của bạn vẫn xuất hiện trên trang chủ nhưng chưa thể bán cho đến khi bạn hoàn thành nó.">
                       <input type="radio" name="radio-unstyled-inline-left">
                       Comming soon
                   </label>
-                  <label class="radio-inline" data-popup="tooltip" title="" data-placement="bottom" data-original-title="Tạo và lưu lại khóa học">
+                  </div>
+                  <div class=" col-lg-4">
+                  <label class="radio-inline" data-popup="tooltip" title="" data-placement="bottom" data-original-title="Tạo và lưu lại khóa học dưới dạng bản nháp và bạn có thể hoàn thiện nó sau.">
                       <input type="radio" name="radio-unstyled-inline-left">
                       Bản nháp
                   </label>
+                  </div>
                 </div>
               </div><!--/Status-->
               <!--Title-->

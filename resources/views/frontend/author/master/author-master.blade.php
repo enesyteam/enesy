@@ -17,11 +17,9 @@
 
   <!-- Theme JS files -->
   <script type="text/javascript" src="{{asset('frontend/user/assets/js/plugins/forms/styling/uniform.min.js')}}"></script>
-  <script type="text/javascript" src="{{asset('frontend/user/assets/js/plugins/forms/styling/switchery.min.js')}}"></script>
   <script type="text/javascript" src="{{asset('frontend/user/assets/js/plugins/forms/styling/switch.min.js')}}"></script>
-
+  <script type="text/javascript" src="{{asset('frontend/user/assets/js/plugins/forms/styling/switchery.min.js')}}"></script>
   <script type="text/javascript" src="{{asset('frontend/user/assets/js/core/app.js')}}"></script>
-  <script type="text/javascript" src="{{asset('frontend/user/assets/js/pages/form_checkboxes_radios.js')}}"></script>
   <!-- /theme JS files -->
   @stop 
   @section('body.content')
@@ -37,7 +35,7 @@
              <!-- Main content -->
             <div class="content-wrapper">
               <!-- Content area -->
-              <div class="content">
+              <div class="content mr--20">
                 @yield('author-body.content')
               </div><!-- /content area -->
             </div><!-- /main content -->

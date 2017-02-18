@@ -61,6 +61,7 @@
                </div>
             </li>
          </ul>
+                     @yield('custom-navbar')
       </div>
    </div>
 </div>

@@ -27,23 +27,25 @@
           <ul class="navigation navigation-main navigation-accordion">
             <!-- Main -->
             <li class="navigation-header"><span>Main</span> <i class="icon-menu" data-original-title="Main pages" title=""></i></li>
-            <li class="{{ Route::is('user.author') ? 'active' : '' }}">
+            <li class="{{ Route::is('user.author') ?  "active" : "" }}">
               <a href="{{route('user.author')}}"><i class="icon-home4"></i> <span>Bảng điều khiển</span></a>
             </li>
-            <li class="{{ Route::is('user.author_courses') ? 'active' : '' }}">
+            <li class="{{ Route::is('user.author_courses') ?  "active" : "" }}">
               <a class="has-ul" href="{{route('user.author_courses')}}"><i class="icon-tree5"></i> <span>Khóa học</span></a>
               <ul>
-                <li class="{{ Route::is('user.author_courses') ? 'active' : '' }}">
-                  <a href="{{route('user.author_courses')}}" id="list"><i class="icon-list-unordered"></i>Danh sách<span class="label bg-warning-400">28</span></a>
+                <li class="{{ Route::is('user.author_courses') ? "active" : "" }}">
+                  <a href="{{route('user.author_courses')}}" id="list1"><i class="icon-list-unordered"></i>Danh sách<span class="label bg-warning-400">28</span></a>
                 </li>
-                <li class="{{ Route::is('user.author_courses_create') ? 'active' : '' }}">
-                  <a href="{{route('user.author_courses_create')}}" id="create"><i class="icon-plus22"></i>Tạo mới</a>
+                <li class="{{ Route::is('user.author_courses_create') ? "active" : "" }}">
+                  <a href="{{route('user.author_courses_create')}}" id="create1"><i class="icon-plus22"></i>Tạo mới</a>
                 </li>
               </ul>
             </li>
-            <li class="{{ Route::is('user.author_enrollers') ? 'active' : '' }}">
-              <a href="{{route('user.author_enrollers')}}"><i class="icon-people"></i> <span>Học viên <span class="label bg-blue-400">1,500</span></span></a>
-            </li><!--Thanh toán-->
+            <li class="{{ Route::is('user.author_enrollers') ? "active" : "" }}">
+              <a href="{{route('user.author_enrollers')}}"><i class="icon-people"></i> <span>Học viên <span class="label bg-blue-400">1,500</span></span>
+              </a>
+            </li>
+            <!--Thanh toán-->
             <!-- Main -->
             <li class="navigation-header"><span>Thu nhập &amp; Thanh toán</span> <i class="icon-menu" data-original-title="Main pages" title=""></i></li>
             <li class="">

@@ -15,6 +15,20 @@ Enesy | Khóa học lập trình AutoCAD với C# trình độ cơ bản
 <script type="text/javascript" charset="utf-8"> hljs.initHighlightingOnLoad(); </script>
 @stop
 
+@section('custom-navbar')
+<div class="header-categories__search">
+  <form id="search" data-view="searchField" action="#" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="">
+    <div class="search-field -border-light">
+      <div class="search-field__input">
+        <input id="term" name="term" class="js-term search-field__input-field" type="search" placeholder="Tìm khóa học" vk_19588="subscribed">
+      </div>
+      <button class="search-field__button" type="submit">
+        <i class="e-icon -icon-search"><span class="e-icon__alt">Search</span></i>
+      </button>
+    </div>
+</form></div>
+@stop
+
 @section ('body.content')
 <div class="context-header ">
    <div class="grid-container ">

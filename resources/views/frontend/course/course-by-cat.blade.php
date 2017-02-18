@@ -4,11 +4,24 @@
 @include('frontend.partials.top-header-message')
 <!--#Top Header-->
 @stop
+@section('custom-navbar')
+<div class="header-categories__search">
+  <form id="search" data-view="searchField" action="#" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="">
+    <div class="search-field -border-light">
+      <div class="search-field__input">
+        <input id="term" name="term" class="js-term search-field__input-field" type="search" placeholder="Tìm khóa học" vk_19588="subscribed">
+      </div>
+      <button class="search-field__button" type="submit">
+        <i class="e-icon -icon-search"><span class="e-icon__alt">Search</span></i>
+      </button>
+    </div>
+</form></div>
+@stop
 @section('section')
 <!--Content-->
 <div class="content-container">
    <div class="content-main--basic">
-      <div class="faceted-search js-faceted-search" data-view="pjaxFacetedSearch">
+      <div>
          <div class="grid-container">
             <!--<div data-view="guestSurveyBanner">
                <div class="js-system-banner-container">

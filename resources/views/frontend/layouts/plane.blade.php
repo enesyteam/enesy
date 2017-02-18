@@ -16,11 +16,11 @@
         <link href="{{asset('frontend/css/custom.css')}}" rel="stylesheet" type="text/css" />
         <link href="{{asset('frontend/css/layout.css')}}" rel="stylesheet" type="text/css" />
 
-        <link href="{{'frontend/user/assets/css/components.css'}}" rel="stylesheet" type="text/css">
+        <link href="{{asset('frontend/user/assets/css/components.css')}}" rel="stylesheet" type="text/css">
         @yield('head.css')
         <!--Page Loader-->
-        <script type="text/javascript" src="{{'frontend/user/assets/js/plugins/loaders/pace.min.js'}}"></script>
-        <script type="text/javascript" src="{{'frontend/user/assets/js/core/libraries/jquery.min.js'}}"></script>
+        <script type="text/javascript" src="{{asset('frontend/user/assets/js/plugins/loaders/pace.min.js')}}"></script>
+        <script type="text/javascript" src="{{asset('frontend/user/assets/js/core/libraries/jquery.min.js')}}"></script>
         <!--/Page Loader-->
         <!--JqueryModal-->
         <script src="{{asset('frontend/vender/jquery-modal/jquery.modal.js')}}" type="text/javascript" charset="utf-8"></script>
