@@ -52,20 +52,20 @@
                 <div class="control-label col-lg-3">
                   <label class="control-label">Trạng thái</label>
                 </div>
-                <div class=" col-lg-9">
-                <div class=" col-lg-4">
+                <div class="col-lg-9">
+                <div class="col-lg-4">
                   <label class="radio-inline" data-popup="tooltip" title="" data-placement="bottom" data-original-title="Tạo và xuất bản khóa học.">
                       <input type="radio" name="radio-unstyled-inline-left" checked="checked">
                       Xuất bản
                   </label>
                   </div>
-                  <div class=" col-lg-4">
+                  <div class="col-lg-4">
                   <label class="radio-inline" data-popup="tooltip" title="" data-placement="bottom" data-original-title="Khóa học của bạn vẫn xuất hiện trên trang chủ nhưng chưa thể bán cho đến khi bạn hoàn thành nó.">
                       <input type="radio" name="radio-unstyled-inline-left">
                       Comming soon
                   </label>
                   </div>
-                  <div class=" col-lg-4">
+                  <div class="col-lg-4">
                   <label class="radio-inline" data-popup="tooltip" title="" data-placement="bottom" data-original-title="Tạo và lưu lại khóa học dưới dạng bản nháp và bạn có thể hoàn thiện nó sau.">
                       <input type="radio" name="radio-unstyled-inline-left">
                       Bản nháp
@@ -170,14 +170,14 @@
                           <div class="form-group">
                             <label class="control-label col-lg-3">Tiêu đề bài học</label>
                             <div class="col-lg-9">
-                              <input class="form-control" placeholder="Nhập tiêu đề bài học" type="text">
+                              <input class="f-input -type-string -width-full" placeholder="Nhập tiêu đề bài học" type="text">
                             </div>
                           </div><!--/Tiêu đề-->
                           <!--Description-->
                           <div class="form-group">
                             <label class="control-label col-lg-3">Tóm tắt bài học</label>
                             <div class="col-lg-9">
-                              <textarea class="form-control" cols="5" placeholder="Default textarea" rows="5"></textarea>
+                              <textarea class="f-textarea" cols="5" placeholder="Default textarea" rows="5"></textarea>
                             </div>
                           </div><!--/Description-->
                           <!--Video file-->
@@ -224,14 +224,14 @@
                           <div class="form-group">
                             <label class="control-label col-lg-3">Tiêu đề bài học</label>
                             <div class="col-lg-9">
-                              <input class="form-control" placeholder="Nhập tiêu đề bài học" type="text">
+                              <input class="f-input -type-string -width-full" placeholder="Nhập tiêu đề bài học" type="text">
                             </div>
                           </div><!--/Tiêu đề-->
                           <!--Description-->
                           <div class="form-group">
                             <label class="control-label col-lg-3">Tóm tắt bài học</label>
                             <div class="col-lg-9">
-                              <textarea class="form-control" cols="5" placeholder="Default textarea" rows="5"></textarea>
+                              <textarea class="f-textarea" cols="5" placeholder="Default textarea" rows="5"></textarea>
                             </div>
                           </div><!--/Description-->
                           <!--Video file-->
@@ -274,14 +274,14 @@
               <div class="form-group">
                 <label class="control-label col-lg-3">Giá mới</label>
                 <div class="col-lg-9">
-                  <input class="form-control" placeholder="Nhập giá mới" type="text">
+                  <input class="f-input -type-string -width-full" placeholder="Nhập giá mới" type="text">
                 </div>
               </div><!--/Giá mới-->
               <!--Giá cũ-->
               <div class="form-group">
                 <label class="control-label col-lg-3">Giá cũ</label>
                 <div class="col-lg-9">
-                  <input class="form-control" placeholder="Nhập giá cũ" type="text">
+                  <input class="f-input -type-string -width-full" placeholder="Nhập giá cũ" type="text">
                 </div>
               </div><!--/Giá cũ-->
             </fieldset>

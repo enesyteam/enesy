@@ -196,6 +196,14 @@ Route::group(array('namespace' => 'frontend' , 'middleware' => 'frontend.auth'),
 		'as'	=>	'user.author_account',
 		'uses'	=>	'UserController@author_account'
 		]);
+	Route::get('giang-vien/tai-khoan/email',[
+		'as'	=>	'user.author_email',
+		'uses'	=>	'UserController@author_email'
+		]);
+	Route::get('giang-vien/thanh-toan',[
+		'as'	=>	'user.author_bill',
+		'uses'	=>	'UserController@author_bill'
+		]);
 
 	/*about*/
 	Route::get('gioi-thieu-enesy',[

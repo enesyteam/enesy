@@ -4,7 +4,7 @@
       <div class="sidebar-user">
         <div class="category-content">
           <div class="media">
-            <a class="media-left" href="#"><img alt="" class="img-circle img-sm" src="{{asset('frontend/images/user-no-avatar.png')}}"></a>
+            <a class="media-left" href="{{route('user.author_public_profile')}}"><img alt="" class="img-circle img-sm" src="{{asset('frontend/images/user-no-avatar.png')}}" data-popup="tooltip" title="" data-placement="bottom" data-original-title="Sửa"></a>
             <div class="media-body">
               <span class="media-heading text-semibold">Công Nguyễn</span>
               <div class="text-size-mini text-muted">
@@ -45,23 +45,21 @@
               <a href="{{route('user.author_enrollers')}}"><i class="icon-people"></i> <span>Học viên <span class="label bg-blue-400">1,500</span></span>
               </a>
             </li>
-            <!--Thanh toán-->
-            <li class="navigation-header"><span>Thu nhập &amp; Thanh toán</span> <i class="icon-menu" data-original-title="Main pages" title=""></i></li>
-            <li class="">
-              <a href="#"><i class="icon-cash"></i> <span>Yêu cầu thanh toán</span></a>
-            </li>
-            <li class="">
-              <a href="#"><i class="icon-cart-remove"></i> <span>Thu nhập</span></a>
-            </li>
             <!--Profile-->
-            <li class="navigation-header"><span>Trang cá nhân</span> <i class="icon-menu" data-original-title="Main pages" title=""></i></li>
+            <li class="navigation-header"><span>Trang cá nhân</span> <i class="icon-menu" data-original-title="Main pages" title=""></i>
+            </li>
 
-                <li class="{{ Route::is('user.author_public_profile') ? "active" : "" }}">
-                  <a href="{{route('user.author_public_profile')}}"><i class="icon-user"></i>Thông tin hiển thị</a>
-                </li>
-                <li class="{{ Route::is('user.author_account') ? "active" : "" }}">
-                  <a href="{{route('user.author_account')}}"><i class="icon-cog3"></i>Thiết lập tài khoản</a>
-                </li>
+            <li class="{{ Route::is('user.author_public_profile') ? "active" : "" }}">
+              <a href="{{route('user.author_public_profile')}}"><i class="icon-user"></i>Thông tin hiển thị</a>
+            </li>
+            <li class="{{ Route::is('user.author_account') ? "active" : "" }}">
+              <a href="{{route('user.author_account')}}"><i class="icon-cog3"></i>Thiết lập tài khoản</a>
+            </li>
+            <li class="{{ Route::is('user.author_email') ? "active" : "" }}">
+              <a href="{{route('user.author_email')}}"><i class="icon-envelope"></i>Email</a>
+            </li>
+            <li class="{{ Route::is('user.author_bill') ? "active" : "" }}">
+              <a href="{{route('user.author_bill')}}"><i class="icon-cash"></i> <span>Thanh toán</span></a>
             </li>
           </ul>
         </div>

@@ -340,7 +340,7 @@ a.badge,
 .navigation > li.active > a,
 .navigation > li.active > a:hover,
 .navigation > li.active > a:focus {
-  background-color: #ededed;
+  background-color: rgba(0, 0, 0, 0.1);
   color: #333;
 }
 .navigation > li.active > a > [class*=text-] {
@@ -358,7 +358,7 @@ a.badge,
   list-style: none;
   margin: 0;
   padding: 0;
-  background-color: rgba(0, 0, 0, 0.15);
+  background-color: rgba(0, 0, 0, 0.02);
   -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.05);
   box-shadow: 0 1px 0 rgba(255, 255, 255, 0.05);
 }
@@ -387,8 +387,8 @@ a.badge,
 .navigation > li > ul li.active > a,
 .navigation > li > ul li.active > a:hover,
 .navigation > li > ul li.active > a:focus {
-  background-color: rgba(0, 0, 0, 0.2);
-  color: #fff;
+  background-color: rgba(0, 0, 0, 0.1);
+  color: #333;
 }
 .navigation .navigation-header {
   min-height: 30px;

@@ -1437,7 +1437,6 @@ iframe[name=google_conversion_frame] {
     outline: 0;
     height: 30px;
     line-height: 1;
-    border-radius: 4px;
     color: gray;
     background: #fafafa;
     border: 1px solid #bababa;
@@ -1582,7 +1581,6 @@ iframe[name=google_conversion_frame] {
     font-weight: normal;
     outline: 0;
     line-height: 1.25;
-    border-radius: 4px;
     color: gray;
     background: #fafafa;
     border: 1px solid #bababa;

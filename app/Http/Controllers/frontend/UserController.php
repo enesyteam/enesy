@@ -104,4 +104,10 @@ class UserController extends Controller
     public function author_account(){
         return view('frontend.author.account');
     }
+    public function author_email(){
+        return view('frontend.author.email');
+    }
+    public function author_bill(){
+        return view('frontend.author.bill');
+    }
 }
