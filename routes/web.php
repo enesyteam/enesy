@@ -188,6 +188,14 @@ Route::group(array('namespace' => 'frontend' , 'middleware' => 'frontend.auth'),
 		'as'	=>	'user.author_courses_create',
 		'uses'	=>	'UserController@author_courses_create'
 		]);
+	Route::get('giang-vien/trang-ca-nhan',[
+		'as'	=>	'user.author_public_profile',
+		'uses'	=>	'UserController@author_public_profile'
+		]);
+	Route::get('giang-vien/tai-khoan',[
+		'as'	=>	'user.author_account',
+		'uses'	=>	'UserController@author_account'
+		]);
 
 	/*about*/
 	Route::get('gioi-thieu-enesy',[

@@ -98,4 +98,10 @@ class UserController extends Controller
     public function author_courses_create(){
         return view('frontend.author.courses-create');
     }
+    public function author_public_profile(){
+        return view('frontend.author.public-profile');
+    }
+    public function author_account(){
+        return view('frontend.author.account');
+    }
 }

@@ -77,14 +77,14 @@
               <div class="form-group">
                 <label class="control-label col-lg-3 cursor-pointer" for="clickable-label">Tiêu đề khóa học</label>
                 <div class="col-lg-9">
-                  <input class="form-control" id="clickable-label" placeholder="vd: Khóa học lập trình Laravel 5.0" type="text">
+                  <input class="f-input -type-string -width-full" id="clickable-label" placeholder="vd: Khóa học lập trình Laravel 5.0" type="text">
                 </div>
               </div><!--/Title-->
               <!--Description-->
               <div class="form-group">
                 <label class="control-label col-lg-3 cursor-pointer" for="clickable-text">Tóm tắt khóa học</label>
                 <div class="col-lg-9">
-                  <textarea class="form-control" cols="5" id="clickable-text" placeholder="Default textarea" rows="5"></textarea>
+                  <textarea class="f-textarea" cols="5" id="clickable-text" placeholder="Default textarea" rows="5"></textarea>
                 </div>
               </div><!--/Description-->
               <!--Tags-->
@@ -94,7 +94,7 @@
                 </div>
                 <div class=" col-lg-9">
                   <div class="tokenfield form-control col-lg-9">
-                    <input class="form-control tokenfield" style="position: absolute; left: -10000px;" tabindex="-1" type="text" value="These,are,tokens"><input style="position: absolute; left: -10000px;" tabindex="-1" type="text">
+                    <input class="f-input -type-string -width-full tokenfield" style="position: absolute; left: -10000px;" tabindex="-1" type="text" value="These,are,tokens"><input style="position: absolute; left: -10000px;" tabindex="-1" type="text">
                     <div class="token">
                       <span class="token-label" style="max-width: 548.4px;">PHP</span><a class="close" href="#" tabindex="-1">×</a>
                     </div>

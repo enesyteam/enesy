@@ -1439,7 +1439,7 @@ iframe[name=google_conversion_frame] {
     line-height: 1;
     border-radius: 4px;
     color: gray;
-    background: white;
+    background: #fafafa;
     border: 1px solid #bababa;
     padding: 5px 8px;
 }
@@ -1456,8 +1456,7 @@ iframe[name=google_conversion_frame] {
     border-style: dashed;
 }
 .f-input:focus, .f-input.is-focussed {
-    -webkit-transition: box-shadow 0.3s ease-in-out;
-    transition: box-shadow 0.3s ease-in-out;
+    background: white;
     box-shadow: 0 0 5px #9ecaed;
     border-color: #9ecaed;
 }
@@ -1585,12 +1584,12 @@ iframe[name=google_conversion_frame] {
     line-height: 1.25;
     border-radius: 4px;
     color: gray;
-    background: white;
+    background: #fafafa;
     border: 1px solid #bababa;
     padding: 5px 8px;
     font-size: 14px;
     width: 100%;
-    height: 150px;
+    height: 100px;
 }
 .f-textarea.is-invalid, .f-textarea.is-error {
     color: #df2c2c;
@@ -1605,8 +1604,7 @@ iframe[name=google_conversion_frame] {
     border-style: dashed;
 }
 .f-textarea:focus, .f-textarea.is-focussed {
-    -webkit-transition: box-shadow 0.3s ease-in-out;
-    transition: box-shadow 0.3s ease-in-out;
+    background: white;
     box-shadow: 0 0 5px #9ecaed;
     border-color: #9ecaed;
 }

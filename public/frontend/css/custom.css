@@ -797,3 +797,13 @@ li.current span{
 .mr--20{
     margin-right: -20px !important;
 }
+/*Author profile*/
+.thumbnail .caption {
+    padding: 20px 0 !important;
+    color: #333333;
+    text-align: center;
+    margin: 0 auto;
+}
+.no-boxshadow{
+    box-shadow: none !important; 
+}

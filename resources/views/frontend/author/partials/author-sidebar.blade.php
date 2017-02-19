@@ -14,7 +14,7 @@
             <div class="media-right media-middle">
               <ul class="icons-list">
                 <li>
-                  <a href="#"><i class="icon-cog3"></i></a>
+                  <a href="{{route('user.author_public_profile')}}"><i class="icon-cog3"></i></a>
                 </li>
               </ul>
             </div>
@@ -46,13 +46,22 @@
               </a>
             </li>
             <!--Thanh toán-->
-            <!-- Main -->
             <li class="navigation-header"><span>Thu nhập &amp; Thanh toán</span> <i class="icon-menu" data-original-title="Main pages" title=""></i></li>
             <li class="">
               <a href="#"><i class="icon-cash"></i> <span>Yêu cầu thanh toán</span></a>
             </li>
             <li class="">
               <a href="#"><i class="icon-cart-remove"></i> <span>Thu nhập</span></a>
+            </li>
+            <!--Profile-->
+            <li class="navigation-header"><span>Trang cá nhân</span> <i class="icon-menu" data-original-title="Main pages" title=""></i></li>
+
+                <li class="{{ Route::is('user.author_public_profile') ? "active" : "" }}">
+                  <a href="{{route('user.author_public_profile')}}"><i class="icon-user"></i>Thông tin hiển thị</a>
+                </li>
+                <li class="{{ Route::is('user.author_account') ? "active" : "" }}">
+                  <a href="{{route('user.author_account')}}"><i class="icon-cog3"></i>Thiết lập tài khoản</a>
+                </li>
             </li>
           </ul>
         </div>
