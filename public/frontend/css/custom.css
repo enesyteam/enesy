@@ -815,3 +815,11 @@ li.current span{
     font-size: 12px !important;
     line-height: 17px !important;
 }
+.media-notifications{
+    width: 75px;
+}
+.list-inline > li {
+    padding-left: 0;
+    padding-right: 10px !important;
+    font-size: 13px;
+}

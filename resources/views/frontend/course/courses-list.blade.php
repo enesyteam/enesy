@@ -37,7 +37,7 @@
                
                <!--Filter bar-->
                <div class="is-hidden--no-js search-facet-horizontal-form -border-bottom">
-                  <div class="inline-select-wrapper">
+                  <div class="inline-select-wrapper ml-10">
                      <div class="search-facet-header--horizontal">
                         <h2><i class="e-icon -icon-sort -margin-right"></i><span class="e-icon__alt">Sắp xếp</span></h2>
                      </div>

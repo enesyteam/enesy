@@ -5697,7 +5697,7 @@ button.search-field__button:active {
     margin-right: 15px;
 }
 }.notify-summary {
-    color: white;
+    color: gray;
 }
 .notify-summary.is-empty {
     color: gray;

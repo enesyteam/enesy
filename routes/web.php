@@ -208,6 +208,10 @@ Route::group(array('namespace' => 'frontend' , 'middleware' => 'frontend.auth'),
 		'as'	=>	'user.author_bill',
 		'uses'	=>	'UserController@author_bill'
 		]);
+	Route::get('giang-vien/thong-bao',[
+		'as'	=>	'user.author_notifications',
+		'uses'	=>	'UserController@author_notifications'
+		]);
 
 	/*about*/
 	Route::get('gioi-thieu-enesy',[

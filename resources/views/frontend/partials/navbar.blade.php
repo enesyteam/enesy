@@ -35,7 +35,7 @@
 
                         ?>
                      <li>
-                        <a class="hub-header-dropdown__top" href="{{$url_ccat}}">{{$c_value->title}}</a>
+                        <a href="{{$url_ccat}}">{{$c_value->title}}</a>
                      </li>
                      <?php }?>
                      

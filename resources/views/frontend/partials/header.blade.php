@@ -80,7 +80,7 @@
                               </a>          
                            </li>
                            <li>
-                              <a href="{{route('user.author_account')}}">
+                              <a class="hub-header-dropdown__bottom" href="{{route('user.author_account')}}">
                               Thiết lập
                               <i class="icon-cog3 font-size-12"></i>
                               </a>          
@@ -89,7 +89,7 @@
                      </div>
                   </div>
                   <div class="header-logo-account__user-nav-item">
-                     <a class="header-logo-account__user-nav-main-link--cart" rel="nofollow" href="#">
+                     <a class="header-logo-account__user-nav-main-link--cart" rel="nofollow" href="{{route('user.author_notifications')}}">
                         <div class="notify-summary" data-view="cartCount">
                            <i class="icon-bell2 font-size-12"></i>
                            <span class="js-cart-summary-count notify-summary__count">5</span>

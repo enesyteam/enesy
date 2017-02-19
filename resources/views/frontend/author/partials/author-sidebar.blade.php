@@ -34,7 +34,7 @@
               <a class="has-ul" href="{{route('user.author_courses')}}"><i class="icon-book-play"></i> <span>Khóa học</span></a>
               <ul>
                 <li class="{{ Route::is('user.author_courses') ? "active" : "" }}">
-                  <a href="{{route('user.author_courses')}}" id="list1"><i class="icon-list-unordered"></i>Danh sách<span class="label bg-warning-400">28</span></a>
+                  <a href="{{route('user.author_courses')}}" id="list1"><i class="icon-list-unordered"></i>Danh sách<span class="badge badge-primary">28</span></a>
                 </li>
                 <li class="{{ Route::is('user.author_courses_create') ? "active" : "" }}">
                   <a href="{{route('user.author_courses_create')}}" id="create1"><i class="icon-plus22"></i>Tạo mới</a>
@@ -42,15 +42,18 @@
               </ul>
             </li>
             <li class="{{ Route::is('user.author_enrollers') ? "active" : "" }}">
-              <a href="{{route('user.author_enrollers')}}"><i class="icon-users2"></i> <span>Học viên <span class="label bg-blue-400">1,500</span></span>
+              <a href="{{route('user.author_enrollers')}}"><i class="icon-users2"></i> <span>Học viên <span class="badge badge-primary">1,500</span></span>
               </a>
             </li>
             <!--Profile-->
             <li class="navigation-header"><span>Trang cá nhân</span> <i class="icon-menu" data-original-title="Main pages" title=""></i>
             </li>
-
+            <li class="{{ Route::is('user.author_notifications') ? "active" : "" }}">
+              <a href="{{route('user.author_notifications')}}"><i class="icon-bell2"></i><span>Trung tâm thông báo
+              <span class="badge badge-danger">20</span></span></a>
+            </li>
             <li class="{{ Route::is('user.author_public_profile') ? "active" : "" }}">
-              <a href="{{route('user.author_public_profile')}}"><i class="icon-user"></i>Thông tin hiển thị</a>
+              <a href="{{route('user.author_public_profile')}}"><i class="icon-user"></i>Thông tin cá nhân</a>
             </li>
             <li class="{{ Route::is('user.author_account') ? "active" : "" }}">
               <a href="{{route('user.author_account')}}"><i class="icon-cog3"></i>Thiết lập tài khoản</a>
