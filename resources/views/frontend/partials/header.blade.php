@@ -50,47 +50,54 @@
                   </div>
                   @else
                   <div class="header-logo-account__user-nav-item">
-                     <a class="header-logo-account__user-nav-main-link--alpha-with-dropdown" data-view="touchOnlyDropdown" data-dropdown-target="#user-nav-dropdown" href="">
+                     <a class="header-logo-account__user-nav-main-link--alpha-with-dropdown" data-view="touchOnlyDropdown" data-dropdown-target="#user-nav-dropdown" href="{{route('user.author')}}">
                      <span id="user_username">congcd4</span>
                      </a>
                      <div class="header-logo-account__user-nav-dropdown" id="user-nav-dropdown">
                         <ul class="hub-header-dropdown">
                            <li>
-                              <a href="#">
-                              Tài khoản
-                              <i class="e-icon -icon-person"></i>
+                              <a href="{{route('user.author')}}">
+                              Bảng điều khiển
+                              <i class="icon-home4 font-size-12"></i>
                               </a>          
                            </li>
                            <li>
-                              <a href="#">
+                              <a href="{{route('user.author_courses')}}">
                               Khóa học của bạn
-                              <i class="e-icon "></i>
+                              <i class="icon-book-play font-size-12"></i>
                               </a>          
                            </li>
                            <li>
-                              <a href="#">
-                              XXX
-                              <i class="e-icon "></i>
+                              <a href="{{route('user.author_enrollers')}}">
+                              Học viên của bạn
+                              <i class="icon-users2 font-size-12"></i>
                               </a>          
                            </li>
                            <li>
-                              <a href="#">
+                              <a href="{{route('user.author_bill')}}">
+                              Thanh toán
+                              <i class="icon-cash font-size-12"></i>
+                              </a>          
+                           </li>
+                           <li>
+                              <a href="{{route('user.author_account')}}">
                               Thiết lập
-                              <i class="e-icon -icon-cog"></i>
+                              <i class="icon-cog3 font-size-12"></i>
                               </a>          
                            </li>
                         </ul>
                      </div>
                   </div>
-                  @endif
                   <div class="header-logo-account__user-nav-item">
-                     <a class="header-logo-account__user-nav-main-link--cart" rel="nofollow" href="//#/cart">
-                        <div class="shopping-cart-summary is-empty" data-view="cartCount">
-                           <i class="e-icon -icon-cart"></i>
-                           <span class="js-cart-summary-count shopping-cart-summary__count">0</span>
+                     <a class="header-logo-account__user-nav-main-link--cart" rel="nofollow" href="#">
+                        <div class="notify-summary" data-view="cartCount">
+                           <i class="icon-bell2 font-size-12"></i>
+                           <span class="js-cart-summary-count notify-summary__count">5</span>
                         </div>
                      </a>
                   </div>
+                  @endif
+                  
                   <div class="header-logo-account__user-nav-item">
                      @if(Auth::guard('frontend')->check())
                      <a class="header-logo-account__user-nav-main-link--omega" href="{{route('user.logout')}}">Thoát</a>

@@ -31,7 +31,7 @@
               <a href="{{route('user.author')}}"><i class="icon-home4"></i> <span>Bảng điều khiển</span></a>
             </li>
             <li class="{{ Route::is('user.author_courses') ?  "active" : "" }}">
-              <a class="has-ul" href="{{route('user.author_courses')}}"><i class="icon-tree5"></i> <span>Khóa học</span></a>
+              <a class="has-ul" href="{{route('user.author_courses')}}"><i class="icon-book-play"></i> <span>Khóa học</span></a>
               <ul>
                 <li class="{{ Route::is('user.author_courses') ? "active" : "" }}">
                   <a href="{{route('user.author_courses')}}" id="list1"><i class="icon-list-unordered"></i>Danh sách<span class="label bg-warning-400">28</span></a>
@@ -42,7 +42,7 @@
               </ul>
             </li>
             <li class="{{ Route::is('user.author_enrollers') ? "active" : "" }}">
-              <a href="{{route('user.author_enrollers')}}"><i class="icon-people"></i> <span>Học viên <span class="label bg-blue-400">1,500</span></span>
+              <a href="{{route('user.author_enrollers')}}"><i class="icon-users2"></i> <span>Học viên <span class="label bg-blue-400">1,500</span></span>
               </a>
             </li>
             <!--Profile-->

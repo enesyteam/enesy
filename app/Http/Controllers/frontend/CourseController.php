@@ -34,4 +34,7 @@ class CourseController extends Controller
                         ->paginate(Course::PAGE_SIZE); 
         return view('frontend.course.course-by-cat',['listCourse'=>$listCourse]);
     }
+    public function search_result(){
+        return view('frontend.course.course-search-result');
+    }
 }

@@ -6,7 +6,7 @@
 @stop
 @section('custom-navbar')
 <div class="header-categories__search">
-  <form id="search" data-view="searchField" action="#" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="">
+  <form id="search" data-view="searchField" action="{{route('course.search_result')}}" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="">
     <div class="search-field -border-light">
       <div class="search-field__input">
         <input id="term" name="term" class="js-term search-field__input-field" type="search" placeholder="Tìm khóa học" vk_19588="subscribed">
@@ -46,6 +46,15 @@
                <!--Courses List-->
                
                <div>
+               <!-- Add by Cong, need to revise by code team -->
+               <h2 class="t-heading -weight-light -size-xs h-mb1 ml-5">
+                Các khóa học <strong>XXX </strong> ({{count($listCourse)}})
+              </h2>
+              <!-- Add by Cong, need to revise by code team -->
+              <!-- Check if category has any course -->
+              @if($listCourse->isEmpty())
+               <span class="ml-10">Chưa có khóa học nào</span>
+              @else
                <ul class="course-list">
                   @foreach($listCourse as $item)
                   @php ($link_detail = route('course.detail',['id'=>$item->id]))
@@ -112,6 +121,8 @@
                   @endforeach
                   
                </ul>
+
+               @endif
                 </div>
                <!--Pagination-->
                {{$listCourse->render()}}

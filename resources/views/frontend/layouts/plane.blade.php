@@ -13,11 +13,11 @@
         <meta content="Enesy.vn" name="author" />
         <link href="{{asset('frontend/css/normalize.css')}}" rel="stylesheet" type="text/css" />
         <link href="{{asset('frontend/css/style.css')}}" rel="stylesheet" type="text/css" />
-        <link href="{{asset('frontend/css/custom.css')}}" rel="stylesheet" type="text/css" />
         <link href="{{asset('frontend/css/layout.css')}}" rel="stylesheet" type="text/css" />
-
-        <link href="{{asset('frontend/user/assets/css/components.css')}}" rel="stylesheet" type="text/css">
         @yield('head.css')
+        <link href="{{asset('frontend/user/assets/css/components.css')}}" rel="stylesheet" type="text/css">
+        <link href="{{asset('frontend/user/assets/css/icons/icomoon/styles.css')}}" rel="stylesheet" type="text/css">
+        <link href="{{asset('frontend/css/custom.css')}}" rel="stylesheet" type="text/css" />
         <!--Page Loader-->
         <script type="text/javascript" src="{{asset('frontend/user/assets/js/plugins/loaders/pace.min.js')}}"></script>
         <script type="text/javascript" src="{{asset('frontend/user/assets/js/core/libraries/jquery.min.js')}}"></script>

@@ -45,9 +45,10 @@
             </li>
             <?php }?>
             
-            <li class="header-categories__links-item menu-demo-only">
+            <li class="header-categories__links-item">
                <a class="header-categories__main-link" href="#">
                Html pages
+               <span class="e-text-label -size-s -color-grey-light" style="color: red">Dev. only</span>
                </a>  
                <div class="header-categories__links-dropdown js-categories-6-dropdown">
                   <ul class="hub-header-dropdown">
@@ -57,6 +58,10 @@
                      <li>
                         <a class="hub-header-dropdown__top" href="{{route('course.view')}}">Học</a>
                      </li>
+                     <li>
+                        <a class="hub-header-dropdown__top" href="{{route('course.search_result')}}">Kết quả tìm khóa học</a>
+                     </li>
+                     
                   </ul>
                </div>
             </li>

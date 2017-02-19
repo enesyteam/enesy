@@ -25,7 +25,7 @@
               <div class="form-group">
                 <label class="text-semibold">Số tài khoản:</label> <input class="f-input -type-string -width-full" placeholder="" type="text" value="180010889875">
               </div><!-- /bank number-->
-              <button class="btn btn-default" type="button">Cập nhật</button>
+              <button class="btn btn-primary" type="button">Cập nhật</button>
             </div><!-- /bill -->
             <!-- Payment History -->
             <legend class="text-semibold">Yêu cầu thanh toán</legend>
@@ -195,6 +195,12 @@
           </div>
           <div class="col-md-3">
             <!-- Nothing here! just placeholder -->
+            <div class="thumbnail no-border no-boxshadow">
+              <div class="thumb mt-10 mb-10"><span class="text-semibold mb-10">Các ngân hàng được chấp nhận</span> 
+              <img alt="" class="mt-10" src="{{asset('frontend/images/vietcombank.jpg')}}"></div>
+              <img alt="" class="mt-10" src="{{asset('frontend/images/vietinbank.jpg')}}"></div>
+              <img alt="" class="mt-10" src="{{asset('frontend/images/techcombank.jpg')}}"></div>
+            </div>
           </div>
         </div>
       </div>

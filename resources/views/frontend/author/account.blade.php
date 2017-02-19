@@ -20,7 +20,7 @@
               <label class="text-semibold">Nhập lại mật khẩu mới:</label> <input class="f-input -type-string -width-full" placeholder="" type="password" value="">
             </div><!-- /confirm new password -->
             
-            <button class="btn btn-default" type="button">Cập nhật mật khẩu</button>
+            <button class="btn btn-primary" type="button">Cập nhật mật khẩu</button>
             <a class=" position-right">Quên mật khẩu</a>
 
             <!-- username -->
@@ -28,7 +28,7 @@
               <legend class="text-semibold">Tài khoản đăng nhập</legend> 
               <label class="text-semibold">Tên đăng nhập:</label> <input class="f-input -type-string -width-full" placeholder="" type="text" value="congcd4">
             </div><!-- /username -->
-            <button class="btn btn-default" type="button">Thay đổi tên đăng nhập</button>
+            <button class="btn btn-primary" type="button">Thay đổi tên đăng nhập</button>
 
             <!-- delete account -->
             <div class="form-group mt-10">

@@ -3890,7 +3890,6 @@ input[type=text].footer-subscribe__input:focus::-webkit-input-placeholder, input
     position: relative;
 }
 .header-categories__main-link, .header-categories__main-link--empty {
-    border-radius: 4px 4px 0 0;
     color: #666666;
     display: block;
     padding: 10px;
@@ -4078,11 +4077,11 @@ input[type=text].footer-subscribe__input:focus::-webkit-input-placeholder, input
     color: white;
 }
 .header-logo-account__sundry-main-link--brand-color {
-    color: #E41937; /*#82b541;*/
+    color: #82b541;
     opacity: 0.7;
 }
 .touch .header-logo-account__sundry-item .header-logo-account__sundry-main-link--brand-color.is-open, .header-logo-account__sundry-item:hover>.header-logo-account__sundry-main-link--brand-color {
-    color: #E41937; /*#82b541;*/
+    color: #82b541; /*#82b541;*/
     opacity: 1;
 }
 .header-logo-account__sundry-dropdown {
@@ -5697,21 +5696,21 @@ button.search-field__button:active {
     width: 615px;
     margin-right: 15px;
 }
-}.shopping-cart-summary {
+}.notify-summary {
     color: white;
 }
-.shopping-cart-summary.is-empty {
+.notify-summary.is-empty {
     color: gray;
 }
-.shopping-cart-summary.is-empty span {
+.notify-summary.is-empty span {
     display: none;
 }
-.shopping-cart-summary__count {
+.notify-summary__count {
     box-sizing: border-box;
     background: #82b541;
     display: inline-block;
-    padding: 2px 7px 3px 7px;
-    font-size: 12px;
+    padding: 2px 6px 2px 6px;
+    font-size: 10px;
     font-weight: 700;
     color: whitesmoke;
     line-height: 1;
@@ -6698,6 +6697,8 @@ ul.pagination>li>a[rel="prev"]:after, .pagination__previous:after, .pagination__
 .e-icon.-icon-cancel:before {
     content: ""}
 .e-icon.-icon-cart:before {
+    content: ""}
+.e-icon.-icon-bell:before {
     content: ""}
 .e-icon.-icon-chevron-down:before {
     content: ""}

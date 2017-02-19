@@ -5212,16 +5212,12 @@ a.thumbnail.active {
 }
 .thumb-slide .caption {
   position: absolute;
-  bottom: -100%;
   left: 0;
   color: #fff;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.7);
   z-index: 10;
-  -webkit-transition: all 0.1s linear;
-  -o-transition: all 0.1s linear;
-  transition: all 0.1s linear;
 }
 .thumb-slide .caption span {
   position: absolute;

@@ -17,7 +17,7 @@ Enesy | Khóa học lập trình AutoCAD với C# trình độ cơ bản
 
 @section('custom-navbar')
 <div class="header-categories__search">
-  <form id="search" data-view="searchField" action="#" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="">
+  <form id="search" data-view="searchField" action="{{route('course.search_result')}}" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="">
     <div class="search-field -border-light">
       <div class="search-field__input">
         <input id="term" name="term" class="js-term search-field__input-field" type="search" placeholder="Tìm khóa học" vk_19588="subscribed">

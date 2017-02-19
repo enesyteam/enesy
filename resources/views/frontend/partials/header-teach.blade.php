@@ -27,10 +27,13 @@
       <div class="grid-container">
          <div class="header-logo-account__container">
             <a class="header-teach-logo-account__logo" href="{{route('home.become_instructor')}}">
-            <span>Enesy</span>
+            <span>Enesy Teach</span>
             </a>
             <nav class="header-logo-account__right">
                <ul class="header-logo-account__sundry">
+               <li class="header-logo-account__sundry-item">
+                  <a class="header-logo-account__sundry-main-link--brand-color -rounded-corners" href="{{route('home')}}"><i class="icon-undo2" style="font-size: 12px;margin-right: 5px"></i>Enesy</a>
+              </li>
                   <li class="header-logo-account__sundry-item">
                      <a class="header-logo-account__sundry-main-link" href="{{route('home.about')}}">Tạo khóa học</a>
                   </li>
