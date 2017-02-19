@@ -7,7 +7,7 @@ namespace App\Http\Models;
  * Time: 10:36 AM
  */
 use Illuminate\Database\Eloquent\Model;
-use App\Http\Models\backend\Category;
+use App\Http\Models\Category;
 
 class Member extends Model
 {
