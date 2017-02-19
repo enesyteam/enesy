@@ -93,6 +93,7 @@ class CourseController extends Controller
             $course->introtext        = $data["introtext"];      
             $course->content          = $data["content"];
             $course->love             = 0;
+            $course->picture          = '';
             $course->num_of_learn     = 0;
             $course->create_date      = time();
             $course->updated_at       = time();
