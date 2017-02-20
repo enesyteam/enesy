@@ -36,7 +36,7 @@ class CourseController extends Controller
             ->leftJoin('tbl_member','tbl_member.id','=','tbl_course.mentor_id')
             ->leftJoin('tbl_categories as cat1','cat1.id','=','tbl_course.parent_cat_id')
             ->leftJoin('tbl_categories as cat2','cat2.id','=','tbl_course.cat_id')
-            //->where('cat_id', $id)
+            ->where('cat_id', $id)
             ->orderBy('tbl_course.id', 'DESC')
             ->orderBy('tbl_course.love','DESC')
             ->orderBy('tbl_course.num_of_learn','DESC')  
