@@ -10,8 +10,8 @@
             <div class="form-group">
               <legend class="text-semibold">Thông tin cá nhân</legend> 
               <label class="text-semibold">Họ:</label> <input class="f-input -type-string -width-full" placeholder="" type="text" value="Nguyễn" required="true">
-              <label class="text-semibold">Tên đệm:</label> <input class="f-input -type-string -width-full" placeholder="" type="text" value="Văn" required="true">
-              <label class="text-semibold">Tên:</label> <input class="f-input -type-string -width-full" placeholder="" type="text" value="Công" required="true">
+              <label class="text-semibold mt-10">Tên đệm:</label> <input class="f-input -type-string -width-full" placeholder="" type="text" value="Văn" required="true">
+              <label class="text-semibold mt-10">Tên:</label> <input class="f-input -type-string -width-full" placeholder="" type="text" value="Công" required="true">
             </div><!-- /Name -->
             <!-- Gender -->
             <label class="text-semibold">Giới tính:</label>
@@ -54,6 +54,15 @@
             </ul>
             </div>
             <!-- /Biography help -->
+            <!-- Contact info -->
+            <div class="form-group">
+              <legend class="text-semibold">Thông tin liên hệ</legend> 
+              <label class="text-semibold">Địa chỉ:</label> <input class="f-input -type-string -width-full" placeholder="" type="text" value="Số nhà 123 - Đường Phạm Hùng - Quận Ba Đình - Hà Nội" required="true">
+              <label class="text-semibold mt-10">Điện thoại:</label> <input class="f-input -type-string -width-full" placeholder="" type="text" value="0943-312-354" required="true">
+              <label class="text-semibold mt-10">Facebook:</label> <input class="f-input -type-string -width-full" placeholder="" type="text" value="https://www.facebook.com/cacom2012" required="true">
+              <label class="text-semibold mt-10">Skype:</label> <input class="f-input -type-string -width-full" placeholder="" type="text" value="mr.ca.com" required="true">
+            </div>
+            <!-- /Contact info -->
             <button class="btn btn-primary" type="button">Cập nhật</button>
           </div>
           <div class="col-md-1"></div>
