@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Redirect;
 use DB;
 use Cache;
 use Config;
+use Helper;
 
 
 class CourseController extends Controller
@@ -86,7 +87,8 @@ class CourseController extends Controller
             $data                     = $request->all();
             $cat                      = explode("-",$data['category']);
             $course                   = new Course(); 
-            $course->title            = $data["title"];      
+            $course->title            = $data["title"];   
+            $course->alias            = Helper::generateSlug($data["title"]);     
             $course->parent_cat_id    = $cat[0];  
             $course->cat_id           = $cat[1];
             $course->mentor_id        = $data['mentor_id'];       
@@ -135,7 +137,8 @@ class CourseController extends Controller
         if($request->isMethod('post')){
             $data                     = $request->all();
             $cat                      = explode("-",$data['category']);
-            $course->title            = $data["title"];      
+            $course->title            = $data["title"]; 
+            $course->alias            = Helper::generateSlug($data["title"]);       
             $course->parent_cat_id    = $cat[0];  
             $course->cat_id           = $cat[1];
             $course->mentor_id        = $data['mentor_id'];       

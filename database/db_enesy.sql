@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 17, 2017 at 11:30 AM
+-- Generation Time: Feb 20, 2017 at 08:57 AM
 -- Server version: 10.1.19-MariaDB
 -- PHP Version: 7.0.13
 
@@ -51,7 +51,7 @@ INSERT INTO `tbl_categories` (`id`, `parent_id`, `title`, `alias`, `description`
 (4, 1, 'Giới thiệu', 'quá ongn', 'dfd', '', 'ducnvna@gmail.com', 20170216, 0, 0, 1),
 (5, 1, 'Hướng đối tượng', 'Hướng đối tượng', 'dfdsf', '', 'ducnvna@gmail.com', 20170216, 0, 0, 1),
 (6, 1, 'Xã Hội', 'Xã Hội', 'df', '', 'ducnvna@gmail.com', 20170216, 0, 0, 1),
-(7, 0, 'Cầu Đường', 'Cầu Đường', '1111', '', 'ducnvna@gmail.com', 20170216, 0, 0, 1);
+(7, 0, 'Cầu Đường', 'cau-duong', '1111', '', 'ducnvna@gmail.com', 20170220, 0, 0, 1);
 
 -- --------------------------------------------------------
 
@@ -65,6 +65,7 @@ CREATE TABLE `tbl_course` (
   `picture` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `cat_id` int(11) NOT NULL,
   `title` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `alias` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `introtext` varchar(500) COLLATE utf8_unicode_ci NOT NULL,
   `content` text COLLATE utf8_unicode_ci NOT NULL,
   `price` double DEFAULT NULL,
@@ -81,11 +82,13 @@ CREATE TABLE `tbl_course` (
 -- Dumping data for table `tbl_course`
 --
 
-INSERT INTO `tbl_course` (`id`, `parent_cat_id`, `picture`, `cat_id`, `title`, `introtext`, `content`, `price`, `love`, `num_of_learn`, `time_learn`, `mentor_id`, `create_date`, `updated_at`, `trending`) VALUES
-(1, 0, '', 2, '1111 đã edit', '1111- đã edit', '11111- đã edit', 0, 0, 0, 0, 0, 1484621541, 1484621566, 0),
-(2, 0, '', 1, 'dfdsf', 'sdfdsf', 'dfds', 0, 0, 0, 0, 0, 1484621584, 0, 0),
-(3, 0, '', 1, 'ểwr', 'ểwr', 'ểwr', 0, 0, 0, 0, 0, 1484621603, 0, 0),
-(4, 1, '', 2, 'lập trình F.U.C.K Linh miu', 'fuck là một nghệ thuật...', 'fuck là một nghệ thuật và người fuck là một nghệ sĩ', NULL, NULL, NULL, NULL, 11, 1487136918, 1487138150, 0);
+INSERT INTO `tbl_course` (`id`, `parent_cat_id`, `picture`, `cat_id`, `title`, `alias`, `introtext`, `content`, `price`, `love`, `num_of_learn`, `time_learn`, `mentor_id`, `create_date`, `updated_at`, `trending`) VALUES
+(1, 2, '', 3, 'Học lập trình hướng đối tượng', 'hoc-lap-trinh-huong-doi-tuong', '1111- đã edit', '<!DOCTYPE html>\r\n<html>\r\n<head>\r\n</head>\r\n<body>\r\n<p>11111- đã edit</p>\r\n</body>\r\n</html>', 0, 0, 0, 0, 1, 1484621541, 1487577027, 0),
+(2, 0, '', 1, 'Học cầu đường bộ', 'hoc-cau-duong-bo', 'sdfdsf', '<!DOCTYPE html>\r\n<html>\r\n<head>\r\n</head>\r\n<body>\r\n<p>dfds</p>\r\n</body>\r\n</html>', 0, 0, 0, 0, 1, 1484621584, 1487577043, 0),
+(3, 0, '', 1, 'ểwr', 'ewr', 'ểwr', '<!DOCTYPE html>\r\n<html>\r\n<head>\r\n</head>\r\n<body>\r\n<p>ểwr</p>\r\n</body>\r\n</html>', 0, 0, 0, 0, 1, 1484621603, 1487577123, 0),
+(4, 1, '', 2, 'lập trình F.U.C.K Linh miu', '', 'fuck là một nghệ thuật...', 'fuck là một nghệ thuật và người fuck là một nghệ sĩ', NULL, NULL, NULL, NULL, 11, 1487136918, 1487138150, 0),
+(5, 2, '', 3, 'lap tỉnh php', 'lap-tinh-php', 'dfdsfd', '<!DOCTYPE html>\r\n<html>\r\n<head>\r\n</head>\r\n<body>\r\n<p>dfdsf</p>\r\n</body>\r\n</html>', NULL, 0, 0, NULL, 1, 1487576855, 1487576855, 0),
+(6, 2, '', 3, 'sdfdsf', 'sdfdsf', 'dfdsf', '<!DOCTYPE html>\r\n<html>\r\n<head>\r\n</head>\r\n<body>\r\n<p>fd</p>\r\n</body>\r\n</html>', NULL, 0, 0, NULL, 1, 1487576960, 1487576960, 0);
 
 -- --------------------------------------------------------
 
@@ -176,6 +179,13 @@ CREATE TABLE `tbl_member` (
   `phone` varchar(15) DEFAULT NULL,
   `address` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `tbl_member`
+--
+
+INSERT INTO `tbl_member` (`id`, `email`, `username`, `password`, `last_name`, `first_name`, `middle_name`, `updated_at`, `status`, `information_status`, `info`, `create_date`, `create_user`, `modify_date`, `modify_user`, `remember_token`, `avatar`, `is_teaching`, `sex`, `dob`, `social`, `phone`, `address`) VALUES
+(1, 'ducnvna@gmail.com', 'ducnvna', '$2y$10$UejvQjCBb4k7/b.QSugNzuyf/L1AybFoVi5vGKFHhX9tmbGZigNLK', 'Nguyen', 'Duc', 'Van', NULL, 1, 0, NULL, 1487560565, NULL, 20170220, NULL, NULL, 'backend/image/default_avatar_male.jpg', 1, NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -273,7 +283,7 @@ ALTER TABLE `tbl_categories`
 -- AUTO_INCREMENT for table `tbl_course`
 --
 ALTER TABLE `tbl_course`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT for table `tbl_lesson`
 --
@@ -288,7 +298,7 @@ ALTER TABLE `tbl_lesson_doc`
 -- AUTO_INCREMENT for table `tbl_member`
 --
 ALTER TABLE `tbl_member`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `tbl_user`
 --

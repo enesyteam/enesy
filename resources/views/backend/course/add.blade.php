@@ -20,8 +20,8 @@
 
       <div class="form-group">
         <label class="required">Category</label>
-        <select name="category" id='category' class="form-control">
-          <option>-- Select category --</option>
+        <select name="category" id='category' class="form-control" required>
+          <option value="">-- Select category --</option>
           @foreach($listCat as $id => $cat)        
             <option value='{{ '0-'.$id }}'>{{ $cat['title'] }}</option>
             @foreach($cat['data'] as $item)        
@@ -33,8 +33,8 @@
 
       <div class="form-group">
         <label class="required">Mentor</label>
-        <select name="mentor_id" id='mentor_id' class="form-control">
-          <option>-- Select mentor --</option>
+        <select name="mentor_id" id='mentor_id' class="form-control" required>
+          <option value="">-- Select mentor --</option>
           @foreach($listTeacher as $teach)        
           <option value='{{ $teach->id }}'>{{ $teach->last_name.' '.$teach->middle_name.' '.$teach->first_name }}</option>
           @endforeach                              

@@ -8,6 +8,7 @@ use App\Http\Models\Category;
 use App\Http\Requests;
 use Config;
 use DB;
+use Helper;
 
 
 class CategoryController extends Controller
@@ -92,8 +93,8 @@ class CategoryController extends Controller
         }
     	$cate = new Category;    	
     	
-    	$cate->title = $req->title;
-        $cate->alias = $req->title;
+    	$cate->title     = $req->title;
+        $cate->alias     = Helper::generateSlug($req->title);   
         $cate->parent_id = $req->parent_id;
     	$cate->description = $req->description;
     	$date = date('Y').date('m').date('d');	
@@ -140,6 +141,7 @@ class CategoryController extends Controller
     	$cate = Category::find($id);
     	
     	$cate->title = $req->title;
+        $cate->alias     = Helper::generateSlug($req->title);   
     	$cate->description = $req->description;
     	$date = date('Y').date('m').date('d');	
     	$cate->create_date = $date;
