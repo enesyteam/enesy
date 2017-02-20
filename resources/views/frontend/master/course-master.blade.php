@@ -22,6 +22,7 @@
             <link href="{{asset('frontend/css/layout.css')}}" rel="stylesheet" type="text/css" />
             @yield('head.css')
             @yield('head.js')
+            @yield('head-scripts')
          </head>
          <!-- #HEAD -->
          <body>

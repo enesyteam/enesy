@@ -44,3 +44,4 @@
       </div><!--/Dashboard-->
     </div>
   </div>@stop
+  @yield('scripts')

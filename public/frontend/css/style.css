@@ -8062,3 +8062,17 @@ img.mfp-img {
 .right{
     float: right;
 }
+/*Form controls*/
+.form-horizontal .inputs, .form-horizontal--wide .inputs
+input[type=file] {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    background: #fafafa;
+    border: 1px solid #bbb;
+    box-sizing: border-box;
+    line-height: 13px;
+    margin: 0;
+    padding: 5px 8px 6px 8px;
+    outline: 0;
+}

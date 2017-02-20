@@ -17,9 +17,15 @@
                     <br>
                     <span class="text-caption text-muted">Anh ơi cho em hỏi đẻ có đau lắm không ạ?</span>
                     <ul class="list-inline mt-5">
-                        <li><a class="label label-default" href="#">Xem chi tiết</a></li>
-                        <li><a class="label label-default" href="#">Trả lời nhanh</a></li>
+                        <li><a class="label label-default" href="#"><i class=" icon-arrow-right14 font-size-12 position-left"></i>Chi tiết</a></li>
+                        <li><a class="label label-default btn-reply" href="#"><i class="icon-undo2 font-size-12 position-left"></i>Trả lời</a></li>
                     </ul>
+                    <!-- Comment -->
+                    <div class="comment-form hidden">
+                      <textarea name="enter-message" class="f-textarea content-group mt-10 mb-5" rows="3" cols="1" placeholder="Enter your message..."></textarea>
+                      <ul class="list-inline"><li><a class="label label-primary" href="#">Gửi</a></li></ul>
+                    </div>
+                    <!-- /Comment -->
                   </div>
                 </li>
                 <li class="media">
@@ -29,7 +35,7 @@
                   <div class="media-body">
                     <a href="#">congcd4</a>, <a href="#">quandt</a> đã mua khóa học <a href="#"> Lập trình PHP nâng cao</a> của bạn asef asd.
                     <ul class="list-inline mt-5">
-                        <li><a class="label label-default" href="#">Xem chi tiết</a></li>
+                        <li><a class="label label-default" href="#"><i class=" icon-arrow-right14 font-size-12 position-left"></i>Chi tiết</a></li>
                     </ul>
                   </div>
                 </li>
@@ -40,7 +46,7 @@
                   <div class="media-body">
                     <a href="#">congcd4</a>, <a href="#">quandt</a> đã mua khóa học <a href="#"> Lập trình PHP nâng cao</a> của bạn asef asd.
                     <ul class="list-inline mt-5">
-                        <li><a class="label label-default" href="#">Xem chi tiết</a></li>
+                        <li><a class="label label-default" href="#"><i class=" icon-arrow-right14 font-size-12 position-left"></i>Chi tiết</a></li>
                     </ul>
                   </div>
                 </li>
@@ -51,7 +57,7 @@
                   <div class="media-body">
                     <a href="#">congcd4</a>, <a href="#">quandt</a> đã mua khóa học <a href="#"> Lập trình PHP nâng cao</a> của bạn asef asd.
                     <ul class="list-inline mt-5">
-                        <li><a class="label label-default" href="#">Xem chi tiết</a></li>
+                        <li><a class="label label-default" href="#"><i class=" icon-arrow-right14 font-size-12 position-left"></i>Chi tiết</a></li>
                     </ul>
                   </div>
                 </li>
@@ -62,7 +68,7 @@
                   <div class="media-body">
                     <a href="#">congcd4</a>, <a href="#">quandt</a> đã mua khóa học <a href="#"> Lập trình PHP nâng cao</a> của bạn asef asd.
                     <ul class="list-inline mt-5">
-                        <li><a class="label label-default" href="#">Xem chi tiết</a></li>
+                        <li><a class="label label-default" href="#"><i class=" icon-arrow-right14 font-size-12 position-left"></i>Chi tiết</a></li>
                     </ul>
                   </div>
                 </li>
@@ -73,7 +79,7 @@
                   <div class="media-body">
                     <a href="#">congcd4</a>, <a href="#">quandt</a> đã mua khóa học <a href="#"> Lập trình PHP nâng cao</a> của bạn asef asd.
                     <ul class="list-inline mt-5">
-                        <li><a class="label label-default" href="#">Xem chi tiết</a></li>
+                        <li><a class="label label-default" href="#"><i class=" icon-arrow-right14 font-size-12 position-left"></i>Chi tiết</a></li>
                     </ul>
                   </div>
                 </li>
@@ -84,7 +90,7 @@
                   <div class="media-body">
                     <a href="#">congcd4</a>, <a href="#">quandt</a> đã mua khóa học <a href="#"> Lập trình PHP nâng cao</a> của bạn asef asd.
                     <ul class="list-inline mt-5">
-                        <li><a class="label label-default" href="#">Xem chi tiết</a></li>
+                        <li><a class="label label-default" href="#"><i class=" icon-arrow-right14 font-size-12 position-left"></i>Chi tiết</a></li>
                     </ul>
                   </div>
                 </li>
@@ -95,7 +101,7 @@
                   <div class="media-body">
                     <a href="#">congcd4</a>, <a href="#">quandt</a> đã mua khóa học <a href="#"> Lập trình PHP nâng cao</a> của bạn asef asd.
                     <ul class="list-inline mt-5">
-                        <li><a class="label label-default" href="#">Xem chi tiết</a></li>
+                        <li><a class="label label-default" href="#"><i class=" icon-arrow-right14 font-size-12 position-left"></i>Chi tiết</a></li>
                     </ul>
                   </div>
                 </li>
@@ -136,4 +142,20 @@
     </form>
   </div>
 </div><!-- /content area -->
+@stop
+
+@section('head-scripts')
+<script type="text/javascript">
+  //this is demo by cong, need to rewrite by code team
+  $(document).ready(function() {
+  var max_fields      = 10; //maximum emails
+  var wrapper         = $(".comment-form"); //Fields wrapper
+  var reply_button      = $(".btn-reply"); //Add button ID
+
+  $(reply_button).click(function(e){
+      e.preventDefault();
+        $(wrapper).removeClass('hidden');
+  });
+});
+</script>
 @stop

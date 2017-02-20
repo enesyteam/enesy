@@ -212,6 +212,13 @@ Route::group(array('namespace' => 'frontend' , 'middleware' => 'frontend.auth'),
 		'as'	=>	'user.author_notifications',
 		'uses'	=>	'UserController@author_notifications'
 		]);
+	// cong test
+	Route::get('giang-vien/course/add/section',[
+		'as'	=>	'author.add_section',
+		function() {
+    	return  View::make('frontend.course.create.section')->render();
+		}]);
+	// /cong test
 
 	/*about*/
 	Route::get('gioi-thieu-enesy',[
