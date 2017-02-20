@@ -84,33 +84,6 @@
 
                                         <div class="e-form__group">
                                             <div class="e-form__label"><label
-                                                        for="sso_sign_up_form_first_name">Họ</label></div>
-                                            <div class="e-form__input">
-                                                {{ Form::text('first_name', Input::old('first_name'), array('placeholder' => 'Họ' , 'class'=>'f-input -type-string js-sign-up__first-name -width-full')) }}
-                                                <p class="error_message">{{ $errors->first('first_name') }}</p>
-                                            </div>
-                                        </div>
-
-                                        <div class="e-form__group">
-                                            <div class="e-form__label"><label for="sso_sign_up_form_first_name">Tên
-                                                    đệm</label></div>
-                                            <div class="e-form__input">
-                                                        {{ Form::text('middle_name', Input::old('middle_name'), array('placeholder' => 'Tên Đệm' , 'class'=>'f-input -type-string js-sign-up__first-name -width-full')) }}
-                                                        <p class="error_message">{{ $errors->first('middle_name') }}</p>
-                                                        </div>
-                                        </div>
-
-                                        <div class="e-form__group">
-                                            <div class="e-form__label"><label
-                                                        for="sso_sign_up_form_last_name">Tên</label></div>
-                                                        <div class="e-form__input">
-                                                        {{ Form::text('last_name', Input::old('last_name'), array('placeholder' => 'Tên' , 'class'=>'f-input -type-string js-sign-up__last-name -width-full')) }}
-                                                        <p class="error_message">{{ $errors->first('last_name') }}</p>
-                                                         </div>
-                                        </div>
-
-                                        <div class="e-form__group">
-                                            <div class="e-form__label"><label
                                                         for="sso_sign_up_form_last_name">User Name</label></div>
                                                         <div class="e-form__input">
                                                         {{ Form::text('username', Input::old('username'), array('placeholder' => 'User Name' , 'class'=>'f-input -type-string js-sign-up__last-name -width-full')) }}
