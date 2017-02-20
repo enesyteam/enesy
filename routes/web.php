@@ -113,7 +113,7 @@ Route::group(array('namespace' => 'frontend' , 'middleware' => 'frontend.auth'),
 		'as' 	=>	'courses.index',
 		'uses'	=>	'CourseController@index'
 		]);
-	Route::get('chi-tiet-khoa-hoc',[
+	Route::get('khoa-hoc/{alias}/{id}',[
 		'as' 	=>	'course.detail',
 		'uses'	=>	'CourseController@detail'
 		]);

@@ -57,7 +57,7 @@
               @else
                <ul class="course-list">
                   @foreach($listCourse as $item)
-                  @php ($link_detail = route('course.detail',['id'=>$item->id]))
+                  @php ($link_detail = route('course.detail',['alias'=>$item->alias,'id'=>$item->id]))
                   <!--Course-->
                   <li class="js-google-analytics__list-event-container">
                      <div class="course-list__columns-container">
@@ -87,7 +87,7 @@
                               </div>
                               <div class="course-list__info">
                                  <div class="course__info-author">Giảng viên:
-                                    <a class="t-link -color-default -decoration-reversed" href="{{route('course.detail')}}">
+                                    <a class="t-link -color-default -decoration-reversed" href="#">
                                     {{$item->last_name.' '.$item->middle_name.' '.$item->first_name}}
                                     </a>
                                  </div>
