@@ -3,15 +3,15 @@
 Enesy | Khóa học lập trình AutoCAD với C# trình độ cơ bản
 @stop
 @section ('head.css')
-<link href="{{'frontend/css/course.css'}}" rel="stylesheet" type="text/css" />
-<link href="{{'frontend/css/icon.css'}}" rel="stylesheet" type="text/css" />
+<link href="{{asset('frontend/css/course.css')}}" rel="stylesheet" type="text/css" />
+<link href="{{asset('frontend/css/icon.css')}}" rel="stylesheet" type="text/css" />
 @stop
 
 @section('head.js')
 <!--JqueryModal-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-<script src="{{'frontend/vender/jquery-modal/jquery.modal.js'}}" type="text/javascript" charset="utf-8"></script>
-<script src="{{'frontend/vender/jquery-modal/highlight/highlight.pack.js'}}" type="text/javascript" charset="utf-8"></script>
+<script src="{{asset('frontend/vender/jquery-modal/jquery.modal.js')}}" type="text/javascript" charset="utf-8"></script>
+<script src="{{asset('frontend/vender/jquery-modal/highlight/highlight.pack.js')}}" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript" charset="utf-8"> hljs.initHighlightingOnLoad(); </script>
 @stop
 
