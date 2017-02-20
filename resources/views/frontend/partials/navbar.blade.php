@@ -20,7 +20,7 @@
             </li>
             <?php foreach($list_cat_parent as $p=>$p_value){ 
                   $child = isset($list_cat_child[$p_value->id]) ? $list_cat_child[$p_value->id]: array();
-                  $url_pcat = route('course.listByCat',['id'=>$p_value->id]);
+                  $url_pcat = route('course.listByCat',['id'=>$p_value->id,'alias'=>$p_value->alias]);
 
                ?>
             <li class="header-categories__links-item">
@@ -31,7 +31,8 @@
                <div class="header-categories__links-dropdown js-categories-0-dropdown">
                   <ul class="hub-header-dropdown">
                      <?php foreach($child as $p=>$c_value){ 
-                        $url_ccat = "";
+                        $url_ccat = route('course.listByCat',['id'=>$c_value->id,'alias'=>$c_value->alias]);
+
 
                         ?>
                      <li>
