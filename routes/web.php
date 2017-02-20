@@ -129,7 +129,7 @@ Route::group(array('namespace' => 'frontend' , 'middleware' => 'frontend.auth'),
 		'as' 	=>	'course.search_result',
 	'uses'	=>	'CourseController@search_result'
 		]);
-	Route::get('danh-muc/{id}',[
+	Route::get('chu-de/{alias}/{id}',[
 		'as' 	=>	'course.listByCat',
 		'uses'	=>	'CourseController@listByCategory'
 		]);
