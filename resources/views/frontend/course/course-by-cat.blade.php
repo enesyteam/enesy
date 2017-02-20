@@ -101,7 +101,7 @@
                            <p class="t-body -size-s h-m0">
                               <span class="meta-categories -no-slash">
                               lĩnh vực 
-                              <b itemprop="genre"><a href="{{route('course.listByCat',['id'=>$item->parent_cat_id])}}">{{$item->cat_title1}}</a></b>
+                              <b itemprop="genre"><a href="{{route('course.listByCat',['id'=>$item->parent_cat_id,'alias'=>$item->cat_alias1])}}">{{$item->cat_title1}}</a></b>
                               <b itemprop="genre">{{$item->cat_title2}}</b>
                               </span>
                               <br>

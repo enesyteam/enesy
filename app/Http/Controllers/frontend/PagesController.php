@@ -10,7 +10,14 @@ class PagesController extends Controller
     public function index(Request $request){
       $dataRequest = $request->all();
       $sort = isset($dataRequest['sort'])?$dataRequest['sort']:"";
-    	$listCourse = Course::select('tbl_course.*','tbl_member.first_name','tbl_member.last_name','tbl_member.middle_name','cat1.title as cat_title1','cat2.title as cat_title2')
+    	$listCourse = Course::select('tbl_course.*'
+            ,'tbl_member.first_name'
+            ,'tbl_member.last_name'
+            ,'tbl_member.middle_name'
+            ,'cat1.title as cat_title1'
+            ,'cat1.alias as cat_alias1'
+            ,'cat2.title as cat_title2'
+            ,'cat1.alias as cat_alias2')
     					->leftJoin('tbl_member','tbl_member.id','=','tbl_course.mentor_id')
     					->leftJoin('tbl_categories as cat1','cat1.id','=','tbl_course.parent_cat_id')
     					->leftJoin('tbl_categories as cat2','cat2.id','=','tbl_course.cat_id');				
