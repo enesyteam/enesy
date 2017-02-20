@@ -1024,7 +1024,7 @@ iframe[name=google_conversion_frame] {
     display: none !important;
 }
 .is-loading {
-    background-image: url(//public-assets.envato-static.com/assets/common/pagination_loader-5b6741ec6a76c32a048a4c447e6ad4ca.gif);
+    background-image: url(../images/loading.gif);
     background-position: center center;
     background-repeat: no-repeat;
     height: 30px;
@@ -1308,7 +1308,6 @@ iframe[name=google_conversion_frame] {
 }
 .t-list {
     list-style: disc;
-    margin-left: 32px;
 }
 .t-list.-style-none {
     list-style: none;
@@ -1587,7 +1586,6 @@ iframe[name=google_conversion_frame] {
     padding: 5px 8px;
     font-size: 14px;
     width: 100%;
-    height: 100px;
 }
 .f-textarea.is-invalid, .f-textarea.is-error {
     color: #df2c2c;

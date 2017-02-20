@@ -797,6 +797,9 @@ li.current span{
 .mr--20{
     margin-right: -20px !important;
 }
+.mt--10{
+    margin-top: -10px !important;
+}
 /*Author profile*/
 .thumbnail .caption {
     padding: 20px 0 !important;
