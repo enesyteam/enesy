@@ -79,6 +79,7 @@ Route::group(array('namespace' => 'backend', 'prefix' => 'admin', 'middleware' =
 
     Route::get('/member/edit', [ 'as' => 'memberEdit', 'uses' => 'MemberController@edit']);
     Route::post('/member/postEdit', [ 'as' => 'postEditMember', 'uses' => 'MemberController@postEdit']);
+    Route::get('/member/changeIsTeacher', ['as' => 'changeIsTeacher','uses' => 'MemberController@changeIsTeacher']);
 
 
     // Course

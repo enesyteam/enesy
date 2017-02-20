@@ -111,7 +111,7 @@
                        
                       {{$value->create_user}}                  
                       <td>
-                        <input type="checkbox" name=""  "<?php if($value->is_teaching == 1) echo ' checked ' ?>">
+                        <input type="checkbox" name="" value="{{ $value->is_teaching == 1 ? 1 : 0 }}"  "<?php if($value->is_teaching == 1) echo ' checked ' ?>" onclick="changeStatus('{{ $value->id }}')">
                       </td>
                       
                      
@@ -209,6 +209,22 @@
                     });
                }
              }
+            function changeStatus(value) {
+                  var params = {'id':value};
+                  $.ajax({
+                    url: "{{ URL::route('changeIsTeacher') }}",
+                    data: params,
+                    error: function(xhr, status, errorThrow) {
+                      //alert(errorThrow);
+                    },
+                     success: function(data) {
+                      // alert('ok '  + data.status + " id = " + data.id );
+                    }
+
+                  });
+                  
+
+                }             
 
              function checkAll() {
                 var allCheckbox = document.getElementsByName('rowCheck');
