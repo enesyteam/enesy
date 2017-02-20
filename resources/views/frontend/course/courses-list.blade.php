@@ -110,7 +110,15 @@
                            </p>
                         </div>
                         <div class="course-list__column-price">
-                           <p class="course-list__price-desktop">{{number_format($item->price)}}<sup>k</sup></p>
+                              @if($item->price > 0)
+                                 <p class="course-list__price-desktop-free">
+                                    {{number_format($item->price)}}<sup>k</sup>
+                                 </p>
+                              @else
+                                 <p class="course-list__price-free" style="background-color: #4CAF50; border-color: #4CAF50; color: #fff; padding: 2px; border-radius: 3px;">
+                                    Miễn phí
+                                 </p>
+                              @endif
                            <div class="course-list__info-desktop">
                               <div class="course-list__sales-desktop">
                               </div>

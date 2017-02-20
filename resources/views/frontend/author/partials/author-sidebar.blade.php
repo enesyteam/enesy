@@ -59,7 +59,7 @@
               <a href="{{route('user.author_account')}}"><i class="icon-cog3"></i>Thiết lập tài khoản</a>
             </li>
             <li class="{{ Route::is('user.author_email') ? "active" : "" }}">
-              <a href="{{route('user.author_email')}}"><i class="icon-envelope"></i>Email</a>
+              <a href="{{route('user.author_email')}}"><i class="icon-envelope"></i>Email &amp; Thông báo</a>
             </li>
             <li class="{{ Route::is('user.author_bill') ? "active" : "" }}">
               <a href="{{route('user.author_bill')}}"><i class="icon-cash"></i> <span>Thanh toán</span></a>

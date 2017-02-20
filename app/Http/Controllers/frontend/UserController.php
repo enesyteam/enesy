@@ -103,7 +103,9 @@ class UserController extends Controller
     	return view('frontend.author.index');
     }
     public function author_enrollers(){
-        return view('frontend.author.enrollers');
+        //for testing
+        $enrollers = Member::orderBy('id', 'DESC')->paginate(16);
+        return view('frontend.author.enrollers')->withEnrollers($enrollers);
     }
     public function author_courses(){
         return view('frontend.author.courses');

@@ -34,7 +34,7 @@
               <textarea class="f-textarea font-size-13" cols="5" rows="10">Kỹ sư cầu đường với 10 năm kinh nghiệm thiết kế, giám sát các dự án giao thông lớn ở Việt Nam như: Dự án cầu Nhật Tân, dự án hầm đường bộ qua Đèo Cả, dự án hầm đường bộ qua Đèo Cù Mông, dự án mở rộng hầm Hải Vân, ...</textarea>
             </div><!-- /Biography -->
             <!-- Biography help -->
-            <div class="box h-clickable biography-help mt--10 is-open" data-view="dropdown" data-dropdown-target="#us-person-definition">
+            <div class="box h-clickable biography-help mt--20 is-open" data-view="dropdown" data-dropdown-target="#us-person-definition">
             <h3 class="t-body -size-s h-m0">
               <i class="e-icon -icon-info -margin-right"></i>
               <strong>Các thẻ <code>&lt;html&gt;</code> được chấp nhận</strong>

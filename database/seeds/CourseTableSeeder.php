@@ -16,7 +16,7 @@ class CourseTableSeeder extends Seeder
     public function run()
     {
        	$faker = Faker\Factory::create();
-/*
+
        	//create 1000 members
 		for($i=0;$i<1000;++$i){
 			Member::create([
@@ -55,7 +55,7 @@ class CourseTableSeeder extends Seeder
 				'status'			=>	1
 				]);
 		}
-*/
+
 		//create 1000 courses
 		for($i=0; $i<100; ++$i){
 			Course::create([

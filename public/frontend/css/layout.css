@@ -4726,6 +4726,13 @@ pre {
         padding: 0;
         color: black
     }
+    .course-list__price-desktop-free {
+        display: block;
+        font-size: 22px;
+        line-height: 1;
+        padding: 0;
+        color: black
+    }
 }
 
 .course-list__info-desktop {

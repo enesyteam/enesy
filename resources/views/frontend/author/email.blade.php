@@ -48,6 +48,22 @@
                   </label>    
 
               <!-- /email settings-->
+              <!-- notifications settings-->
+            <div class="form-group">
+              <legend class="text-semibold">Cài đặt thông báo</legend>
+              <label class="">
+                      <input type="radio" name="radio-unstyled-inline-left" for="sadf" checked="checked">
+                      <span class="text-semibold">Nhận tất cả ..........</span>
+                      <span class="help-block position-right">Viết cái gì đây nhỉ?.</span>
+              </label>
+              <br />
+              <label class="">
+                      <input type="radio" name="radio-unstyled-inline-left" id="111" checked="checked">
+                      <span class="text-semibold">Chỉ nhận các ..... từ hệ thống và ...</span>
+                      <span class="help-block position-right">Viết cái gì đây nhỉ?.</span>
+                  </label>    
+
+              <!-- /notifications settings-->
             </div>
           </div>
           <div class="col-md-1">

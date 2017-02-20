@@ -7,6 +7,7 @@
         <div class="panel-body">
           <div class="col-md-8">
           <legend class="text-semibold">Trung tâm thông báo</legend>
+          <p class="mb-20">Thay đổi cài đặt nhận thông báo của bạn <a href="{{route('user.author_email')}}">tại đây</a>.</p>
             <ul class="" role="notification">
                 <li class="media">
                   <div class="pull-left media-notifications">
