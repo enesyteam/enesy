@@ -6,7 +6,7 @@
           <div class="media">
             <a class="media-left" href="{{route('user.author_public_profile')}}"><img alt="" class="img-circle img-sm" src="{{asset('frontend/images/user-no-avatar.png')}}" data-popup="tooltip" title="" data-placement="bottom" data-original-title="Sửa"></a>
             <div class="media-body">
-              <span class="media-heading text-semibold">Công Nguyễn</span>
+              <span class="media-heading text-semibold">{{ Auth::guard('frontend')->user()->username }}</span>
               <div class="text-size-mini text-muted">
                 <i class="icon-pin text-size-small"></i> &nbsp;Hà Nội
               </div>

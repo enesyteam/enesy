@@ -22,7 +22,7 @@
                     </ul>
                     <!-- Comment -->
                     <div class="comment-form hidden">
-                      <textarea name="enter-message" class="f-textarea content-group mt-10 mb-5" rows="3" cols="1" placeholder="Enter your message..."></textarea>
+                      <textarea name="enter-message" class="f-textarea content-group mt-10 mb-5 font-size-13" rows="3" cols="1" placeholder="Enter your message..."></textarea>
                       <ul class="list-inline"><li><a class="label label-primary" href="#">Gửi</a></li></ul>
                     </div>
                     <!-- /Comment -->
@@ -148,7 +148,6 @@
 <script type="text/javascript">
   //this is demo by cong, need to rewrite by code team
   $(document).ready(function() {
-  var max_fields      = 10; //maximum emails
   var wrapper         = $(".comment-form"); //Fields wrapper
   var reply_button      = $(".btn-reply"); //Add button ID
 

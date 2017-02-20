@@ -815,6 +815,10 @@ li.current span{
     font-size: 12px !important;
     line-height: 17px !important;
 }
+.font-size-13{
+    font-size: 13px !important;
+    line-height: 17px !important;
+}
 .media-notifications{
     width: 75px;
 }
