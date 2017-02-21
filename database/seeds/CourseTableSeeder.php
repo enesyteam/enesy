@@ -28,7 +28,7 @@ class CourseTableSeeder extends Seeder
 		};
 
 		//create 3 parent categories
-		for ($i=0; $i < 3 ; ++$i) {
+		for ($i=0; $i < 4 ; ++$i) {
 			Category::create([
 				'id'				=>	1000+$i,
 				'parent_id'			=>	0,
@@ -45,7 +45,7 @@ class CourseTableSeeder extends Seeder
 		//create 15 child categories
 		for ($i=0; $i < 15 ; ++$i) {
 			Category::create([
-				'parent_id'			=>	rand(1000, 1002),
+				'parent_id'			=>	rand(1000, 1003),
 				'title'				=>	$faker->lexify($string = 'Mục con ???'),
 				'alias'				=>	$faker->slug(),
 				'description'		=>	implode('',$faker->sentences(4)),
@@ -57,12 +57,12 @@ class CourseTableSeeder extends Seeder
 		}
 
 		//create 1000 courses
-		for($i=0; $i<100; ++$i){
+		for($i=0; $i<1000; ++$i){
 			Course::create([
 					'title'			=>	$faker->sentence,
 					'introtext'		=>	implode('',$faker->sentences(8)),
 					'content'		=>	implode('',$faker->sentences(30)),
-					'cat_id'		=>	rand ( 0 , 1 ),
+					'cat_id'		=>	rand ( 1000 , 1003 ),
 					'parent_cat_id'	=>	0,
 					'mentor_id'		=>	rand ( 1 , 3 ),
 					'picture'		=>	'',

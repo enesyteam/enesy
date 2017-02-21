@@ -833,3 +833,29 @@ li.current span{
     padding-right: 10px !important;
     font-size: 13px;
 }
+
+/*Courses grid*/
+.course-thumbnail .caption {
+    padding: 10px 15px 10px !important;
+    color: #333333;
+    text-align: left;
+    margin: 0 auto;
+}
+.course-thumbnail .caption  .course-title{
+    height: 50px;
+    line-height: 18px;
+    overflow: hidden;
+    width: 100%;
+    text-overflow: ellipsis;
+}
+.course-thumbnail .caption  .course-intro{
+    height: 65px;
+    max-height: 80px;
+    overflow: hidden;
+    width: 100%;
+    text-overflow: ellipsis;
+    line-height: 16px;
+}
+.course-thumbnail .caption .course-intro span{
+    line-height: 14px;
+}
