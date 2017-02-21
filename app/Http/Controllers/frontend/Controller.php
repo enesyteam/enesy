@@ -18,6 +18,7 @@ class Controller extends BaseController
 
     public function __construct()
     {
+      \DB::enableQueryLog();
        // menu 
        $query  = DB::table('tbl_categories')
         ->orderBy('id', 'desc')
