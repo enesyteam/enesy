@@ -14,6 +14,9 @@
         <link href="{{asset('frontend/css/normalize.css')}}" rel="stylesheet" type="text/css" />
         <link href="{{asset('frontend/css/style.css')}}" rel="stylesheet" type="text/css" />
         <link href="{{asset('frontend/css/layout.css')}}" rel="stylesheet" type="text/css" />
+        <link href="{{asset('frontend/user/assets/css/bootstrap.css')}}" rel="stylesheet" type="text/css">
+        <link href="{{asset('frontend/user/assets/css/core.css')}}" rel="stylesheet" type="text/css">
+        <link href="{{asset('frontend/user/assets/css/colors.css')}}" rel="stylesheet" type="text/css">        
         @yield('head.css')
         <link href="{{asset('frontend/user/assets/css/components.css')}}" rel="stylesheet" type="text/css">
         <link href="{{asset('frontend/user/assets/css/icons/icomoon/styles.css')}}" rel="stylesheet" type="text/css">

@@ -6,9 +6,7 @@
 @stop
 
 @section('head.css')
-<link href="{{asset('frontend/user/assets/css/bootstrap.css')}}" rel="stylesheet" type="text/css">
-<link href="{{asset('frontend/user/assets/css/core.css')}}" rel="stylesheet" type="text/css">
-<link href="{{asset('frontend/user/assets/css/colors.css')}}" rel="stylesheet" type="text/css">
+
 @stop
 
 @section('section')
