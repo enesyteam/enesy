@@ -51,21 +51,21 @@
           </div>
         </div>
         <div class="container-fluid">
-          <div class="row text-center mt-10">
-            <div class="col-md-4">
-              <div class="content-group">
-                <h5 class="text-semibold no-margin"><i class="icon-users position-left text-slate"></i> 5,689</h5><span class="text-muted text-size-small">học viên hàng tuần</span>
-              </div>
+          <div class="row text-center mt-10 mb-10">
+            <div class="col-xs-4">
+                <p><i class="icon-users2 icon-2x display-inline-block text-info"></i></p>
+                <h5 class="text-semibold no-margin">2,345</h5>
+                <span class="text-muted text-size-small">Học viên hàng tuần</span>
             </div>
-            <div class="col-md-4">
-              <div class="content-group">
-                <h5 class="text-semibold no-margin"><i class="icon-calendar52 position-left text-slate"></i> 32,568</h5><span class="text-muted text-size-small">học viên hàng tháng</span>
-              </div>
+            <div class="col-xs-4">
+                    <p><i class="icon-point-up icon-2x display-inline-block text-warning"></i></p>
+                    <h5 class="text-semibold no-margin">3,568</h5>
+                    <span class="text-muted text-size-small">Lượt xem bài học</span>
             </div>
-            <div class="col-md-4">
-              <div class="content-group">
-                <h5 class="text-semibold no-margin"><i class="icon-cash3 position-left text-slate"></i> 8 triệu</h5><span class="text-muted text-size-small">tổng thu nhập</span>
-              </div>
+            <div class="col-xs-4">
+                    <p><i class="icon-cash3 icon-2x display-inline-block text-success"></i></p>
+                    <h5 class="text-semibold no-margin">15 triệu</h5>
+                    <span class="text-muted text-size-small">Thu nhập</span>
             </div>
           </div>
         </div>

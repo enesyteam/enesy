@@ -162,27 +162,11 @@
                                     </fieldset>
                               {{ Form::close() }}
                             </div>
-
-                            <div class="sso-form__fallback">
-                                <div class="h-text-align-center">
-                                    <h2 class="t-heading -size-m">
-                                        Great to see you here!
-                                    </h2>
-                                    <p class="t-body -size-m -color-mid">
-                                        Let’s set up your account in just a couple of steps.
-                                    </p>
-                                </div>
-
-
-                                <a class="e-btn--3d -color-primary -size-m h-mt1"
-                                   href="https://account.envato.com/sign_up?to=themeforest">Create an Enesy account</a>
-                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="mfp-preloader">Loading...</div>
     </div>
 </div>
 </body>

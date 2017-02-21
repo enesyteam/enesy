@@ -4,6 +4,7 @@
 @include('frontend.partials.top-header-message')
 <!--#Top Header-->
 @stop
+
 @section('custom-navbar')
 <div class="header-categories__search">
   <form id="search" data-view="searchField" action="{{route('course.search_result')}}" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="">

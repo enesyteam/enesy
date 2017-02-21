@@ -1,5 +1,5 @@
 <div class="js-search-header">
-   <div class="page-section -theme-themeforest -size-xcompact" data-view="parallaxBackground">
+   <div class="page-section -theme-enesy -size-xcompact" data-view="parallaxBackground">
       <div class="page-section__content">
          <div class="search-header__form-wrapper" data-view="searchBar" data-facet-id="searchFacets">
             <div class="heading__block">
@@ -9,7 +9,7 @@
             <div class="h-p2">
                <form class="huge-search--search-home" action="{{route('course.search_result')}}" method="GET">
                   <input type="search" name="term" value="" autocomplete="off" class="js-term" placeholder="Tìm khóa học bạn quan tâm" vk_142c9="subscribed">
-                  <button name="button" type="submit" class="huge-search--btn -theme-themeforest">
+                  <button name="button" type="submit" class="huge-search--btn -theme-enesy">
                   <span class="e-icon__alt">Tìm</span>
                   </button>              <input class="js-autosuggest__analytics-param" type="hidden" name="as" value="0" disabled="">
                   <input class="js-autosuggest__term-type-param" type="hidden" name="type" value="0" disabled="">
