@@ -37,7 +37,7 @@ class CreateTblMember extends Migration
                     $table->string('avatar', 255)->nullable();
                     $table->tinyInteger('is_teaching')->unsigned()->nullable()->default(0)->index()->comment = '1. là giáo viên 0. ko phải giáo viên';
                     $table->string('sex', 45)->nullable();
-                    $table->date(format)('dob')->nullable();
+                    $table->date('dob')->nullable();
                     $table->string('social', 255)->nullable();
                     $table->string('address', 255)->nullable();
                     
