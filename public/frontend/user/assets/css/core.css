@@ -5117,7 +5117,6 @@ a.thumbnail.active {
   height: auto;
 }
 .thumb:not(.thumb-rounded) img {
-  border-radius: 3px;
 }
 .thumb:hover .caption-zoom {
   border-radius: 0;
@@ -6319,4 +6318,16 @@ h6.panel-title,
 .popover[class*=bg-].left > .arrow:after,
 .popover[class*=border-].left > .arrow:after {
   border-left-color: inherit;
+}
+.media.panel-body {
+    margin-top: 0;
+}
+.panel-body+.panel-body, .panel-body+.table, .panel-body+.table-responsive, .panel-body.has-top-border {
+    border-top: 1px solid #ddd;
+}
+.panel-body, .panel-footer, .panel-heading, .panel-title {
+    position: relative;
+}
+.media, .media-body {
+    overflow: visible;
 }

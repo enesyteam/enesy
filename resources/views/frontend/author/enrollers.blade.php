@@ -15,6 +15,19 @@
 </form></div>
 @stop
 
+<div class="search-facet-layout-switcher js-search-facet-layout-switcher">
+                     <div class="btn-group">
+                        <a class="{{ Route::is('user.author_enrollers_list') ? "btn btn--group-item btn--color-transparent is-active" : "btn btn--group-item btn--color-transparent" }}" 
+                          data-layout-switch="list" href="{{route('user.author_enrollers_list')}}">
+                           <i class="e-icon -icon-list"><span class="e-icon__alt">List</span></i>
+                        </a>        
+                        <a class="{{ Route::is('user.author_enrollers') ? "btn btn--group-item btn--color-transparent is-active" : "btn btn--group-item btn--color-transparent" }}" 
+                                   data-layout-switch="list" href="{{route('user.author_enrollers')}}">
+                           <i class="e-icon -icon-grid"><span class="e-icon__alt">Grid</span></i>
+                        </a>
+                     </div>
+               </div>
+
 <div class="row">
   <div class="col-md-12  mr--10">
     <!--Row for users-->

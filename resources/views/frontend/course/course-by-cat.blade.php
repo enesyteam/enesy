@@ -28,7 +28,7 @@
                <div>
                <!-- Add by Cong, need to revise by code team -->
                <h2 class="t-heading -weight-light -size-xs h-mb1 ml-5">
-                Các khóa học <strong>XXX</strong> (100)
+                Các khóa học <strong>{{$cat->title}}</strong> ({{$listCourse->isEmpty() ? 0: $listCourse->total()}})
               </h2>
               <!-- Add by Cong, need to revise by code team -->
               <!-- Check if category has any course -->

@@ -113,6 +113,12 @@ Route::group(array('namespace' => 'frontend' , 'middleware' => 'frontend.auth'),
 		'as' 	=>	'courses.index',
 		'uses'	=>	'CourseController@index'
 		]);
+	//demo
+	Route::get('khoa-hoc/grid-view',[
+		'as' 	=>	'home.gridview',
+		'uses'	=>	'PagesController@indexByGrid'
+		]);
+	//demo
 	Route::get('khoa-hoc/{alias}/{id}',[
 		'as' 	=>	'course.detail',
 		'uses'	=>	'CourseController@detail'
@@ -184,6 +190,10 @@ Route::group(array('namespace' => 'frontend' , 'middleware' => 'frontend.auth'),
 	Route::get('giang-vien/hoc-vien',[
 		'as'	=>	'user.author_enrollers',
 		'uses'	=>	'UserController@author_enrollers'
+		]);
+	Route::get('giang-vien/hoc-vien/list-view',[
+		'as'	=>	'user.author_enrollers_list',
+		'uses'	=>	'UserController@author_enrollers_list'
 		]);
 	Route::get('giang-vien/khoa-hoc',[
 		'as'	=>	'user.author_courses',

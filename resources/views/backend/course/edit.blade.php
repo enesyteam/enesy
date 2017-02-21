@@ -24,7 +24,7 @@
                 <select name="category" id='category' class="form-control" required>
                     <option value="">-- Select category --</option>
                     @foreach($listCat as $id => $cat)        
-                      <option disabled>{{ $cat['title'] }}</option>
+                      <option value='{{ $id.'-'.$id }}' @if($course->cat_id == $id) selected @endif>{{ $cat['title'] }}</option>
                       @foreach($cat['data'] as $item)        
                         <option value="{{ $id.'-'.$item->id }}" @if($course->cat_id == $item->id) selected @endif>&nbsp;&nbsp;&nbsp;&nbsp;-- {{ $item->title }}</option>
                       @endforeach

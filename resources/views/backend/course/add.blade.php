@@ -23,7 +23,7 @@
         <select name="category" id='category' class="form-control" required>
           <option value="">-- Select category --</option>
           @foreach($listCat as $id => $cat)        
-            <option disabled>{{ $cat['title'] }}</option>
+            <option value='{{ $id.'-'.$id }}'>{{ $cat['title'] }}</option>
             @foreach($cat['data'] as $item)        
               <option value="{{ $id.'-'.$item->id }}">&nbsp;&nbsp;&nbsp;&nbsp;-- {{ $item->title }}</option>
             @endforeach
