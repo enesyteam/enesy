@@ -12,8 +12,14 @@ class CourseController extends Controller
     public function index(){
     	return view('frontend.course.index');
     }
-    public function detail(){
-    	return view('frontend.course.course-detail');
+    public function detail($alias,$id){
+        $course_detail = Course::where('id',$id)->where('status',1)->first();
+        if($course_detail){
+         $cat = Category::where('id',$course_detail->cat_id)->where('status',1)->first();
+    	  return view('frontend.course.course-detail',['course_detail'=>$course_detail, 'cat'=>$cat]);
+        } else {
+            return redirect()->route('error');
+        }
     }
     public function preview(){
 		return view('frontend.course.course-preview');

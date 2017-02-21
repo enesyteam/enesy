@@ -81,7 +81,8 @@ class CourseTableSeeder extends Seeder
 					'create_date'	=>	time(),
 					'num_of_learn'	=>	0,
 					'love'			=>	rand(1, 1000),
-					'updated_at'	=>	time()
+					'updated_at'	=>	time(),
+					'status'			=>	1
 				]);
 		}
     }
