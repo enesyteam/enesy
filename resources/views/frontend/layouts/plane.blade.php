@@ -31,5 +31,12 @@
      </head>
 <body>
     @yield('body')
+    <div style="margin-top: 30px">
+        <pre>
+        <?php              
+            print_r(\DB::getQueryLog()); 
+        ?>
+        </pre>
+    </div>
 </body>
 </html>
