@@ -4,6 +4,13 @@
 <!--@include('frontend.partials.top-header-message')-->
 <!--#Top Header-->
 @stop
+
+@section('head.css')
+<link href="{{asset('frontend/user/assets/css/bootstrap.css')}}" rel="stylesheet" type="text/css">
+<link href="{{asset('frontend/user/assets/css/core.css')}}" rel="stylesheet" type="text/css">
+<link href="{{asset('frontend/user/assets/css/colors.css')}}" rel="stylesheet" type="text/css">
+@stop
+
 @section('section')
 <!--Search-->
 @include('frontend.partials.searchheader')
@@ -88,6 +95,9 @@
                                        </div>
                                        </a>
                                     </div>-->
+                                    <div class="ml--20 mt-10">
+                                       @include ('frontend.course.partials.course-list-actions-bar', array('item'=>$item,'link_detail'=>$link_detail))
+                                    </div>
                                  </div>
                               </div>
                            </div>
@@ -108,7 +118,7 @@
                                  </div>
                               </div>
                            </div>
-                           @include ('frontend.course.partials.course-list-actions-bar', array('item'=>$item,'link_detail'=>$link_detail))
+                           
                         </div>
                         <div class="course-list__column-category">
                            <p class="t-body -size-s h-m0">

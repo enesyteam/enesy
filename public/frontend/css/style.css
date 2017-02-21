@@ -6496,6 +6496,7 @@ li.active span, .pagination__page--current {
     padding: 0 2px;
 }
 }
+/*
 ul.pagination>li>a[rel="next"], ul.pagination>li>a[rel="prev"]{visibility: hidden;}
 ul.pagination>li>a[rel="next"]:after, ul.pagination>li>a[rel="prev"]:after{
     visibility: visible;
@@ -6565,6 +6566,7 @@ ul.pagination>li>a[rel="prev"]:after, .pagination__previous:after, .pagination__
     content: "";
     left: -1px;
 }
+*/
 .document {
     color: #666666;
 }
