@@ -5,6 +5,7 @@ use Illuminate\Database\Eloquent\Model;
 use App\Http\Models\Course;
 use App\Http\Models\Member;
 use App\Http\Models\Category;
+use App\Http\Models\User;
 
 class CourseTableSeeder extends Seeder
 {
@@ -17,6 +18,17 @@ class CourseTableSeeder extends Seeder
     {
        	$faker = Faker\Factory::create();
 
+
+        //create 10 admin
+		for($i=1;$i<11;++$i){
+			User::create([
+					'email'		=>	'admin'.$i.'@gmail.com',
+					'username'	=>	'admin'.$i,
+					'password'	=>	'$2y$10$wBqR1wNApDE6mZEJtmqzYOf04DYrAMd7Q3qRWPCTEGzGlE2HmRcee',
+					'active'	=>	1,
+					'full_name' =>  $faker->lexify($string = '???????')
+				]);
+		};
        	//create 1000 members
 		for($i=0;$i<1000;++$i){
 			Member::create([
