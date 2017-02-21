@@ -41,10 +41,10 @@ Enesy | Khóa học lập trình AutoCAD với C# trình độ cơ bản
       <div class="item-header" data-view="itemHeader">
          <div class="item-header__title">
             <h1 class="t-heading -color-inherit -size-l h-m0 is-hidden-phone" itemprop="name">
-               Khóa học lập trình AutoCAD với C# - trình độ cơ bản
+               {{$course_detail->title}}
             </h1>
             <h1 class="t-heading -color-inherit -size-xs h-m0 is-hidden-tablet-and-above">
-               Khóa học lập trình AutoCAD với C# - trình độ cơ bản
+               {{$course_detail->title}}
             </h1>
          </div>
          <div class="item-header__price">
@@ -120,7 +120,7 @@ Enesy | Khóa học lập trình AutoCAD với C# trình độ cơ bản
                <h4 class="tab-title">
                 Mô tả khóa học
                </h4>
-               <p style="">AutoCAD là phần mềm hỗ trợ vẽ kỹ thuật trên máy tính. Nói một cách khác, AutoCAD là một công cụ hỗ trợ hình thành, thiết kế, trình bày, xử lý bản vẽ kỹ thuật trên máy tính. Cho đến nay, AutoCAD là phần mềm được ứng dụng phổ biến nhất (khoảng trên 90%) trong việc thiết kế, hình thành bản vẽ 2D. Vì AutoCAD là công cụ hỗ trợ vẽ kỹ thuật, nên tất cả những ai làm về kỹ thuật, có liên quan tới bản vẽ kỹ thuật đều cần học AutoCAD. Ví dụ như: kỹ sư cơ khí, kỹ sư xây dựng, kiến trúc sư, kỹ thuật viên cơ khí chế tạo, họa viên kiến trúc, công nhân kỹ thuật…</p>
+               <p style="">{{$course_detail->content}}</p>
                <h4 class="tab-title">
                 Các yêu cầu của khóa học
                </h4>

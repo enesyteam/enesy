@@ -67,7 +67,6 @@ class PagesController extends Controller
       }
       $listCourse = $listCourse->paginate(Course::PAGE_SIZE);
       // seo
-     
       View::share ( 'meta_title','Enesy | Đào tạo Kỹ sư chuyên nghiệp' );
       View::share ( 'meta_des','Đào tạo Kỹ sư chuyên nghiệp' );
        

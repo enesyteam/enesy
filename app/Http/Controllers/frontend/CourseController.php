@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Models\Course;
 use App\Http\Models\Category;
 use DB;
+use View;
 
 class CourseController extends Controller
 {
@@ -20,6 +21,10 @@ class CourseController extends Controller
          if($course_detail->cat_id!=$course_detail->parent_cat_id){
             $parent_cat = Category::where('id',$course_detail->parent_cat_id)->where('status',1)->first(); 
          }
+          // seo
+          View::share ( 'meta_title',$course_detail->title );
+          View::share ( 'meta_des',$course_detail->introtext );
+          // end seo
     	  return view('frontend.course.course-detail',['course_detail'=>$course_detail, 'cat'=>$cat, 'parent_cat'=>$parent_cat]);
         } else {
             return redirect()->route('error');
