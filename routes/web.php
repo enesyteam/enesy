@@ -241,6 +241,11 @@ Route::group(array('namespace' => 'frontend' , 'middleware' => 'frontend.auth'),
 		'as'	=>	'home.privacy_policy',
 		'uses'	=>	'PagesController@privacy_policy'
 		]);
+	/*Error page*/
+	Route::get('error',[
+		'as'	=>	'error',
+		'uses'	=>	'PagesController@error'
+		]);
 	});
 	
 

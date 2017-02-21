@@ -60,4 +60,10 @@ class PagesController extends Controller
           View::share ( 'meta_des','Đào tạo Kỹ sư chuyên nghiệp' );
         return view('frontend.privacy-policy');
     }
+
+    public function error(){
+          View::share ( 'meta_title','Enesy | Not found!' );
+          View::share ( 'meta_des','Đào tạo Kỹ sư chuyên nghiệp' );
+        return view('frontend.error');
+    }
 }
