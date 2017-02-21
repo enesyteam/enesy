@@ -20,7 +20,7 @@
     <!--Row for users-->
     <div class="row">
     @foreach($enrollers as $enroller)
-      <div class="col-lg-3 col-md-4">
+      <div class="col-lg-3 col-md-4 col-sm-4">
         <div class="thumbnail">
           <div class="thumb thumb-slide">
             <img alt="" src="{{asset('frontend/images/user-no-avatar.png')}}">

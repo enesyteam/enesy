@@ -154,7 +154,7 @@
 
   $(reply_button).click(function(e){
       e.preventDefault();
-        $(wrapper).removeClass('hidden');
+        $(wrapper).toggleClass('hidden');
   });
 });
 </script>
