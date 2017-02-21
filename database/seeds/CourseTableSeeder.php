@@ -17,8 +17,6 @@ class CourseTableSeeder extends Seeder
     public function run()
     {
        	$faker = Faker\Factory::create();
-
-
         //create 10 admin
 		for($i=1;$i<11;++$i){
 			User::create([

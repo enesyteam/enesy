@@ -84,12 +84,21 @@
                      @php ($link_detail = route('course.detail',['alias'=>$item->alias,'id'=>$item->id]))
                      <!-- Course item -->
                      <div class="col-lg-3 col-md-4 col-sm-3">
-                        <div class="thumbnail course-thumbnail">
-                           <div class="thumb">
+                        <div class="course-grid-item">
+                           <div class="thumbnail course-thumbnail">
+                        <div class="item-thumbnail">
+                           <div class="item-thumbnail__image">
                               <a href="#course_preview" data-toggle="modal">
-                                 <img src="<?php if($item->picture != '') echo $item->picture; else echo asset('frontend/images/img_default.png'); ?>" class="img-responsive img-rounded" alt="">
-                                 <span class="zoom-image"><i class="icon-play3"></i></span>
+                                 <img src="<?php if($item->picture != '') echo $item->picture; else echo asset('frontend/images/img_default.png'); ?>" class="img-responsive" alt="">
                               </a>
+                              <div class="item-thumbnail__preview">
+                                       <a target="_blank" href="{{route('course.preview')}}" rel="modal:open">
+                                       <div class="" ng-show="showPlaceholderPlayButton" style="">
+                                          <div class="play-button play-button--initially-visible" data-purpose="video-play-button-initial"></div>
+                                       </div>
+                                       </a>
+                              </div>
+                           </div>
                            </div>
 
                            <div class="caption">
@@ -123,6 +132,7 @@
                                  <!-- /Rating -->
                               </div>
                            </div>
+                        </div>
                         </div>
                      </div>
                      <!-- /Course Item -->

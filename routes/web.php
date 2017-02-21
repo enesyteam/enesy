@@ -191,6 +191,10 @@ Route::group(array('namespace' => 'frontend' , 'middleware' => 'frontend.auth'),
 		'as'	=>	'user.author_enrollers',
 		'uses'	=>	'UserController@author_enrollers'
 		]);
+	Route::get('giang-vien/hoc-vien/list-view',[
+		'as'	=>	'user.author_enrollers_list',
+		'uses'	=>	'UserController@author_enrollers_list'
+		]);
 	Route::get('giang-vien/khoa-hoc',[
 		'as'	=>	'user.author_courses',
 		'uses'	=>	'UserController@author_courses'

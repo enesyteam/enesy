@@ -32,21 +32,42 @@
   <div class="col-md-12  mr--10">
     <!--Row for users-->
     <div class="row">
-    @foreach($enrollers as $enroller)
-      <div class="col-lg-3 col-md-4 col-sm-4">
-        <div class="thumbnail">
-          <div class="thumb thumb-slide">
-            <img alt="" src="{{asset('frontend/images/user-no-avatar.png')}}">
-            <div class="caption">
-              <span><a class="btn bg-success-400 btn-xs" href="#">Nhắn tin</a></span>
-            </div>
-          </div>
-          <div class="caption text-center">
-            <h6 class="text-semibold no-margin"><a href="#">{{$enroller->username}}</a><small class="display-block">{{$enroller->email}}</small></h6>
-          </div>
-        </div>
-      </div><!--/User-->
-    @endforeach
+      <!-- User list -->
+      <div class="panel panel-white">
+                <div class="panel-heading">
+                  <h6 class="panel-title text-semibold">Danh sách học viên</h6>
+                </div>
+                <ul class="media-list">
+                @foreach($enrollers as $enroller)
+                <!-- Enroller -->
+                  <li class="media panel-body stack-media-on-mobile">
+                    <div class="media-left">
+                      <a href="#">
+                        <img src="{{asset('frontend/images/user-no-avatar.png')}}" class="img-rounded img-lg" alt="">
+                      </a>
+                    </div>
+
+                    <div class="media-body">
+                      <h6 class="media-heading text-semibold">
+                        <a href="#">{{$enroller->username}}</a>
+                      </h6>
+
+                      <ul class="list-inline list-inline-separate text-muted mb-10">
+                        <li><a href="#" class="text-muted">{{$enroller->email}}</a></li>
+                        <li>{{$enroller->username}}</li>
+                      </ul>
+                      Đoạn mô tả về bản thân ở đây, Đoạn mô tả về bản thân ở đây, Đoạn mô tả về bản thân ở đây, Đoạn mô tả về bản thân ở đây, Đoạn mô tả về bản thân ở đây, Đoạn mô tả về bản thân ở đây, .
+                    </div>
+
+                    <div class="media-right text-nowrap">
+                      <span class="label bg-blue">Mới</span>
+                    </div>
+                  </li>
+                  <!-- /Enroller -->
+                  @endforeach
+                </ul>
+              </div>
+      <!-- /User list -->
     </div><!-- /Row for users -->
     <!-- Pagination -->
         {{$enrollers->render()}}

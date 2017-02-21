@@ -340,7 +340,8 @@
 }
 
 .search-facet-header--horizontal>h2 {
-    left: 0
+    left: 0;
+    top: 7px;
 }
 
 .search-facet-result-count {

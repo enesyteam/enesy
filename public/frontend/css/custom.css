@@ -251,6 +251,7 @@ a.sc-ministats {
 }
 .item-preview.-preview-live>a:hover .play-button, 
 .item-preview.-preview-screenshot>a:hover .play-button,
+.thumbnail:hover .play-button,
 .course-list>li:hover .play-button{
     visibility:visible;
     opacity:1;
@@ -259,6 +260,13 @@ a.sc-ministats {
     -o-transform:scale(1.1);
     transform:scale(1.1)
 }
+.course-grid-item:hover .item-thumbnail__preview{
+    opacity:1;
+}
+.course-grid-item:hover .thumbnail{
+    box-shadow:0 2px 2px rgba(0,0,0,.25);
+}
+
 /*Curriculum*/
 .table-responsive {
     overflow-x: auto;

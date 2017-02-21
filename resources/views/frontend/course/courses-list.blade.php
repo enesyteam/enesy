@@ -88,17 +88,17 @@
                                     <a title="{{$item->title}}" class="js-google-analytics__list-event-trigger" href="{{$link_detail}}">
                                     <img src="<?php if($item->picture != '') echo $item->picture; else echo asset('frontend/images/img_default.png'); ?>" border="0" height="80" width="150" alt="Moti App PSD Landing Page PSD Template - ThemeForest Item for Sale" title="" class="preload no_preview landscape-image-magnifier" data-tooltip="Moti App PSD Landing Page PSD Template">
                                     </a>
-                                    <!--<div class="item-thumbnail__preview">
+                                    <div class="item-thumbnail__preview">
                                        <a target="_blank" href="{{route('course.preview')}}" rel="modal:open">
                                        <div class="" ng-show="showPlaceholderPlayButton" style="">
                                           <div class="play-button play-button--initially-visible" data-purpose="video-play-button-initial"></div>
                                        </div>
                                        </a>
-                                    </div>-->
-                                    <div class="ml--20 mt-10">
-                                       @include ('frontend.course.partials.course-list-actions-bar', array('item'=>$item,'link_detail'=>$link_detail))
                                     </div>
                                  </div>
+                                 <div class="ml--20 mt-10">
+                                       @include ('frontend.course.partials.course-list-actions-bar', array('item'=>$item,'link_detail'=>$link_detail))
+                                    </div>
                               </div>
                            </div>
                            <div class="course-list__adjacent-thumbnail">
