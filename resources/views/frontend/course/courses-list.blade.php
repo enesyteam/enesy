@@ -6,7 +6,6 @@
 @stop
 
 @section('head.css')
-
 @stop
 
 @section('section')
