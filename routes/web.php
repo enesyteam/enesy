@@ -11,6 +11,7 @@
 |
 */
 Route::group(['prefix' => 'admin','middleware' => 'guest'], function () {
+	
     Route::get('/login', 'backend\LoginController@getLogin');
     Route::post('/postLogin' , 'backend\LoginController@postLogin');
 
@@ -78,6 +79,7 @@ Route::group(array('namespace' => 'backend', 'prefix' => 'admin', 'middleware' =
 
     Route::get('/member/edit', [ 'as' => 'memberEdit', 'uses' => 'MemberController@edit']);
     Route::post('/member/postEdit', [ 'as' => 'postEditMember', 'uses' => 'MemberController@postEdit']);
+    Route::get('/member/changeIsTeacher', ['as' => 'changeIsTeacher','uses' => 'MemberController@changeIsTeacher']);
 
 
     // Course
@@ -100,7 +102,7 @@ Route::group(array('namespace' => 'frontend' , 'middleware' => 'web|auth'), func
 
 });
 
-Route::group(array('namespace' => 'frontend' , 'middleware' => 'web'), function () {
+Route::group(array('namespace' => 'frontend' , 'middleware' => 'frontend.auth'), function () {
 	Route::get('/', [
 		'as'	=>	'home',
 		'uses'	=>	'PagesController@index'
@@ -111,7 +113,13 @@ Route::group(array('namespace' => 'frontend' , 'middleware' => 'web'), function 
 		'as' 	=>	'courses.index',
 		'uses'	=>	'CourseController@index'
 		]);
-	Route::get('chi-tiet-khoa-hoc',[
+	//demo
+	Route::get('khoa-hoc/grid-view',[
+		'as' 	=>	'home.gridview',
+		'uses'	=>	'PagesController@indexByGrid'
+		]);
+	//demo
+	Route::get('khoa-hoc/{alias}/{id}',[
 		'as' 	=>	'course.detail',
 		'uses'	=>	'CourseController@detail'
 		]);
@@ -122,6 +130,14 @@ Route::group(array('namespace' => 'frontend' , 'middleware' => 'web'), function 
 	Route::get('xem-truoc-khoa-hoc',[
 		'as' 	=>	'course.preview',
 		'uses'	=>	'CourseController@preview'
+		]);
+	Route::get('khoa-hoc/ket-qua-tim-kiem',[
+		'as' 	=>	'course.search_result',
+	'uses'	=>	'CourseController@search_result'
+		]);
+	Route::get('chu-de/{alias}/{id}',[
+		'as' 	=>	'course.listByCat',
+		'uses'	=>	'CourseController@listByCategory'
 		]);
 
 	/*share*/
@@ -171,14 +187,77 @@ Route::group(array('namespace' => 'frontend' , 'middleware' => 'web'), function 
 		'as'	=>	'user.author',
 		'uses'	=>	'UserController@author'
 		]);
+	Route::get('giang-vien/hoc-vien',[
+		'as'	=>	'user.author_enrollers',
+		'uses'	=>	'UserController@author_enrollers'
+		]);
+	Route::get('giang-vien/hoc-vien/list-view',[
+		'as'	=>	'user.author_enrollers_list',
+		'uses'	=>	'UserController@author_enrollers_list'
+		]);
+	Route::get('giang-vien/khoa-hoc',[
+		'as'	=>	'user.author_courses',
+		'uses'	=>	'UserController@author_courses'
+		]);
+	Route::get('giang-vien/khoa-hoc/tao-khoa-hoc',[
+		'as'	=>	'user.author_courses_create',
+		'uses'	=>	'UserController@author_courses_create'
+		]);
+	Route::get('giang-vien/trang-ca-nhan',[
+		'as'	=>	'user.author_public_profile',
+		'uses'	=>	'UserController@author_public_profile'
+		]);
+	Route::get('giang-vien/tai-khoan',[
+		'as'	=>	'user.author_account',
+		'uses'	=>	'UserController@author_account'
+		]);
+	Route::get('giang-vien/tai-khoan/email',[
+		'as'	=>	'user.author_email',
+		'uses'	=>	'UserController@author_email'
+		]);
+	Route::get('giang-vien/thanh-toan',[
+		'as'	=>	'user.author_bill',
+		'uses'	=>	'UserController@author_bill'
+		]);
+	Route::get('giang-vien/thong-bao',[
+		'as'	=>	'user.author_notifications',
+		'uses'	=>	'UserController@author_notifications'
+		]);
+	// cong test
+	Route::get('giang-vien/course/add/section',[
+		'as'	=>	'author.add_section',
+		function() {
+    	return  View::make('frontend.course.create.section')->render();
+		}]);
+	// /cong test
 
 	/*about*/
 	Route::get('gioi-thieu-enesy',[
 		'as'	=>	'home.about',
 		'uses'	=>	'PagesController@about'
 		]);
+	/*Become Instructor*/
+	Route::get('hop-tac-giang-day',[
+		'as'	=>	'home.become_instructor',
+		'uses'	=>	'PagesController@become_instructor'
+		]);
+	/*terms of use*/
+	Route::get('dieu-khoan-su-dung',[
+		'as'	=>	'home.terms',
+		'uses'	=>	'PagesController@terms'
+		]);
+	/*Privacy policy*/
+	Route::get('chinh-sach-bao-mat',[
+		'as'	=>	'home.privacy_policy',
+		'uses'	=>	'PagesController@privacy_policy'
+		]);
+	/*Error page*/
+	Route::get('error',[
+		'as'	=>	'error',
+		'uses'	=>	'PagesController@error'
+		]);
 	});
-
+	
 
 
 

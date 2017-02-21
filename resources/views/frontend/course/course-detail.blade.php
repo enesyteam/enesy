@@ -3,16 +3,30 @@
 Enesy | Khóa học lập trình AutoCAD với C# trình độ cơ bản
 @stop
 @section ('head.css')
-<link href="{{'frontend/css/course.css'}}" rel="stylesheet" type="text/css" />
-<link href="{{'frontend/css/icon.css'}}" rel="stylesheet" type="text/css" />
+<link href="{{asset('frontend/css/course.css')}}" rel="stylesheet" type="text/css" />
+<link href="{{asset('frontend/css/icon.css')}}" rel="stylesheet" type="text/css" />
 @stop
 
 @section('head.js')
 <!--JqueryModal-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-<script src="{{'frontend/vender/jquery-modal/jquery.modal.js'}}" type="text/javascript" charset="utf-8"></script>
-<script src="{{'frontend/vender/jquery-modal/highlight/highlight.pack.js'}}" type="text/javascript" charset="utf-8"></script>
+<script src="{{asset('frontend/vender/jquery-modal/jquery.modal.js')}}" type="text/javascript" charset="utf-8"></script>
+<script src="{{asset('frontend/vender/jquery-modal/highlight/highlight.pack.js')}}" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript" charset="utf-8"> hljs.initHighlightingOnLoad(); </script>
+@stop
+
+@section('custom-navbar')
+<div class="header-categories__search">
+  <form id="search" data-view="searchField" action="{{route('course.search_result')}}" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="">
+    <div class="search-field -border-light">
+      <div class="search-field__input">
+        <input id="term" name="term" class="js-term search-field__input-field" type="search" placeholder="Tìm khóa học" vk_19588="subscribed">
+      </div>
+      <button class="search-field__button" type="submit">
+        <i class="e-icon -icon-search"><span class="e-icon__alt">Search</span></i>
+      </button>
+    </div>
+</form></div>
 @stop
 
 @section ('body.content')

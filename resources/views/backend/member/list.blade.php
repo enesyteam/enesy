@@ -32,14 +32,7 @@
                         <option value="2" "<?php if ($teacher == 2) echo ' selected ';?>">No teacher</option>
                       </select>
                  </div>
-                 <div class="col-md-2 form-group">
-                     <label>Learning:</label>
-                   <select id="learning" class="form-control">
-                        <option value="none" >None</option>
-                        <option value="1" "<?php if ($learning == 1) echo ' selected ';?>">Student</option>
-                        <option value="2" "<?php if ($learning == 2) echo ' selected ';?>">No student</option>
-                      </select>
-                 </div>
+
                  <div class="col-md-2 form-group">
                      <label>Status</label>
                    <select id="active" class="form-control">
@@ -81,10 +74,10 @@
                    <th>Info</th>    
                     <th>Status</th>                             
                     <th>Register date</th>
-                    <th>Result date</th>                   
-                    <th>Admin</th>                   
+                    <th>Modify date</th>                   
+                    <th>Create user</th>                   
                     <th>Teacher</th>
-                    <th>Learning</th>                       
+                          
                     <th>Action</th>                                
                   </tr>                   
                 </thead>
@@ -106,23 +99,21 @@
                     <td>{{$status[$value->status]}}</td>
                       <td id="createDate{{$value->id}}">
                       @if ($value->create_date > 0)
-                        <?php if ($value->create_date > 0) echo substr($value->create_date, 0, 4).'-'.substr($value->create_date, 4, 2).'-'.substr($value->create_date, 6, 2) ?>                        
+                        <?php if ($value->create_date > 0) echo date('d/m/Y',$value->create_date) ?>                        
                           @endif
                       </td>
                       <td id="createUser{{$value->id}}">
                           @if ($value->modify_date > 0)
-                      <?php if ($value->modify_date > 0) echo substr($value->modify_date, 0, 4).'-'.substr($value->modify_date, 4, 2).'-'.substr($value->modify_date, 6, 2) ?></td>
+                      <?php if ($value->modify_date > 0) echo date('d/m/Y',$value->modify_date) ?></td>
                       @endif   
                       </td>
                       <td id="modifyDate{{$value->id}}">
                        
                       {{$value->create_user}}                  
                       <td>
-                        <input type="checkbox" name=""  "<?php if($value->is_teaching == 1) echo ' checked ' ?>">
+                        <input type="checkbox" name="" value="{{ $value->is_teaching == 1 ? 1 : 0 }}"  "<?php if($value->is_teaching == 1) echo ' checked ' ?>" onclick="changeStatus('{{ $value->id }}')">
                       </td>
-                      <td>
-                        <input type="checkbox" name=""  "<?php if($value->is_learning == 1) echo ' checked ' ?>">
-                      </td>
+                      
                      
                       <td>
                       <a href="{{URL::route('memberEdit', array('id' => $value->id))}}">  <span class="glyphicon glyphicon-pencil"></span></a>
@@ -218,6 +209,22 @@
                     });
                }
              }
+            function changeStatus(value) {
+                  var params = {'id':value};
+                  $.ajax({
+                    url: "{{ URL::route('changeIsTeacher') }}",
+                    data: params,
+                    error: function(xhr, status, errorThrow) {
+                      //alert(errorThrow);
+                    },
+                     success: function(data) {
+                      // alert('ok '  + data.status + " id = " + data.id );
+                    }
+
+                  });
+                  
+
+                }             
 
              function checkAll() {
                 var allCheckbox = document.getElementsByName('rowCheck');

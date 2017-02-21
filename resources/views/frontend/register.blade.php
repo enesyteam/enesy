@@ -27,6 +27,11 @@
     <script src="{{'frontend/vender/jquery-modal/highlight/highlight.pack.js'}}" type="text/javascript"
             charset="utf-8"></script>
     <script type="text/javascript" charset="utf-8"> hljs.initHighlightingOnLoad(); </script>
+    <style type="text/css">
+        .error_message{
+            color: red;
+        }
+    </style>
 </head>
 <!-- #HEAD -->
 <body>
@@ -38,9 +43,11 @@
                  data-google-analytics-page-title="direct_sign_up">
                 <header class="e-modal__header -background-dark -padding-m">
                     <div class="h-image-svg h-text-align-center" width="130px" height="25px">
-                        <img alt="Enesy" width="130" class="is-hidden--no-svg is-hidden--no-js"
-                             src="{{url('frontend/images/logo.png')}}">
-                        <h1 class="t-heading -size-l -color-light h-m0 is-hidden--svg">Enesy</h1>
+                        <a href="{{route('home')}}">
+                            <img alt="Enesy" width="130" class="is-hidden--no-svg is-hidden--no-js"
+                                 src="{{url('frontend/images/logo.png')}}">
+                            <h1 class="t-heading -size-l -color-light h-m0 is-hidden--svg">Enesy</h1>
+                        </a>
                     </div>
                 </header>
                 <div class="e-modal__section -padding-none -radius-bottom">
@@ -68,39 +75,11 @@
                                                 Hoàn thành các bước đăng ký để trở thành thành viên của Enesy.
                                             </p>-->
 
-                                             <div id="error_message" style="color: red">
-                                                {{ $errors->first('first_name') }}
-                                                {{ $errors->first('last_name') }}
-                                                {{ $errors->first('middle_name') }}
-                                                {{ $errors->first('username') }}
-                                                {{ $errors->first('email') }}
-                                                {{ $errors->first('password') }}
-                                                {{ $errors->first('confirm-password') }}
-                                            </div>
-                                        </div>
-
-                                        <div class="e-form__group">
-                                            <div class="e-form__label"><label
-                                                        for="sso_sign_up_form_first_name">Họ</label></div>
-                                            <div class="e-form__input">
-                                                {{ Form::text('first_name', Input::old('first_name'), array('placeholder' => 'Họ' , 'class'=>'f-input -type-string js-sign-up__first-name -width-full')) }}
-                                            </div>
-                                        </div>
-
-                                        <div class="e-form__group">
-                                            <div class="e-form__label"><label for="sso_sign_up_form_first_name">Tên
-                                                    đệm</label></div>
-                                            <div class="e-form__input">
-                                                        {{ Form::text('middle_name', Input::old('middle_name'), array('placeholder' => 'Tên Đệm' , 'class'=>'f-input -type-string js-sign-up__first-name -width-full')) }}
-                                                        </div>
-                                        </div>
-
-                                        <div class="e-form__group">
-                                            <div class="e-form__label"><label
-                                                        for="sso_sign_up_form_last_name">Tên</label></div>
-                                                        <div class="e-form__input">
-                                                        {{ Form::text('last_name', Input::old('last_name'), array('placeholder' => 'Tên' , 'class'=>'f-input -type-string js-sign-up__last-name -width-full')) }}
-                                                         </div>
+                                            @if(Session::has('message_error'))
+                                                <div class="alert-box success">
+                                                    <h2>{{ Session::get('message_error') }}</h2>
+                                                </div>
+                                            @endif
                                         </div>
 
                                         <div class="e-form__group">
@@ -108,6 +87,7 @@
                                                         for="sso_sign_up_form_last_name">User Name</label></div>
                                                         <div class="e-form__input">
                                                         {{ Form::text('username', Input::old('username'), array('placeholder' => 'User Name' , 'class'=>'f-input -type-string js-sign-up__last-name -width-full')) }}
+                                                        <p class="error_message">{{ $errors->first('username') }}</p>
                                                          </div>
                                         </div>
 
@@ -115,7 +95,9 @@
                                             <div class="e-form__label"><label for="sso_sign_up_form_email">Email</label>
                                             </div>
                                             <div class="e-form__input">
-                                            {{ Form::email('email', Input::old('email'), array('placeholder' => 'Email' , 'class'=>'string f-input -type-string js-sign-up__email -width-full f-input -type-string')) }}</div>
+                                            {{ Form::email('email', Input::old('email'), array('placeholder' => 'Email' , 'class'=>'string f-input -type-string js-sign-up__email -width-full f-input -type-string')) }}
+                                            <p class="error_message">{{ $errors->first('email') }}</p>
+                                            </div>
                                         </div>
 
                                         <div class="e-form__group">
@@ -123,6 +105,7 @@
                                                         for="sso_sign_up_form_email">Password</label></div>
                                             <div class="e-form__input"> 
                                             {{ Form::password('password', array('placeholder' => 'Password' , 'class'=>'string f-input -type-string js-sign-up__email -width-full f-input -type-string')) }}
+                                            <p class="error_message">{{ $errors->first('password') }}</p>
                                             </div>
                                         </div>
 
@@ -130,13 +113,15 @@
                                             <div class="e-form__label"><label for="sso_sign_up_form_email">Confirm
                                                     password</label></div>
                                             <div class="e-form__input">
-                                            {{ Form::password('confirm-password', array('placeholder' => 'Confirm Password' , 'class'=>'string f-input -type-string js-sign-up__email -width-full f-input -type-string')) }}</div>
+                                            {{ Form::password('confirm-password', array('placeholder' => 'Confirm Password' , 'class'=>'string f-input -type-string js-sign-up__email -width-full f-input -type-string')) }}
+                                            <p class="error_message">{{ $errors->first('confirm-password') }}</p>
+                                            </div>
                                         </div>
 
                                         <div class="h-text-align-center">
                                             <p class="t-body -size-m -color-mid h-m0">
-                                                Bằng việc tạo tài khoản, coi như bạn đã đồng ý với các <a href="">Điều
-                                                    khoản sử dụng</a> của Enesy.
+                                                Bằng việc tạo tài khoản, coi như bạn đã đồng ý với các <a href="{{route('home.terms')}}">Điều
+                                                    khoản sử dụng</a> và <a href="{{route('home.privacy_policy')}}"> Chính sách bảo mật</a> của Enesy.
 
                                             </p>
                                         </div>

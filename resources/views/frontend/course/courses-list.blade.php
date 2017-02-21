@@ -1,4 +1,16 @@
 @extends('frontend.layouts.dashboard')
+@section('top-header')
+<!--Top Header-->
+<!--@include('frontend.partials.top-header-message')-->
+<!--#Top Header-->
+@stop
+
+@section('head.css')
+<link href="{{asset('frontend/user/assets/css/bootstrap.css')}}" rel="stylesheet" type="text/css">
+<link href="{{asset('frontend/user/assets/css/core.css')}}" rel="stylesheet" type="text/css">
+<link href="{{asset('frontend/user/assets/css/colors.css')}}" rel="stylesheet" type="text/css">
+@stop
+
 @section('section')
 <!--Search-->
 @include('frontend.partials.searchheader')
@@ -8,7 +20,7 @@
    <div class="content-main--basic">
       <div class="faceted-search js-faceted-search" data-view="pjaxFacetedSearch">
          <div class="grid-container">
-            <div data-view="guestSurveyBanner">
+            <!--<div data-view="guestSurveyBanner">
                <div class="js-system-banner-container">
                   <div class="js-system-banner__guest-survey">
                      <div class="e-alert-box -type-success">
@@ -26,34 +38,46 @@
                      </div>
                   </div>
                </div>
-            </div>
+            </div>-->
             <div class="content-l -size-scale-tablet content-right">
                <!--Courses List-->
                
                <!--Filter bar-->
-               <div class="is-hidden--no-js search-facet-horizontal-form -border-bottom">
-                  <div class="inline-select-wrapper">
-                     <div class="search-facet-header--horizontal">
-                        <h2><i class="e-icon -icon-sort -margin-right"></i><span class="e-icon__alt">Sắp xếp</span></h2>
-                     </div>
-                     <div class="-border-top-none -border-radius-none inline-select">
-                        <label class="is-visually-hidden" for="sort_horizontal">Sắp xếp</label>
-                        <select name="sort_horizontal" id="sort_horizontal" class="js-search-facet-sort-by" data-pjax="">
-                           <option value="" selected="selected">Sắp xếp: Mới nhất</option>
-                           <option value="trending">Khóa học xu thế</option>
-                           <option value="sales">Học nhiều nhất</option>
-                           <option value="rating">Khóa học tốt nhất</option>
-                           <option value="price-asc">Giá: từ thấp đến cao</option>
-                           <option value="price-desc">Giá: từ cao đến thấp</option>
-                        </select>
-                     </div>
+               <div class="is-hidden--no-js search-facet-horizontal-form">
+               <div class="inline-select-wrapper">
+                  <div class="search-facet-header--horizontal">
+                     <h2><i class="e-icon -icon-sort -margin-right"></i><span class="e-icon__alt">Sắp xếp</span></h2>
+                  </div>
+                  <div class="-border-top-none -border-radius-none inline-select">
+                     <label class="is-visually-hidden" for="sort_horizontal">Sắp xếp</label>
+                     <select name="sort_horizontal" id="sort_horizontal" class="js-search-facet-sort-by" data-pjax="">
+                        <option value="id" @if($sort != "" && $sort == "id") selected @endif>Sắp xếp: Mới nhất</option>
+                        <option value="trending" @if($sort != "" && $sort == "trending") selected @endif>Khóa học xu thế</option>
+                        <option value="num_of_learn" @if($sort != "" && $sort == "num_of_learn") selected @endif>Học nhiều nhất</option>
+                        <option value="love" @if($sort != "" && $sort == "love") selected @endif>Khóa học tốt nhất</option>
+                        <option value="price-asc" @if($sort != "" && $sort == "price-asc") selected @endif>Giá: từ thấp đến cao</option>
+                        <option value="price-desc" @if($sort != "" && $sort == "price-desc") selected @endif>Giá: từ cao đến thấp</option>
+                     </select>
                   </div>
                </div>
+               <div class="search-facet-layout-switcher js-search-facet-layout-switcher">
+                     <div class="btn-group">
+                        <a class="{{ Route::is('home') ? "btn btn--group-item btn--color-transparent is-active" : "btn btn--group-item btn--color-transparent" }}" 
+                          data-layout-switch="list" href="{{route('home')}}">
+                           <i class="e-icon -icon-list"><span class="e-icon__alt">List</span></i>
+                        </a>        
+                        <a class="{{ Route::is('home.gridview') ? "btn btn--group-item btn--color-transparent is-active" : "btn btn--group-item btn--color-transparent" }}" 
+                                   data-layout-switch="list" href="{{route('home.gridview')}}">
+                           <i class="e-icon -icon-grid"><span class="e-icon__alt">Grid</span></i>
+                        </a>
+                     </div>
+               </div>
+            </div>
                <!--#Filter bar-->
                <div>
                <ul class="course-list">
                   @foreach($listCourse as $item)
-                  @php ($link_detail = route('course.detail',['id'=>$item->id]))
+                  @php ($link_detail = route('course.detail',['alias'=>$item->alias,'id'=>$item->id]))
                   <!--Course-->
                   <li class="js-google-analytics__list-event-container">
                      <div class="course-list__columns-container">
@@ -64,14 +88,17 @@
                                     <a title="{{$item->title}}" class="js-google-analytics__list-event-trigger" href="{{$link_detail}}">
                                     <img src="<?php if($item->picture != '') echo $item->picture; else echo asset('frontend/images/img_default.png'); ?>" border="0" height="80" width="150" alt="Moti App PSD Landing Page PSD Template - ThemeForest Item for Sale" title="" class="preload no_preview landscape-image-magnifier" data-tooltip="Moti App PSD Landing Page PSD Template">
                                     </a>
-                                    <!--<div class="item-thumbnail__preview">
+                                    <div class="item-thumbnail__preview">
                                        <a target="_blank" href="{{route('course.preview')}}" rel="modal:open">
                                        <div class="" ng-show="showPlaceholderPlayButton" style="">
                                           <div class="play-button play-button--initially-visible" data-purpose="video-play-button-initial"></div>
                                        </div>
                                        </a>
-                                    </div>-->
+                                    </div>
                                  </div>
+                                 <div class="ml--20 mt-10">
+                                       @include ('frontend.course.partials.course-list-actions-bar', array('item'=>$item,'link_detail'=>$link_detail))
+                                    </div>
                               </div>
                            </div>
                            <div class="course-list__adjacent-thumbnail">
@@ -83,7 +110,7 @@
                               </div>
                               <div class="course-list__info">
                                  <div class="course__info-author">Giảng viên:
-                                    <a class="t-link -color-default -decoration-reversed" href="{{route('course.detail')}}">
+                                    <a class="t-link -color-default -decoration-reversed" href="#">
                                     {{$item->last_name.' '.$item->middle_name.' '.$item->first_name}}
                                     </a>
                                  </div>
@@ -91,13 +118,13 @@
                                  </div>
                               </div>
                            </div>
-                           @include ('frontend.course.partials.course-list-actions-bar', array('item'=>$item,'link_detail'=>$link_detail))
+                           
                         </div>
                         <div class="course-list__column-category">
                            <p class="t-body -size-s h-m0">
                               <span class="meta-categories -no-slash">
                               lĩnh vực 
-                              <b itemprop="genre"><a href="#">{{$item->cat_title1}}</a></b>
+                              <b itemprop="genre"><a href="{{route('course.listByCat',['id'=>$item->parent_cat_id,'alias'=>$item->cat_alias2])}}">{{$item->cat_title1}}</a></b>
                               <b itemprop="genre">{{$item->cat_title2}}</b>
                               </span>
                               <br>
@@ -105,7 +132,15 @@
                            </p>
                         </div>
                         <div class="course-list__column-price">
-                           <p class="course-list__price-desktop">{{number_format($item->price)}}<sup>k</sup></p>
+                              @if($item->price > 0)
+                                 <p class="course-list__price-desktop-free">
+                                    {{number_format($item->price)}}<sup>k</sup>
+                                 </p>
+                              @else
+                                 <p class="course-list__price-free" style="background-color: #4CAF50; border-color: #4CAF50; color: #fff; padding: 2px; border-radius: 3px;">
+                                    Miễn phí
+                                 </p>
+                              @endif
                            <div class="course-list__info-desktop">
                               <div class="course-list__sales-desktop">
                               </div>
@@ -119,7 +154,13 @@
                </ul>
                 </div>
                <!--Pagination-->
-               {{$listCourse->render()}}
+               @if($sort != '')
+                  {{$listCourse->appends(['sort' => $sort])->render()}}
+               @else
+               <nav class="js-pagination pagination">
+                  {{$listCourse->render()}}
+               </nav>
+               @endif
                <!--#Pagination-->                                       
                <!--#Courses List-->
             </div>

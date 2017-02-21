@@ -16,12 +16,13 @@
             <meta content="width=device-width, initial-scale=1" name="viewport" />
             @yield('head.content')
             @yield('head.author')
-            <link href="{{'frontend/css/normalize.css'}}" rel="stylesheet" type="text/css" />
-            <link href="{{'frontend/css/style.css'}}" rel="stylesheet" type="text/css" />
-            <link href="{{'frontend/css/custom.css'}}" rel="stylesheet" type="text/css" />
-            <link href="{{'frontend/css/layout.css'}}" rel="stylesheet" type="text/css" />
+            <link href="{{asset('frontend/css/normalize.css')}}" rel="stylesheet" type="text/css" />
+            <link href="{{asset('frontend/css/style.css')}}" rel="stylesheet" type="text/css" />
+            <link href="{{asset('frontend/css/custom.css')}}" rel="stylesheet" type="text/css" />
+            <link href="{{asset('frontend/css/layout.css')}}" rel="stylesheet" type="text/css" />
             @yield('head.css')
             @yield('head.js')
+            @yield('head-scripts')
          </head>
          <!-- #HEAD -->
          <body>

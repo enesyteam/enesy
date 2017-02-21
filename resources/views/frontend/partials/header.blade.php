@@ -31,47 +31,18 @@
             </a>
             <nav class="header-logo-account__right">
                <ul class="header-logo-account__sundry">
-                  <!-- <li class="header-logo-account__sundry-item">
-                     <a class="header-logo-account__sundry-main-link--brand-color -rounded-corners" target="_blank" href="https://elements.envato.com/?utm_campaign=elements_mkt-headernav_beta-launch_01AUG2016&amp;utm_content=tf_headernav&amp;utm_medium=promos&amp;utm_source=#">Envato Elements</a>
-                     </li>
-                     <li class="header-logo-account__sundry-item">
-                     <a class="header-logo-account__sundry-main-link -rounded-corners" target="_self" href="//#/become-an-author">Start selling</a>
-                     </li>
-                     <li class="header-logo-account__sundry-item">
-                     <a class="header-logo-account__sundry-main-link" data-view="touchOnlyDropdown" data-dropdown-target=".js-sundry-2-dropdown" href="https://forums.envato.com">Forums</a>
-                     <div class="header-logo-account__sundry-dropdown js-sundry-2-dropdown">
-                        <ul class="hub-header-dropdown">
-                           <li>
-                              <a class="header-logo-account__sundry-sub-link" href="https://forums.envato.com">All forums</a>
-                           </li>
-                           <li>
-                              <a class="header-logo-account__sundry-sub-link" href="https://forums.envato.com/c/authoring-on-envato">Authoring on Envato</a>
-                           </li>
-                           <li>
-                              <a class="header-logo-account__sundry-sub-link" href="https://forums.envato.com/c/project-making">Project making</a>
-                           </li>
-                        </ul>
-                     </div>
-                     </li>-->
                   <li class="header-logo-account__sundry-item">
-                     <a class="header-logo-account__sundry-main-link" data-view="touchOnlyDropdown" data-dropdown-target=".js-sundry-3-dropdown" href="{{route('home.about')}}">Giới thiệu Enesy</a>
+                     <a class="header-logo-account__sundry-main-link" href="{{route('home.about')}}">Giới thiệu</a>
+                  </li>
+                  <li class="header-logo-account__sundry-item">
+                     <a class="header-logo-account__sundry-main-link" href="{{route('home.become_instructor')}}"><strong>Hợp tác giảng dạy</strong></a>
                   </li>
                   <li class="header-logo-account__sundry-item">
                      <a class="header-logo-account__sundry-main-link" href="#">Trợ giúp</a>
-                     <div class="header-logo-account__sundry-dropdown js-sundry-5-dropdown">
-                        <ul class="hub-header-dropdown">
-                           <li>
-                              <a class="header-logo-account__sundry-sub-link" href="{{route('help.enrollers')}}">Trợ giúp học viên</a>
-                           </li>
-                           <li>
-                              <a class="header-logo-account__sundry-sub-link" href="{{route('help.authors')}}">Dành cho giảng viên</a>
-                           </li>
-                        </ul>
-                     </div>
                   </li>
                </ul>
                <div class="header-logo-account__user-nav">
-                  @if(!Auth::check())
+                  @if(!Auth::guard('frontend')->check())
                   <div class="header-logo-account__user-nav-item">
                      <strong>
                      <a class="header-logo-account__user-nav-main-link--alpha" href="{{route('user.register')}}"><span>Đăng ký thành viên</span></a>
@@ -79,50 +50,56 @@
                   </div>
                   @else
                   <div class="header-logo-account__user-nav-item">
-                     <a class="header-logo-account__user-nav-main-link--alpha-with-dropdown" data-view="touchOnlyDropdown" data-dropdown-target="#user-nav-dropdown" href="">
-                     <span id="user_username">congcd4</span>
-                     <strong class="header-logo-account__balance">$0.00</strong>
+                     <a class="header-logo-account__user-nav-main-link--alpha-with-dropdown" data-view="touchOnlyDropdown" data-dropdown-target="#user-nav-dropdown" href="{{route('user.author')}}">
+                     <span id="user_username">{{ Auth::guard('frontend')->user()->username }}</span>
                      </a>
                      <div class="header-logo-account__user-nav-dropdown" id="user-nav-dropdown">
                         <ul class="hub-header-dropdown">
                            <li>
-                              <a href="#">
-                              Tài khoản
-                              <i class="e-icon -icon-person"></i>
+                              <a href="{{route('user.author')}}">
+                              Bảng điều khiển
+                              <i class="icon-home4 font-size-12"></i>
                               </a>          
                            </li>
                            <li>
-                              <a href="#">
+                              <a href="{{route('user.author_courses')}}">
                               Khóa học của bạn
-                              <i class="e-icon "></i>
+                              <i class="icon-book-play font-size-12"></i>
                               </a>          
                            </li>
                            <li>
-                              <a href="#">
-                              XXX
-                              <i class="e-icon "></i>
+                              <a href="{{route('user.author_enrollers')}}">
+                              Học viên của bạn
+                              <i class="icon-users2 font-size-12"></i>
                               </a>          
                            </li>
                            <li>
-                              <a href="#">
+                              <a href="{{route('user.author_bill')}}">
+                              Thanh toán
+                              <i class="icon-cash font-size-12"></i>
+                              </a>          
+                           </li>
+                           <li>
+                              <a class="hub-header-dropdown__bottom" href="{{route('user.author_account')}}">
                               Thiết lập
-                              <i class="e-icon -icon-cog"></i>
+                              <i class="icon-cog3 font-size-12"></i>
                               </a>          
                            </li>
                         </ul>
                      </div>
                   </div>
-                  @endif
                   <div class="header-logo-account__user-nav-item">
-                     <a class="header-logo-account__user-nav-main-link--cart" rel="nofollow" href="//#/cart">
-                        <div class="shopping-cart-summary is-empty" data-view="cartCount">
-                           <i class="e-icon -icon-cart"></i>
-                           <span class="js-cart-summary-count shopping-cart-summary__count">0</span>
+                     <a class="header-logo-account__user-nav-main-link--cart" rel="nofollow" href="{{route('user.author_notifications')}}">
+                        <div class="notify-summary" data-view="cartCount">
+                           <i class="icon-bell2 font-size-12"></i>
+                           <span class="js-cart-summary-count notify-summary__count">5</span>
                         </div>
                      </a>
                   </div>
+                  @endif
+                  
                   <div class="header-logo-account__user-nav-item">
-                     @if(Auth::check())
+                     @if(Auth::guard('frontend')->check())
                      <a class="header-logo-account__user-nav-main-link--omega" href="{{route('user.logout')}}">Thoát</a>
                      @else
                      <a class="header-logo-account__user-nav-main-link--omega" href="{{route('user.login')}}" >Đăng nhập</a>

@@ -152,6 +152,19 @@ class MemberController extends Controller
 		}
 		return \Redirect::route('memberIndex');
 	}
+	function changeIsTeacher () {
+    	$id  = $_GET['id'];
+    	$mm = Member::find($id);
+    	if ($mm != null) {
+    		if ($mm->is_teaching == 1) {
+    			$mm->is_teaching = 0;
+    		} else {
+    			$mm->is_teaching = 1;
+    		}
+    		$mm->save();
+    	}
+      return response()->json(array('status'=> "updated", 'id'=> $id));
+    }
 	
 
 }

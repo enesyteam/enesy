@@ -49,10 +49,8 @@ class Category extends Model
         return $categories;
     }
 
-    public function articles()
-    {
-        return $this->hasMany('App\Http\Models\backend\Articles');
-    }
+   
+   
 
         public function scopeParentId($query, $value) {
 

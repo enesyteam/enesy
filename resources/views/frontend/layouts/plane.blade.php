@@ -6,23 +6,30 @@
 <!--<![endif]-->
      <head>
         <meta charset="utf-8" />
-        <title>Enesy | Đào tạo Kỹ sư chuyên nghiệp</title>
+        <title> {{ $meta_title }} </title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta content="width=device-width, initial-scale=1" name="viewport" />
-        <meta content="Đào tạo Kỹ sư chuyên nghiệp" name="description" />
+        <meta content="{{ $meta_des }}" name="description" />
         <meta content="Enesy.vn" name="author" />
-        <link href="{{'frontend/css/normalize.css'}}" rel="stylesheet" type="text/css" />
-        <link href="{{'frontend/css/style.css'}}" rel="stylesheet" type="text/css" />
-        <link href="{{'frontend/css/custom.css'}}" rel="stylesheet" type="text/css" />
-        <link href="{{'frontend/css/layout.css'}}" rel="stylesheet" type="text/css" />
+        <link href="{{asset('frontend/css/normalize.css')}}" rel="stylesheet" type="text/css" />
+        <link href="{{asset('frontend/css/style.css')}}" rel="stylesheet" type="text/css" />
+        <link href="{{asset('frontend/css/layout.css')}}" rel="stylesheet" type="text/css" />
         @yield('head.css')
+        <link href="{{asset('frontend/user/assets/css/components.css')}}" rel="stylesheet" type="text/css">
+        <link href="{{asset('frontend/user/assets/css/icons/icomoon/styles.css')}}" rel="stylesheet" type="text/css">
+        <link href="{{asset('frontend/css/custom.css')}}" rel="stylesheet" type="text/css" />
+        <!--Page Loader-->
+        <script type="text/javascript" src="{{asset('frontend/user/assets/js/plugins/loaders/pace.min.js')}}"></script>
+        <script type="text/javascript" src="{{asset('frontend/user/assets/js/core/libraries/jquery.min.js')}}"></script>
+        <!--/Page Loader-->
         <!--JqueryModal-->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-        <script src="{{'frontend/vender/jquery-modal/jquery.modal.js'}}" type="text/javascript" charset="utf-8"></script>
-        <script src="{{'frontend/vender/jquery-modal/highlight/highlight.pack.js'}}" type="text/javascript" charset="utf-8"></script>
+        <script src="{{asset('frontend/vender/jquery-modal/jquery.modal.js')}}" type="text/javascript" charset="utf-8"></script>
+        <script src="{{asset('frontend/js/main.js')}}" type="text/javascript" charset="utf-8"></script>
+        <script src="{{asset('frontend/vender/jquery-modal/highlight/highlight.pack.js')}}" type="text/javascript" charset="utf-8"></script>
         <script type="text/javascript" charset="utf-8"> hljs.initHighlightingOnLoad(); </script>
+        <!--/JqueryModal-->
      </head>
 <body>
-	@yield('body')
+    @yield('body')
 </body>
 </html>

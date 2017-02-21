@@ -7,7 +7,7 @@
                <div class="subhead">Luyện kỹ năng nghề nghiệp từ các khóa học thực tế</div>
             </div>
             <div class="h-p2">
-               <form class="huge-search--search-home" action="/search" method="GET">
+               <form class="huge-search--search-home" action="{{route('course.search_result')}}" method="GET">
                   <input type="search" name="term" value="" autocomplete="off" class="js-term" placeholder="Tìm khóa học bạn quan tâm" vk_142c9="subscribed">
                   <button name="button" type="submit" class="huge-search--btn -theme-themeforest">
                   <span class="e-icon__alt">Tìm</span>
