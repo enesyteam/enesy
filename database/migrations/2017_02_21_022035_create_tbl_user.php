@@ -32,10 +32,9 @@ class CreateTblUser extends Migration
                     $table->integer('modify_date')->nullable();
                     $table->string('modify_user', 255)->nullable();
                     $table->string('remember_token', 255)->nullable();
-                    $table->tinyInteger('type_admin')->unsigned()->nullable()->default(1)->index()->comment = '1:Supper admin\n2:Admin';
+                    $table->tinyInteger('type_admin')->unsigned()->nullable()->default(1)->index()->comment = '1:Supper admin:Admin';
                     $table->integer('permission')->nullable();
                     $table->string('avatar', 255)->nullable();
-
                     
                 });
     }
@@ -47,6 +46,6 @@ class CreateTblUser extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('tbl_user');
     }
 }
