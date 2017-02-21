@@ -31,12 +31,23 @@
      </head>
 <body>
     @yield('body')
-    <div style="margin-top: 30px">
+    <div class="query-log is-hidden" style="margin-top: 30px">
         <pre>
         <?php              
             print_r(\DB::getQueryLog()); 
         ?>
         </pre>
     </div>
+<script type="text/javascript">
+//this is demo by cong, need to rewrite by code team
+$(document).ready(function() {
+var showLogButton         = $(".show-log-button");
+
+$(showLogButton).click(function(e){
+  e.preventDefault();
+      $('.query-log').toggleClass("is-hidden");
+});
+});
+</script>
 </body>
 </html>

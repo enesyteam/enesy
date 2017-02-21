@@ -24,6 +24,7 @@ class CourseTableSeeder extends Seeder
 					'username'	=>	'admin'.$i,
 					'password'	=>	'$2y$10$wBqR1wNApDE6mZEJtmqzYOf04DYrAMd7Q3qRWPCTEGzGlE2HmRcee',
 					'active'	=>	1,
+					'mobile'	=>	'123456',
 					'full_name' =>  $faker->lexify($string = '???????')
 				]);
 		};
@@ -73,7 +74,7 @@ class CourseTableSeeder extends Seeder
 					'introtext'		=>	implode('',$faker->sentences(8)),
 					'content'		=>	implode('',$faker->sentences(30)),
 					'cat_id'		=>	rand ( 1000 , 1003 ),
-					'parent_cat_id'	=>	0,
+					'parent_cat_id'	=>	rand ( 1000 , 1003 ),
 					'mentor_id'		=>	rand ( 1 , 3 ),
 					'picture'		=>	'',
 					'alias'			=>	$faker->slug(),

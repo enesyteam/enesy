@@ -8,6 +8,11 @@
                </div>
                <div class="footer-top__right is-hidden-tablet-and-below">
                   <div class="market-stats">
+                  <ul class="fxw fxwrap right">
+                  <li>
+                           <button type="button" class="btn btn-primary show-log-button">Show Query Log</button>
+                        </li>
+                  </ul>
                      <!--<ul class="fxw fxwrap right">
                         <li>
                            <a href="{{route('home.about')}}" class=" white-text">Về Enesy</a>
