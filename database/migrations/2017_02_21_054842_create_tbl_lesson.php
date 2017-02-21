@@ -13,7 +13,19 @@ class CreateTblLesson extends Migration
      */
     public function up()
     {
-        //
+          Schema::create('tbl_lesson', function (Blueprint $table) {
+                    $table->engine = 'InnoDB';
+                    $table->charset = 'utf8';
+                    $table->collation = 'utf8_unicode_ci';
+                    
+                    $table->increments('id')->unsigned();
+                    $table->integer('cat_id')->nullable();
+                    $table->integer('course_id')->nullable();
+                    $table->string('title', 255)->nullable();
+                    $table->integer('create_date')->nullable();
+                    $table->integer('updated_at')->nullable();
+                    
+                });
     }
 
     /**
@@ -23,6 +35,6 @@ class CreateTblLesson extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('tbl_lesson');
     }
 }

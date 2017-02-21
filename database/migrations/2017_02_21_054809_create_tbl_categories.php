@@ -27,9 +27,7 @@ class CreateTblCategories extends Migration
                     $table->integer('create_date')->nullable();
                     $table->tinyInteger('level')->unsigned()->nullable()->default(1)->index();
                     $table->string('ordering')->nullable()->index();
-                    $table->tinyInteger('status')->unsigned()->nullable()->default(0)->index()->comment = '1:active, 0:not active';
-    
-                    
+                    $table->tinyInteger('status')->unsigned()->nullable()->default(0)->index()->comment = '1:active, 0:not active';     
                 });
     }
 
