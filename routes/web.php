@@ -13,7 +13,10 @@
 Route::group(['prefix' => 'admin','middleware' => 'guest'], function () {
 	
     Route::get('/login', 'backend\LoginController@getLogin');
-    Route::post('/postLogin' , 'backend\LoginController@postLogin');
+    Route::post('/postLogin' ,[
+    	'as'	=>	'admin.login',
+    	'uses'	=>	'backend\LoginController@postLogin'
+    	]);
 
 });
 

@@ -28,7 +28,8 @@ class LoginController extends Controller
 
     //Get Login
     public function getLogin(){
-        return view("backend\login.login");
+        //return view("backend\login.login");
+        return view("backend.templates.default.login.login");
     }
 
     //post Login
