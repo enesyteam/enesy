@@ -51,7 +51,7 @@
                   @else
                   <div class="header-logo-account__user-nav-item">
                      <a class="header-logo-account__user-nav-main-link--alpha-with-dropdown" data-view="touchOnlyDropdown" data-dropdown-target="#user-nav-dropdown" href="{{route('user.author')}}">
-                     <span id="user_username">{{ Auth::guard('frontend')->user()->username }}</span>
+                     <span id="user_username">congcd4</span>
                      </a>
                      <div class="header-logo-account__user-nav-dropdown" id="user-nav-dropdown">
                         <ul class="hub-header-dropdown">

@@ -43,6 +43,9 @@ class Member extends Authenticatable
 
      protected function  validatordoRegister(array $data){
         $rules = [
+            'first_name' => 'required',
+            'last_name' => 'required',
+            'middle_name' => 'required',
             'username' => 'required|checkusername',
             'email' => 'required|email|checkemail',
             'password' => 'required|min:6|max:12',

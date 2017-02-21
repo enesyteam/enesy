@@ -63,7 +63,7 @@ class UserController extends Controller
     {
         $data_return = [];
 
-        $data = Request::only('email' , 'password' , 'username' , 'confirm-password');
+        $data = Request::only('email' , 'password' , 'username', 'first_name' , 'last_name' , 'middle_name' , 'confirm-password');
 
         $validator = Member::validatordoRegister($data);
 
@@ -73,27 +73,14 @@ class UserController extends Controller
                 ->withInput(Input::except('password'));
         }
 
-        $userdata = array(
-            'username'  => Input::get('username'),
-            'password'  => Input::get('password')
-        );
-
         $data['password'] = Hash::make($data['password']);
-
         try{
             $checkStatus = Member::create($data);
+
         }catch (Exception $e){
             return Redirect::route('user.register')
                             ->withInput()
                             ->with('message', 'Register Failed');
-        }
-        if( $checkStatus ){
-            if ( Auth::guard('frontend')->attempt($userdata) ){
-                return Redirect::route('home');
-            }else{
-                Session::flash('message_error', 'Login Failed'); 
-                return Redirect::route('user.login');
-            }
         }
 
     }
