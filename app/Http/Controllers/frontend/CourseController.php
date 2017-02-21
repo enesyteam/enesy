@@ -24,9 +24,9 @@ class CourseController extends Controller
     public function share(){
     	return view('frontend.course.course-share');
     }
-    public function listByCategory($id) {
-        $cat = Category::find($id);
-        if($cat) {
+    public function listByCategory($alias, $id) {
+        $cat = Category::where('id',$id)->where('status',1)->first();
+        if(!empty($cat)) {
             $listCourse = Course::select('tbl_course.*'
                 ,'tbl_member.first_name'
                 ,'tbl_member.last_name'
@@ -44,11 +44,10 @@ class CourseController extends Controller
             } else {
                 $listCourse->where('cat_id', $id);
             }
-            $listCourse->orderBy('tbl_course.id', 'DESC')
+            $listCourse = $listCourse->orderBy('tbl_course.id', 'DESC')
                 ->orderBy('tbl_course.love','DESC')
                 ->orderBy('tbl_course.num_of_learn','DESC')  
                 ->paginate(Course::PAGE_SIZE);
-
             return view('frontend.course.course-by-cat',['listCourse'=>$listCourse]);
         } else {
             return redirect()->route('error');
