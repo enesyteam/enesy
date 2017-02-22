@@ -1,5 +1,5 @@
 @extends('backend.layouts.dashboard')
-@section('page_heading','All category')
+@section('page_heading','Course category')
 @section('section')
     <div class="col-sm-12">
         @section ('table_panel_title','List')

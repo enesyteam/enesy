@@ -72,18 +72,27 @@ class CategoryController extends Controller
             $custom_link_render['status'] = $status;
         }
         $all_category->appends($custom_link_render);
-    	return view('backend.category.list', $data);
-    }
 
-    function add() {
-
+        //for Add category
         $query  = DB::table('tbl_categories')
         ->orderBy('id', 'desc')
         ->select('id','title');  
         $query   = $query->where('parent_id', '=', 0);
         $parents = $query->get();
+
+    	return view('backend.templates.default.category.list', $data)->withParents($parents);
+    }
+
+    function add() {
+
+        /*$query  = DB::table('tbl_categories')
+        ->orderBy('id', 'desc')
+        ->select('id','title');  
+        $query   = $query->where('parent_id', '=', 0);
+        $parents = $query->get();
     	
-    	return view('backend.category.add', array('parents' => $parents));
+    	return view('backend.templates.default.category.add', array('parents' => $parents));*/
+        return \Redirect::route('allCategory');
     }
 
     function executeAdd(Request $req) {
@@ -114,7 +123,8 @@ class CategoryController extends Controller
         }       
     	$cate->save();
     	
-    	return \Redirect::route('addCategory')->with('status', 'successed');
+    	//return \Redirect::route('addCategory')->with('status', 'successed');
+        return \Redirect::route('allCategory')->with('status', 'successed');
     }
 
     function edit($id) {
@@ -127,7 +137,7 @@ class CategoryController extends Controller
             ->select('id','title');  
             $query   = $query->where('parent_id', '=', 0);
             $parents = $query->get();    	
-        	return view('backend.category.edit', array('category'=>$cate,'parents'=>$parents));
+        	return view('backend.templates.default.category.edit', array('category'=>$cate,'parents'=>$parents));
         }
     	return \Redirect::route('allCategory');
     }
@@ -169,7 +179,7 @@ class CategoryController extends Controller
     	if ($cate != null) {
     		$cate2 = Category::find($cate->parent_id);
     		
-    		return view('backend.category.delete', array('category'=>$cate, 'parents'=>$all_category));
+    		return view('backend.templates.default.category.delete', array('category'=>$cate, 'parents'=>$all_category));
     	}
     	return \Redirect::route('allCategory');
     }

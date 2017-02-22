@@ -23,15 +23,23 @@ Route::group(['prefix' => 'admin','middleware' => 'guest'], function () {
 Route::group(array('namespace' => 'backend', 'prefix' => 'admin', 'middleware' => 'auth'), function () {
 
     Route::get('/logout' , 'LoginController@getLogout');
-    Route::get('/' , 'HomeController@index');
+    Route::get('/' ,[
+    	'as'	=>	'home.admin',
+		'uses'  =>	'HomeController@index']);
 
     //List User
-    Route::get('/adminManager','UserController@getAllAdminUser');
+    Route::get('/adminManager',[
+    	'as'	=>	'admin.list-admin',
+   	 	'uses'		=>	'UserController@getAllAdminUser']);
     Route::post('/getListAdmin','UserController@getListAdmin');
 
 
-    Route::get('/addUserAdmin','UserController@addUserAdmin');
-    Route::post('/insertAdmin','UserController@insertAdmin');
+    Route::get('/addUserAdmin',[
+    	'as'	=>	'admin.add',
+    	'uses'		=>	'UserController@addUserAdmin']);
+    Route::post('/insertAdmin',[
+    	'as'	=>	'excuteAddNewAdmin',
+    	'uses'	=>	'UserController@insertAdmin']);
 
     Route::post('ajax/changeStatus','UserAjaxController@changeStatusActive');
 
@@ -73,6 +81,9 @@ Route::group(array('namespace' => 'backend', 'prefix' => 'admin', 'middleware' =
      
     // member
     Route::get('/member', ['as' => 'memberIndex', 'uses' => 'MemberController@index']);
+
+    //cong
+    Route::post('/member/add/execute', ['as' => 'executeAddMember', 'uses' => 'MemberController@executeAdd']);
 
     Route::get('/member/delete', ['as' => 'memberDeleteById', 'uses' => 'MemberController@deleteById']);
 

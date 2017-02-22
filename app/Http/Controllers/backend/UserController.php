@@ -65,7 +65,7 @@ class UserController extends Controller
         }
 
         //Filter
-        $listAdmin = $adminUser->paginate(5);
+        $listAdmin = $adminUser->paginate(10);
 
         $pagination = $listAdmin->appends( array(
             'name' => Input::get('name'),
@@ -75,7 +75,7 @@ class UserController extends Controller
             'sort'      => Input::get('sort'),
             'order'     => Input::get('order')
         ))->links();
-        return view('backend.user.list')->with( array(
+        return view('backend.templates.default.user.admin-list')->with( array(
             'name' => $name,
             'email' => $email,
             'startdate' => $startdate,
@@ -107,10 +107,14 @@ class UserController extends Controller
         }
 
         $data = new User($request->all());
+        $data->username = $request->input('username');
+        $data->full_name = $request->input('full_name');
+        $data->info = $request->input('info');
+
         $data->password = bcrypt($request->input('password'));
-        $data->create_date = date("Y-m-d H:i:s").time();
+        $data->create_date = time();
         $data->create_user = Auth::user()->username;
-        $data->modify_date = date("Y-m-d H:i:s").time();
+        $data->modify_date = time();
         $data->modify_user = Auth::user()->username;
         $data->active = 1;
         $data->save();
@@ -128,7 +132,7 @@ class UserController extends Controller
         }else{
             return Redirect::to('/admin/adminManager');
         }
-        $this->layout->content = View::make('backend.user.edit',array(
+        return view('backend.templates.default.user.admin-edit',array(
             'user' => $user
         ));
     }

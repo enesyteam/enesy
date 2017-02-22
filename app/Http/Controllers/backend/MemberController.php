@@ -74,8 +74,28 @@ class MemberController extends Controller
 		
 		$all_member->appends($custom_link);
 
-		return view('backend.member.list', $data);
+		//
+		$data1 = array();
+		$data1['status'] = Config::get('params.status_user');
+
+		return view('backend.templates.default.user.members-list', $data)->withData1($data1);
 	}
+
+	//cong
+	function executeAdd(Request $req) {
+    	$mem = new Member;    	
+    	
+    	$mem->username     = $req->username;
+        $mem->email     = $req->email;
+        $mem->password     = $req->password;
+
+    	if (isset($req->status)) {
+    		$mem->status = $req->status;
+    	}
+    
+    	$mem->save();
+        return \Redirect::route('memberIndex')->with('status', 'successed');
+    }
 
 	function getDate($value) {
 		if (isset($value) && strlen($value) > 0) {
@@ -136,7 +156,7 @@ class MemberController extends Controller
 		$data = array();
 		$data['member'] = Member::find($id);
 		 $data['status'] = Config::get('params.status_user');
-		return view('backend.member.edit', $data);
+		return view('backend.templates.default.user.edit-member', $data);
 	}
 
 	function postEdit(Request $Request) {
