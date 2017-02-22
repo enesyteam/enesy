@@ -57,7 +57,7 @@ class CourseController extends Controller
                     );               
         $all_data->appends($custom_link);  
 
-        return view('backend.templates.default.course.list',$data);
+        return view('backend.course.list',$data);
                 
             }
 

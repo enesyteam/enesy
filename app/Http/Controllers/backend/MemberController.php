@@ -75,10 +75,10 @@ class MemberController extends Controller
 		$all_member->appends($custom_link);
 
 		//
-		$data1 = array();
-		$data1['status'] = Config::get('params.status_user');
+		//$data1 = array();
+		//$data1['status'] = Config::get('params.status_user');
 
-		return view('backend.templates.default.user.members-list', $data)->withData1($data1);
+		return view('backend.member.list', $data);//->withData1($data1);
 	}
 
 	//cong
@@ -156,7 +156,7 @@ class MemberController extends Controller
 		$data = array();
 		$data['member'] = Member::find($id);
 		 $data['status'] = Config::get('params.status_user');
-		return view('backend.templates.default.user.edit-member', $data);
+		return view('backend.member.edit', $data);
 	}
 
 	function postEdit(Request $Request) {

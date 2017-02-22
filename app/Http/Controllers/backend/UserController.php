@@ -75,7 +75,7 @@ class UserController extends Controller
             'sort'      => Input::get('sort'),
             'order'     => Input::get('order')
         ))->links();
-        return view('backend.templates.default.user.admin-list')->with( array(
+        return view('backend.user.list')->with( array(
             'name' => $name,
             'email' => $email,
             'startdate' => $startdate,
@@ -132,7 +132,7 @@ class UserController extends Controller
         }else{
             return Redirect::to('/admin/adminManager');
         }
-        return view('backend.templates.default.user.admin-edit',array(
+        return view('backend.user.edit',array(
             'user' => $user
         ));
     }

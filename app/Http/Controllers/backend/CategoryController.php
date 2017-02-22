@@ -80,18 +80,18 @@ class CategoryController extends Controller
         $query   = $query->where('parent_id', '=', 0);
         $parents = $query->get();
 
-    	return view('backend.templates.default.category.list', $data)->withParents($parents);
+    	return view('backend.category.list', $data)->withParents($parents);
     }
 
     function add() {
 
-        /*$query  = DB::table('tbl_categories')
+        $query  = DB::table('tbl_categories')
         ->orderBy('id', 'desc')
         ->select('id','title');  
         $query   = $query->where('parent_id', '=', 0);
         $parents = $query->get();
     	
-    	return view('backend.templates.default.category.add', array('parents' => $parents));*/
+    	return view('backend.category.add', array('parents' => $parents));
         return \Redirect::route('allCategory');
     }
 
@@ -137,7 +137,7 @@ class CategoryController extends Controller
             ->select('id','title');  
             $query   = $query->where('parent_id', '=', 0);
             $parents = $query->get();    	
-        	return view('backend.templates.default.category.edit', array('category'=>$cate,'parents'=>$parents));
+        	return view('backend.category.edit', array('category'=>$cate,'parents'=>$parents));
         }
     	return \Redirect::route('allCategory');
     }
@@ -179,7 +179,7 @@ class CategoryController extends Controller
     	if ($cate != null) {
     		$cate2 = Category::find($cate->parent_id);
     		
-    		return view('backend.templates.default.category.delete', array('category'=>$cate, 'parents'=>$all_category));
+    		return view('backend.category.delete', array('category'=>$cate, 'parents'=>$all_category));
     	}
     	return \Redirect::route('allCategory');
     }
