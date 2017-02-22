@@ -21,7 +21,7 @@
     if (count($_GET)){    
 
         $folder = date("Y/md/");
-        $path   = $file_location_video.$folder;
+        $path   = $file_location.$folder;
         
         if(@chdir($path) == false) mkdir($path, 0777, true);
         $full_path = '/'.$folder.$fileName;

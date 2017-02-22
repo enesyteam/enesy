@@ -24,7 +24,7 @@
         //
         $is_cut=0; 
         $folder = date("Y/md/");
-        $path   = $file_location_video.$folder;
+        $path   = $file_location.$folder;
         if(@chdir($path) == false) mkdir($path, 0777, true);
         // folder small
         $path_small   = $path.$small_w.'x'.$small_h.'_crop/';
