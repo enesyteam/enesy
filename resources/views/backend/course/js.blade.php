@@ -20,7 +20,7 @@
                     $("#path_mini").val(responseJSON.path_mini);                       
                     $("#folder_path").val(responseJSON.folder_path);
                     
-                    $( "#view_img").html('<img src="<?php echo Config::get('params.url_upload');?> '+responseJSON.full_path+'">');
+                    $( "#view_img").html('<img src="<?php echo Config::get('params.url_upload');?>'+responseJSON.full_path+'">');
                     var is_cut = responseJSON.is_cut; 
                     var is_cut = 1;
                     $('img#cropbox').attr("src",'<?php echo Config::get('params.url_upload');?>'+responseJSON.full_path);  
