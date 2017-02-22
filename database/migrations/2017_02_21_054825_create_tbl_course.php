@@ -19,6 +19,7 @@ class CreateTblCourse extends Migration
                     $table->collation = 'utf8_unicode_ci';
                     $table->increments('id')->unsigned();
                     $table->string('picture', 255)->nullable();
+                    $table->string('video', 255)->nullable();
                     $table->integer('parent_cat_id')->nullable();
                     $table->integer('cat_id')->nullable();
                     $table->string('title', 255)->nullable();
