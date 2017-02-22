@@ -9,7 +9,7 @@
    function uploadImg(stt){
           var uploader_img = new qq.FileUploader({
               element: document.getElementById('upload_img'+stt),
-              action: '<?php echo "/upload_content/upload_video.php"; ?>',      
+              action: "{{ URL::to('/upload_lib/upload_pic_doc.php') }}",   
               allowedExtensions: ['jpg', 'png', 'gif','jpeg'],
               multiple: false,
               uploadButtonText: 'Upload ảnh',
