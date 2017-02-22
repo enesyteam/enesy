@@ -65,6 +65,10 @@ class UserController extends Controller
 
         $data = Request::only('email' , 'password' , 'username', 'first_name' , 'last_name' , 'middle_name' , 'confirm-password');
 
+        $userdata = array(
+            'username'     => Input::get('username'),
+            'password'  => Input::get('password')
+        );
         $validator = Member::validatordoRegister($data);
 
         if($validator->fails()){
@@ -81,6 +85,17 @@ class UserController extends Controller
             return Redirect::route('user.register')
                             ->withInput()
                             ->with('message', 'Register Failed');
+        }
+
+        if( $checkStatus ){
+            if ( Auth::guard('frontend')->attempt($userdata) ){
+                return Redirect::route('home');
+            }else{
+                Session::flash('message_error', 'Login Failed');
+                return Redirect::route('user.login');
+            }
+        }else{
+            return Redirect::route('user.login');
         }
 
     }
