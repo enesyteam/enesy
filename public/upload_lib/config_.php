@@ -2,8 +2,8 @@
     error_reporting(0);
     $http_host = isset($_SERVER["HTTP_HOST"])? $_SERVER["HTTP_HOST"]:""; 
     if($http_host=="localhost"){
-        $file_location='D:/xampp/htdocs/e-learning/public/upload/image/';
-        $url_doc="http://localhost/e-learning/public/upload/image";
+        $file_location='D:/xampp/htdocs/enesy.vn/public/upload/image/';
+        $url_doc="http://localhost/enesy.vn/public/upload/image";
 
     }
 	else {
