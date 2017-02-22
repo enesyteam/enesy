@@ -50,12 +50,12 @@
                   <tr style="background-color:#26C6DA; color:white;">
                   <th style="vertical-align: middle; text-align:center;"><input type="checkbox" name="checkAll" id="checkAll" onclick="checkAll(this)"></th>
                    <th >ID</th>                     
-                    <th width="40%">Title</th>  
+                    <th width="25%">Title</th>  
                     <th>Introtext</th>  
                                         
-                    <th>Create date</th>
+                    <th width="5%">Create date</th>
                      
-                    <th  style="vertical-align: middle; text-align:center;">Action</th>                    
+                    <th width="10%"  style="vertical-align: middle; text-align:center;">Action</th>                    
                   </tr>                   
                 </thead>
                 <tbody>

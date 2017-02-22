@@ -22,7 +22,7 @@
                       onComplete: function(id, fileName, responseJSON){   
                           if(responseJSON.success==true){
                               $("#picture"+stt).val(responseJSON.full_path);
-                              $( "#view_img"+stt).html('<img width="120" src="'+responseJSON.full_path+'">');
+                              $("#view_img"+stt).html('<img width="120" src="'+responseJSON.full_path+'">');
                           }
                       }
                   });
@@ -36,7 +36,6 @@
                         multiple: true,
                         uploadButtonText: 'Upload Doc',
                         cancelButtonText: 'Cancel',
-                        debug:true,
                         failUploadText: 'Error upload',
                         onComplete: function(id, fileName, responseJSON){
                               if(responseJSON.success){        
