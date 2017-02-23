@@ -52,7 +52,7 @@
                                        
                            <div id="view_img" name="view_img">
                              <?php if(!empty($course->picture)){?>
-                               <img  src="<?php echo Helper::getDocs($course->picture);?>"/>
+                               <img  src="<?php echo Helper::getPic($course->picture);?>"/>
                             <?php }?>
 
                            </div>

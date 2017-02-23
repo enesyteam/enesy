@@ -81,6 +81,7 @@ class CourseTableSeeder extends Seeder
 					'parent_cat_id'	=>	rand ( 1000 , 1003 ),
 					'mentor_id'		=>	rand ( 1 , 3 ),
 					'picture'		=>	'',
+					'video'		    =>	'/default/course-preview.mp4',
 					'alias'			=>	$faker->slug(),
 					'create_date'	=>	time(),
 					'num_of_learn'	=>	0,

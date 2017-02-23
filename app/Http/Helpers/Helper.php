@@ -44,6 +44,19 @@
                 }
                 return Config::get('params.url_upload').$folder.$name_doc;
             }
+        public static function getPic($name_doc,$type='',$folder='')
+            {
+                if(!$name_doc){
+                    return Config::get('params.url_upload').'/default/img_default.png';
+
+                }
+                if($type!='')
+                {
+                    $type=$type.'_';
+                    $name_doc=str_replace($type,'small_',$name_doc);
+                }
+                return Config::get('params.url_upload').$folder.$name_doc;
+            }            
 
     }
 ?>
