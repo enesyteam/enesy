@@ -75,7 +75,7 @@
             failUploadText: 'Upload thất bại',
             onComplete: function(id, fileName, responseJSON){
                 if(responseJSON.success){        
-                    var file      = responseJSON.full_path;
+                    var file      =  responseJSON.full_path;
                     var file_type =  responseJSON.fileType ;
                     var file_size =  responseJSON.fileSize ;
                     $("#file").val(file);
@@ -91,7 +91,11 @@
                     html += '<td width="60%"><ul class="form2 bottom20">';        
 
 
-                    html += '<li class="magb5 clearfix"><div class="filltext">';            
+                    html += '<li class="magb5 clearfix"><div class="filltext">';     
+                    html += 'video controls="" width="640" height="480" >';
+
+                    html += '<source src="<?php Config::get('params.url_upload');?>'+responseJSON.full_path+'" type="video/mp4">';
+                    html += '</video>';          
                
                     html += '</li>';      
 
