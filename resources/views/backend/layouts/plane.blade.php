@@ -12,6 +12,8 @@
 	<meta content="" name="description"/>
 	<meta content="" name="author"/>
 
+	<?php $last_vesion = 1.0; ?>
+
 	<link rel="icon" type="image/png" href="{{ asset("frontend/images/logo/logo-ghi.png") }}">
 
 	<link rel="stylesheet" href="{{ asset("backend/assets/stylesheets/styles.css") }}" />
@@ -19,10 +21,13 @@
 
     <script rel="text/javascript" src="{{ asset('backend/assets/scripts/jquery-2.2.3.js') }}" ></script>
 
+    <script rel="text/javascript" src="{{ asset('backend/assets/scripts/function.js') }}?v=<?php echo $last_vesion; ?>" ></script>
+    <script src="{{ asset('backend/assets/scripts/frontend.js') }}" type="text/javascript"></script>
+
 </head>
 <body>
 	@yield('body')
-	<script src="{{ asset("backend/assets/scripts/frontend.js") }}" type="text/javascript"></script>
+	
 	<script src="{{ asset('backend/assets/scripts/bootstrap-datepicker/js/bootstrap-datepicker.js') }}" rel="text/javascript" ></script>
 
 </body>

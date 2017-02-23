@@ -6,7 +6,7 @@
 
     <script rel="text/javascript" src="{{ asset('backend/assets/scripts/bootstrap-confirmation.js') }}" ></script>
 
-    <script rel="text/javascript" src="{{ asset('backend/assets/scripts/adminuser/adminuser.js') }}" ></script>
+
 
     <span class="col-sm-12">
         @section ('table_panel_title','Admin List')

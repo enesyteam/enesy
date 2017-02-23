@@ -5,13 +5,7 @@
  @section ('table_panel_title','&nbsp;')
  @section ('table_panel_body')
 
-  <script rel="text/javascript" src="{{ asset('backend/assets/scripts/function.js') }}" ></script>
-  <script rel="text/javascript" src="{{ asset('backend/assets/scripts/ajax_upload_file/fileuploader.js') }}" ></script>
-  <link rel="stylesheet" href="{{ asset('backend/assets/scripts/ajax_upload_file/fileuploader.css') }}" type="text/css" /> 
-
-  <script rel="text/javascript" src="{{ asset('backend/assets/scripts/Jcrop/jquery.Jcrop.min.js') }}" ></script>
-  <link rel="stylesheet" href="{{ asset('backend/assets/scripts/Jcrop/jquery.Jcrop.css') }}" type="text/css" />
-  @include('backend.course.js', array())
+@include('backend.course.js', array())
  
 
  <form role="form" action="{{ URL::route('course/add') }}" method="POST" enctype="multipart/form-data">
@@ -74,7 +68,7 @@
       <div class="form-group">
         <label class="required">Video intro</label>
             <div id="upload_video"></div>
-            <input type="hidden" id="file"/>
+            <input type="hidden" id="file" name="file"/>
             <input type="hidden" id="file_size"/>
             <input type="hidden" id="file_type"/>
             <table id="view_video" name="view_video" width="100%" border="0" cellspacing="0" cellpadding="0" class="form1 magt20"></table>        

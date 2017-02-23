@@ -1,7 +1,16 @@
+  <?php $last_vesion = 1.0; ?>
+
+  <script rel="text/javascript" src="{{ asset('backend/assets/scripts/ajax_upload_file/fileuploader.js') }}?v=<?php echo $last_vesion; ?>" ></script>
+  <link rel="stylesheet" href="{{ asset('backend/assets/scripts/ajax_upload_file/fileuploader.css') }}?v=<?php echo $last_vesion; ?>" type="text/css" /> 
+
+  <script rel="text/javascript" src="{{ asset('backend/assets/scripts/Jcrop/jquery.Jcrop.min.js') }}?v=<?php echo $last_vesion; ?>" ></script>
+  <link rel="stylesheet" href="{{ asset('backend/assets/scripts/Jcrop/jquery.Jcrop.css') }}?v=<?php echo $last_vesion; ?>" type="text/css" />
+
+  <script rel="text/javascript" src="{{ asset('backend/assets/scripts/colorbox/jquery.colorbox-min.js') }}?v=<?php echo $last_vesion; ?>" ></script>
+  <link rel="stylesheet" href="{{ asset('backend/assets/scripts/colorbox/colorbox.css') }}?v=<?php echo $last_vesion; ?>" type="text/css" />
+
+
 <script>
-    $(document).ready(function(){ 
-            uploadImg();           
-    });
     var i = 0;
     function uploadImg(){
         var uploader_img = new qq.FileUploader({
@@ -95,8 +104,11 @@
             }
         });           
     }        
-    window.onload = createUploader;  
-    $(function(){      
+    window.onload = createUploader; 
+
+    $( document ).ready(function() {   
+      uploadImg();     
+
      $("#type_video input[name=type]").click(function(){
             if($(this).val()==1){
                 $("#th_author_alias").show();
