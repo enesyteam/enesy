@@ -30,8 +30,9 @@ class CourseController extends Controller
             return redirect()->route('error');
         }
     }
-    public function preview(){
-		return view('frontend.course.course-preview');
+    public function preview($id){
+        $course_detail = Course::where('id',$id)->where('status',1)->first();
+		return view('frontend.course.course-preview',['course_detail'=>$course_detail]);
     }
     public function view(){
         return view('frontend.course.course-view');

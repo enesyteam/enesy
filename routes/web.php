@@ -144,7 +144,7 @@ Route::group(array('namespace' => 'frontend' , 'middleware' => 'frontend.auth'),
 		'as' 	=>	'course.view',
 		'uses'	=>	'CourseController@view'
 		]);
-	Route::get('xem-truoc-khoa-hoc',[
+	Route::get('xem-truoc-khoa-hoc/{id}',[
 		'as' 	=>	'course.preview',
 		'uses'	=>	'CourseController@preview'
 		]);
