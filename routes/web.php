@@ -121,6 +121,11 @@ Route::group(array('namespace' => 'frontend' , 'middleware' => 'frontend.auth'),
 		'as'	=>	'home',
 		'uses'	=>	'PagesController@index'
 		]);
+// test
+	Route::get('/1', [
+		'as'	=>	'newhome',
+		'uses'	=>	'PagesController@newhome'
+		]);
 
 	/*Courses*/
 	Route::get('khoa-hoc',[
