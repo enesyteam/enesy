@@ -72,7 +72,7 @@
                   <div class="form-group">
                     <label class="required">Video intro</label>
                         <div id="upload_video"></div>
-                        <input type="hidden" id="file" name="file"/>
+                        <input type="hidden" id="file" name="file" value="<?php echo $course->video; ?>" />
                         <input type="hidden" id="file_size"/>
                         <input type="hidden" id="file_type"/>
                         <table id="view_video" name="view_video" width="100%" border="0" cellspacing="0" cellpadding="0" class="form1 magt20">

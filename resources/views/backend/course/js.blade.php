@@ -84,17 +84,14 @@
                     var link_video = ''+responseJSON.full_path;
                     
                    // var html_video = showEmbedCodeNew(400,200,link_embed);
-                    var html_video='';
+
                     var html = '';
-                    html += '<tr>';
-                    html += '<td width="40%"><div>'+html_video+'</div></td>';
-                    html += '<td width="60%"><ul class="form2 bottom20">';        
-
-
+                    html += '<tr>';   
+                    html += '<td><ul class="form2 bottom20">';        
                     html += '<li class="magb5 clearfix"><div class="filltext">';     
-                    html += 'video controls="" width="640" height="480" >';
+                    html += '<video controls="" width="640" height="480" >';
 
-                    html += '<source src="<?php Config::get('params.url_upload');?>'+responseJSON.full_path+'" type="video/mp4">';
+                    html += '<source src="<?php echo Config::get('params.url_upload');?>'+responseJSON.full_path+'" type="video/mp4">';
                     html += '</video>';          
                
                     html += '</li>';      
