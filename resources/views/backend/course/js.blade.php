@@ -92,8 +92,8 @@
 
 
                     html += '<li class="magb5 clearfix"><div class="filltext">';            
-                         
-                    html += '</div></li>';      
+               
+                    html += '</li>';      
 
                     html += '</ul></td></tr>'; 
 

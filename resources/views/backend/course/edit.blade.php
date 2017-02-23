@@ -75,7 +75,15 @@
                         <input type="hidden" id="file" name="file"/>
                         <input type="hidden" id="file_size"/>
                         <input type="hidden" id="file_type"/>
-                        <table id="view_video" name="view_video" width="100%" border="0" cellspacing="0" cellpadding="0" class="form1 magt20"></table>        
+                        <table id="view_video" name="view_video" width="100%" border="0" cellspacing="0" cellpadding="0" class="form1 magt20">
+                          <?php if(!empty($course->video)){?>
+                               <video controls="" width="640" height="480" >
+                                 <source src="<?php echo Helper::getDocs($course->video);?>" type="video/mp4">
+                               </video>
+                               
+                            <?php }?>
+
+                        </table>        
                   </div>
 
 
