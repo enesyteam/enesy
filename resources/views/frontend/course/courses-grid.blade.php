@@ -81,7 +81,10 @@
                   <!-- Grid -->
                   <div class="row">
                      @foreach($listCourse as $item)
-                     @php ($link_detail = route('course.detail',['alias'=>$item->alias,'id'=>$item->id]))
+                     <?php  
+                    $link_detail  = route('course.detail',['alias'=>$item->alias,'id'=>$item->id]);
+                    $link_preview = route('course.preview',['id'=>$item->id]);
+                    ?>
                      <!-- Course item -->
                      <div class="col-lg-3 col-md-4 col-sm-3">
                         <div class="course-grid-item">
@@ -92,7 +95,7 @@
                                  <img src="<?php if($item->picture != '') echo $item->picture; else echo asset('frontend/images/img_default.png'); ?>" class="img-responsive" alt="">
                               </a>
                               <div class="item-thumbnail__preview">
-                                       <a target="_blank" href="{{route('course.preview')}}" rel="modal:open">
+                                       <a target="_blank" href="{{$link_preview}}" rel="modal:open">
                                        <div class="" ng-show="showPlaceholderPlayButton" style="">
                                           <div class="play-button play-button--initially-visible" data-purpose="video-play-button-initial"></div>
                                        </div>

@@ -97,8 +97,8 @@ Enesy | Khóa học lập trình AutoCAD với C# trình độ cơ bản
       <div class="content-s">
          <div class="box--no-padding no-border">
             <div class="item-preview -preview-live">
-               <a target="_blank" href="{{route('course.preview')}}" rel="modal:open">
-                  <img alt="EduLearn - Education, School &amp; Courses HTML Template - Business Corporate" itemprop="image" src="{{url('frontend/images/courses/preview-images/course-preview-image.jpg')}}">
+               <a target="_blank" href="{{route('course.preview',['id'=>$course_detail->id])}}" rel="modal:open">
+                  <img alt="{{$course_detail->title}}" itemprop="image" src="<?php echo Helper::getPic($course_detail->picture); ?>">
                   <div class="" ng-show="showPlaceholderPlayButton" style="">
                      <div class="play-button play-button--initially-visible" data-purpose="video-play-button-initial"></div>
                   </div>
@@ -120,7 +120,7 @@ Enesy | Khóa học lập trình AutoCAD với C# trình độ cơ bản
                <h4 class="tab-title">
                 Mô tả khóa học
                </h4>
-               <p style="">{{$course_detail->content}}</p>
+               <p style=""><?php echo $course_detail->content;?></p>
                <h4 class="tab-title">
                 Các yêu cầu của khóa học
                </h4>
@@ -166,7 +166,7 @@ Enesy | Khóa học lập trình AutoCAD với C# trình độ cơ bản
                                           Giới thiệu khóa học Lập trình AutoCAD với C# - Trình độ cơ bản
                                        </div>
                                        <a class="btn btn-sm ud-courseimpressiontracker preview-btn ml15 btn-primary
-                                          " target="_blank" href="{{route('course.preview')}}" rel="modal:open">
+                                          " target="_blank" href="{{route('course.preview',['id'=>$course_detail->id])}}" rel="modal:open">
                                        Xem trước
                                        </a>
                                     </div>
@@ -188,7 +188,7 @@ Enesy | Khóa học lập trình AutoCAD với C# trình độ cơ bản
                                           Sử dụng các tập tin của khóa học
                                        </div>
                                        <a class="btn btn-sm ud-courseimpressiontracker preview-btn ml15 btn-primary
-                                          " target="_blank" href="{{route('course.preview')}}" rel="modal:open">
+                                          " target="_blank" href="{{route('course.preview',['id'=>$course_detail->id])}}" rel="modal:open">
                                        Xem trước
                                        </a>
                                     </div>
@@ -215,7 +215,7 @@ Enesy | Khóa học lập trình AutoCAD với C# trình độ cơ bản
                                           Làm quen với AutoCAD .NET API
                                        </div>
                                        <a class="btn btn-sm ud-courseimpressiontracker preview-btn ml15 btn-primary
-                                          " target="_blank" href="{{route('course.preview')}}" rel="modal:open">
+                                          " target="_blank" href="{{route('course.preview',['id'=>$course_detail->id])}}" rel="modal:open">
                                        Xem trước
                                        </a>
                                     </div>
@@ -237,7 +237,7 @@ Enesy | Khóa học lập trình AutoCAD với C# trình độ cơ bản
                                           Cài đặt Template
                                        </div>
                                        <a class="btn btn-sm ud-courseimpressiontracker preview-btn ml15 btn-primary
-                                          " target="_blank" href="{{route('course.preview')}}" rel="modal:open">
+                                          " target="_blank" href="{{route('course.preview',['id'=>$course_detail->id])}}" rel="modal:open">
                                        Xem trước
                                        </a>
                                     </div>
@@ -259,7 +259,7 @@ Enesy | Khóa học lập trình AutoCAD với C# trình độ cơ bản
                                           Cấu trúc một dự án C#
                                        </div>
                                        <a class="btn btn-sm ud-courseimpressiontracker preview-btn ml15 btn-primary
-                                          " target="_blank" href="{{route('course.preview')}}" rel="modal:open">
+                                          " target="_blank" href="{{route('course.preview',['id'=>$course_detail->id])}}" rel="modal:open">
                                        Xem trước
                                        </a>
                                     </div>
@@ -281,7 +281,7 @@ Enesy | Khóa học lập trình AutoCAD với C# trình độ cơ bản
                                           Netload và Debug
                                        </div>
                                        <a class="btn btn-sm ud-courseimpressiontracker preview-btn ml15 btn-primary
-                                          " target="_blank" href="{{route('course.preview')}}" rel="modal:open">
+                                          " target="_blank" href="{{route('course.preview',['id'=>$course_detail->id])}}" rel="modal:open">
                                        Xem trước
                                        </a>
                                     </div>
@@ -308,7 +308,7 @@ Enesy | Khóa học lập trình AutoCAD với C# trình độ cơ bản
                                           Entering And Running A   Program In Windows
                                        </div>
                                        <a class="btn btn-sm ud-courseimpressiontracker preview-btn ml15 btn-primary
-                                          " target="_blank" href="{{route('course.preview')}}" rel="modal:open">
+                                          " target="_blank" href="{{route('course.preview',['id'=>$course_detail->id])}}" rel="modal:open">
                                        Xem trước
                                        </a>
                                     </div>
