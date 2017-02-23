@@ -41,6 +41,22 @@ class Member extends Authenticatable
         'password', 'remember_token',
     ];
 
+    protected function validatorEditProfile(array  $data){
+        $rules = [
+            'first_name' => 'required',
+            'last_name' => 'required',
+            'middle_name' => 'required',
+            'sex' => 'required',
+            'dob' => 'required',
+            'social' => 'required',
+            'address' => 'required',
+            'phone' => 'required',
+            'skype' => 'required',
+            'facebook' => 'required',
+        ];
+
+        return Validator::make($data , $rules);
+    }
      protected function  validatordoRegister(array $data){
         $rules = [
             'first_name' => 'required',

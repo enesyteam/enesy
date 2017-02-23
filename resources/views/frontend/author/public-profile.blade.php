@@ -1,47 +1,55 @@
 @extends('frontend.author.master.author-master') @section('author-body.content') <!-- Content area -->
 @section('author-body.content') <!-- Content area -->
+<style>
+    .error_message{
+        color: red;
+    }
+</style>
 <div class="row">
     <div class="col-md-12 mr--10">
         <div class="panel panel-flat">
             <div class="panel-body">
                 {{--open form--}}
-                {{ Form::open(array('url' => 'doUpdateProfile' , 'class'=>'e-form')) }}
+                {{ Form::open(array('url' => 'lecturers/doUpdateProfile' , 'class'=>'e-form')) }}
 
                 <div class="col-md-8">
                     <!-- Name -->
                     <div class="form-group">
                         <legend class="text-semibold">Thông tin cá nhân</legend>
                         <label class="text-semibold">Họ:</label>
-                        {{ Form::text('first_name', Input::old('first_name'), array('placeholder' => 'Họ' , 'class'=>'f-input -type-string -width-full')) }}
+                        {{ Form::text('first_name',Auth::guard('frontend')->user()->first_name, array('placeholder' => 'Họ' , 'class'=>'f-input -type-string -width-full')) }}
                         <p class="error_message">{{ $errors->first('first_name') }}</p>
                         <label class="text-semibold mt-10">Tên đệm:</label>
-                        {{ Form::text('middle_name', Input::old('middle_name'), array('placeholder' => 'Tên Đệm' , 'class'=>'f-input -type-string js-sign-up__first-name -width-full')) }}
+                        {{ Form::text('middle_name', Auth::guard('frontend')->user()->middle_name, array('placeholder' => 'Tên Đệm' , 'class'=>'f-input -type-string js-sign-up__first-name -width-full')) }}
                         <p class="error_message">{{ $errors->first('middle_name') }}</p>
 
                         <label class="text-semibold mt-10">Tên:</label>
-                        {{ Form::text('last_name', Input::old('last_name'), array('placeholder' => 'Tên' , 'class'=>'f-input -type-string js-sign-up__last-name -width-full')) }}
+                        {{ Form::text('last_name',Auth::guard('frontend')->user()->last_name, array('placeholder' => 'Tên' , 'class'=>'f-input -type-string js-sign-up__last-name -width-full')) }}
                         <p class="error_message">{{ $errors->first('last_name') }}</p>
                     </div><!-- /Name -->
                     <!-- Gender -->
                     <label class="text-semibold">Giới tính:</label>
                     <label class="radio-inline ml-10">
-                        {{ Form::radio('sex' , 'Nam') }}Nam
+                        {{ Form::radio('sex' , '1' , Auth::guard('frontend')->user()->sex =="1") }}Nam
                     </label>
                     <label class="radio-inline">
-                        {{ Form::radio('sex' , 'Nữ') }}Nữ
+                        {{ Form::radio('sex' , '0' , Auth::guard('frontend')->user()->sex =="0") }}Nữ
                     </label>
                     <label class="radio-inline">
-                        {{ Form::radio('sex' , 'Khác') }}Khác
+                        {{ Form::radio('sex' , '2' , Auth::guard('frontend')->user()->sex=="2") }}Khác
                     </label><br/>
+                    <p class="error_message">{{ $errors->first('sex') }}</p>
                     <!-- /Gender -->
                     <!-- Date of birth -->
                     <label class="text-semibold">Ngày sinh:</label>
-                {{ Form::date('dob', Input::old('dob'), array('placeholder' => 'Ngày Sinh' , 'class'=>'f-input -type-string js-sign-up__last-name -width-full')) }}
+                {{ Form::date('dob',date("Y-m-d" ,  Auth::guard('frontend')->user()->dob), array('placeholder' => 'Ngày Sinh' , 'class'=>'f-input -type-string js-sign-up__last-name -width-full')) }}
+                    <p class="error_message">{{ $errors->first('dob') }}</p>
                 <!-- /Date of birth -->
                     <!-- Biography -->
                     <div class="form-group mt-10">
                         <label class="text-semibold">Giới thiệu:</label>
-                        {{Form::textarea('social',null,['class'=>'f-textarea font-size-13', 'rows' => 10, 'cols' => 5]) }}
+                        {{Form::textarea('social',Auth::guard('frontend')->user()->social,['class'=>'f-textarea font-size-13', 'rows' => 10, 'cols' => 5]) }}
+                        <p class="error_message">{{ $errors->first('social') }}</p>
                     </div><!-- /Biography -->
                     <!-- Biography help -->
                     <div class="box h-clickable biography-help mt--20 is-open" data-view="dropdown"
@@ -71,15 +79,27 @@
                     <div class="form-group">
                         <legend class="text-semibold">Thông tin liên hệ</legend>
                         <label class="text-semibold">Địa chỉ:</label>
-                        {{ Form::text('address', Input::old('address'), array('placeholder' => 'Địa chỉ' , 'class'=>'f-input -type-string -width-full')) }}
+                        {{ Form::text('address', Auth::guard('frontend')->user()->address, array('placeholder' => 'Địa chỉ' , 'class'=>'f-input -type-string -width-full')) }}
+                        <p class="error_message">{{ $errors->first('address') }}</p>
 
                         <label class="text-semibold mt-10">Điện thoại:</label>
-                        {{ Form::text('phone', Input::old('phone'), array('placeholder' => 'Điện Thoại' , 'class'=>'f-input -type-string -width-full')) }}
+                        {{ Form::text('phone', Auth::guard('frontend')->user()->phone, array('placeholder' => 'Điện Thoại' , 'class'=>'f-input -type-string -width-full')) }}
+                        <p class="error_message">{{ $errors->first('phone') }}</p>
+
                         <label class="text-semibold mt-10">Facebook:</label>
-                        {{ Form::text('facebook', Input::old('facebook'), array('placeholder' => 'Facebook' , 'class'=>'f-input -type-string -width-full')) }}
+                        {{ Form::text('facebook', Auth::guard('frontend')->user()->facebook, array('placeholder' => 'Facebook' , 'class'=>'f-input -type-string -width-full')) }}
+                        <p class="error_message">{{ $errors->first('facebook') }} </p>
+
                         <label class="text-semibold mt-10">Skype:</label>
-                        {{ Form::text('skype', Input::old('skype'), array('placeholder' => 'Skype' , 'class'=>'f-input -type-string -width-full')) }}
+                        {{ Form::text('skype',Auth::guard('frontend')->user()->skype, array('placeholder' => 'Skype' , 'class'=>'f-input -type-string -width-full')) }}
+                        <p class="error_message">{{ $errors->first('skype') }}</p>
                     </div>
+
+                    @if(Session::has('message_error'))
+                        <div class="alert-box success">
+                            <h2>{{ Session::get('message_error') }}</h2>
+                        </div>
+                @endif
                     <!-- /Contact info -->
                     <button class="btn btn-primary" type="submit">Cập nhật</button>
                 </div>

@@ -226,6 +226,10 @@ Route::group(array('namespace' => 'frontend' , 'middleware' => 'frontend.auth'),
 		'as'	=>	'user.author_public_profile',
 		'uses'	=>	'UserController@profileLecturers'
 		]);
+	Route::post('lecturers/doUpdateProfile',[
+		'as'	=>	'user.author_public_profile_post',
+		'uses'	=>	'UserController@doUpdateProfile'
+		]);
 
 
 	Route::get('giang-vien/tai-khoan',[

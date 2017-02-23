@@ -105,15 +105,44 @@ class UserController extends Controller
         return view('frontend.author.public-profile');
     }
 
+    public function doUpdateProfile(){
+        $data_return = [];
+        $data = Request::only(
+                    'sex' , 'dob' , 'social',
+                    'first_name' , 'last_name' ,
+                    'middle_name' , 'address',
+                    'phone' , 'skype','facebook');
+        $validator = Member::validatorEditProfile($data);
 
+        if($validator->fails()) {
+            return Redirect::route('user.author_public_profile')
+                ->withErrors($validator);
+        }
+        try{
 
+            $member = Member::find(Auth::guard('frontend')->user()->id);
+            $member->sex = $data['sex'];
+            $member->dob = strtotime($data['dob']);
+            $member->social = $data['social'];
+            $member->first_name = $data['first_name'];
+            $member->last_name = $data['last_name'];
+            $member->middle_name = $data['middle_name'];
+            $member->address = $data['address'];
+            $member->phone = $data['phone'];
+            $member->skype = $data['skype'];
+            $member->facebook = $data['facebook'];
+            $member->save();
 
+        }catch (Exception $e){
+            return Redirect::route('user.author_public_profile')
+                ->withInput()
+                ->with('message_error', 'Update Profile Fail! (Sorry) ');
+        }
 
+        return Redirect::route('user.author_public_profile')
+                            ->with('message_error','Update Success!');
 
-
-
-
-
+    }
 
     public function author(){
     	return view('frontend.author.index');
