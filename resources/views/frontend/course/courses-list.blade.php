@@ -74,7 +74,11 @@
                <div>
                <ul class="course-list">
                   @foreach($listCourse as $item)
-                  @php ($link_detail = route('course.detail',['alias'=>$item->alias,'id'=>$item->id]))
+
+                  <?php  
+                    $link_detail  = route('course.detail',['alias'=>$item->alias,'id'=>$item->id]);
+                    $link_preview = route('course.preview',['id'=>$item->id]);
+                    ?>
                   <!--Course-->
                   <li class="js-google-analytics__list-event-container">
                      <div class="course-list__columns-container">
@@ -86,7 +90,7 @@
                                     <img src="<?php  echo Helper::getPic($item->picture); ?>" border="0" height="80" width="150" alt="Moti App PSD Landing Page PSD Template - ThemeForest Item for Sale" title="" class="preload no_preview landscape-image-magnifier" data-tooltip="Moti App PSD Landing Page PSD Template">
                                     </a>
                                     <div class="item-thumbnail__preview">
-                                       <a target="_blank" href="{{route('course.preview')}}" rel="modal:open">
+                                       <a target="_blank" href="{{$link_preview}}" rel="modal:open">
                                        <div class="" ng-show="showPlaceholderPlayButton" style="">
                                           <div class="play-button play-button--initially-visible" data-purpose="video-play-button-initial"></div>
                                        </div>
