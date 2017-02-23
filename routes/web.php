@@ -10,6 +10,7 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+echo "a";exit;
 Route::group(['prefix' => 'admin','middleware' => 'guest'], function () {
 	
     Route::get('/login', 'backend\LoginController@getLogin');
@@ -112,9 +113,6 @@ Route::group(array('namespace' => 'backend', 'prefix' => 'admin', 'middleware' =
     // end course
 });
 
-Route::group(array('namespace' => 'frontend' , 'middleware' => 'web|auth'), function () {
-
-});
 
 Route::group(array('namespace' => 'frontend' , 'middleware' => 'frontend.auth'), function () {
 	Route::get('/', [
