@@ -92,7 +92,7 @@
                         <div class="item-thumbnail">
                            <div class="item-thumbnail__image">
                               <a href="#course_preview" data-toggle="modal">
-                                 <img src="<?php if($item->picture != '') echo $item->picture; else echo asset('frontend/images/img_default.png'); ?>" class="img-responsive" alt="">
+                                 <img src="<?php echo Helper::getPic($item->picture); ?>" class="img-responsive" alt="{{$item->title}}">
                               </a>
                               <div class="item-thumbnail__preview">
                                        <a target="_blank" href="{{$link_preview}}" rel="modal:open">

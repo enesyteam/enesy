@@ -50,7 +50,7 @@
                               <div class="item-thumbnail">
                                  <div class="item-thumbnail__image">
                                     <a title="{{$item->title}}" class="js-google-analytics__list-event-trigger" href="{{$link_detail}}">
-                                    <img src="<?php echo Helper::getPic($item->picture); ?>" border="0" height="80" width="150" alt="Enesy Course" title="" class="preload no_preview landscape-image-magnifier" data-tooltip="Enesy Course">
+                                    <img src="<?php echo Helper::getPic($item->picture); ?>" border="0" height="80" width="150" alt="{{$item->title}}" title="{{$item->title}}" class="preload no_preview landscape-image-magnifier" data-tooltip="Enesy Course">
                                     </a>
                                     <div class="item-thumbnail__preview">
                                        <a target="_blank" href="{{$link_preview}}" rel="modal:open">
