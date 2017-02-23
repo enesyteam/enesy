@@ -2,6 +2,7 @@
     set_time_limit(0);          
     require_once("config_.php");
     require_once("lib/qqUploaded.php");
+    error_reporting(0);
     $arr_extension = array("php","PHP","jsp","JSP","js","JS","cs","CS","java","JAVA","sh","SH","h","H");
     $upload = New qqUploadedFileXhr();
     if(isset($_GET['qqfile'])){

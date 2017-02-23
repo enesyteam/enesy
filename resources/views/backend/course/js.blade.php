@@ -75,7 +75,7 @@
             failUploadText: 'Upload thất bại',
             onComplete: function(id, fileName, responseJSON){
                 if(responseJSON.success){        
-                    var file = responseJSON.full_path + ";";
+                    var file      = responseJSON.full_path;
                     var file_type =  responseJSON.fileType ;
                     var file_size =  responseJSON.fileSize ;
                     $("#file").val(file);
