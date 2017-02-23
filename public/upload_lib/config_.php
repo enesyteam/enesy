@@ -1,16 +1,20 @@
 <?php
     error_reporting(0);
     $http_host = isset($_SERVER["HTTP_HOST"])? $_SERVER["HTTP_HOST"]:""; 
-    if($http_host=="localhost"){
-        $file_location='D:/xampp/htdocs/e-learning/public/upload/image/';
-        $url_doc="http://localhost/e-learning/public/upload/image";
+    
+    /*if($http_host=="localhost"){
+        $file_location='D:/xampp/htdocs/enesy.vn/public/upload/image/';
+        $url_doc="http://localhost/enesy.vn/public/upload/image";
 
     }
 	else {
         $file_location='/dd';
         $url_doc="http://lzt.vn/ghi/public/upload/image";
 
-    }
+    }*/
+     $file_location = str_replace('upload_lib', 'upload', dirname(__FILE__)).'/image/' ;
+     $url_doc       ="http://localhost/enesy.vn/public/upload/image";
+
  
     $small_w =630;     
     $small_h =352; 

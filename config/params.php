@@ -36,13 +36,13 @@ return [
     |
     */
 
-    'url_upload' => 'http://localhost/e-learning/public/upload/image',
+    'url_upload' => 'http://localhost/enesy.vn/public/upload/image',
 
     'url_upload_db' => 'upload/image',
 
     'url_upload_cer_db' => 'upload/certificate',
 
-    'url_website' => 'http://localhost/e/public',
+    'url_website' => 'http://localhost/enesy.vn/public',
 
 
     'status_user' => array(1 =>"Approved",2=>'Waiting Review',3=>'In Review',4=>'Rejected' ),

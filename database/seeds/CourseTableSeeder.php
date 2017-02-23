@@ -31,8 +31,8 @@ class CourseTableSeeder extends Seeder
        	//create 1000 members
 		for($i=0;$i<1000;++$i){
 			Member::create([
-					'email'		    =>	$faker->lexify($string = '???????????@mail.com'),
-					'username'	    =>	$faker->lexify($string = '???????'),
+					'email'		=>	'user'.$i.'@gmail.com',
+					'username'	=>	'user00'.$i,
 					'password'	    =>	'$2y$10$wBqR1wNApDE6mZEJtmqzYOf04DYrAMd7Q3qRWPCTEGzGlE2HmRcee',
 					'first_name'	=>	$faker->lexify($string = '???????'),
 					'middle_name'	=>	$faker->lexify($string = '???????'),

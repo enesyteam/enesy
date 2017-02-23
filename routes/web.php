@@ -112,9 +112,7 @@ Route::group(array('namespace' => 'backend', 'prefix' => 'admin', 'middleware' =
     // end course
 });
 
-Route::group(array('namespace' => 'frontend' , 'middleware' => 'web|auth'), function () {
 
-});
 
 Route::group(array('namespace' => 'frontend' , 'middleware' => 'frontend.auth'), function () {
 	Route::get('/', [
@@ -222,10 +220,14 @@ Route::group(array('namespace' => 'frontend' , 'middleware' => 'frontend.auth'),
 		'as'	=>	'user.author_courses_create',
 		'uses'	=>	'UserController@author_courses_create'
 		]);
-	Route::get('giang-vien/trang-ca-nhan',[
+
+	//Profile giảng viên
+	Route::get('lecturers/profile',[
 		'as'	=>	'user.author_public_profile',
-		'uses'	=>	'UserController@author_public_profile'
+		'uses'	=>	'UserController@profileLecturers'
 		]);
+
+
 	Route::get('giang-vien/tai-khoan',[
 		'as'	=>	'user.author_account',
 		'uses'	=>	'UserController@author_account'

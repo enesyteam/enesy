@@ -1,5 +1,6 @@
 <?php
     namespace App\Http\Helpers;
+    use Config;
 
     class Helper{
        
@@ -34,6 +35,15 @@
             }
             return $text;
         }
+        public static function getDocs($name_doc,$type='',$folder='')
+            {
+                if($type!='')
+                {
+                    $type=$type.'_';
+                    $name_doc=str_replace($type,'small_',$name_doc);
+                }
+                return Config::get('params.url_upload').$folder.$name_doc;
+            }
 
     }
 ?>

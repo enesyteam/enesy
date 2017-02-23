@@ -95,7 +95,8 @@ class CourseController extends Controller
             $course->introtext        = $data["introtext"];      
             $course->content          = $data["content"];
             $course->love             = 0;
-            $course->picture          = '';
+            $course->picture          = $data["picture"];
+            $course->video            = $data["file"];
             $course->num_of_learn     = 0;
             $course->create_date      = time();
             $course->updated_at       = time();
@@ -144,6 +145,8 @@ class CourseController extends Controller
             $course->mentor_id        = $data['mentor_id'];       
             $course->introtext        = $data["introtext"];      
             $course->content          = $data["content"];
+            $course->picture          = $data["picture"];
+            $course->video            = $data["file"];            
             $course->updated_at       = time();
             $course->save(['timestamps' => false]);
             return Redirect::to('/admin/course');

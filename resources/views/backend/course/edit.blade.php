@@ -4,9 +4,6 @@
     <div class="col-sm-12">
         @section ('table_panel_title','&nbsp;')
         @section ('table_panel_body')
-          <script rel="text/javascript" src="{{ asset('backend/assets/scripts/function.js') }}" ></script>
-          <script rel="text/javascript" src="{{ asset('backend/assets/scripts/ajax_upload_file/fileuploader.js') }}" ></script>
-          <link rel="stylesheet" href="{{ asset('backend/assets/scripts/ajax_upload_file/fileuploader.css') }}" type="text/css" />  
           @include('backend.course.js', array())       
        
            <form role="form" action="{{ URL::to('/admin/course/edit/'.$course->id) }}" method="POST" enctype="multipart/form-data">
@@ -48,12 +45,17 @@
             <div class="form-group">
                     <label class="required">Picture</label>
                           <div id="upload_img"></div>
-                           <input type="hidden" id="picture" name="picture"/>   
+                           <input type="hidden" id="picture" name="picture" value="<?php echo $course->picture;?>"/>   
                            <input type="hidden" id="path_small" name="path_small"/>  
                            <input type="hidden" id="path_mini" name="path_mini"/>  
                            <input type="hidden" id="folder_path" name="folder_path"/>   
                                        
-                           <div id="view_img" name="view_img"></div>
+                           <div id="view_img" name="view_img">
+                             <?php if(!empty($course->picture)){?>
+                               <img  src="<?php echo Helper::getDocs($course->picture);?>"/>
+                            <?php }?>
+
+                           </div>
                            <div id="frm_crop_img" style="display: none;">
                                             <img id="cropbox" src=""  />
                                             <input id="x_ads" type="hidden" name="x_ads" value="">
@@ -70,10 +72,18 @@
                   <div class="form-group">
                     <label class="required">Video intro</label>
                         <div id="upload_video"></div>
-                        <input type="hidden" id="file"/>
+                        <input type="hidden" id="file" name="file" value="<?php echo $course->video; ?>" />
                         <input type="hidden" id="file_size"/>
                         <input type="hidden" id="file_type"/>
-                        <table id="view_video" name="view_video" width="100%" border="0" cellspacing="0" cellpadding="0" class="form1 magt20"></table>        
+                        <table id="view_video" name="view_video" width="100%" border="0" cellspacing="0" cellpadding="0" class="form1 magt20">
+                          <?php if(!empty($course->video)){?>
+                               <video controls="" width="640" height="480" >
+                                 <source src="<?php echo Helper::getDocs($course->video);?>" type="video/mp4">
+                               </video>
+                               
+                            <?php }?>
+
+                        </table>        
                   </div>
 
 

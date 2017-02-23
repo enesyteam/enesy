@@ -1,7 +1,16 @@
+  <?php $last_vesion = 1.0; ?>
+
+  <script rel="text/javascript" src="{{ asset('backend/assets/scripts/ajax_upload_file/fileuploader.js') }}?v=<?php echo $last_vesion; ?>" ></script>
+  <link rel="stylesheet" href="{{ asset('backend/assets/scripts/ajax_upload_file/fileuploader.css') }}?v=<?php echo $last_vesion; ?>" type="text/css" /> 
+
+  <script rel="text/javascript" src="{{ asset('backend/assets/scripts/Jcrop/jquery.Jcrop.min.js') }}?v=<?php echo $last_vesion; ?>" ></script>
+  <link rel="stylesheet" href="{{ asset('backend/assets/scripts/Jcrop/jquery.Jcrop.css') }}?v=<?php echo $last_vesion; ?>" type="text/css" />
+
+  <script rel="text/javascript" src="{{ asset('backend/assets/scripts/colorbox/jquery.colorbox-min.js') }}?v=<?php echo $last_vesion; ?>" ></script>
+  <link rel="stylesheet" href="{{ asset('backend/assets/scripts/colorbox/colorbox.css') }}?v=<?php echo $last_vesion; ?>" type="text/css" />
+
+
 <script>
-    $(document).ready(function(){ 
-            uploadImg();           
-    });
     var i = 0;
     function uploadImg(){
         var uploader_img = new qq.FileUploader({
@@ -20,7 +29,7 @@
                     $("#path_mini").val(responseJSON.path_mini);                       
                     $("#folder_path").val(responseJSON.folder_path);
                     
-                    $( "#view_img").html('<img src="<?php echo Config::get('params.url_upload');?> '+responseJSON.full_path+'">');
+                    $( "#view_img").html('<img src="<?php echo Config::get('params.url_upload');?>'+responseJSON.full_path+'">');
                     var is_cut = responseJSON.is_cut; 
                     var is_cut = 1;
                     $('img#cropbox').attr("src",'<?php echo Config::get('params.url_upload');?>'+responseJSON.full_path);  
@@ -66,7 +75,7 @@
             failUploadText: 'Upload thất bại',
             onComplete: function(id, fileName, responseJSON){
                 if(responseJSON.success){        
-                    var file = responseJSON.full_path + ";";
+                    var file      =  responseJSON.full_path;
                     var file_type =  responseJSON.fileType ;
                     var file_size =  responseJSON.fileSize ;
                     $("#file").val(file);
@@ -75,16 +84,17 @@
                     var link_video = ''+responseJSON.full_path;
                     
                    // var html_video = showEmbedCodeNew(400,200,link_embed);
-                    var html_video='';
+
                     var html = '';
-                    html += '<tr>';
-                    html += '<td width="40%"><div>'+html_video+'</div></td>';
-                    html += '<td width="60%"><ul class="form2 bottom20">';        
+                    html += '<tr>';   
+                    html += '<td><ul class="form2 bottom20">';        
+                    html += '<li class="magb5 clearfix"><div class="filltext">';     
+                    html += '<video controls="" width="640" height="480" >';
 
-
-                    html += '<li class="magb5 clearfix"><div class="filltext">';            
-                         
-                    html += '</div></li>';      
+                    html += '<source src="<?php echo Config::get('params.url_upload');?>'+responseJSON.full_path+'" type="video/mp4">';
+                    html += '</video>';          
+               
+                    html += '</li>';      
 
                     html += '</ul></td></tr>'; 
 
@@ -95,8 +105,11 @@
             }
         });           
     }        
-    window.onload = createUploader;  
-    $(function(){      
+    window.onload = createUploader; 
+
+    $( document ).ready(function() {   
+      uploadImg();     
+
      $("#type_video input[name=type]").click(function(){
             if($(this).val()==1){
                 $("#th_author_alias").show();
