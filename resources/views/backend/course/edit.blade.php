@@ -52,9 +52,9 @@
                                        
                            <div id="view_img" name="view_img">
                              <?php if(!empty($course->picture)){?>
-                               <img  src="<?php echo Config::get('params.url_upload').$course->picture;?>"/>
+                               <img  src="<?php echo Helper::getDocs($course->picture);?>"/>
                             <?php }?>
-                             
+
                            </div>
                            <div id="frm_crop_img" style="display: none;">
                                             <img id="cropbox" src=""  />
