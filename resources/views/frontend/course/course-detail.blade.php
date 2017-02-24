@@ -105,11 +105,11 @@ Enesy | Khóa học lập trình AutoCAD với C# trình độ cơ bản
                </a>
                <div class="item-preview__actions">
                   <div id="fullscreen" class="item-preview__preview-buttons">
-                     <a data-view="crossDomainGoogleAnalyticsLink" href="#" role="button" class="btn-icon live-preview" target="_blank" rel="nofollow">1,000</a>
-                     <a data-view="crossDomainGoogleAnalyticsLink" href="#" role="button" class="btn-icon like" target="_blank" rel="nofollow">2,000</a>
+                     <a data-view="crossDomainGoogleAnalyticsLink" role="button" class="btn-icon live-preview" target="_blank" rel="nofollow">{{$course_detail->num_of_learn}}</a>
+                     <a data-view="crossDomainGoogleAnalyticsLink" href="#" role="button" class="btn-icon like" target="_blank" rel="nofollow">{{$course_detail->love}}</a>
                      <a target="_blank" href="{{route('course.share')}}" rel="modal:open" role="button" class="btn-icon share" target="_blank">Chia sẻ</a>
                      <a data-view="crossDomainGoogleAnalyticsLink" href="#" role="button" class="btn-icon list" target="_blank" rel="nofollow">85</a>
-                     <a data-view="crossDomainGoogleAnalyticsLink" href="#" role="button" class="btn-icon time" target="_blank" rel="nofollow">50h</a>
+                     <a data-view="crossDomainGoogleAnalyticsLink" href="#" role="button" class="btn-icon time" target="_blank" rel="nofollow">{{$course_detail->time_learn}}h</a>
                   </div>
                </div>
             </div>

@@ -10,9 +10,9 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 
-class CourseBenefit extends Model
+class CourseHit extends Model
 {
-    protected $table = "tbl_course_benefit";
+    protected $table = "tbl_course_hit";
 
     public $timestamps = false;
       

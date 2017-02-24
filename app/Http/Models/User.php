@@ -2,8 +2,8 @@
 namespace App\Http\Models;
 /**
  * Created by PhpStorm.
- * User: Dungtd
- * Date: 7/1/2016
+ * User: ducnv
+ * Date: 7/1/2017
  * Time: 10:36 AM
  */
 use Illuminate\Database\Eloquent\Model;

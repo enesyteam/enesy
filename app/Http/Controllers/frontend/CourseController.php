@@ -5,6 +5,9 @@ namespace App\Http\Controllers\frontend;
 use Illuminate\Http\Request;
 use App\Http\Models\Course;
 use App\Http\Models\Category;
+use App\Http\Models\CourseBenefit;
+use App\Http\Models\CourseRequirement;
+use App\Http\Models\CourseHit;
 use DB;
 use View;
 
@@ -21,11 +24,23 @@ class CourseController extends Controller
          if($course_detail->cat_id!=$course_detail->parent_cat_id){
             $parent_cat = Category::where('id',$course_detail->parent_cat_id)->where('status',1)->first(); 
          }
+         $course_benefit     = CourseBenefit::where('course_id',$id)->get();
+         $course_requirement = CourseRequirement::where('course_id',$id)->get();
+         $course_hit         = CourseHit::where('course_id',$id)->first();
+
+         $data = array();
+         $data['course_detail']      = $course_detail;
+         $data['cat']                = $cat;
+         $data['parent_cat']         = $parent_cat;
+         $data['course_benefit']     = $course_benefit;
+         $data['course_requirement'] = $course_requirement;
+         $data['course_hit']         = $course_hit;
+
           // seo
           View::share ( 'meta_title',$course_detail->title );
           View::share ( 'meta_des',$course_detail->introtext );
           // end seo
-    	  return view('frontend.course.course-detail',['course_detail'=>$course_detail, 'cat'=>$cat, 'parent_cat'=>$parent_cat]);
+    	  return view('frontend.course.course-detail',$data);
         } else {
             return redirect()->route('error');
         }
