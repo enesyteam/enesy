@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\frontend;
 
-use Illuminate\Http\Request;
+use Request;
 use App\Http\Models\User;
 use App\Http\Models\Course;
 use App\Http\Models\Category;
@@ -69,7 +69,7 @@ class UserController extends Controller
         return view('frontend.register');
     }
 
-    public function doRegister( Request $request )
+    public function doRegister()
     {
         $data_return = [];
 
@@ -202,7 +202,7 @@ class UserController extends Controller
     public function author_courses(){
         return view('frontend.author.courses');
     }
-    public function author_courses_create(Request $request){
+    public function author_courses_create(){
         /*get status course*/
         $arrStatus = Config('params.course_status');
         /*get list category*/
@@ -217,8 +217,8 @@ class UserController extends Controller
             }
             
         }
-        if($request->isMethod('post')) {
-            $requestData = $request->all();
+        if(Request::isMethod('post')) {
+            $requestData = Request::all();
 
         }
         return view('frontend.author.courses-create', ['arrStatus'=>$arrStatus,'listCat'=>$listCat]);
