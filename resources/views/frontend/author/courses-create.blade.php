@@ -210,7 +210,9 @@
                             <label class="col-lg-3 control-label">Video bài học</label>
                             <div class="col-lg-9">
                                 <div class="inputs">
-                                  <input type="file" class="" name="" id="" vk_1c399="subscribed">
+                                  <div id="upload_lesson"></div>
+                                  <table id="view_lesson" name="view_video" width="100%" border="0" cellspacing="0" cellpadding="0" class="form1 magt20">
+                                  </table>
                                 </div>
                                 <small class="help-block">JPEG 150x80px</small>
                             </div>
