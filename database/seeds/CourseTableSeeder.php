@@ -3,9 +3,9 @@
 use Illuminate\Database\Seeder;
 use Illuminate\Database\Eloquent\Model;
 use App\Http\Models\Course;
-use App\Http\Models\Member;
-use App\Http\Models\Category;
-use App\Http\Models\User;
+use App\Http\Models\CourseHit;
+use App\Http\Models\CourseBenefit;
+use App\Http\Models\CourseRequirement;
 
 class CourseTableSeeder extends Seeder
 {
@@ -19,8 +19,9 @@ class CourseTableSeeder extends Seeder
        	$faker = Faker\Factory::create();
         
 		//create 1000 courses
-		for($i=0; $i<1000; ++$i){
+		for($i=0; $i<300; ++$i){
 			Course::create([
+					'id'			=>	$i+1,
 					'title'			=>	$faker->sentence,
 					'introtext'		=>	implode('',$faker->sentences(8)),
 					'content'		=>	implode('',$faker->sentences(30)),
@@ -36,6 +37,24 @@ class CourseTableSeeder extends Seeder
 					'updated_at'	=>	time(),
 					'status'			=>	1
 				]);
+			CourseHit::create([
+					'course_id'		=>	$i+1,
+					'view'		    =>	rand ( 1, 1003 ),
+					'create_date'	=>	time(),
+					'updated_at'	=>	time()
+				]);	
+			CourseBenefit::create([
+					'course_id'		=>	$i+1,
+					'title'		    =>	"lợi ích ".rand ( 1, 1003 ),
+					'create_date'	=>	time(),
+					'updated_at'	=>	time()
+				]);	
+			CourseRequirement::create([
+					'course_id'		=>	$i+1,
+					'title'		    =>	'Yêu cầu'.rand ( 1, 1003 ),
+					'create_date'	=>	time(),
+					'updated_at'	=>	time()
+				]);											
 		}
     }
 }
