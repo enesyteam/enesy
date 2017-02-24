@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTblLesson extends Migration
+class CreateTblSection extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateTblLesson extends Migration
      */
     public function up()
     {
-          Schema::create('tbl_lesson', function (Blueprint $table) {
+          Schema::create('tbl_section', function (Blueprint $table) {
                     $table->engine = 'InnoDB';
                     $table->charset = 'utf8';
                     $table->collation = 'utf8_unicode_ci';
@@ -35,6 +35,6 @@ class CreateTblLesson extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tbl_lesson');
+        Schema::dropIfExists('tbl_section');
     }
 }

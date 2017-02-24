@@ -9,7 +9,7 @@ use App\Http\Models\Member;
 use Illuminate\Support\Facades\View;
 use App\Http\Models\Course;
 use App\Http\Models\Lesson;
-use App\Http\Models\LessonDoc;
+use App\Http\Models\Section;
 use Illuminate\Support\Facades\Redirect;
 use DB;
 use Cache;
@@ -195,7 +195,7 @@ class CourseController extends Controller
 
         $course                 = Course::find($cId);
 
-        $query = DB::table('tbl_lesson')
+        $query = DB::table('tbl_section')
         ->orderBy('id', 'desc')
         ->select('id','title','cat_id','create_date')
         ->where('course_id', '=', $cId);
@@ -264,7 +264,7 @@ class CourseController extends Controller
                                       
                    $data_insert[] = array('title' =>'','path' =>$value,'file_type' =>$file_type[$key],"file_size"=>$file_size[$key],"cat_id"=>$lesson->cat_id ,"course_id"=>$lesson->course_id,'lesson_id'=>$lesson->id,'create_date'=>time(),'updated_at'=>time() ); 
                 }
-                DB::table('tbl_lesson_doc')->insert($data_insert); // Query Builder
+                DB::table('tbl_lesson')->insert($data_insert); // Query Builder
 
             }
             return Redirect::to('/admin/course/list-lesson/'.$cId);
@@ -281,10 +281,10 @@ class CourseController extends Controller
         $category     = new Category;
         $all_category = $category->getCategories(); 
         $data['all_category'] = $all_category;
-        $lesson        = Lesson::find($id);
+        $lesson        = Section::find($id);
         $data['lesson'] = $lesson;        
 
-        $list_data_doc = DB::table('tbl_lesson_doc')     
+        $list_data_doc = DB::table('tbl_lesson')     
         ->select('id','cat_id','course_id','lesson_id','title','path','file_type','file_size')
         ->orderBy('id', 'desc')
         ->where([
@@ -331,8 +331,8 @@ class CourseController extends Controller
                                       
                    $data_insert[] = array('title' =>'','path' =>$value,'file_type' =>$file_type[$key],"file_size"=>$file_size[$key],"cat_id"=>$lesson->cat_id ,"course_id"=>$lesson->course_id,'lesson_id'=>$lesson->id,'create_date'=>time(),'updated_at'=>time() ); 
                 }
-                LessonDoc::where('lesson_id', '=',$lesson->id )->delete();
-                DB::table('tbl_lesson_doc')->insert($data_insert); // Query Builder
+                Lesson::where('lesson_id', '=',$lesson->id )->delete();
+                DB::table('tbl_lesson')->insert($data_insert); // Query Builder
 
             }          
             
@@ -346,7 +346,7 @@ class CourseController extends Controller
     function deleteLessonById() {
         $id = $_GET['id'];
         if (isset($id)) {
-            $course = Lesson::find($id);
+            $course = Section::find($id);
             if ($course != null) {
                $course->delete();
             }
@@ -356,7 +356,7 @@ class CourseController extends Controller
     function deleteAllLesson() {
         foreach ($_GET['data'] as $value) {
             if (isset($value)) {
-                $e = Lesson::find($value);
+                $e = Section::find($value);
                 if ($e != null) {
                     $e->delete();
                 }

@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTblLessonDoc extends Migration
+class CreateTblLesson extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateTblLessonDoc extends Migration
      */
     public function up()
     {
-          Schema::create('tbl_lesson_doc', function (Blueprint $table) {
+          Schema::create('tbl_lesson', function (Blueprint $table) {
                     $table->engine = 'InnoDB';
                     $table->charset = 'utf8';
                     $table->collation = 'utf8_unicode_ci';
@@ -23,6 +23,7 @@ class CreateTblLessonDoc extends Migration
                     $table->integer('course_id')->nullable();
                     $table->integer('lesson_id')->nullable();
                     $table->string('title', 255)->nullable();
+                    $table->string('introtext', 500)->nullable();
                     $table->string('path', 255)->nullable();
                     $table->string('file_type', 255)->nullable();
                     $table->string('file_size', 255)->nullable();
@@ -39,6 +40,6 @@ class CreateTblLessonDoc extends Migration
      */
     public function down()
     {
-         Schema::dropIfExists('tbl_lesson_doc');
+         Schema::dropIfExists('tbl_lesson');
     }
 }
