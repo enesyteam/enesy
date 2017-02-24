@@ -25,6 +25,7 @@ class CreateTblLesson extends Migration
                     $table->integer('section_id')->nullable();
                     $table->string('title', 255)->nullable();
                     $table->string('introtext', 500)->nullable();
+                    $table->string('duration', 50)->nullable();
                     $table->string('path', 255)->nullable();
                     $table->string('file_type', 255)->nullable();
                     $table->string('file_size', 255)->nullable();

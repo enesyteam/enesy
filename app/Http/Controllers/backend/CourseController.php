@@ -265,6 +265,7 @@ class CourseController extends Controller
             $file_path          = isset($data["file_path"])    ? $data["file_path"]: array();
             $file_type          = isset($data["file_type"])    ? $data["file_type"]: array();
             $file_size          = isset($data["file_size"])    ? $data["file_size"]: array();
+            $duration           = isset($data["duration"])    ? $data["duration"]: array();
 
             if($file_path){
                 $data_insert = array();
@@ -275,6 +276,7 @@ class CourseController extends Controller
                                         ,'path' =>$value
                                         ,'file_type' =>$file_type[$key]
                                         ,"file_size"=>$file_size[$key]
+                                        ,"duration"=>$duration[$key]
                                         ,"cat_id"=>$section->cat_id 
                                         ,"course_id"=>$section->course_id
                                         ,'section_id'=>$section->id
@@ -340,6 +342,7 @@ class CourseController extends Controller
             $file_path          = isset($data["file_path"])    ? $data["file_path"]: array();
             $file_type          = isset($data["file_type"])    ? $data["file_type"]: array();
             $file_size          = isset($data["file_size"])    ? $data["file_size"]: array();
+            $duration           = isset($data["duration"])    ? $data["duration"]: array();
 
             if($file_path){
                 $data_insert = array();
@@ -350,6 +353,7 @@ class CourseController extends Controller
                                         ,'path' =>$value
                                         ,'file_type' =>$file_type[$key]
                                         ,"file_size"=>$file_size[$key]
+                                        ,"duration"=>$duration[$key]
                                         ,"cat_id"=>$section->cat_id 
                                         ,"course_id"=>$section->course_id
                                         ,'section_id'=>$section->id

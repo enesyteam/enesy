@@ -59,6 +59,7 @@
                               <td>        
                               <div class="filltext">            
                               <div class="form-group"><input placeholder="Tiêu đề bài học" type="text" name="file_title[]"  value="<?php echo $doc->title; ?>" class="form-control"></div>  
+                              <div class="form-group"><input placeholder="Thời gian học (số phút)" type="text" name="duration[]"  value="<?php echo $doc->title; ?>" class="form-control"></div>  
                               <textarea placeholder="Miêu tả bài học"  name="file_introtext[]"  class="form-control"><?php echo $doc->introtext; ?></textarea> 
                               <input type="hidden" name="file_path[]"  value="<?php echo $doc->path; ?>" >  
                               <input type="hidden" name="file_type[]"  value="<?php echo $doc->file_type; ?>" > 

@@ -48,6 +48,7 @@
                           html += '<td>';        
                           html += '<div class="filltext">';            
                           html += '<div class="form-group"><input placeholder="Tiêu đề bài học" type="text" name="file_title[]"  value="" class="form-control"></div>';  
+                          html += '<div class="form-group"><input placeholder="Thời gian học (số phút)" type="text" name="duration[]"  value="" class="form-control"></div>';                           
                           html += '<textarea placeholder="Miêu tả bài học"  name="file_introtext[]" class="form-control"></textarea>'; 
                           html += '<input type="hidden" name="file_path[]"  value="'+file_path+'" >';   
                           html += '<input type="hidden" name="file_type[]"  value="'+file_type+'" >';  
