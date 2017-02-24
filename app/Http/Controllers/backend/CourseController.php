@@ -230,20 +230,33 @@ class CourseController extends Controller
     function createLesson($cId,Request $request) {
         $data = array();
         $category               = new Category;
-        $all_category           = $category->getCategories(); 
+        /*get list category*/
+        $all_category = Category::where('status', 1)->orderBy('parent_id','ASC')->orderBy('id','DESC')->get(); 
+        $listCat = array();
+        foreach ($all_category as $cat) {
+            if($cat->parent_id == 0) {
+                $listCat[$cat->id]["title"] = $cat->title;
+                $listCat[$cat->id]['data'] = array();
+            } else {
+                $listCat[$cat->parent_id]['data'][] = $cat;
+            }
+            
+        }
+        $data['listCat']        = $listCat;
         $data['all_category']   = $all_category;
         $course                 = Course::find($cId);
-
         $data['course'] = $course;         
 
         if($request->isMethod('post')){
-            $data                 = $request->all();
+            $data                  = $request->all();
+            $cat                   = explode("-",$data['category']);
             $section               = new Section(); 
             $section->title        = $data["title"];      
-            $section->cat_id       = $data["category"];
-            $section->course_id      = $cId;
+            $section->parent_cat_id    = $cat[0];  
+            $section->cat_id           = $cat[1];
+            $section->course_id    = $cId;
             $section->create_date  = time();
-            $section->updated_at  = time();
+            $section->updated_at   = time();
             $section->save(['timestamps' => false]);
 
             
@@ -276,10 +289,22 @@ class CourseController extends Controller
     function editLesson($id,Request $request) {
         $data = array();
         $category     = new Category;
-        $all_category = $category->getCategories(); 
+         /*get list category*/
+        $all_category = Category::where('status', 1)->orderBy('parent_id','ASC')->orderBy('id','DESC')->get(); 
+        $listCat      = array();
+        foreach ($all_category as $cat) {
+            if($cat->parent_id == 0) {
+                $listCat[$cat->id]["title"] = $cat->title;
+                $listCat[$cat->id]['data'] = array();
+            } else {
+                $listCat[$cat->parent_id]['data'][] = $cat;
+            }
+            
+        }
         $data['all_category'] = $all_category;
-        $section        = Section::find($id);
-        $data['section'] = $section;        
+        $data['listCat']      = $listCat;
+        $section              = Section::find($id);
+        $data['section']      = $section;        
 
         $list_data_doc = DB::table('tbl_lesson')     
         ->select('id','cat_id','course_id','section_id','title','path','file_type','file_size')
@@ -308,10 +333,12 @@ class CourseController extends Controller
         $data["file_type_"] = $file_type_;
         
         if($request->isMethod('post')){
-            $data                      = $request->all();
+            $data                = $request->all();
+            $cat                 = explode("-",$data['category']);
             $section->id         = $data["id"];   
             $section->title      = $data["title"];      
-            $section->cat_id     = $data["category"];
+            $section->parent_cat_id    = $cat[0];  
+            $section->cat_id           = $cat[1];
             $section->save(['timestamps' => false]);
 
             $file_str           = isset($data["file"]) ? $data["file"]: array();
@@ -333,7 +360,7 @@ class CourseController extends Controller
 
             }          
             
-             return Redirect::to('/admin/course/list-lesson/'.$lesson["course_id"]);
+             return Redirect::to('/admin/course/list-lesson/'.$section["course_id"]);
        }
 
         $this->layout->meta_title='Edit Section'; 
