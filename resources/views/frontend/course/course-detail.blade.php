@@ -125,20 +125,26 @@ Enesy | Khóa học lập trình AutoCAD với C# trình độ cơ bản
                 Các yêu cầu của khóa học
                </h4>
                <ul class="regular-list">
+               <?php 
+                 foreach ($course_requirement as $key => $value) {  
+               ?>
                 
-                    <li>Máy tính có cài đặt phần mềm AutoCAD</li>
+                    <li>{{$value->title}}</li>
                 
-                    <li>Your Imagination!</li>
+                <?php }?>
                 
                </ul>
                <h4 class="tab-title">
                 Lợi ích từ khóa học
                </h4>
                <ul class="regular-list">
+               <?php 
+                 foreach ($course_benefit as $key => $value) {  
+               ?>
                 
-                    <li>Sử dụng AutoCAD ở cấp độ chuyên gia</li>
+                    <li>{{$value->title}}</li>
                 
-                    <li>Your Imagination!</li>
+                <?php }?>
                 
                </ul>
                   <div id="curriculum" class="top-space-for-scroll clearfix" data-purpose="course-curriculum">
@@ -565,11 +571,8 @@ Enesy | Khóa học lập trình AutoCAD với C# trình độ cơ bản
             <div class="purchase-panel">
                <div id="purchase-form" class="purchase-form">
                   <form action="" accept-charset="UTF-8" method="post">
-                     <input name="utf8" type="hidden" value="✓"><input type="hidden" name="authenticity_token" value="">
                      <div itemprop="offers" itemscope="" itemtype="">
-                        <meta itemprop="price" content="20.00">
-                        <meta itemprop="priceCurrency" content="USD">
-                        <meta itemprop="availability" content="instock">
+ 
                         <div data-view="itemVariantSelector">
                            <div class="purchase-form__selection">
                               <span class="purchase-form__license-type">
@@ -578,53 +581,21 @@ Enesy | Khóa học lập trình AutoCAD với C# trình độ cơ bản
                               </span>
                               </span>
                               <div class="js-purchase-heading purchase-form__price t-heading -size-xxl">
-                                 <b class="t-currency"><span class="js-purchase-price">k699</span></b>
+                                 <b class="t-currency"><span class="js-purchase-price">k{{$course_detail->price}}</span></b>
                               </div>
                            </div>
-                           <div class="purchase-form__license js-purchase-license is-active" data-license="regular">
-                              <input type="hidden" name="size_regular" id="size_regular" value="source" class="js-purchase-hidden-license is-active" data-size="source" data-price-prepaid="$20" data-license="regular" data-price-prepaid-upgrade="$26" data-support-upgrade-price="$6" data-support-upgrade-saving="$8" data-support-extension-price="$10" data-support-extension-saving="$4">
-                           </div>
-                           <div class="purchase-form__license js-purchase-license" data-license="extended">
-                              <input type="hidden" name="size_extended" id="size_extended" value="source" class="js-purchase-hidden-license" data-size="source" data-price-prepaid="$800" data-license="extended" data-price-prepaid-upgrade="$1025" data-support-upgrade-price="$225" data-support-upgrade-saving="$300" data-support-extension-price="$375" data-support-extension-saving="$150">
-                           </div>
+                           
+                           
                            <div class="purchase-form__support">
                               <ul class="t-icon-list -font-size-s -icon-size-s -offset-flush">
-                                 <li class="t-icon-list__item -icon-ok">
-                                    <span class="is-visually-hidden">Included:</span>
-                                    Học lập trình từ dự án thực tế
-                                 </li>
-                                 <li class="t-icon-list__item -icon-ok">
-                                    <span class="is-visually-hidden">Included:</span>
-                                    Tự viết các ứng dụng cơ bản
-                                 </li>
-                                 <li class="t-icon-list__item -icon-ok">
-                                    <span class="is-visually-hidden">Included:</span>
-                                    Học các thủ thuật AutoCAD nâng cao
-                                 </li>
-                                 <li class="t-icon-list__item -icon-ok">
-                                    <span class="is-visually-hidden">Included:</span>
-                                    Ứng dụng 
-                                 </li>
-                                 <li class="t-icon-list__item -icon-ok">
-                                    <span class="is-visually-hidden">Included:</span>
-                                    Hỗ trợ ....
-                                 </li>
-                                 <li class="t-icon-list__item -icon-ok">
-                                    <span class="is-visually-hidden">Included:</span>
-                                    Hỗ trợ ....
-                                 </li>
-                                 <li class="t-icon-list__item -icon-ok">
-                                    <span class="is-visually-hidden">Included:</span>
-                                    Hỗ trợ ....
-                                 </li>
-                                 <li class="t-icon-list__item -icon-ok">
-                                    <span class="is-visually-hidden">Included:</span>
-                                    Hỗ trợ ....
-                                 </li>
-                                 <li class="t-icon-list__item -icon-ok">
-                                    <span class="is-visually-hidden">Included:</span>
-                                    Hỗ trợ ....
-                                 </li>
+                                 <?php 
+                                   foreach ($course_benefit as $key => $value) {  
+                                 ?>
+                                      <li class="t-icon-list__item -icon-ok">{{$value->title}}</li>
+                                  
+                                  <?php }?>
+                                 
+                                 
                               </ul>
                            </div>
                         </div>

@@ -27,6 +27,7 @@ class CourseTableSeeder extends Seeder
 					'content'		=>	implode('',$faker->sentences(30)),
 					'cat_id'		=>	rand ( 1000 , 1003 ),
 					'parent_cat_id'	=>	rand ( 1000 , 1003 ),
+					'price'	=>	rand ( 10 , 1003 ),
 					'mentor_id'		=>	rand ( 1 , 3 ),
 					'picture'		=>	'',
 					'video'		    =>	'/default/course-preview.mp4',
@@ -43,18 +44,21 @@ class CourseTableSeeder extends Seeder
 					'create_date'	=>	time(),
 					'updated_at'	=>	time()
 				]);	
-			CourseBenefit::create([
-					'course_id'		=>	$i+1,
-					'title'		    =>	"lợi ích ".rand ( 1, 1003 ),
-					'create_date'	=>	time(),
-					'updated_at'	=>	time()
-				]);	
-			CourseRequirement::create([
-					'course_id'		=>	$i+1,
-					'title'		    =>	'Yêu cầu'.rand ( 1, 1003 ),
-					'create_date'	=>	time(),
-					'updated_at'	=>	time()
-				]);											
+			$y_max = rand ( 2 , 8 );
+			for($y=0; $y<$y_max; ++$y){
+					CourseBenefit::create([
+							'course_id'		=>	$i+1,
+							'title'		    =>	"Lợi ích ".rand ( 1, 1003 ),
+							'create_date'	=>	time(),
+							'updated_at'	=>	time()
+						]);	
+					CourseRequirement::create([
+							'course_id'		=>	$i+1,
+							'title'		    =>	'Yêu cầu'.rand ( 1, 1003 ),
+							'create_date'	=>	time(),
+							'updated_at'	=>	time()
+						]);	
+				}										
 		}
     }
 }
