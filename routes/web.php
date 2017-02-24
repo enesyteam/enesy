@@ -235,10 +235,16 @@ Route::group(array('namespace' => 'frontend'), function () {
 		]);
 
 
-	Route::get('giang-vien/tai-khoan',[
+	Route::get('lecturers/account',[
 		'as'	=>	'user.author_account',
 		'uses'	=>	'UserController@author_account'
 		]);
+
+	Route::post('lecturers/doChangePass',[
+		'as'	=>	'user.author_account_post',
+		'uses'	=>	'UserController@doChangePass'
+		]);
+
 	Route::get('giang-vien/tai-khoan/email',[
 		'as'	=>	'user.author_email',
 		'uses'	=>	'UserController@author_email'
