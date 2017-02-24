@@ -108,8 +108,15 @@
     window.onload = createUploader; 
 
     $( document ).ready(function() {   
+      
       uploadImg();     
-
+      $("#btn_benefit").click(function(){
+            
+        });  
+       $("#btn_requirement").click(function(){
+            
+        }); 
+     
      $("#type_video input[name=type]").click(function(){
             if($(this).val()==1){
                 $("#th_author_alias").show();
@@ -157,7 +164,7 @@
         });       
     });  
         
-     function closeCutImage(){
+    function closeCutImage(){
         $.colorbox.close(); 
         $('#frm_crop_img').hide();
         $('#cropbox').hide();         

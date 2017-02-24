@@ -86,11 +86,23 @@
       </div>
 
       <div class="form-group">
-        <label class="required">Content</label>
+        <label class="required">Nội dung khóa học</label>
         <textarea class="form-control" name="content"  id="content"  data-bind="value:content"></textarea>
         <div class="form-group has-error">
           <label lass="control-label" for="inputError" style="color:red;" >{{ $errors->first('content') }}</label>
         </div>              
+      </div>
+      <div class="form-group">
+        <label class="required">Lợi ích từ khóa học </label>
+        <div id="benefit"></div>
+        <button id="btn_benefit">Thêm lợi ích</button>
+                     
+      </div>
+      <div class="form-group">
+        <label class="required">Các yêu cầu của khóa học</label>
+        <div id="requirement"></div>
+        <button id="btn_requirement">Thêm yêu cầu</button>
+                     
       </div>
 
 
