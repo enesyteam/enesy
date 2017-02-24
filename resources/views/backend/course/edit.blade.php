@@ -101,7 +101,31 @@
                 <div class="form-group has-error">
                     <label lass="control-label" for="inputError" style="color:red;" >{{ $errors->first('content') }}</label>
                 </div>              
-             </div>            
+             </div>  
+
+              <div class="form-group">
+                <label class="required">Lợi ích từ khóa học </label>
+                <div id="benefit">
+                  @foreach($list_benefit as $key=>$benefit) 
+                    <div class="form-group"><input placeholder="Lợi ích" type="text" name="benefit[]"  value="{{$benefit->title}}" class="form-control"></div>
+                   @endforeach  
+
+                </div>
+                <button id="btn_benefit" type="button">Thêm lợi ích</button>
+                             
+              </div>
+              <div class="form-group">
+                <label class="required">Các yêu cầu của khóa học</label>
+                <div id="requirement">
+                  @foreach($list_requirement as $key=>$requirement) 
+                    <div class="form-group"><input placeholder="Yêu cầu" type="text" name="requirement[]"  value="{{$requirement->title}}" class="form-control"></div>
+                   @endforeach 
+
+                </div>
+                <button id="btn_requirement" type="button">Thêm yêu cầu</button>
+                             
+              </div>
+
              
             <div class="form-group">
               <input type="submit" name="" value="Update" class="btn btn-primary     ">

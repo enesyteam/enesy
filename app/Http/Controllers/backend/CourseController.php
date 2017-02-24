@@ -156,6 +156,9 @@ class CourseController extends Controller
             }
             
         }
+
+         
+
         /*get list teacher*/
         $listTeacher = Member::select('id','last_name','first_name','middle_name')
                         ->where('status',1)
@@ -166,7 +169,31 @@ class CourseController extends Controller
         if(!$course){
             echo "Not found Record!!";
             exit();
-        }        
+        }  
+
+        $list_benefit = DB::table('tbl_course_benefit')     
+        ->select('*')
+        ->orderBy('id', 'asc')
+        ->where([
+                ['course_id', '=', $id]
+           ])
+        ->get();
+
+        $data['list_benefit'] = $list_benefit;
+
+        $list_requirement = DB::table('tbl_course_requirement')     
+        ->select('*')
+        ->orderBy('id', 'asc')
+        ->where([
+                ['course_id', '=', $id]
+           ])
+        ->get();
+
+        $data['list_requirement'] = $list_requirement;    
+
+        $data['listCat']          = $listCat;  
+        $data['listTeacher']      = $listTeacher;   
+        $data['course']           = $course;            
 
         if($request->isMethod('post')){
             $data                     = $request->all();
@@ -182,6 +209,10 @@ class CourseController extends Controller
             $course->video            = $data["file"];            
             $course->updated_at       = time();
             $course->save(['timestamps' => false]);
+
+
+            $benefit            = isset($data["benefit"])     ? $data["benefit"]: array();
+            $requirement        = isset($data["requirement"]) ? $data["requirement"]: array();            
 
             if($benefit){
                 $data_insert = array();
@@ -212,7 +243,7 @@ class CourseController extends Controller
             return Redirect::to('/admin/course');
        }
         $this->layout->meta_title='Edit Course';
-        $this->layout->content = View::make('backend.course.edit',['listCat'=>$listCat,'listTeacher'=>$listTeacher,'course'=>$course]);
+        $this->layout->content = View::make('backend.course.edit',$data);
     }   
 
     function deleteById() {
@@ -386,7 +417,6 @@ class CourseController extends Controller
 
         $data['list_data_doc'] = $list_data_doc;
 
-  
         
         if($request->isMethod('post')){
             $data                = $request->all();
