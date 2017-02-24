@@ -115,6 +115,9 @@ Route::group(array('namespace' => 'backend', 'prefix' => 'admin', 'middleware' =
 
 
 Route::group(array('namespace' => 'frontend'), function () {
+
+    Route::get('refresh/captcha' , 'UserController@refreshCaptcha');
+
 	Route::get('/', [
 		'as'	=>	'home',
 		'uses'	=>	'PagesController@index'

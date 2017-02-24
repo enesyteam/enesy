@@ -152,7 +152,7 @@
                                             <p class="error_message"
                                                style="float: right">{{$errors->first('captcha')}}</p>
                                         </div>
-                                        <div class="e-form__hint">Click vào ảnh để lấy captcha khác nếu nhìn không rõ.(Đợi 5s mới hiện ra)</div>
+                                        <div class="e-form__hint error_message">Click vào ảnh để lấy captcha khác nếu nhìn không rõ.(Đợi 5s mới hiện ra)</div>
                                     </div>
                                 </div>
 
