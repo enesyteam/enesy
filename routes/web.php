@@ -252,10 +252,10 @@ Route::group(array('namespace' => 'frontend'), function () {
 		'uses'	=>	'UserController@author_notifications'
 		]);
 	// cong test
-	Route::get('giang-vien/course/add/section',[
+	Route::get('giang-vien/course/add/section/{s}',[
 		'as'	=>	'author.add_section',
-		function() {
-    	return  View::make('frontend.course.create.section')->render();
+		function($s) {
+    	return  View::make('frontend.course.create.section',['s'=>$s])->render();
 		}]);
 	// /cong test
 

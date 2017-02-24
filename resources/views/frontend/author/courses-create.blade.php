@@ -1,4 +1,5 @@
-  @extends('frontend.author.master.author-master') @section('head.js') <!-- Core JS files -->
+  @extends('frontend.author.master.author-master') @section('head.js') 
+  <!-- Core JS files -->
    
   <script src="{{asset('frontend/user/assets/js/plugins/loaders/pace.min.js')}}" type="text/javascript">
   </script> 
@@ -15,6 +16,7 @@
   </script> 
 
 <script type="text/javascript" src="{{asset('frontend/user/assets/js/pages/components_popups.js')}}"></script>
+@include('frontend.author.js-upload', array())
   <!-- /theme JS files -->
   @stop @section('author-body.content') <!-- Content area -->
   <!--Messages-->
@@ -45,19 +47,19 @@
                 <div class="col-lg-9">
                 <div class="col-lg-4">
                   <label class="radio-inline" data-popup="tooltip" title="" data-placement="bottom" data-original-title="Tạo và xuất bản khóa học.">
-                      <input type="radio" name="radio-unstyled-inline-left" checked="checked">
+                      <input type="radio" name="course[status]" value="{{$arrStatus['PUBLIC']}}" checked="checked">
                       Xuất bản
                   </label>
                   </div>
                   <div class="col-lg-4">
                   <label class="radio-inline" data-popup="tooltip" title="" data-placement="bottom" data-original-title="Khóa học của bạn vẫn xuất hiện trên trang chủ nhưng chưa thể bán cho đến khi bạn hoàn thành nó.">
-                      <input type="radio" name="radio-unstyled-inline-left">
+                      <input type="radio" name="course[status]" value="{{$arrStatus['COMMING_SOON']}}">
                       Comming soon
                   </label>
                   </div>
                   <div class="col-lg-4">
                   <label class="radio-inline" data-popup="tooltip" title="" data-placement="bottom" data-original-title="Tạo và lưu lại khóa học dưới dạng bản nháp và bạn có thể hoàn thiện nó sau.">
-                      <input type="radio" name="radio-unstyled-inline-left">
+                      <input type="radio" name="course[status]" value="{{$arrStatus['DRAFT']}}">
                       Bản nháp
                   </label>
                   </div>
@@ -67,26 +69,79 @@
               <div class="form-group">
                 <label class="control-label col-lg-3 cursor-pointer" for="clickable-label">Tiêu đề khóa học</label>
                 <div class="col-lg-9">
-                  <input class="f-input -type-string -width-full" id="clickable-label" placeholder="vd: Khóa học lập trình Laravel 5.0" type="text">
+                  <input class="f-input -type-string -width-full" id="clickable-label" placeholder="vd: Khóa học lập trình Laravel 5.0" type="text" name="course[title]">
                 </div>
               </div><!--/Title-->
-              <!--Description-->
+              <!--Category-->
+              <div class="form-group">
+                <label class="control-label col-lg-3 cursor-pointer" for="clickable-label">Danh mục</label>
+                <div class="col-lg-9">
+                  <select class="f-input -type-string -width-full" name="course[cat]">
+                    <option value="">-- Chọn danh mục --</option>
+                    @foreach($listCat as $id => $cat)        
+                      <option value='{{ $id.'-'.$id }}'>{{ $cat['title'] }}</option>
+                      @foreach($cat['data'] as $item)        
+                        <option value="{{ $id.'-'.$item->id }}">&nbsp;&nbsp;&nbsp;&nbsp;-- {{ $item->title }}</option>
+                      @endforeach
+                    @endforeach
+                  </select>
+                </div>
+              </div><!--/Category-->
+              <!--Introtext-->
               <div class="form-group">
                 <label class="control-label col-lg-3 cursor-pointer" for="clickable-text">Tóm tắt khóa học</label>
                 <div class="col-lg-9">
-                  <textarea class="f-textarea" cols="5" id="clickable-text" placeholder="Default textarea" rows="5"></textarea>
+                  <textarea class="f-textarea" cols="5" id="clickable-text" placeholder="Default textarea" rows="5" name="course[introtext]"></textarea>
+                </div>
+              </div><!--/Introtext-->
+              <!--Description-->
+              <div class="form-group">
+                <label class="control-label col-lg-3 cursor-pointer" for="clickable-text">Nội dung khóa học</label>
+                <div class="col-lg-9">
+                  <textarea class="f-textarea" cols="5" id="clickable-text" placeholder="Default textarea" rows="10" name="course[content]"></textarea>
                 </div>
               </div><!--/Description-->
               <!--Thumb-->
-                  <div class="form-group">
-                    <label class="col-lg-3 control-label">Hình đại diện</label>
-                    <div class="col-lg-9">
-                      <div class="inputs">
-                      <input type="file" class="" name="" id="" vk_1c399="subscribed">
-                    </div>
-                    <small class="help-block">JPEG 150x80px</small>
-                    </div>
-                  </div><!--/Thumb-->
+              <div class="form-group">
+                <label class="col-lg-3 control-label">Hình đại diện</label>
+                <div class="col-lg-9">
+                  <div class="inputs">
+                    <div id="upload_img"></div>
+                    <input type="hidden" id="picture" name="picture"/>   
+                    <input type="hidden" id="path_small" name="path_small"/>  
+                    <input type="hidden" id="path_mini" name="path_mini"/>  
+                    <input type="hidden" id="folder_path" name="folder_path"/>   
+                                
+                    <div id="view_img" name="view_img"></div>
+                    <div id="frm_crop_img" style="display: none;">
+                      <img id="cropbox" src=""  />
+                      <input id="x_ads" type="hidden" name="x_ads" value="">
+                      <input id="y_ads" type="hidden" name="y_ads" value="">
+                      <input id="w_ads" type="hidden" name="w_ads" value="">
+                      <input id="h_ads" type="hidden" name="h_ads" value="">
+                      <p style="margin-top: 10px;text-align: center;">
+                        <input class="buton-radi" name="btn_crop" id="btn_crop" type="button" value="Cắt ảnh" />
+                        <input class="buton-radi" onclick="closeCutImage();"  type="button" value="Bỏ qua" />
+                      </p>
+                     </div>
+                  </div>
+                  <small class="help-block">JPEG 150x80px</small>
+                </div>
+              </div><!--/Thumb-->
+              <!--Thumb-->
+              <div class="form-group">
+                <label class="col-lg-3 control-label">Video giới thiệu</label>
+                <div class="col-lg-9">
+                  <div class="inputs">
+                    <div id="upload_video"></div>
+                    <input type="hidden" id="file" name="file"/>
+                    <input type="hidden" id="file_size"/>
+                    <input type="hidden" id="file_type"/>
+                    <table id="view_video" name="view_video" width="100%" border="0" cellspacing="0" cellpadding="0" class="form1 magt20"></table>
+                  </div>
+                  <small class="help-block">Video FullHD 1080</small>
+                </div>
+              </div><!--/Thumb-->
             </fieldset>
           </form>
         </div>
@@ -110,7 +165,9 @@
                 <!--Section-->
                 <div class="panel panel-white">
                   <div class="panel-heading">
-                    <h6 class="panel-title"><a aria-expanded="false" class="collapsed" data-parent="#accordion-target" data-toggle="collapse" href="#accordion-control-group1">Section 1</a></h6>
+                    <h6 class="panel-title">
+                      <a aria-expanded="false" class="collapsed title-section" data-parent="#accordion-target" data-toggle="collapse" href="#accordion-control-group1">Section 1</a>
+                    </h6>
                     <div class="heading-elements">
                       <div class="btn-group">
                         <button aria-expanded="false" class="btn dropdown-toggle" data-toggle="dropdown" type="button"><i class="icon-menu7"></i></button>
@@ -223,7 +280,8 @@
         e.preventDefault();
         if(x < max_fields){ //max input box allowed
             x++; //text box increment
-            $(wrapper).append($("<div>").load('{{route('author.add_section')}}'));
+            var url_load = '{{URL::to('giang-vien/course/add/section')}}'+'/'+x;
+            $(wrapper).append($("<div>").load(url_load));
         }
     });
     

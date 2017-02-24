@@ -1,7 +1,7 @@
 
                 <div class="panel panel-white">
                   <div class="panel-heading">
-                    <h6 class="panel-title"><a aria-expanded="false" class="collapsed" data-parent="#accordion-target" data-toggle="collapse" href="#accordion-control-group1">Section 1</a></h6>
+                    <h6 class="panel-title"><a aria-expanded="false" class="collapsed title-section" data-parent="#accordion-target" data-toggle="collapse" href="#accordion-control-group{{$s}}">Section {{$s}}</a></h6>
                     <div class="heading-elements">
                       <div class="btn-group">
                         <button aria-expanded="false" class="btn dropdown-toggle" data-toggle="dropdown" type="button"><i class="icon-menu7"></i></button>
@@ -20,7 +20,7 @@
                       </div>
                     </div>
                   </div>
-                  <div aria-expanded="false" class="panel-collapse collapse" id="accordion-control-group1">
+                  <div aria-expanded="false" class="panel-collapse collapse" id="accordion-control-group{{$s}}">
                     <div class="panel-body">
 
                       <form class="form-horizontal">

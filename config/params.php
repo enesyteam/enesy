@@ -48,6 +48,6 @@ return [
     'status_user' => array(1 =>"Approved",2=>'Waiting Review',3=>'In Review',4=>'Rejected' ),
     'notification_type' => ['exam' => 'Exam', 'notice' => 'Notice'],
     'row_page' => 20,
-
+    'course_status' => ['PUBLIC'=>1, 'COMMING_SOON'=>2, 'DRAFT'=>3]
 
 ];

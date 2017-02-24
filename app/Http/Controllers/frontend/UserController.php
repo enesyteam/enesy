@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers\frontend;
 
-use Request;
+use Illuminate\Http\Request;
 use App\Http\Models\User;
+use App\Http\Models\Course;
+use App\Http\Models\Category;
 use Response;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Redirect;
@@ -200,8 +202,26 @@ class UserController extends Controller
     public function author_courses(){
         return view('frontend.author.courses');
     }
-    public function author_courses_create(){
-        return view('frontend.author.courses-create');
+    public function author_courses_create(Request $request){
+        /*get status course*/
+        $arrStatus = Config('params.course_status');
+        /*get list category*/
+        $all_category = Category::where('status', 1)->orderBy('parent_id','ASC')->orderBy('id','DESC')->get(); 
+        $listCat = array();
+        foreach ($all_category as $cat) {
+            if($cat->parent_id == 0) {
+                $listCat[$cat->id]["title"] = $cat->title;
+                $listCat[$cat->id]['data'] = array();
+            } else {
+                $listCat[$cat->parent_id]['data'][] = $cat;
+            }
+            
+        }
+        if($request->isMethod('post')) {
+            $requestData = $request->all();
+
+        }
+        return view('frontend.author.courses-create', ['arrStatus'=>$arrStatus,'listCat'=>$listCat]);
     }
 
 
