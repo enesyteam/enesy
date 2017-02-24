@@ -118,7 +118,7 @@
         });  
        $("#btn_requirement").click(function(){
            var html='';
-           html += '<div class="form-group"><input placeholder="Lợi ích" type="text" name="requirement[]"  value="" class="form-control"></div>';
+           html += '<div class="form-group"><input placeholder="Yêu cầu" type="text" name="requirement[]"  value="" class="form-control"></div>';
            $("#requirement").append(html); 
         }); 
      

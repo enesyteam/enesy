@@ -10,7 +10,10 @@ use Illuminate\Support\Facades\View;
 use App\Http\Models\Course;
 use App\Http\Models\Lesson;
 use App\Http\Models\Section;
+use App\Http\Models\CourseBenefit;
+use App\Http\Models\CourseRequirement;
 use Illuminate\Support\Facades\Redirect;
+
 use DB;
 use Cache;
 use Config;
@@ -102,6 +105,36 @@ class CourseController extends Controller
             $course->updated_at       = time();
         
             $course->save(['timestamps' => false]);
+
+            $benefit            = isset($data["benefit"])     ? $data["benefit"]: array();
+            $requirement        = isset($data["requirement"]) ? $data["requirement"]: array();
+
+
+            if($benefit){
+                $data_insert = array();
+                foreach ($benefit as $key => $value) {
+                                      
+                   $data_insert[] = array('title' =>$value
+                                        ,"course_id"=>$course->id
+                                        ,'create_date'=>time()
+                                        ,'updated_at'=>time() 
+                                        ); 
+                }
+                DB::table('tbl_course_benefit')->insert($data_insert); // Query Builder
+            }
+            if($requirement){
+                $data_insert = array();
+                foreach ($requirement as $key => $value) {
+                                      
+                   $data_insert[] = array('title' =>$value
+                                        ,"course_id"=>$course->id
+                                        ,'create_date'=>time()
+                                        ,'updated_at'=>time() 
+                                        ); 
+                }
+                DB::table('tbl_course_requirement')->insert($data_insert); // Query Builder
+            }            
+
             return Redirect::to('/admin/course');
 
        }
@@ -123,6 +156,9 @@ class CourseController extends Controller
             }
             
         }
+
+         
+
         /*get list teacher*/
         $listTeacher = Member::select('id','last_name','first_name','middle_name')
                         ->where('status',1)
@@ -133,7 +169,31 @@ class CourseController extends Controller
         if(!$course){
             echo "Not found Record!!";
             exit();
-        }        
+        }  
+
+        $list_benefit = DB::table('tbl_course_benefit')     
+        ->select('*')
+        ->orderBy('id', 'asc')
+        ->where([
+                ['course_id', '=', $id]
+           ])
+        ->get();
+
+        $data['list_benefit'] = $list_benefit;
+
+        $list_requirement = DB::table('tbl_course_requirement')     
+        ->select('*')
+        ->orderBy('id', 'asc')
+        ->where([
+                ['course_id', '=', $id]
+           ])
+        ->get();
+
+        $data['list_requirement'] = $list_requirement;    
+
+        $data['listCat']          = $listCat;  
+        $data['listTeacher']      = $listTeacher;   
+        $data['course']           = $course;            
 
         if($request->isMethod('post')){
             $data                     = $request->all();
@@ -149,10 +209,41 @@ class CourseController extends Controller
             $course->video            = $data["file"];            
             $course->updated_at       = time();
             $course->save(['timestamps' => false]);
+
+
+            $benefit            = isset($data["benefit"])     ? $data["benefit"]: array();
+            $requirement        = isset($data["requirement"]) ? $data["requirement"]: array();            
+
+            if($benefit){
+                $data_insert = array();
+                foreach ($benefit as $key => $value) {
+                                      
+                   $data_insert[] = array('title' =>$value
+                                        ,"course_id"=>$course->id
+                                        ,'create_date'=>time()
+                                        ,'updated_at'=>time() 
+                                        ); 
+                }
+                CourseBenefit::where('course_id', '=',$course->id )->delete();
+                DB::table('tbl_course_benefit')->insert($data_insert); // Query Builder
+            }
+            if($requirement){
+                $data_insert = array();
+                foreach ($requirement as $key => $value) {
+                                      
+                   $data_insert[] = array('title' =>$value
+                                        ,"course_id"=>$course->id
+                                        ,'create_date'=>time()
+                                        ,'updated_at'=>time() 
+                                        ); 
+                }
+                CourseRequirement::where('course_id', '=',$course->id )->delete();
+                DB::table('tbl_course_requirement')->insert($data_insert); // Query Builder
+            }              
             return Redirect::to('/admin/course');
        }
         $this->layout->meta_title='Edit Course';
-        $this->layout->content = View::make('backend.course.edit',['listCat'=>$listCat,'listTeacher'=>$listTeacher,'course'=>$course]);
+        $this->layout->content = View::make('backend.course.edit',$data);
     }   
 
     function deleteById() {
@@ -326,7 +417,6 @@ class CourseController extends Controller
 
         $data['list_data_doc'] = $list_data_doc;
 
-  
         
         if($request->isMethod('post')){
             $data                = $request->all();
