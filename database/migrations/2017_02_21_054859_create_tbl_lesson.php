@@ -29,7 +29,6 @@ class CreateTblLesson extends Migration
                     $table->string('path', 255)->nullable();
                     $table->string('file_type', 255)->nullable();
                     $table->string('file_size', 255)->nullable();
-                    $table->string('duration', 255)->nullable();
                     $table->integer('create_date')->nullable();
                     $table->integer('updated_at')->nullable();
                     
