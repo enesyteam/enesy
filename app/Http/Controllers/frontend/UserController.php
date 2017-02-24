@@ -11,6 +11,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use App\Member;
 use Session;
+use Captcha;
 
 class UserController extends Controller
 {
@@ -19,6 +20,13 @@ class UserController extends Controller
             return Redirect::route('home');
         }
     	return view('frontend.login');
+    }
+
+    //
+    public function refreshCaptcha(){
+        $captcha = Captcha::src();
+        sleep(5);
+        return response()->json($captcha);
     }
 
     //doLogin post
@@ -145,6 +153,37 @@ class UserController extends Controller
 
     }
 
+    //Đổi mật khẩu
+    public function author_account(){
+        return view('frontend.author.account');
+    }
+
+    public function doChangePass(){
+
+        $data = Request::only('old_pass','new_pass','new_pass_confirm');
+        $validator = Member::validatorChangePass($data);
+        if($validator->fails()) {
+            return Redirect::route('user.author_account')
+                ->withErrors($validator);
+        }
+        try{
+
+            $member = Member::find(Auth::guard('frontend')->user()->id);
+            $member->password = bcrypt($data['new_pass']);
+            $member->save();
+
+        }catch (Exception $e){
+            return Redirect::route('user.author_account')
+                ->withInput()
+                ->with('message_error', 'Update Profile Fail! (Sorry) ');
+        }
+
+        return Redirect::route('user.author_account')
+            ->with('message_error','Update Success!');
+
+    }
+
+
     public function author(){
     	return view('frontend.author.index');
     }
@@ -165,9 +204,7 @@ class UserController extends Controller
         return view('frontend.author.courses-create');
     }
 
-    public function author_account(){
-        return view('frontend.author.account');
-    }
+
     public function author_email(){
         return view('frontend.author.email');
     }

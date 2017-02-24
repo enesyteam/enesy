@@ -10,6 +10,7 @@
         "laravel/framework": "5.4.*",
         "laravel/tinker": "~1.0",
         "laravelcollective/html": "~5.0",
+        "mews/captcha": "^2.1",
         "tymon/jwt-auth": "^0.5.9"
     },
     "require-dev": {

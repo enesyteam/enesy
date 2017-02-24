@@ -57,6 +57,17 @@ class Member extends Authenticatable
 
         return Validator::make($data , $rules);
     }
+
+    protected function validatorChangePass(array  $data){
+        $rules = [
+            'old_pass' => 'required',
+            'new_pass' => 'required',
+            'new_pass_confirm' => 'required|same:new_pass',
+        ];
+
+        return Validator::make($data , $rules);
+    }
+
      protected function  validatordoRegister(array $data){
         $rules = [
             'first_name' => 'required',

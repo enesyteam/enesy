@@ -24,9 +24,12 @@ class User extends Model
         $rules = [
             'username' => 'required|min:6|max:12',
             'password' => 'required|max:12',
+            'captcha' => 'required|captcha'
         ];
-
-        return Validator::make($data , $rules);
+        $message = [
+            'captcha.captcha' => 'Captcha sai ! Xin nhập lại'
+        ];
+        return Validator::make($data , $rules,$message);
     }
 
     protected function validatorCreate(array $data ){

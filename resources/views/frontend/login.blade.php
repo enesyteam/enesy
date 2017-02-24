@@ -10,31 +10,65 @@
 <!--<![endif]-->
 <!-- HEAD -->
 <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8"/>
     <title>Enesy | Đào tạo Kỹ sư chuyên nghiệp</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
     <meta content="Đào tạo Kỹ sư chuyên nghiệp"
-          name="description" />
-    <meta content="" name="author" />
-    <link href="{{'frontend/css/normalize.css'}}" rel="stylesheet" type="text/css" />
-    <link href="{{'frontend/css/style.css'}}" rel="stylesheet" type="text/css" />
-    <link href="{{'frontend/css/custom.css'}}" rel="stylesheet" type="text/css" />
-    <link href="{{'frontend/css/layout.css'}}" rel="stylesheet" type="text/css" />
+          name="description"/>
+    <meta content="" name="author"/>
+    <link href="{{'frontend/css/normalize.css'}}" rel="stylesheet" type="text/css"/>
+    <link href="{{'frontend/css/style.css'}}" rel="stylesheet" type="text/css"/>
+    <link href="{{'frontend/css/custom.css'}}" rel="stylesheet" type="text/css"/>
+    <link href="{{'frontend/css/layout.css'}}" rel="stylesheet" type="text/css"/>
     <!--JqueryModal-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="{{'frontend/vender/jquery-modal/jquery.modal.js'}}" type="text/javascript" charset="utf-8"></script>
-    <script src="{{'frontend/vender/jquery-modal/highlight/highlight.pack.js'}}" type="text/javascript" charset="utf-8"></script>
+    <script src="{{'frontend/vender/jquery-modal/highlight/highlight.pack.js'}}" type="text/javascript"
+            charset="utf-8"></script>
     <script type="text/javascript" charset="utf-8"> hljs.initHighlightingOnLoad(); </script>
 
     <style type="text/css">
-        .error_message{
+        .error_message {
             color: red;
         }
+
+        .f-input {
+            margin-top: 3px;
+            margin-left: 10px;
+        }
     </style>
+
+    <script>
+        $(document).ready(function () {
+            var requestRunning = false;
+            $(".captcha").click(function () {
+                if (requestRunning == true) {
+                    return;
+                }
+                var url = $("#urlCaptcha").val();
+                var ajaxOpts = {
+                    type: "get",
+                    url: url,
+                    dataType: 'json',
+                    success: function (data) {
+                        $("#captchaLogin").prop('src', data);
+                    },
+                    complete: function () {
+                        requestRunning = false;
+                    }
+
+                };
+                requestRunning = true;
+                $.ajax(ajaxOpts);
+                return false;
+            })
+        })
+    </script>
 </head>
 <!-- #HEAD -->
 <body>
+<input type="hidden" value="{{ asset("refresh/captcha")  }}" id="urlCaptcha"/>
 <div class="mfp-bg mfp-fade mfp-ready"></div>
 <div class="mfp-wrap mfp-auto-cursor mfp-fade mfp-ready" tabindex="-1" style="overflow: hidden;">
     <div class="mfp-s-ready mfp-inline-holder">
@@ -105,16 +139,20 @@
 
                                 <div class="sso-form__two-factor">
                                     <div class="e-form__group">
-                                        <div class="e-form__label">
-                                            <label for="sso_sign_in_form_authentication_code">Authentication
-                                                Code</label>
+                                        <div class="e-form__label" style="float: left">
+                                            <label for="sso_sign_in_form_authentication_code">
+                                                Authentication Code</label>
                                         </div>
                                         <div class="e-form__input">
-                                            <input class="f-input -type-string js-sign-in__authentication-code -width-full"
-                                                   type="text" name="sso_sign_in_form[authentication_code]"
-                                                   id="sso_sign_in_form_authentication_code">
+                                            <div class="captcha pull-right" style="float: left;cursor: pointer;">
+                                                <img id="captchaLogin" src="{{Captcha::src()}}">
+                                            </div>
+                                            <input class="f-input -type-string" type="text" name="captcha"
+                                                   id="sso_sign_in_form_authentication_code" maxlength="6">
+                                            <p class="error_message"
+                                               style="float: right">{{$errors->first('captcha')}}</p>
                                         </div>
-                                        <div class="e-form__hint">You may use a backup code instead</div>
+                                        <div class="e-form__hint">Click vào ảnh để lấy captcha khác nếu nhìn không rõ.(Đợi 5s mới hiện ra)</div>
                                     </div>
                                 </div>
 

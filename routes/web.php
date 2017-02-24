@@ -112,14 +112,45 @@ Route::group(array('namespace' => 'backend', 'prefix' => 'admin', 'middleware' =
     // end course
 });
 
+Route::group(['namespace' => 'frontend','middleware' => 'guest'], function () {
 
+    Route::get('/', [
+        'as'	=>	'home',
+        'uses'	=>	'PagesController@index'
+    ]);
 
-Route::group(array('namespace' => 'frontend' , 'middleware' => 'frontend.auth'), function () {
-	Route::get('/', [
-		'as'	=>	'home',
-		'uses'	=>	'PagesController@index'
-		]);
-// test
+    /*User*/
+    Route::get('doLogin',[
+        'as'	=>	'user.login',
+        'uses'	=>	'UserController@login'
+    ]);
+
+    Route::get('doLogout',[
+        'as'	=>	'user.logout',
+        'uses'	=>	'UserController@doLogout'
+    ]);
+
+    Route::post('doLogin',[
+        'as'	=>	'user.login',
+        'uses'	=>	'UserController@doLogin'
+    ]);
+
+    Route::get('dang-ky',[
+        'as'	=>	'user.register',
+        'uses'	=>	'UserController@register'
+    ]);
+
+    Route::post('doRegister',[
+        'as'	=>	'user.doregister',
+        'uses'	=>	'UserController@doRegister'
+    ]);
+
+    Route::get('refresh/captcha' , 'UserController@refreshCaptcha');
+});
+
+Route::group(array('namespace' => 'frontend' , 'middleware' => 'auth'), function () {
+
+    // test
 	Route::get('/1', [
 		'as'	=>	'newhome',
 		'uses'	=>	'PagesController@newhome'
@@ -173,32 +204,6 @@ Route::group(array('namespace' => 'frontend' , 'middleware' => 'frontend.auth'),
 		'uses'	=>	'HelpController@authors'
 		]);
 
-	/*User*/
-	Route::get('doLogin',[
-		'as'	=>	'user.login',
-		'uses'	=>	'UserController@login'
-		]);
-
-	Route::get('doLogout',[
-		'as'	=>	'user.logout',
-		'uses'	=>	'UserController@doLogout'
-		]);
-
-	Route::post('doLogin',[
-		'as'	=>	'user.login',
-		'uses'	=>	'UserController@doLogin'
-		]);
-
-	Route::get('dang-ky',[
-		'as'	=>	'user.register',
-		'uses'	=>	'UserController@register'
-		]);
-
-	Route::post('doRegister',[
-		'as'	=>	'user.doregister',
-		'uses'	=>	'UserController@doRegister'
-		]);
-
 	/*Author*/
 	Route::get('giang-vien',[
 		'as'	=>	'user.author',
@@ -231,11 +236,14 @@ Route::group(array('namespace' => 'frontend' , 'middleware' => 'frontend.auth'),
 		'uses'	=>	'UserController@doUpdateProfile'
 		]);
 
-
+    //Thông tin tài khoản. Đổi m
 	Route::get('giang-vien/tai-khoan',[
 		'as'	=>	'user.author_account',
 		'uses'	=>	'UserController@author_account'
 		]);
+
+
+
 	Route::get('giang-vien/tai-khoan/email',[
 		'as'	=>	'user.author_email',
 		'uses'	=>	'UserController@author_email'
