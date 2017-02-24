@@ -20,6 +20,7 @@ class CreateTblLesson extends Migration
                     
                     $table->increments('id')->unsigned();
                     $table->integer('cat_id')->nullable();
+                    $table->integer('parent_cat_id')->nullable();
                     $table->integer('course_id')->nullable();
                     $table->integer('section_id')->nullable();
                     $table->string('title', 255)->nullable();
