@@ -111,7 +111,7 @@ class UserController extends Controller
                     'sex' , 'dob' , 'social',
                     'first_name' , 'last_name' ,
                     'middle_name' , 'address',
-                    'phone' , 'skype','facebook');
+                    'phone' , 'skype','facebook','path_small');
         $validator = Member::validatorEditProfile($data);
 
         if($validator->fails()) {
@@ -131,6 +131,7 @@ class UserController extends Controller
             $member->phone = $data['phone'];
             $member->skype = $data['skype'];
             $member->facebook = $data['facebook'];
+            $member->avatar = $data['path_small'];
             $member->save();
 
         }catch (Exception $e){

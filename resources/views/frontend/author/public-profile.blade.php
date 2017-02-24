@@ -1,17 +1,26 @@
 @extends('frontend.author.master.author-master') @section('author-body.content') <!-- Content area -->
 @section('author-body.content') <!-- Content area -->
+
 <style>
     .error_message{
         color: red;
     }
 </style>
+
+
+@include('backend.course.js', array())
+<style type="text/css">
+   .qq-upload-button
+   {
+    margin: 0 auto;
+   }
+ </style>
 <div class="row">
     <div class="col-md-12 mr--10">
         <div class="panel panel-flat">
+        {{--open form--}}
+        {{ Form::open(array('url' => 'lecturers/doUpdateProfile' , 'class'=>'e-form')) }}
             <div class="panel-body">
-                {{--open form--}}
-                {{ Form::open(array('url' => 'lecturers/doUpdateProfile' , 'class'=>'e-form')) }}
-
                 <div class="col-md-8">
                     <!-- Name -->
                     <div class="form-group">
@@ -103,23 +112,48 @@
                     <!-- /Contact info -->
                     <button class="btn btn-primary" type="submit">Cập nhật</button>
                 </div>
-                {{ Form::close() }}
+                <script type="text/javascript">
+                    $(document).ready(function(){
+                        $('#path_small').on('change', function() {
+                            var path_small = $("#path_small").val();
+                            $(".avatar-img").prop("src" , "../upload/image"+path_small);
+                        })
+                    })
+                </script>
                 <div class="col-md-1"></div>
                 <div class="col-md-3">
                     <div class="thumbnail no-border no-boxshadow">
-                        <div class="thumb mt-10 mb-10"><span class="text-semibold mb-10">Ảnh đại diện</span> <img
-                                    alt="" class="mt-10" src="{{asset('frontend/images/user-no-avatar.png')}}">
+                        <div class="thumb mt-10 mb-10 avatar"><span class="text-semibold mb-10">Ảnh đại diện</span> 
+                        @if(Auth::guard('frontend')->user()->avatar)
+                            <img alt="" class="mt-10 avatar-img" src="../upload/image{{Auth::guard('frontend')->user()->avatar}}">
+                        @else
+                            abc
+                            <img alt="" class="mt-10 avatar-img" src="{{'frontend/images/user-no-avatar.png'}}">
+                        @endif
                         </div>
-                        <div class="caption">
-                            <button class="btn btn-default btn-ladda btn-ladda-progress" data-spinner-size="20"
-                                    data-style="expand-left" type="button"><span
-                                        class="ladda-label">Thay ảnh mới</span><span class="ladda-spinner"></span>
-                                <div class="ladda-progress" style="width: 158px;"></div>
-                            </button>
+                        <div class="form-group">
+                          <div id="upload_img"></div>
+                           <input type="hidden" id="picture" name="picture"/>   
+                           <input type="hidden" id="path_small" name="path_small"/>  
+                           <input type="hidden" id="path_mini" name="path_mini"/>  
+                           <input type="hidden" id="folder_path" name="folder_path"/>   
+                                       
+                           <div id="frm_crop_img" style="display: none;">
+                                            <img id="cropbox" src=""  />
+                                            <input id="x_ads" type="hidden" name="x_ads" value="">
+                                            <input id="y_ads" type="hidden" name="y_ads" value="">
+                                            <input id="w_ads" type="hidden" name="w_ads" value="">
+                                            <input id="h_ads" type="hidden" name="h_ads" value="">
+                                            <p style="margin-top: 10px;text-align: center;">
+                                                <input class="buton-radi" name="btn_crop" id="btn_crop" type="button" value="Cắt ảnh" />
+                                                <input class="buton-radi" onclick="closeCutImage();"  type="button" value="Bỏ qua" />
+                                            </p>
+                           </div>         
                         </div>
                     </div>
                 </div>
             </div>
+           {{ Form::close() }}
         </div>
     </div>
 </div><!-- /content area -->
