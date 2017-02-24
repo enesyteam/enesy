@@ -26,10 +26,10 @@
             var uploader = new qq.FileUploader({
                 element: document.getElementById('upload_doc'),
                 
-                 action: "{{ URL::to('/upload_lib/upload_doc.php') }}",   
-                //allowedExtensions: ['mp4','flv','avi','mov','dv','qt','mpeg','3gp','asf','wmv','mpg','dat','vob','mkv'],
+                action: "{{ URL::to('/upload_lib/upload_doc.php') }}",   
+                allowedExtensions: ['mp4','flv','avi','mov','dv','qt','mpeg','3gp','asf','wmv','mpg','dat','vob','mkv'],
                 multiple: true,
-                uploadButtonText: 'Upload Doc',
+                uploadButtonText: 'Upload video',
                 cancelButtonText: 'Cancel',
                 debug:true,
                 failUploadText: 'Error upload',
@@ -48,7 +48,7 @@
                           html += '<td width="90%"><div>'+html_video+'</div></td>';
                           html += '<td width="10%">';        
                           html += '<div class="filltext">';            
-                         // html += '<input placeholder="Tiêu đề file video" type="text" name="title_file" id="title_file'+i+'" value="" style="width:500px">';                
+                          html += '<input placeholder="Tiêu đề file video" type="text" name="title_file" id="title_file'+i+'" value="" style="width:500px">'                
                           html += '</div>';   
 
                           /*
