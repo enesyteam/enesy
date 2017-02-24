@@ -95,13 +95,13 @@
       <div class="form-group">
         <label class="required">Lợi ích từ khóa học </label>
         <div id="benefit"></div>
-        <button id="btn_benefit">Thêm lợi ích</button>
+        <button id="btn_benefit" type="button">Thêm lợi ích</button>
                      
       </div>
       <div class="form-group">
         <label class="required">Các yêu cầu của khóa học</label>
         <div id="requirement"></div>
-        <button id="btn_requirement">Thêm yêu cầu</button>
+        <button id="btn_requirement" type="button">Thêm yêu cầu</button>
                      
       </div>
 
