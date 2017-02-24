@@ -260,19 +260,27 @@ class CourseController extends Controller
             $section->save(['timestamps' => false]);
 
             
-            $file_str           = isset($data["file"]) ? $data["file"]: array();
-            $file_type_str      = isset($data["file_type"]) ? $data["file_type"]: array();
-            $file_size_str      = isset($data["file_size"]) ? $data["file_size"]: array();
+            $file_title         = isset($data["file_title"])   ? $data["file_title"]: array();
+            $file_introtext     = isset($data["file_introtext"]) ? $data["file_introtext"]: array();
+            $file_path          = isset($data["file_path"])    ? $data["file_path"]: array();
+            $file_type          = isset($data["file_type"])    ? $data["file_type"]: array();
+            $file_size          = isset($data["file_size"])    ? $data["file_size"]: array();
 
-            if($file_str){
-                $file      = explode(";", $file_str);
-                $file_type = explode(";", $file_type_str);
-                $file_size = explode(";", $file_size_str);
-
+            if($file_path){
                 $data_insert = array();
-                foreach ($file as $key => $value) {
+                foreach ($file_path as $key => $value) {
                                       
-                   $data_insert[] = array('title' =>'','path' =>$value,'file_type' =>$file_type[$key],"file_size"=>$file_size[$key],"cat_id"=>$section->cat_id ,"course_id"=>$section->course_id,'section_id'=>$section->id,'create_date'=>time(),'updated_at'=>time() ); 
+                   $data_insert[] = array('title' =>$file_title[$key]
+                                        ,'introtext' =>$file_introtext[$key]
+                                        ,'path' =>$value
+                                        ,'file_type' =>$file_type[$key]
+                                        ,"file_size"=>$file_size[$key]
+                                        ,"cat_id"=>$section->cat_id 
+                                        ,"course_id"=>$section->course_id
+                                        ,'section_id'=>$section->id
+                                        ,'create_date'=>time()
+                                        ,'updated_at'=>time() 
+                                        ); 
                 }
                 DB::table('tbl_lesson')->insert($data_insert); // Query Builder
 
@@ -307,8 +315,8 @@ class CourseController extends Controller
         $data['section']      = $section;        
 
         $list_data_doc = DB::table('tbl_lesson')     
-        ->select('id','cat_id','course_id','section_id','title','path','file_type','file_size')
-        ->orderBy('id', 'desc')
+        ->select('*')
+        ->orderBy('id', 'asc')
         ->where([
                 ['section_id', '=', $id]
            ])
@@ -316,21 +324,7 @@ class CourseController extends Controller
 
         $data['list_data_doc'] = $list_data_doc;
 
-        $file_name_ ='';
-        $file_size_ ='';
-        $file_type_ ='';
-
-        foreach ($list_data_doc as $key => $value) {
-           if($value->path){
-                $file_name_ .= $value->path.";";
-                $file_size_ .= $value->file_size.";";
-                $file_type_ .= $value->file_type.";";
-            }
-        }
-
-        $data["file_name_"] = $file_name_;
-        $data["file_size_"] = $file_size_;
-        $data["file_type_"] = $file_type_;
+  
         
         if($request->isMethod('post')){
             $data                = $request->all();
@@ -341,19 +335,27 @@ class CourseController extends Controller
             $section->cat_id           = $cat[1];
             $section->save(['timestamps' => false]);
 
-            $file_str           = isset($data["file"]) ? $data["file"]: array();
-            $file_type_str      = isset($data["file_type"]) ? $data["file_type"]: array();
-            $file_size_str      = isset($data["file_size"]) ? $data["file_size"]: array();
+            $file_title         = isset($data["file_title"])   ? $data["file_title"]: array();
+            $file_introtext     = isset($data["file_introtext"]) ? $data["file_introtext"]: array();
+            $file_path          = isset($data["file_path"])    ? $data["file_path"]: array();
+            $file_type          = isset($data["file_type"])    ? $data["file_type"]: array();
+            $file_size          = isset($data["file_size"])    ? $data["file_size"]: array();
 
-            if($file_str){
-                $file      = explode(";", $file_str);
-                $file_type = explode(";", $file_type_str);
-                $file_size = explode(";", $file_size_str);
-
+            if($file_path){
                 $data_insert = array();
-                foreach ($file as $key => $value) {
+                foreach ($file_path as $key => $value) {
                                       
-                   $data_insert[] = array('title' =>'','path' =>$value,'file_type' =>$file_type[$key],"file_size"=>$file_size[$key],"cat_id"=>$section->cat_id ,"course_id"=>$section->course_id,'section_id'=>$section->id,'create_date'=>time(),'updated_at'=>time() ); 
+                   $data_insert[] = array('title' =>$file_title[$key]
+                                        ,'introtext' =>$file_introtext[$key]
+                                        ,'path' =>$value
+                                        ,'file_type' =>$file_type[$key]
+                                        ,"file_size"=>$file_size[$key]
+                                        ,"cat_id"=>$section->cat_id 
+                                        ,"course_id"=>$section->course_id
+                                        ,'section_id'=>$section->id
+                                        ,'create_date'=>time()
+                                        ,'updated_at'=>time() 
+                                        ); 
                 }
                 Lesson::where('section_id', '=',$section->id )->delete();
                 DB::table('tbl_lesson')->insert($data_insert); // Query Builder

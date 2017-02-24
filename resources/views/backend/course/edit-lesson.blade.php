@@ -44,17 +44,28 @@
                    <div class="col-md-12 form-group" id="list_answer">
                         <div class="input_fields_wrap col-md-12" style="min-height: 200px">
                           <div id="upload_doc"></div>
-                          <input type="hidden" id="file"      name="file" value="{{$file_name_}}" />
-                          <input type="hidden" id="file_size" name="file_size" value="{{$file_size_}}"/>
-                          <input type="hidden" id="file_type" name="file_type" value="{{$file_type_}}"/>
                           <table id="view_doc" name="view_video" width="100%" border="0" cellspacing="0" cellpadding="0" class="form1 magt20">
                            @foreach($list_data_doc as $key=>$doc) 
-                             <tr>
-                                <td width="90%"><div>{{$doc->path}}</div></td>
-                                <td width="10%">
-                                    
-                                </td>
-                            </tr>                           
+                             
+
+                            <tr>
+                              <td width="30%"><div style="float:left">
+                                
+                              <video controls="" width="300" height="200">
+                              <source src="<?php echo Helper::getDocs($doc->path);?>" type="video/<?php echo $doc->file_type; ?>">
+                              </video> 
+
+                              </div></td>
+                              <td>        
+                              <div class="filltext">            
+                              <div class="form-group"><input placeholder="Tiêu đề bài học" type="text" name="file_title[]"  value="<?php echo $doc->title; ?>" class="form-control"></div>  
+                              <textarea placeholder="Miêu tả bài học"  name="file_introtext[]"  class="form-control"><?php echo $doc->introtext; ?></textarea> 
+                              <input type="hidden" name="file_path[]"  value="<?php echo $doc->path; ?>" >  
+                              <input type="hidden" name="file_type[]"  value="<?php echo $doc->file_type; ?>" > 
+                              <input type="hidden" name="file_size[]"  value="<?php echo $doc->file_size; ?>" >              
+                              </div>                  
+
+                          </td></tr>                            
 
                            @endforeach  
 

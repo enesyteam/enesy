@@ -45,11 +45,7 @@
                  <div class="col-md-12 form-group" id="list_answer">
                         <div class="input_fields_wrap col-md-12" style="min-height: 200px">
                           <div id="upload_doc"></div>
-                          <input type="hidden" id="file"      name="file"/>
-                          <input type="hidden" id="file_size" name="file_size"/>
-                          <input type="hidden" id="file_type" name="file_type"/>
                           <table id="view_doc" name="view_video" width="100%" border="0" cellspacing="0" cellpadding="0" class="form1 magt20">
-
                           </table>
                       </div>
                   </div>
