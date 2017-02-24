@@ -97,12 +97,10 @@ Enesy | Khóa học lập trình AutoCAD với C# trình độ cơ bản
       <div class="content-s">
          <div class="box--no-padding no-border">
             <div class="item-preview -preview-live">
-               <a target="_blank" href="{{route('course.preview',['id'=>$course_detail->id])}}" rel="modal:open">
-                  <img alt="{{$course_detail->title}}" itemprop="image" src="<?php echo Helper::getPic($course_detail->picture); ?>">
-                  <div class="" ng-show="showPlaceholderPlayButton" style="">
-                     <div class="play-button play-button--initially-visible" data-purpose="video-play-button-initial"></div>
-                  </div>
-               </a>
+               <video width="100%"  controls>
+              <source src="<?php echo Helper::getDocs($course_detail->video); ?>" type="video/mp4">
+            Your browser does not support the video tag.
+            </video>
                <div class="item-preview__actions">
                   <div id="fullscreen" class="item-preview__preview-buttons">
                      <a data-view="crossDomainGoogleAnalyticsLink" role="button" class="btn-icon live-preview" target="_blank" rel="nofollow">{{$course_detail->num_of_learn}}</a>
