@@ -111,10 +111,15 @@
       
       uploadImg();     
       $("#btn_benefit").click(function(){
+        var html='';
+        html += '<div class="form-group"><input placeholder="Lợi ích" type="text" name="benefit[]"  value="" class="form-control"></div>';         
+        $("#benefit").append(html);
             
         });  
        $("#btn_requirement").click(function(){
-            
+           var html='';
+           html += '<div class="form-group"><input placeholder="Lợi ích" type="text" name="requirement[]"  value="" class="form-control"></div>';
+           $("#requirement").append(html); 
         }); 
      
      $("#type_video input[name=type]").click(function(){
