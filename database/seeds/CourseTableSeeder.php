@@ -54,7 +54,7 @@ class CourseTableSeeder extends Seeder
 						]);	
 					CourseRequirement::create([
 							'course_id'		=>	$i+1,
-							'title'		    =>	'Yêu cầu'.rand ( 1, 1003 ),
+							'title'		    =>	'Yêu cầu '.rand ( 1, 1003 ),
 							'create_date'	=>	time(),
 							'updated_at'	=>	time()
 						]);	
