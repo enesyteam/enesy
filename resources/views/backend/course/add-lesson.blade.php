@@ -118,7 +118,7 @@
              
               <div class="col-md-8 form-group">
                 <input type="submit" name="" value="Add" class="btn btn-primary">
-                <a href="{{URL::route('course/list-lesson', array('eId' => $exam->id))}}" class="btn btn-danger">Back</a>
+                <a href="{{URL::route('course/list-lesson', array('eId' => $course->id))}}" class="btn btn-danger">Back</a>
               </div>
               </div>
             </div>                      

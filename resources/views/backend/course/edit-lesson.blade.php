@@ -79,14 +79,14 @@
            <form role="form" action="" method="POST" enctype="multipart/form-data">
           	 <div class="row">
                 <div class="col-md-8">
-                    <input class="form-control" type="hidden" name="id" value="{{ $lesson->id }}">      
+                    <input class="form-control" type="hidden" name="id" value="{{ $section->id }}">      
                     <h2 class="col-md-12 form-group">Question Info</h2>     
                     <div class="col-md-12 form-group">
                        <div class="col-md-2"> 
                           <label>Name:</label>
                        </div>
                        <div class="col-md-6">    
-                           <input class="form-control" name="title" value="{{ $lesson->title }}">    
+                           <input class="form-control" name="title" value="{{ $section->title }}">    
                         </div>          
                     </div>
                    
@@ -98,7 +98,7 @@
                               <div class="col-md-6"> 
                                 <select name="category" id='category' class="form-control">
                                     @foreach($all_category as $category)        
-                                              <option value='{{ $category['id'] }}' @if ($lesson->cat_id == $category['id']) selected="selected" @endif >{{ $category['title'] }}</option>
+                                              <option value='{{ $category['id'] }}' @if ($section->cat_id == $category['id']) selected="selected" @endif >{{ $category['title'] }}</option>
                                     @endforeach                              
                                 </select>
                               </div>
@@ -128,7 +128,7 @@
                      
                    <div class="col-md-8 form-group">
                       <input type="submit" name="" value="Update" class="btn btn-primary">
-                      <a href="{{URL::route('course/list-lesson', array('eId' => $lesson->course_id))}}" class="btn btn-danger">Back</a>
+                      <a href="{{URL::route('course/list-lesson', array('eId' => $section->course_id))}}" class="btn btn-danger">Back</a>
                     </div>
 
                 </div> 

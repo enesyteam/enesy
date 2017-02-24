@@ -181,7 +181,7 @@ class CourseController extends Controller
 
     function listLesson($cId) {   
  
-        $this->layout->meta_title='Lesson List';
+        $this->layout->meta_title='Section List';
         $custom_link = array();
 
         
@@ -189,9 +189,6 @@ class CourseController extends Controller
      
         $start_date = Input::get('start_date', '');
         $end_date   = Input::get('end_date', '');
-
-
-         
 
         $course                 = Course::find($cId);
 
@@ -237,17 +234,17 @@ class CourseController extends Controller
         $data['all_category']   = $all_category;
         $course                 = Course::find($cId);
 
-        $data['exam'] = $course;         
+        $data['course'] = $course;         
 
         if($request->isMethod('post')){
             $data                 = $request->all();
-            $lesson               = new Section(); 
-            $lesson->title        = $data["title"];      
-            $lesson->cat_id       = $data["category"];
-            $lesson->course_id      = $cId;
-            $lesson->create_date  = time();
-            $lesson->updated_at  = time();
-            $lesson->save(['timestamps' => false]);
+            $section               = new Section(); 
+            $section->title        = $data["title"];      
+            $section->cat_id       = $data["category"];
+            $section->course_id      = $cId;
+            $section->create_date  = time();
+            $section->updated_at  = time();
+            $section->save(['timestamps' => false]);
 
             
             $file_str           = isset($data["file"]) ? $data["file"]: array();
@@ -262,7 +259,7 @@ class CourseController extends Controller
                 $data_insert = array();
                 foreach ($file as $key => $value) {
                                       
-                   $data_insert[] = array('title' =>'','path' =>$value,'file_type' =>$file_type[$key],"file_size"=>$file_size[$key],"cat_id"=>$lesson->cat_id ,"course_id"=>$lesson->course_id,'section_id'=>$lesson->id,'create_date'=>time(),'updated_at'=>time() ); 
+                   $data_insert[] = array('title' =>'','path' =>$value,'file_type' =>$file_type[$key],"file_size"=>$file_size[$key],"cat_id"=>$section->cat_id ,"course_id"=>$section->course_id,'section_id'=>$section->id,'create_date'=>time(),'updated_at'=>time() ); 
                 }
                 DB::table('tbl_lesson')->insert($data_insert); // Query Builder
 
@@ -270,7 +267,7 @@ class CourseController extends Controller
             return Redirect::to('/admin/course/list-lesson/'.$cId);
        }
 
-        $this->layout->meta_title='Add New Lesson';
+        $this->layout->meta_title='Add New Section';
         
         $this->layout->content = View::make('backend.course.add-lesson',$data);
     }
@@ -281,14 +278,14 @@ class CourseController extends Controller
         $category     = new Category;
         $all_category = $category->getCategories(); 
         $data['all_category'] = $all_category;
-        $lesson        = Section::find($id);
-        $data['lesson'] = $lesson;        
+        $section        = Section::find($id);
+        $data['section'] = $section;        
 
         $list_data_doc = DB::table('tbl_lesson')     
-        ->select('id','cat_id','course_id','lesson_id','title','path','file_type','file_size')
+        ->select('id','cat_id','course_id','section_id','title','path','file_type','file_size')
         ->orderBy('id', 'desc')
         ->where([
-                ['lesson_id', '=', $id]
+                ['section_id', '=', $id]
            ])
         ->get();
 
@@ -312,10 +309,10 @@ class CourseController extends Controller
         
         if($request->isMethod('post')){
             $data                      = $request->all();
-            $lesson->id         = $data["id"];   
-            $lesson->title      = $data["title"];      
-            $lesson->cat_id     = $data["category"];
-            $lesson->save(['timestamps' => false]);
+            $section->id         = $data["id"];   
+            $section->title      = $data["title"];      
+            $section->cat_id     = $data["category"];
+            $section->save(['timestamps' => false]);
 
             $file_str           = isset($data["file"]) ? $data["file"]: array();
             $file_type_str      = isset($data["file_type"]) ? $data["file_type"]: array();
@@ -329,9 +326,9 @@ class CourseController extends Controller
                 $data_insert = array();
                 foreach ($file as $key => $value) {
                                       
-                   $data_insert[] = array('title' =>'','path' =>$value,'file_type' =>$file_type[$key],"file_size"=>$file_size[$key],"cat_id"=>$lesson->cat_id ,"course_id"=>$lesson->course_id,'lesson_id'=>$lesson->id,'create_date'=>time(),'updated_at'=>time() ); 
+                   $data_insert[] = array('title' =>'','path' =>$value,'file_type' =>$file_type[$key],"file_size"=>$file_size[$key],"cat_id"=>$section->cat_id ,"course_id"=>$section->course_id,'section_id'=>$section->id,'create_date'=>time(),'updated_at'=>time() ); 
                 }
-                Lesson::where('lesson_id', '=',$lesson->id )->delete();
+                Lesson::where('section_id', '=',$section->id )->delete();
                 DB::table('tbl_lesson')->insert($data_insert); // Query Builder
 
             }          
@@ -339,7 +336,7 @@ class CourseController extends Controller
              return Redirect::to('/admin/course/list-lesson/'.$lesson["course_id"]);
        }
 
-        $this->layout->meta_title='Edit Lesson'; 
+        $this->layout->meta_title='Edit Section'; 
         $this->layout->content = View::make('backend.course.edit-lesson',$data);
     }
 
