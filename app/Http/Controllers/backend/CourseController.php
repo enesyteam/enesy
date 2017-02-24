@@ -241,7 +241,7 @@ class CourseController extends Controller
 
         if($request->isMethod('post')){
             $data                 = $request->all();
-            $lesson               = new Lesson(); 
+            $lesson               = new Section(); 
             $lesson->title        = $data["title"];      
             $lesson->cat_id       = $data["category"];
             $lesson->course_id      = $cId;
@@ -262,7 +262,7 @@ class CourseController extends Controller
                 $data_insert = array();
                 foreach ($file as $key => $value) {
                                       
-                   $data_insert[] = array('title' =>'','path' =>$value,'file_type' =>$file_type[$key],"file_size"=>$file_size[$key],"cat_id"=>$lesson->cat_id ,"course_id"=>$lesson->course_id,'lesson_id'=>$lesson->id,'create_date'=>time(),'updated_at'=>time() ); 
+                   $data_insert[] = array('title' =>'','path' =>$value,'file_type' =>$file_type[$key],"file_size"=>$file_size[$key],"cat_id"=>$lesson->cat_id ,"course_id"=>$lesson->course_id,'section_id'=>$lesson->id,'create_date'=>time(),'updated_at'=>time() ); 
                 }
                 DB::table('tbl_lesson')->insert($data_insert); // Query Builder
 
@@ -353,7 +353,7 @@ class CourseController extends Controller
         }
     }
 
-    function deleteAllLesson() {
+    function deleteAllSection() {
         foreach ($_GET['data'] as $value) {
             if (isset($value)) {
                 $e = Section::find($value);
