@@ -1,8 +1,8 @@
 <div class="global-nav__header">
   <div class="global-nav__header-content">
     <div class="global-nav__header-top">
-      <a class="global-nav__header-tuts-logo-link" href="https://tutsplus.com/">
-        <img alt="envato-tuts+" class="global-nav__header-tuts-logo-image" src="https://static.tutsplus.com/assets/tuts_logo-b4f5f5fad9a5f4b3f91e3b770689a808.svg">
+      <a class="global-nav__header-tuts-logo-link" href="{{route('home')}}">
+        <img alt="Enesy" class="global-nav__header-tuts-logo-image" src="">
       </a>
       <div class="global-nav__header-right">
         <ul class="global-nav__header-list">
@@ -30,31 +30,11 @@
               </a>
               <ul class="global-nav__user-menu-items">
                 <li class="global-nav__user-menu-item">
-                  <a class="global-nav__user-menu-item-link" href="https://tutsplus.com/account/courses">My Courses
+                  <a class="global-nav__user-menu-item-link" href="#">Khóa học của tôi
                   </a>
                 </li>
                 <li class="global-nav__user-menu-item">
-                  <a class="global-nav__user-menu-item-link" href="https://tutsplus.com/account/subscription">Subscription
-                  </a>
-                </li>
-                <li class="global-nav__user-menu-item">
-                  <a class="global-nav__user-menu-item-link" href="https://tutsplus.com/account/user/edit">Personal Details
-                  </a>
-                </li>
-                <li class="global-nav__user-menu-item">
-                  <a class="global-nav__user-menu-item-link" href="https://tutsplus.com/account/email_preference/edit">Email Preferences
-                  </a>
-                </li>
-                <li class="global-nav__user-menu-item">
-                  <a class="global-nav__user-menu-item-link" href="https://tutsplus.com/account/invoice_information/edit">Invoice Information
-                  </a>
-                </li>
-                <li class="global-nav__user-menu-item">
-                  <a class="global-nav__user-menu-item-link" href="https://tutsplus.com/account/change_email/new">Change Email
-                  </a>
-                </li>
-                <li class="global-nav__user-menu-item">
-                  <a class="global-nav__user-menu-item-link" href="https://tutsplus.com/account/password/edit">Change Password
+                  <a class="global-nav__user-menu-item-link" href="#">Học viên của tôi
                   </a>
                 </li>
                 <li class="global-nav__user-menu-item">
@@ -108,11 +88,11 @@
             ]) !!}
             <span class="twitter-typeahead" style="position: relative; display: inline-block; direction: ltr;">
               {!! Form::input('search','search[terms]', null,['class'=>'global-nav__search-terms tt-input','autocomplete'=>'off', 'spellcheck'=>'false', 'style'=>'position: relative; vertical-align: top; background-color: transparent;    padding-right: 35px;', 'placeholder'=>'Tìm trong 1,500 khóa học']) !!}
-                <pre aria-hidden="true" style="position: absolute; visibility: hidden; white-space: pre; font-family: Arial, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; word-spacing: 0px; letter-spacing: 0px; text-indent: 0px; text-rendering: auto; text-transform: none;">
-                </pre>
                 <span class="tt-dropdown-menu" style="position: absolute; top: 100%; left: 0px; z-index: 100; display: none; width: 300px; right: auto;">
                   <div class="tt-dataset-search">
-                    <span>Kết quả tìm kiếm</span>
+                    <strong class="search-header" style="margin-left: 15px; padding: 20px 0;top:20px;">Kết quả tìm kiếm</strong>
+                    <ul class="search-items">
+                    </ul>
                   </div>
                 </span>
             </span>

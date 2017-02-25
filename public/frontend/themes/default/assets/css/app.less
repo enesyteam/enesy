@@ -505,6 +505,20 @@ video {
     height: 36px;
     width: 36px;
 }
+.tt-dataset-search ul{
+	margin-left: 0;
+	margin-top: 0px;
+}
+.tt-dataset-search ul>li{
+	list-style: none;
+	margin-left: -20px;
+}
+.tt-dataset-search ul>li:before{
+	font-family: 'icomoon';
+	font-size: 10px;
+	margin-right: 5px;
+	content:"\e98e";
+}
 .global-nav__header-list {
     list-style: none;
     margin: 0;
@@ -825,7 +839,7 @@ video {
     right: 240px
 }
 .body--mobile-nav-open .global-nav__mobile-toggle-link {
-    background: #82b541;
+    background: #e73827;
     border-radius: 3px
 }
 .body--mobile-nav-open .global-nav__mobile-toggle-link .fa-reorder {
@@ -869,6 +883,8 @@ video {
 		opacity: .5;
 		-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
 		filter: alpha(opacity=50);
+	    -webkit-transition: all 0.15s ease-out;
+    	transition: all 0.15s ease-out;
 }
 .overlay-is-show .global-nav__header{
 	z-index: 1003;
@@ -1126,7 +1142,6 @@ span.twitter-typeahead .tt-dropdown-menu {
     z-index: 1000;
     display: none;
     float: left;
-    min-width: 160px;
     padding: 5px 0;
     margin: 2px 0 0;
     list-style: none;
@@ -1135,7 +1150,7 @@ span.twitter-typeahead .tt-dropdown-menu {
     background-color: #ffffff;
     border: 1px solid #cccccc;
     border: 1px solid rgba(0, 0, 0, 0.15);
-    border-radius: 4px;
+    .border-radius(4px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
     background-clip: padding-box
 }
