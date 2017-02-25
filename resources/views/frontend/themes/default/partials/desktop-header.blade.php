@@ -2,7 +2,7 @@
   <div class="global-nav__header-content">
     <div class="global-nav__header-top">
       <a class="global-nav__header-tuts-logo-link" href="{{route('home')}}">
-        <img alt="Enesy" class="global-nav__header-tuts-logo-image" src="">
+        <img alt="Enesy" class="global-nav__header-tuts-logo-image" src="{{asset('frontend/themes/default/assets/images/logo.svg')}}">
       </a>
       <div class="global-nav__header-right">
         <ul class="global-nav__header-list">
