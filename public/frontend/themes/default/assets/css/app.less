@@ -184,6 +184,8 @@ video {
 .icon-menu7:before{content:"\ec6e";}
 .icon-chevron-right:before{content:"\e9de";}
 .icon-x:before{content:"\ea00";}
+.icon-chevron-down:before{content:"\e9dc";}
+.icon-chevron-up:before{content:"\e9df";}
 
 .pull-right {
     float: right
@@ -356,17 +358,6 @@ video {
     position: relative;
     font-family: Roboto, sans-serif
 }
-.svg .global-nav__header-enesy-logo{
-	background: url('../images/logo.svg');
-    background-size: 185px 23px;
-}
-.global-nav__header-enesy-logo>span {
-    display: block;
-    position: relative;
-    text-indent: -9999px;
-    height: 23px;
-    width: 185px;
-}
 .global-nav__header-content {
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
@@ -410,11 +401,25 @@ video {
         left: 8px
     }
 }
+
 .global-nav__header-tuts-logo-image {
+    position: absolute;
     margin-top: 3px;
-    width: 185px;
-    height: 23px
 }
+.global-nav__header-tuts-logo-image>span {
+    display: block;
+    position: relative;
+    text-indent: -9999px;
+    height: 23px;
+    width: 185px;
+    top: 3px
+}
+.svg .global-nav__header-tuts-logo-image>span {
+    background: url(../images/logo.svg);
+    background-size: 185px 23px
+}
+
+
 .global-nav__header-left {
     display: inline-block;
     position: absolute;
@@ -1021,7 +1026,7 @@ video {
 .global-nav__mobile-top-level-collapse-text {
     position: absolute;
     right: 14px;
-    top: 0;
+    top: 10px;
     font: 14px/2.9em Arial, sans-serif;
     color: #999999
 }
@@ -1114,6 +1119,22 @@ video {
 .global-nav__mobile-top-level-item--expanded .global-nav__mobile-top-level-link-expandable {
     border-bottom: none;
     background: #1d2630
+}
+.global-nav-mobile__enesy-links {
+    padding: 0
+}
+.global-mobile__header-item--enesy-link {
+    display: block;
+    position: relative;
+    padding: 0 14px;
+    color: white
+}
+.global-mobile__header-item--enesy-link:hover,
+.global-mobile__header-item--enesy-link:active,
+.global-mobile__header-item--enesy-link:focus {
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+    color: #999999
 }
 .global-nav__mobile-user-links {
     color: #a66230;

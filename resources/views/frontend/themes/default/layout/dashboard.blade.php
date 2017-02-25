@@ -4,6 +4,8 @@
 
 @section('body.script')
 <script type="text/javascript">
+
+	// mobile menu
 	$(document).on('click', '.global-nav__mobile-toggle-link', function (e) {
 		$('body').toggleClass('body--mobile-nav-open');
 	});
@@ -51,5 +53,18 @@
 	        
 	    };
 	});
+
+	// mobile menu expand (need Duc's help! to re-write)
+	$(document).on('click','.global-nav__mobile-top-level-expansion-link', function (e) {
+		$(this).closest(".global-nav__mobile-top-level-item").toggleClass("global-nav__mobile-top-level-item--expanded");
+	});
+
+    $(window).on('resize', function ()
+    {
+        if ($(window).width() > 480)
+        {
+            $('body').removeClass('body--mobile-nav-open');
+        }
+    });
 </script>
 @stop
