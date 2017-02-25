@@ -90,12 +90,7 @@
                         <span class="global-nav__mobile-top-level-link-title">{{$p_value->title}}</span>
                       </a>
                       <a class="global-nav__mobile-top-level-link global-nav__mobile-top-level-expansion-link" href="#">
-                        <span class="global-nav__mobile-top-level-expand-text">
-                          <i class="icon-chevron-down icon-medium global-nav__mobile-top-level-link-icon"></i>
-                        </span>
-                        <span class="global-nav__mobile-top-level-collapse-text">
-                          <i class="icon-chevron-up icon-medium global-nav__mobile-top-level-link-icon"></i>
-                        </span>
+                        
                       </a>
                       <?php if($child){ ?>
                       <ul class="global-nav__mobile-second-level">

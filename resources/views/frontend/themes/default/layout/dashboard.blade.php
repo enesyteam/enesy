@@ -55,10 +55,6 @@
 	});
 
 	// mobile menu expand (need Duc's help! to re-write)
-	$(document).on('click','.global-nav__mobile-top-level-expansion-link', function (e) {
-		$(this).closest(".global-nav__mobile-top-level-item").toggleClass("global-nav__mobile-top-level-item--expanded");
-	});
-
     $(window).on('resize', function ()
     {
         if ($(window).width() > 480)
@@ -66,5 +62,25 @@
             $('body').removeClass('body--mobile-nav-open');
         }
     });
+
+    // collapable
+    $('.global-nav__mobile-top-level-expansion-link').click(function(e) {
+	  	e.preventDefault();
+	  
+	    var $this = $(this);
+	    $this.toggleClass('is-open');
+	  
+	    if ($this.next().hasClass('show')) {
+	        $this.next().removeClass('show');
+	        $this.next().slideUp(350);
+	    } else {
+	        $this.parent().parent().find('li .global-nav__mobile-second-level').removeClass('show');
+
+	        $this.parent().parent().find('li .global-nav__mobile-second-level').slideUp(350);
+	        $this.next().toggleClass('show');
+	        $this.next().slideToggle(350);
+	    }
+	});
+
 </script>
 @stop
