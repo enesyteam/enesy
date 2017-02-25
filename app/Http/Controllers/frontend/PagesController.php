@@ -38,7 +38,7 @@ class PagesController extends Controller
       View::share ( 'meta_des','Đào tạo Kỹ sư chuyên nghiệp' );
        
       // end seo
-    	return view('frontend.course.courses-list',['listCourse'=>$listCourse, "sort"=>$sort]);
+    	return view('frontend.themes.default.home',['listCourse'=>$listCourse, "sort"=>$sort]);
     }
     //demo gridview
     public function indexByGrid(Request $request){

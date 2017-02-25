@@ -1,0 +1,1 @@
+@extends('frontend.themes.default.layout.dashboard')
