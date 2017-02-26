@@ -35,6 +35,7 @@
 }
 .icon-medium {
 	font-size: 16px;
+  top: -1px;
 }
 .icon-2x {
 	font-size: 24px;
@@ -64,9 +65,9 @@
 .icon-envelop4:before {
     content: "\ea97";
 }
-.icon-lifebuoy:before {
-    content: "\ea80";
-}
+.icon-comment-discussion:before{content:"\f04f";}
+.icon-grid2:before{content:"\ec5b";}
+.icon-list2:before{content:"\ec57";}
 .fa-search:before {
     content: "\f002"
 }
@@ -97,7 +98,9 @@
   &envelope,
   &question,
   &graduation,
-  &camrecorder{
+  &camrecorder,
+  &list,
+  &grid,{
     font-family: '@{simple-line-font-family}';
     speak: none;
     font-style: normal;
@@ -125,4 +128,10 @@
 }
 .@{simple-line-icon-prefix}camrecorder:before {
   content: "\e07e";
+}
+.@{simple-line-icon-prefix}list:before {
+  content: "\e067";
+}
+.@{simple-line-icon-prefix}grid:before {
+  content: "\e06a";
 }

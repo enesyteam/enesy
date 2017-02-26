@@ -11,7 +11,7 @@ use View;
 class CourseController extends Controller
 {
     public function index(){
-    	return view('frontend.course.index');
+    	return view('frontend.themes.default.pages.course.index');
     }
     public function detail($alias,$id){
         $course_detail = Course::where('id',$id)->where('status',1)->first();
