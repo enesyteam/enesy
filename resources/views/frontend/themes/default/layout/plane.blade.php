@@ -131,7 +131,16 @@
                 </a>
             </div>
         </nav>
+
+        <!-- Page content -->
+        <div class="page-content">
+            
+        </div>
         <div class="global-page-overlay"></div>
+
+        <!-- Footer -->
+        @include('frontend.themes.default.partials.footer')
+        <!-- /Footer -->
 
         @yield('body.script')
     </body>
