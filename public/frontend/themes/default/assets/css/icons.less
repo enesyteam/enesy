@@ -1,0 +1,128 @@
+// Font face
+/*!
+ *  Font Awesome 4.3.0 by @davegandy - http://fontawesome.io - @fontawesome
+ *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
+ */
+@font-face {
+    font-family: 'icomoon';
+    src: url("../icons/icomoon/fonts/icomoon.eot?3p0rtw");
+    src: url("../icons/icomoon/fonts/icomoon.eot?#iefix3p0rtw") format("embedded-opentype"), 
+    url("../icons/icomoon/fonts/icomoon.woff?3p0rtw") format("woff"), 
+    url("../icons/icomoon/fonts/icomoon.ttf?3p0rtw") format("truetype"), 
+    url("../icons/icomoon/fonts/icomoont.svg?3p0rtw#icomoon") format("svg");
+    font-weight: normal;
+    font-style: normal
+}
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	min-width: 1em;
+	display: inline-block;
+	text-align: center;
+	font-size: 12px;
+	vertical-align: middle;
+	position: relative;
+	top: 0;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+.icon-medium {
+	font-size: 16px;
+}
+.icon-2x {
+	font-size: 24px;
+}
+.icon-3x {
+	font-size: 36px;
+}
+.icon-bordered {
+	padding: 5px;
+	border: 2px solid;
+	border-radius: 50%;
+}
+.icon-arrow-down12:before{content:"\e9c1";}
+.icon-user:before{content:"\eb33";}
+.icon-search4:before{content:"\e98e";}
+.icon-menu7:before{content:"\ec6e";}
+.icon-chevron-right:before{content:"\e9de";}
+.icon-x:before{content:"\ea00";}
+.icon-chevron-down:before{content:"\e9dc";}
+.icon-chevron-up:before{content:"\e9df";}
+.icon-help:before {
+    content: "\e9bc";
+}
+.icon-merge:before {
+    content: "\edb1";
+}
+.icon-envelop4:before {
+    content: "\ea97";
+}
+.icon-lifebuoy:before {
+    content: "\ea80";
+}
+.fa-search:before {
+    content: "\f002"
+}
+.fa-chevron-down:before{
+  content:"\f078"
+}
+
+// Simple Line icon
+// Default Variables
+@simple-line-font-path        : "../icons/simpline-icon/fonts/";
+@simple-line-font-family      : "simple-line-icons";
+@simple-line-icon-prefix      : s-icon-;
+
+//Fonts
+@font-face {
+  font-family: '@{simple-line-font-family}';
+  src:  url('@{simple-line-font-path}Simple-Line-Icons.eot?v=2.4.0');
+  src:  url('@{simple-line-font-path}Simple-Line-Icons.eot?v=2.4.0#iefix') format('embedded-opentype'),
+        url('@{simple-line-font-path}Simple-Line-Icons.woff2?v=2.4.0') format('woff2'),
+        url('@{simple-line-font-path}Simple-Line-Icons.ttf?v=2.4.0') format('truetype'),
+        url('@{simple-line-font-path}Simple-Line-Icons.woff?v=2.4.0') format('woff'),
+        url('@{simple-line-font-path}Simple-Line-Icons.svg?v=2.4.0#simple-line-icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+.@{simple-line-icon-prefix}  {
+  &support,
+  &envelope,
+  &question,
+  &graduation,
+  &camrecorder{
+    font-family: '@{simple-line-font-family}';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+.@{simple-line-icon-prefix}support:before {
+  content: "\e056";
+}
+.@{simple-line-icon-prefix}envelope:before {
+  content: "\e086";
+}
+.@{simple-line-icon-prefix}question:before {
+  content: "\e05d";
+}
+.@{simple-line-icon-prefix}graduation:before {
+  content: "\e019";
+}
+.@{simple-line-icon-prefix}camrecorder:before {
+  content: "\e07e";
+}

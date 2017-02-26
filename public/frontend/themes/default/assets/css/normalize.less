@@ -1,0 +1,81 @@
+// Nomarlize
+@charset "UTF-8";
+* {
+    box-sizing: border-box
+}
+html {
+    .full-height;
+}
+body {
+    font: normal 16px/26px "Roboto", Arial, sans-serif;
+    background: @body-bg-color;
+    color: @body-color;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    margin: 0;
+    padding: 0;
+    -webkit-text-size-adjust: none
+}
+h2,
+h3,
+h4,
+h5,
+h6 {
+    line-height: 1em
+}
+a {
+    color: @link-color;
+    .text-no-decoration;
+}
+a:hover,
+a:active,
+a:focus {
+    color: @link-hover-active-focus;
+}
+a img {
+    outline: none;
+    border: none
+}
+h1 {
+    font-size: 49px;
+    line-height: 1em
+}
+@media (max-width: 679px) {
+    h1 {
+        font-size: 36px;
+        line-height: 2.5rem
+    }
+}
+figure {
+    margin: 0;
+    padding: 0
+}
+header,
+footer,
+main,
+section,
+article {
+    display: block
+}
+object,
+embed {
+    outline: 0
+}
+fieldset {
+    border: none;
+    margin: 0;
+    padding: 0
+}
+input:disabled {
+    background-color: #eeeeee
+}
+ol.lower-alpha {
+    list-style-type: lower-alpha
+}
+ol.decimal {
+    list-style-type: decimal
+}
+audio,
+video {
+    max-width: 100%
+}

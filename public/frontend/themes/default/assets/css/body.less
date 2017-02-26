@@ -1,0 +1,110 @@
+.page-body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100vh;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column
+}
+.page-content {
+    position: relative;
+    width: 100%;
+    background: #fefefe;
+    height: auto;
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center
+}
+.page-content.topic-design {
+    border-top: 10px #c94e4b solid
+}
+.page-content.topic-code {
+    border-top: 10px #4cc1be solid
+}
+.page-content.topic-3 {
+    border-top: 10px #56a4ca solid
+}
+.page-content.topic-4 {
+    border-top: 10px #8360a8 solid
+}
+.page-content.topic-5 {
+    border-top: 10px #f95858 solid
+}
+.page-content.topic-6 {
+    border-top: 10px #5d7dba solid
+}
+.page-content.topic-7 {
+    border-top: 10px #f38844 solid
+}
+.page-content.topic-8 {
+    border-top: 10px #ff9069 solid
+}
+.page-content.topic-9 {
+    border-top: 10px #72bf40 solid
+}
+.page-content.topic-10 {
+    border-top: 10px #49b293 solid
+}
+.content {
+    width: 100%;
+    display: block;
+    background: #fefefe;
+    padding-bottom: 10px
+}
+@media (min-width: 680px) {
+    .content {
+        margin: 0 auto
+    }
+    .content:after {
+        content: "";
+        display: table;
+        clear: both
+    }
+}
+@media (min-width: 1340px) {
+    .content {
+        max-width: 1290px
+    }
+}
+@media (min-width: 1024px) and (max-width: 1339px) {
+    .content {
+        max-width: 960px
+    }
+}
+@media (min-width: 680px) and (max-width: 1023px) {
+    .content {
+        max-width: 630px
+    }
+}
+@media (min-width: 680px) {
+    .content {
+        margin: 45px auto
+    }
+}
+@media (max-width: 679px) {
+    .content {
+        padding: 10px;
+        margin: 0
+    }
+}
