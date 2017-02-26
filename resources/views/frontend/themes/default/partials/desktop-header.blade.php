@@ -53,7 +53,7 @@
               $url_pcat = route('course.listByCat',['id'=>$p_value->id,'alias'=>$p_value->alias]); ?>
               <li class="global-nav__header-item">
                 <nav class="courses-menu view" data-toggle=".courses-menu__dropdown-toggle">
-                  <a class="courses-menu__dropdown-toggle global-nav__header-link global-nav__header-link--primary " href="<?php echo $url_pcat; ?>">{{$p_value->title}}
+                  <a class="courses-menu__dropdown-toggle global-nav__header-link global-nav__header-link--primary " href="<?php echo $url_pcat; ?>" title ="Mô tả chưa lấy được">{{$p_value->title}}
                     <i class="icon-chevron-down"></i>
                   </a>
                   <ul class="courses-menu__topics">
@@ -61,7 +61,7 @@
                           $url_ccat = route('course.listByCat',['id'=>$c_value->id,'alias'=>$c_value->alias]);
                     ?>
                       <li class="courses-menu__topic">
-                        <a class="courses-menu__topic-link topic-code" href="{{$url_ccat}}">{{$c_value->title}}</a>
+                        <a class="courses-menu__topic-link topic-code" href="{{$url_ccat}}" title="Mô tả chưa lấy được">{{$c_value->title}}</a>
                       </li>
                     <?php }?>
                   </ul>

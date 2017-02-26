@@ -913,7 +913,7 @@
     display: none;
     float: right;
     right: -88px;
-    padding: 15px 10px;
+    padding: 0;
     background: #fff;
     background-color: #fff;
     border: 1px solid #e1e8ed;
@@ -923,6 +923,11 @@
 }
 .courses-menu__topics li:first-child a {
     border-radius: 3px 3px 0 0;
+    padding-top: 15px;
+}
+.courses-menu__topics li:last-child a {
+    border-radius: 3px 3px 0 0;
+    padding-bottom: 15px;
 }
 .courses-menu__topic {
     list-style: none;
@@ -931,11 +936,10 @@
     position: relative;
     display: inline-block;
     width: 190px;
-    padding: 10px 25px;
-    font: normal 14px/20px "Roboto", Arial, sans-serif;
+    font: normal 14px/20px @font-family-sans-serif;
     white-space: nowrap;
     color: #3a3a3a;
-    padding-left: 25px
+    padding-left: 15px
 }
 
 // Search box
