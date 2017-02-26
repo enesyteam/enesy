@@ -8,19 +8,19 @@
             </a>
           </li>
           <li class="page-footer__bar-link-item">
-            <a class="page-footer__bar-link" href="#">Giới thiệu
+            <a class="page-footer__link" href="#">Giới thiệu
             </a>
           </li>
           <li class="page-footer__bar-link-item">
-            <a class="page-footer__bar-link" href="#">Hợp tác giảng dạy
+            <a class="page-footer__link" href="#">Hợp tác giảng dạy
             </a>
           </li>
           <li class="page-footer__bar-link-item">
-            <a class="page-footer__bar-link" href="#">Hỏi đáp
+            <a class="page-footer__link" href="#">Hỏi đáp
             </a>
           </li>
           <li class="page-footer__bar-link-item">
-            <a class="page-footer__bar-link" href="#">Trợ giúp
+            <a class="page-footer__link" href="#">Trợ giúp
             </a>
           </li>
         </ul>

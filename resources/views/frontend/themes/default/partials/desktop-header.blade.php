@@ -7,13 +7,13 @@
       <div class="global-nav__header-right">
         <ul class="global-nav__header-list">
           <li class="global-nav__header-item">
-            <a class="global-nav__header-item--envato-link" href="{{route('home.about')}}">Giới thiệu</a>
+            <a class="global-nav__header-item--enesy-link" href="{{route('home.about')}}">Giới thiệu</a>
           </li>
           <li class="global-nav__header-item">
-            <a class="global-nav__header-item--envato-link" href="{{route('home.become_instructor')}}"><strong style="color:#83b348">Hợp tác giảng dạy</strong></a>
+            <a class="global-nav__header-item--enesy-link" href="{{route('home.become_instructor')}}">Hợp tác giảng dạy</a>
           </li>
           <li class="global-nav__header-item">
-            <a class="global-nav__header-item--envato-link" href="#">Trợ giúp</a>
+            <a class="global-nav__header-item--enesy-link" href="#">Trợ giúp</a>
           </li>
         </ul>
         <ul class="global-nav__header-buttons">
@@ -60,7 +60,7 @@
                         $url_ccat = route('course.listByCat',['id'=>$c_value->id,'alias'=>$c_value->alias]);
                   ?>
                     <li class="courses-menu__topic">
-                      <a class="courses-menu__topic-link topic-design" href="{{$url_ccat}}">{{$c_value->title}}</a>
+                      <a class="courses-menu__topic-link topic-code" href="{{$url_ccat}}">{{$c_value->title}}</a>
                     </li>
                   <?php }?>
                 </ul>

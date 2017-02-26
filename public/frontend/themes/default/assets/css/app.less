@@ -467,6 +467,9 @@ video {
         display: none
     }
 }
+.global-nav__header-bottom .global-nav__header-list{
+	margin-bottom: 10px;
+}
 .global-nav__search {
     padding: 0;
     width: 300px;
@@ -524,28 +527,34 @@ video {
     height: 36px;
     width: 36px;
 }
-.tt-dataset-search ul{
-	margin-left: 0;
-	margin-top: 0px;
+.tt-dataset-search{
+ 	ul{
+		margin-left: 0;
+		margin-top: 0px;
+	}
+	ul>li{
+		list-style: none;
+		margin-left: -20px;
+	}
 }
 .tt-dataset-search ul>li{
 	list-style: none;
 	margin-left: -20px;
-}
-.tt-dataset-search ul>li:before{
-	font-family: 'icomoon';
-	font-size: 10px;
-	margin-right: 5px;
-	content:"\e98e";
+	ul>li:before{
+		font-family: 'icomoon';
+		font-size: 10px;
+		margin-right: 5px;
+		content:"\e98e";
+	}
 }
 .global-nav__header-list {
     list-style: none;
-    margin: 0;
     padding: 0;
+    margin-top: 0;
     padding-top: 4px;
     height: 30px;
     line-height: 30px;
-    display: inline-block
+    display: inline-block;
 }
 @media (max-width: 1023px) {
     .global-nav__header-list {
@@ -572,11 +581,11 @@ video {
     display: inline-block;
     margin: 0px 30px 0 0
 }
-.global-nav__header-item--envato-link {
+.global-nav__header-item--enesy-link {
     color: #999999;
     font-size: 14px
 }
-.global-nav__header-item--envato-link:hover {
+.global-nav__header-item--enesy-link:hover {
     -webkit-transition: all 0.2s ease;
     transition: all 0.2s ease;
     color: white
@@ -1290,39 +1299,41 @@ span.twitter-typeahead {
     top: -6px;
     right: 88px;
 }
+// NOTE: we'll assign one colot for each topic (Cong)
 .courses-menu__topic-link:hover {
-    text-decoration: underline
+    text-decoration: underline;
+    .topic-civil {
+    	color: #b03532
+	}
+	.topic-code {
+    	color: #33a8a5
+	}
+	.topic-electric {
+    	color: #3d8bb1
+	}
+	.topic-cost {
+    	color: #6a478f
+	}
+	.topic-xxx {
+    	color: #e03f3f
+	}
+	.topic-yyy {
+    	color: #4464a1
+	}
+	.topic-zzz {
+    	color: #da6f2b
+	}
+	.topic-hhh {
+    	color: #e67750
+	}
+	.topic-kkk {
+    	color: #59a627
+	}
+	.topic-lll {
+    	color: #30997a
+	}
 }
-.courses-menu__topic-link:hover.topic-design {
-    color: #b03532
-}
-.courses-menu__topic-link:hover.topic-code {
-    color: #33a8a5
-}
-.courses-menu__topic-link:hover.topic-music {
-    color: #3d8bb1
-}
-.courses-menu__topic-link:hover.topic-photography {
-    color: #6a478f
-}
-.courses-menu__topic-link:hover.topic-cgi {
-    color: #e03f3f
-}
-.courses-menu__topic-link:hover.topic-computers {
-    color: #4464a1
-}
-.courses-menu__topic-link:hover.topic-business {
-    color: #da6f2b
-}
-.courses-menu__topic-link:hover.topic-crafts {
-    color: #e67750
-}
-.courses-menu__topic-link:hover.topic-gamedevelopment {
-    color: #59a627
-}
-.courses-menu__topic-link:hover.topic-webdesign {
-    color: #30997a
-}
+
 .courses-menu__free-link:hover,
 .courses-menu__all-topics-link:hover,
 .courses-menu__bundles-link:hover {
@@ -1383,39 +1394,6 @@ span.twitter-typeahead {
     color: #3a3a3a;
     padding-left: 25px
 }
-.courses-menu__topic-link:hover {
-    text-decoration: underline
-}
-.courses-menu__topic-link:hover.topic-design {
-    color: #b03532
-}
-.courses-menu__topic-link:hover.topic-code {
-    color: #33a8a5
-}
-.courses-menu__topic-link:hover.topic-music {
-    color: #3d8bb1
-}
-.courses-menu__topic-link:hover.topic-photography {
-    color: #6a478f
-}
-.courses-menu__topic-link:hover.topic-cgi {
-    color: #e03f3f
-}
-.courses-menu__topic-link:hover.topic-computers {
-    color: #4464a1
-}
-.courses-menu__topic-link:hover.topic-business {
-    color: #da6f2b
-}
-.courses-menu__topic-link:hover.topic-crafts {
-    color: #e67750
-}
-.courses-menu__topic-link:hover.topic-gamedevelopment {
-    color: #59a627
-}
-.courses-menu__topic-link:hover.topic-webdesign {
-    color: #30997a
-}
 // Footer
 .page-footer {
     background: #282828;
@@ -1423,129 +1401,20 @@ span.twitter-typeahead {
     line-height: 1.6em;
     font-family: Roboto, sans-serif
 }
-.page-footer__social-link {
-    width: 36px;
-    height: 36px;
-    display: inline-block;
-    vertical-align: middle
+.page-footer__link {
+    color: #999999;
+    white-space: nowrap
 }
-.page-footer__social-link:hover {
-    position: relative
-}
-.page-footer__social-link:hover:before {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0;
-    border-radius: 3px
-}
-.page-footer__facebook-link {
-    background: url("//static.tutsplus.com/assets/social-facebook-8dcca1686d9d57da8ed9b29bd05ad185.svg") no-repeat
-}
-.page-footer__facebook-link:hover:before {
-    background-color: rgba(59, 89, 152, 0.3)
-}
-.page-footer__twitter-link {
-    background: url("//static.tutsplus.com/assets/social-twt-b5fe9b51facd37fa3d456b890e116c81.svg") no-repeat
-}
-.page-footer__twitter-link:hover:before {
-    background-color: rgba(0, 172, 237, 0.3)
-}
-.page-footer__googleplus-link {
-    background: url("//static.tutsplus.com/assets/social-google-248c1fffcb350f8fa21cc321576d4d7d.svg") no-repeat
-}
-.page-footer__googleplus-link:hover:before {
-    background-color: rgba(221, 75, 57, 0.3)
-}
-.page-footer__pinterest-link {
-    background: url("//static.tutsplus.com/assets/social-pintrest-62ccaf1be1de9a4f5426d7d1e2a91bfe.svg") no-repeat
-}
-.page-footer__pinterest-link:hover:before {
-    background-color: rgba(203, 32, 39, 0.3)
+.page-footer__link:hover,
+.page-footer__link:active,
+.page-footer__link:focus {
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+    color: white
 }
 .page-footer__rss {
     float: left;
     width: 410px
-}
-.page-footer__envato_teaser {
-    margin-top: 10px
-}
-@media (max-width: 679px) {
-    .page-footer__envato_teaser {
-        width: 50%
-    }
-}
-.page-footer__envato-product {
-    overflow: hidden;
-    margin-bottom: 10px;
-    color: #8e8e8e;
-    display: inline-block;
-    background-color: #19212a;
-    padding: 20px;
-    position: relative
-}
-.page-footer__envato-product:last-child {
-    float: right
-}
-@media (min-width: 1340px) {
-    .page-footer__envato-product {
-        width: 630px
-    }
-}
-@media (min-width: 1024px) and (max-width: 1339px) {
-    .page-footer__envato-product {
-        width: 465px
-    }
-}
-@media (min-width: 680px) and (max-width: 1023px) {
-    .page-footer__envato-product {
-        width: 630px
-    }
-}
-@media (max-width: 679px) {
-    .page-footer__envato-product {
-        width: 180px
-    }
-    .page-footer__envato-product:last-child {
-        float: none
-    }
-}
-.page-footer__envato-product-image {
-    width: 140px;
-    margin-right: 30px;
-    float: left
-}
-.page-footer__envato-product-description {
-    margin-left: 170px
-}
-@media (max-width: 679px) {
-    .page-footer__envato-product-description {
-        margin: 122px 0 0 0;
-        word-wrap: break-word;
-        font-size: 14px
-    }
-}
-@media (max-width: 679px) {
-    .page-footer__envato-product-description-text {
-        display: none
-    }
-}
-.page-footer__envato-product-link {
-    margin-top: 5px;
-    display: block;
-    color: white;
-    position: absolute;
-    bottom: 20px
-}
-@media (max-width: 679px) {
-    .page-footer__envato-product-link {
-        position: initial;
-        white-space: normal;
-        text-align: left
-    }
 }
 .page-footer__bar {
     background: #191919
@@ -1645,22 +1514,31 @@ span.twitter-typeahead {
     display: block;
     float: left;
     font-size: 12px;
-    line-height: 20px
+    line-height: 20px;
+    border-top: 1px solid #333333;
+    padding-top: 10px;
 }
-.page-footer__copyright a{
-	color: #fff;
-}
-.page-footer__copyright a:after{
-	color: #999;
-    content: "/";
-    margin: 0 .3rem;
-}
-.page-footer__copyright a:first-child{
-    margin-left: 10px;
-}
-.page-footer__copyright a:last-child:after{
-    content: "";
-    margin: 0;
+.page-footer__copyright{
+	a{
+		color: #999;
+	}
+	a:hover{
+	    -webkit-transition: all 0.2s ease;
+	    transition: all 0.2s ease;
+	    color: white
+	}
+	a:after{
+		color: #999;
+	    content: "/";
+	    margin: 0 .3rem;
+	}
+	a:first-child{
+    	margin-left: 10px;
+    }
+    a:last-child:after{
+	    content: "";
+	    margin: 0;
+	}
 }
 @media (max-width: 1023px) {
     .page-footer__copyright {
