@@ -6,6 +6,12 @@
 @stop
 {{-- /Page stylesheets --}}
 
+{{-- Page js --}}
+@section('page.js')
+{{ Html::script(asset('frontend/themes/default/assets/js/course.js')) }}
+@stop
+{{-- /Page js --}}
+
 {{-- SEO tags --}}
 @section('page_title', 'Khóa học đào tạo Kỹ sư chuyên nghiệp | Enesy')
 {{-- /SEO tags --}}
@@ -66,53 +72,55 @@
 		</div>
 		{{-- /Content Title --}}
 		{{-- Courses grid --}}
-		<ol class="posts posts--full-width nolinks">
-                 @foreach($listCourse as $item)
-                    <?php  
-                    $link_detail  = route('course.detail',['alias'=>$item->alias,'id'=>$item->id]);
-                    $link_preview = route('course.preview',['id'=>$item->id]);
-                    ?>
+		<div class="courses-grid-view">
+			<ol class="posts posts--full-width nolinks">
+	                 @foreach($listCourse as $item)
+	                    <?php  
+	                    $link_detail  = route('course.detail',['alias'=>$item->alias,'id'=>$item->id]);
+	                    $link_preview = route('course.preview',['id'=>$item->id]);
+	                    ?>
+	                    {{-- Course Item --}}
 
-                    {{-- Course Item --}}
-                    <li class="posts__post">
-					  <article>
-					    <header>
-					      <a class="posts__post-preview " href="{{$link_detail}}">
-					        <img sizes="(max-width: 679px) 76px, 300px" class="posts__post-preview-image posts__post-preview-image--regular" srcset="https://cms-assets.tutsplus.com/uploads/users/71/courses/1033/preview_image/drupal-8-1.png 400w, https://thumbsplus.tutsplus.com/uploads/users/71/courses/1033/preview_image/drupal-8-1.png?height=380&amp;width=380 380w, https://thumbsplus.tutsplus.com/uploads/users/71/courses/1033/preview_image/drupal-8-1.png?height=300&amp;width=300 300w, https://thumbsplus.tutsplus.com/uploads/users/71/courses/1033/preview_image/drupal-8-1.png?height=190&amp;width=190 190w, https://thumbsplus.tutsplus.com/uploads/users/71/courses/1033/preview_image/drupal-8-1.png?height=152&amp;width=152 152w, https://thumbsplus.tutsplus.com/uploads/users/71/courses/1033/preview_image/drupal-8-1.png?height=76&amp;width=76 76w" src="https://thumbsplus.tutsplus.com/uploads/users/71/courses/1033/preview_image/drupal-8-1.png?height=300&amp;width=300" alt="Drupal 8 1">
-					      </a>
-					      <a class="posts__post-title " href="{{$link_detail}}">
-					        <h1 class="nolinks">{{$item->title}}</h1>
-					      </a>
-					    </header>
-					    <div class="posts__post-teaser">{{substr($item->introtext, 0, 100)}}
-					    </div>
-					    <footer class="posts__post-details">
-					      <div class="posts__post-teaser-overlay">
-					      </div>
-					      <div class="posts__post-publication-meta">
-					        <img sizes="76px" class="posts__post-author_photo" srcset="{{asset('frontend/themes/default/assets/images/user-no-avatar.png')}} 400w, {{asset('frontend/themes/default/assets/images/user-no-avatar.png')}}?height=380&amp;width=380 380w, {{asset('frontend/themes/default/assets/images/user-no-avatar.png')}}?height=300&amp;width=300 300w, {{asset('frontend/themes/default/assets/images/user-no-avatar.png')}}?height=190&amp;width=190 190w, {{asset('frontend/themes/default/assets/images/user-no-avatar.png')}}?height=152&amp;width=152 152w, {{asset('frontend/themes/default/assets/images/user-no-avatar.png')}}?height=76&amp;width=76 76w" alt="Derek Jensen" src="{{asset('frontend/themes/default/assets/images/user-no-avatar.png')}}?height=76&amp;width=76">
-					        <div class="posts__post-details__info">
-					          <address class="posts__post-author">
-					            <a class="posts__post-author-link" href="#">{{$item->last_name.' '.$item->middle_name.' '.$item->first_name}}
-					            </a>
-					          </address>
-					          <time class="posts__post-publication-date" datetime="2017-02-24T00:00:00Z" title="24 Feb 2017">26/02/2017
-					          </time>
-					        </div>
-					      </div>
-					      <div class="posts__post-primary-topic topic-code">
-					        <a class="posts__post-primary-topic-link topic-code" href="{{route('course.listByCat',['id'=>$item->parent_cat_id,'alias'=>$item->cat_alias2])}}">{{$item->cat_title2}}
-					        </a>
-					      </div>
-					      <span class="posts__post-extra-info">3.7 hours
-					      </span>
-					    </footer>
-					  </article>
-					</li>
-                    {{-- /Course Item --}}
+	                    <li class="post__container">
+						  <article class="posts__post">
+						    <header>
+						      <a class="posts__post-preview " href="{{$link_detail}}">
+						        <img sizes="(max-width: 679px) 76px, 300px" class="posts__post-preview-image posts__post-preview-image--regular" srcset="https://cms-assets.tutsplus.com/uploads/users/71/courses/1033/preview_image/drupal-8-1.png 400w, https://thumbsplus.tutsplus.com/uploads/users/71/courses/1033/preview_image/drupal-8-1.png?height=380&amp;width=380 380w, https://thumbsplus.tutsplus.com/uploads/users/71/courses/1033/preview_image/drupal-8-1.png?height=300&amp;width=300 300w, https://thumbsplus.tutsplus.com/uploads/users/71/courses/1033/preview_image/drupal-8-1.png?height=190&amp;width=190 190w, https://thumbsplus.tutsplus.com/uploads/users/71/courses/1033/preview_image/drupal-8-1.png?height=152&amp;width=152 152w, https://thumbsplus.tutsplus.com/uploads/users/71/courses/1033/preview_image/drupal-8-1.png?height=76&amp;width=76 76w" src="https://thumbsplus.tutsplus.com/uploads/users/71/courses/1033/preview_image/drupal-8-1.png?height=300&amp;width=300" alt="Drupal 8 1">
+						      </a>
+						      <a class="posts__post-title " href="{{$link_detail}}">
+						        <h1 class="nolinks">{{$item->title}}</h1>
+						      </a>
+						    </header>
+						    <div class="posts__post-teaser">{{substr($item->introtext, 0, 100)}}
+						    </div>
+						    <footer class="posts__post-details">
+						      <div class="posts__post-teaser-overlay">
+						      </div>
+						      <div class="posts__post-publication-meta">
+						        <img sizes="76px" class="posts__post-author_photo" srcset="{{asset('frontend/themes/default/assets/images/user-no-avatar.png')}} 400w, {{asset('frontend/themes/default/assets/images/user-no-avatar.png')}}?height=380&amp;width=380 380w, {{asset('frontend/themes/default/assets/images/user-no-avatar.png')}}?height=300&amp;width=300 300w, {{asset('frontend/themes/default/assets/images/user-no-avatar.png')}}?height=190&amp;width=190 190w, {{asset('frontend/themes/default/assets/images/user-no-avatar.png')}}?height=152&amp;width=152 152w, {{asset('frontend/themes/default/assets/images/user-no-avatar.png')}}?height=76&amp;width=76 76w" alt="Derek Jensen" src="{{asset('frontend/themes/default/assets/images/user-no-avatar.png')}}?height=76&amp;width=76">
+						        <div class="posts__post-details__info">
+						          <address class="posts__post-author">
+						            <a class="posts__post-author-link" href="#">{{$item->last_name.' '.$item->middle_name.' '.$item->first_name}}
+						            </a>
+						          </address>
+						          <time class="posts__post-publication-date" datetime="2017-02-24T00:00:00Z" title="24 Feb 2017">26/02/2017
+						          </time>
+						        </div>
+						      </div>
+						      <div class="posts__post-primary-topic topic-code">
+						        <a class="posts__post-primary-topic-link topic-code" href="{{route('course.listByCat',['id'=>$item->parent_cat_id,'alias'=>$item->cat_alias2])}}">{{$item->cat_title2}}
+						        </a>
+						      </div>
+						      <span class="posts__post-extra-info">3.7 hours
+						      </span>
+						    </footer>
+						  </article>
+						</li>
+	                    {{-- /Course Item --}}
 
-                 @endforeach
-		</ol>
+	                 @endforeach
+			</ol>
+		</div>
 		{{-- /Courses grid --}}
 
 		{{-- Pagination --}}
@@ -130,25 +138,35 @@
 
 @section('body.script')
 <script type="text/javascript">
-   function getItemsPerRow(grid) {
-                var grid_breakpoints = grid.breakpoints;
-                var grid_element = grid.element;
-                var grid_width = grid_element.offsetWidth;
-                var items_per_row = 0;
-                for (var i = 0; i < grid_breakpoints.length; i++) {
-                    var breakpoint = grid_breakpoints[i];
-                    if (grid_width >= breakpoint.min_width) {
-                        var next_breakpoint = breakpoint[i + 1];
-                        if (next_breakpoint) {
-                            if (grid_width < next_breakpoint.min_width) {
-                                items_per_row = breakpoint.items_per_row
-                            }
-                        } else {
-                            items_per_row = breakpoint.items_per_row
-                        }
-                    }
-                }
-                return items_per_row
-            }
+
+    jQuery(document).ready(function () {
+
+        // first demo
+        $('div.courses-grid-view').responsiveContainer({
+            feature: 'min-width',
+            value: '830px',
+            className: 'course_grid_columns-4'
+        });
+
+        $('div.courses-grid-view').responsiveContainer({
+            feature: 'max-width',
+            value: '830px',
+            className: 'course_grid_columns-3'
+        });
+
+        $('div.courses-grid-view').responsiveContainer({
+            feature: 'max-width',
+            value: '680px',
+            className: 'course_grid_columns-2'
+        });
+
+        $('div.courses-grid-view').responsiveContainer({
+            feature: 'max-width',
+            value: '480px',
+            className: 'course_grid_columns-1'
+        });
+
+    });
+    
 </script>
 @stop
