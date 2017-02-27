@@ -65,12 +65,12 @@
         {{-- Page content--}}
         <div class="page-content">
             @yield('body.content')
+
+            {{-- Page overlay--}}
+                <div class="global-page-overlay"></div>
+            {{-- /Page overlay--}}
         </div>
         {{-- /Page content--}}
-
-        {{-- Page overlay--}}
-        <div class="global-page-overlay"></div>
-        {{-- /Page overlay--}}
 
         {{-- Footer--}}
         @include('frontend.themes.default.partials.footer')

@@ -1,5 +1,5 @@
 <div class="global-nav__header">
-  <div class="container">
+  <div class="container content-container">
     <div class="global-nav__header-content">
       <div class="global-nav__header-top">
         <a class="global-nav__header-tuts-logo-image" href="{{route('home')}}">

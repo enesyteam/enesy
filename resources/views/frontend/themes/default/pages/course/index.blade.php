@@ -29,7 +29,7 @@
 		{{-- Content Title --}}
 		<div class="content-title">
 			<div class="content-banner__body">
-				<h2 class="content-banner__title nolinks">Các khóa học đào tạo Kỹ sư chuyên nghiệp</h2>
+				<h3 class="content-banner__title nolinks">Khóa học</h3>
 			</div>
 			<section class="layout__content-full-width">
 				<div class="section-header view view--loaded">
@@ -74,51 +74,77 @@
 		{{-- Courses grid --}}
 		<div class="courses-grid-view">
 			<ol class="posts posts--full-width nolinks">
-	                 @foreach($listCourse as $item)
-	                    <?php  
-	                    $link_detail  = route('course.detail',['alias'=>$item->alias,'id'=>$item->id]);
-	                    $link_preview = route('course.preview',['id'=>$item->id]);
-	                    ?>
-	                    {{-- Course Item --}}
+					{{-- Test --}}
+					@foreach($listCourse as $item)
+					<?php $link_detail  = route('course.detail',['alias'=>$item->alias,'id'=>$item->id]);
+						$link_preview = route('course.preview',['id'=>$item->id]);?>
+					<li class="post__container">
+						<div class="iris_p_infinite__item">
+							<div class="iris_video-vital iris_video-vital--browse iris_video-vital--reveal">
+								{{-- Thumb and title (for link) --}}
+								<a class="iris_video-vital__overlay iris_link-box iris_chip-box" href="{{$link_detail}}">
+									{{-- Thumbnail --}}
+									<div class="iris_thumbnail iris_thumbnail iris_thumbnail-explore iris_thumbnail--16-9">
+										{{-- For thumb --}}
+										<?php  if($item->picture): ?>
+											<div>
+												<img src="<?php echo Helper::getPic($item->picture); ?>" srcset="<?php echo Helper::getPic($item->picture); ?> 2x" class="" data-pin-nopin="false" alt="{{$item->title}}" data-tooltip="{{$item->title}}">
+											</div>
+										<?php endif ?>
+										{{-- For price --}}
+										<div class="iris_video-vital__chips">
+											<div class="iris_annotation__duration iris_chip">
+												255<sup>k</sup>
+											</div>
+										</div/>
+										{{-- For like, share button --}}
+										<div class="iris_video-vital__chips--right">
+											<div class="iris_chip iris_chip-icon iris_chip--watch  iris_chip--browse iris_chip--right" title="Add to Watch Later" data-custom="{&quot;clip_id&quot;:205209634,&quot;title&quot;:&quot;Cream&quot;,&quot;active&quot;:false}"><svg class="iris_ic is--32" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 378.94 378.94">
+											<path d="M348.151,54.514c-19.883-19.884-46.315-30.826-74.435-30.826c-28.124,0-54.559,10.942-74.449,30.826l-9.798,9.8l-9.798-9.8   c-19.884-19.884-46.325-30.826-74.443-30.826c-28.117,0-54.56,10.942-74.442,30.826c-41.049,41.053-41.049,107.848,0,148.885   l147.09,147.091c2.405,2.414,5.399,3.892,8.527,4.461c1.049,0.207,2.104,0.303,3.161,0.303c4.161,0,8.329-1.587,11.498-4.764   l147.09-147.091C389.203,162.362,389.203,95.567,348.151,54.514z M325.155,180.404L189.47,316.091L53.782,180.404   c-28.368-28.364-28.368-74.514,0-102.893c13.741-13.739,32.017-21.296,51.446-21.296c19.431,0,37.702,7.557,51.438,21.296   l21.305,21.312c6.107,6.098,16.897,6.098,23.003,0l21.297-21.312c13.737-13.739,32.009-21.296,51.446-21.296   c19.431,0,37.701,7.557,51.438,21.296C353.526,105.89,353.526,152.039,325.155,180.404z"/>
+											</svg></div>
+										</div>
+										{{-- For player anotation button --}}
+										<div class="iris-annotation-layer iris_annotation iris_annotation--videovitals iris_annotation--sm"><div class="iris_annotation__content"><div class="iris_chip iris_chip-playbutton iris_playbutton" title="Play" data-custom="{}" data-fatal-attraction="container:explore_standard_multi_1|component:thumbnail_play|position:0-0|keyword:205209634|page:0"><svg class="iris_ic is--undefined" viewBox="0 0 232.153 232.153">
+										<path style="fill-rule:evenodd;clip-rule:evenodd;" d="M203.791,99.628L49.307,2.294c-4.567-2.719-10.238-2.266-14.521-2.266
+										c-17.132,0-17.056,13.227-17.056,16.578v198.94c0,2.833-0.075,16.579,17.056,16.579c4.283,0,9.955,0.451,14.521-2.267
+										l154.483-97.333c12.68-7.545,10.489-16.449,10.489-16.449S216.471,107.172,203.791,99.628z"/>
+										</svg></div><span class="iris_annotation__duration iris_chip">04:47</span></div></div>
+									</div>
+									{{-- For Course title --}}
+									<div class="iris_video-vital__title"><h5 class="l-ellipsis"><span class="iris_link iris_link--gray-2">{{$item->title}}</span></h5><div class="iris_video-vital__title-attributes"><!-- react-empty: 365 --></div></div>
+								</a>
+								{{-- Course description --}}
+								<div class="course_description_panel">
+									<span style="font-size: 12px">
+										<?php if (strlen($item->introtext) > 80) echo substr($item->introtext, 0, 80).'...'; else echo $item->introtext;  ?>
+									</span>
+								</div>
+								{{-- Attribute panel --}}
+								<div class="iris_attribution_panel iris_attribution_panel--browse l-text-left">
+								  <div class="iris_uservital iris_uservital--browse l-float-left">
+								    <a class="iris_portrait is-circle iris_portrait--xxsm iris_video-vital__portrait" href="/theanimationworkshop">
+								      <img src="{{asset('frontend/themes/default/assets/images/user-no-avatar.png')}}" srcset="{{asset('frontend/themes/default/assets/images/user-no-avatar.png')}} 1x, {{asset('frontend/themes/default/assets/images/user-no-avatar.png')}} 2x" alt="{{$item->last_name.' '.$item->middle_name.' '.$item->first_name}}">
+								    </a>
+								    <div class="iris_uservital-content">
+								      <a href="/theanimationworkshop" class="iris_userinfo user-vital-item iris_link iris_link--gray-4">
+								        <span>{{$item->last_name.' '.$item->middle_name.' '.$item->first_name}}</span>
+								      </a>
+								      <!-- react-empty: 373 -->
+								      <span class="user-vital-item">
+								        <span class="">
+								          <span class="">442 plays
+								          </span>
+								        </span>
+								      </span>
+								    </div>
+								  </div> 
+								</div>
+								
 
-	                    <li class="post__container">
-						  <article class="posts__post">
-						    <header>
-						      <a class="posts__post-preview " href="{{$link_detail}}">
-						        <img sizes="(max-width: 679px) 76px, 300px" class="posts__post-preview-image posts__post-preview-image--regular" srcset="https://cms-assets.tutsplus.com/uploads/users/71/courses/1033/preview_image/drupal-8-1.png 400w, https://thumbsplus.tutsplus.com/uploads/users/71/courses/1033/preview_image/drupal-8-1.png?height=380&amp;width=380 380w, https://thumbsplus.tutsplus.com/uploads/users/71/courses/1033/preview_image/drupal-8-1.png?height=300&amp;width=300 300w, https://thumbsplus.tutsplus.com/uploads/users/71/courses/1033/preview_image/drupal-8-1.png?height=190&amp;width=190 190w, https://thumbsplus.tutsplus.com/uploads/users/71/courses/1033/preview_image/drupal-8-1.png?height=152&amp;width=152 152w, https://thumbsplus.tutsplus.com/uploads/users/71/courses/1033/preview_image/drupal-8-1.png?height=76&amp;width=76 76w" src="https://thumbsplus.tutsplus.com/uploads/users/71/courses/1033/preview_image/drupal-8-1.png?height=300&amp;width=300" alt="Drupal 8 1">
-						      </a>
-						      <a class="posts__post-title " href="{{$link_detail}}">
-						        <h1 class="nolinks">{{$item->title}}</h1>
-						      </a>
-						    </header>
-						    <div class="posts__post-teaser">{{substr($item->introtext, 0, 100)}}
-						    </div>
-						    <footer class="posts__post-details">
-						      <div class="posts__post-teaser-overlay">
-						      </div>
-						      <div class="posts__post-publication-meta">
-						        <img sizes="76px" class="posts__post-author_photo" srcset="{{asset('frontend/themes/default/assets/images/user-no-avatar.png')}} 400w, {{asset('frontend/themes/default/assets/images/user-no-avatar.png')}}?height=380&amp;width=380 380w, {{asset('frontend/themes/default/assets/images/user-no-avatar.png')}}?height=300&amp;width=300 300w, {{asset('frontend/themes/default/assets/images/user-no-avatar.png')}}?height=190&amp;width=190 190w, {{asset('frontend/themes/default/assets/images/user-no-avatar.png')}}?height=152&amp;width=152 152w, {{asset('frontend/themes/default/assets/images/user-no-avatar.png')}}?height=76&amp;width=76 76w" alt="Derek Jensen" src="{{asset('frontend/themes/default/assets/images/user-no-avatar.png')}}?height=76&amp;width=76">
-						        <div class="posts__post-details__info">
-						          <address class="posts__post-author">
-						            <a class="posts__post-author-link" href="#">{{$item->last_name.' '.$item->middle_name.' '.$item->first_name}}
-						            </a>
-						          </address>
-						          <time class="posts__post-publication-date" datetime="2017-02-24T00:00:00Z" title="24 Feb 2017">26/02/2017
-						          </time>
-						        </div>
-						      </div>
-						      <div class="posts__post-primary-topic topic-code">
-						        <a class="posts__post-primary-topic-link topic-code" href="{{route('course.listByCat',['id'=>$item->parent_cat_id,'alias'=>$item->cat_alias2])}}">{{$item->cat_title2}}
-						        </a>
-						      </div>
-						      <span class="posts__post-extra-info">3.7 hours
-						      </span>
-						    </footer>
-						  </article>
-						</li>
-	                    {{-- /Course Item --}}
-
-	                 @endforeach
+							</div>
+						</div>
+					</li>
+					 @endforeach
 			</ol>
 		</div>
 		{{-- /Courses grid --}}

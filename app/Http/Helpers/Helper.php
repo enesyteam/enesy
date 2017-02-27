@@ -48,7 +48,6 @@
             {
                 if(!$name_doc){
                     return Config::get('params.url_upload').'/default/img_default.png';
-
                 }
                 if($type!='')
                 {
@@ -56,7 +55,30 @@
                     $name_doc=str_replace($type,'small_',$name_doc);
                 }
                 return Config::get('params.url_upload').$folder.$name_doc;
-            }            
+            }
+
+        public static function truncate($string, $total_length, $separator) {
+              // The wordwrap length is half the total, minus the separator's length
+                $len = (int)($total_length - strlen($separator)) / 2;
+
+              // Separate the output from wordwrap() into an array of lines
+              $segments = explode("\n", wordwrap($string, $len));
+
+              // Last element's length is less than half $len, append words from the second-last element
+              $end = end($segments);
+
+              // Add words from the second-last line until the end is at least
+              // half as long as $total_length  
+              if (strlen($end) <= $total_length / 2 && count($segments) > 2) {
+                $prev = explode(' ', prev($segments));
+                while (strlen($end) <= $total_length / 2) {
+                  $end = array_pop($prev) . ' ' . $end;
+                }
+              }
+
+              // Return the first, separator, last
+              return reset($segments) . $separator . $end;
+        }            
 
     }
 ?>
