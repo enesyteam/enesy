@@ -5,64 +5,123 @@
 {{-- /SEO tags --}}
 
 {{-- Body class --}}
-@section('body.class', 'courses-page')
+@section('body.class', 'courses-page category')
 {{-- /Body class --}}
 
 {{-- Body content --}}
-@section('page-banner')
-	<div class="content-banner"></div>
-@stop
-
-@section('page-title')
-{{-- Content Title --}}
-		<div class="content-title">
-			<div class="content-banner__body">
-				<h3 class="content-banner__title nolinks">Khóa học</h3>
+@section('hero-section')
+<div class="explore_module explore_module-hero">
+	<div class="hero-slide-wrapper">
+		<div class="iris_p_content hero-slide__content">
+			<div class="hero-slide__bg-wrapper">
+				{{-- Slide content --}}
+				<img class="iris_token__image iris_token__image--background" src="{{asset('frontend/themes/default/assets/images/man_learning.jpg')}}">
 			</div>
-			<section class="layout__content-full-width">
-				<div class="section-header view view--loaded">
-					<div class="section-header__navigation">
-					  <ul class="section-header__nav-links">
-					    <li class="section-header__nav-link">
-					      <div class="courses-index-header__filter-group courses-index-header__filter-group--difficulty">
-					        <ul class="courses-index-header__button-list">
-					          <li class="courses-index-header__filtering-button-item courses-index-header__filtering-button-item-active">
-					            <a class="courses-difficulty__button-active" href="#">Tất cả</a>
-					          </li>
-					          <li class="courses-index-header__filtering-button-item courses-index-header__filtering-button-item-inactive">
-					            <a class="courses-difficulty__button-active" href="#">Nổi bật</a>
-					          </li>
-					          <li class="courses-index-header__filtering-button-item courses-index-header__filtering-button-item-inactive">
-					            <a class="courses-difficulty__button-active" href="#">Miễn phí</a>
-					          </li>
-					        </ul>
-					      </div>
-					    </li>
-					    {{-- <li class="section-header__nav-link">
-					      <div class="courses-index-header__filter-group courses-index-header__filter-group--cost">
-					        <ul class="courses-index-header__button-list">
-					          <li class="courses-index-header__filtering-button-item courses-index-header__filtering-button-item-active">
-					            <a class="courses-filtering__button-active" href="#"><i class="icon-grid2 icon-medium"></i></a>
-					          </li>
-					          <li class="courses-index-header__filtering-button-item courses-index-header__filtering-button-item-inactive">
-					            <a class="courses-filtering__button-active" href="#"><i class="icon-list2 icon-medium"></i></a>
-					          </li>
-					        </ul>
-					      </div>
-					    </li> --}}
-					    <li class="section-header__nav-link section-header__nav-link--secondary">
-					      <a href="#"><i class="icon-comment-discussion icon-medium section-header__nav-link-image"></i> Đề xuất khóa học</a>
-					    </li>
-					  </ul>
+			<div class="container">
+				<div class="hero-slide__inner-wrapper">
+				<div class="hero-slide__inner-content iris_p_content__main iris_p_content__main-20">
+					<div class="iris_span_xxxlg-20--8of8 hero-slide__inner-metadata-wrapper">
+						<div class="hero-slide__inner-metadata">
+							<div class="">
+								<div class="hero__token iris_token">
+									<img class="iris_token__image iris_token__image--background" src="{{asset('frontend/themes/default/assets/images/man_learning.jpg')}}">
+									<span class="iris_token__icon iris_ic">
+										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+										<path d="M5 22c-.245 0-.483.024-.717.06l-.112.112L0 32l9.828-4.172.112-.112c.036-.233.06-.47.06-.716 0-2.76-2.24-5-5-5zM22 5c-.245 0-.483.024-.717.06L6.293 20.05c.23-.032.466-.05.707-.05 2.76 0 5 2.24 5 5 0 .24-.018.477-.05.708l14.99-14.99c.036-.235.06-.473.06-.718 0-2.76-2.24-5-5-5zM30.828 1.172c-1.562-1.562-4.095-1.562-5.657 0l-1.88 1.88c.233-.034.47-.052.71-.052 2.76 0 5 2.24 5 5 0 .24-.018.477-.05.708l1.88-1.88c1.56-1.562 1.56-4.094-.002-5.656z">
+											
+										</path>
+										<g>
+										<path d="M14.672 8.843L6.414.586c-.78-.78-2.047-.78-2.828 0l-3 3c-.78.78-.78 2.047 0 2.828l1.36 1.36 2.843-2.84 1.413 1.413L3.36 9.19l2.122 2.12 2.842-2.842 1.414 1.414-2.842 2.842 1.947 1.947 5.83-5.827zM31.414 25.586l-8.257-8.257-5.828 5.827 1.946 1.947 2.874-2.874 1.414 1.414-2.874 2.874 2.12 2.12 2.875-2.873L27.1 27.18l-2.875 2.873 1.36 1.36c.782.782 2.048.782 2.83 0l3-3c.78-.78.78-2.046 0-2.827z"></path>
+										</g>
+										</svg>
+									</span>
+								</div>
+							</div>
+							{{-- Cagegory title --}}
+							<header class="hero__title" data-fatal-attraction="container:category_hero_0|component:headline|keyword:183377555|position:0">
+								{{$cat->title}}
+							</header>
+							{{-- Category description --}}
+							<p class="hero__description">{{$cat->description}} …</p>
+							{{-- Actions --}}
+							<div class="hero__action-items"><div class="hero__action-item"><a role="button" href="/202791609" class="iris_btn iris_btn--primary hero-play-btn" data-fatal-attraction="container:category_hero_0|component:cta_clip_watch|keyword:18|position:0"><div class="iris_ic is--16"><svg viewBox="298 388 16 16" fill="#fff"><path d="M298 404v-16l16 8"></path></svg></div><span class="iris_btn-content">Học thử</span></a></div></div>
+						</div>
 					</div>
 				</div>
-			</section>
+			</div>
+			</div>
 		</div>
-		{{-- /Content Title --}}
+	</div>
+	
+</div>
 @stop
 
+{{-- Metadata --}}
+@section('metadata')
+<div class="explore_module ">
+  <div class="iris_metabar">
+    <div class="container">
+    	<div class="iris_p_content">
+      <section class="iris_p_content__main iris_p_content__main-20">
+        <div class="iris_span_xxxlg-20--8of8">
+          <div class="iris_metabar__content">
+            <div class="iris_metabar__meta iris_metabar__meta__breadcrumb">
+              <a href="/watch" class="iris_metabar__breadcrumb iris_link iris_link--gray-2" data-fatal-attraction="container:category_metabar_1|component:breadcrumb">Tất cả chủ đề
+              </a>
+            </div>
+            <div class="iris_metabar__meta">
+              <a href="/categories/art/videos" class="iris_metabar__meta-item iris_link iris_link--gray-2 video-count">{{$listCourse->isEmpty() ? 0: $listCourse->total()}} khóa học
+              </a>
+              <span class="iris_metabar__meta-item ">25,000 học viên
+              </span>
+            </div>
+            <div class="iris_metabar__actions">
+              <button class="iris_btn iris_metabar__button iris_btn--sm iris_btn-utility" data-fatal-attraction="container:category_metabar_1|component:cta_share" type="button">
+                <svg class="e_c_ic is--32" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+					<path d="M2 6v5c0 1.105.902 2 2.01 2h6.986H10l-2-2H4V6h-.5H6L3 3 0 6h2zm4-3h-.996 6.987C13.1 3 14 3.895 14 5v5h-2V5H8L6 3zm10 7h-6l3 3 3-3z" fill-rule="evenodd"/>
+				</svg>
+                <span class="iris_btn-content">Chia sẻ
+                </span>
+              </button>
+              <button type="button" class="iris_btn iris_btn--sm iris_metabar__button iris_btn-outline iris_btn-outline--primary" data-fatal-attraction="container:category_metabar_1|component:cta_follow">
+                <svg class="iris_ic is--12" width="10" height="10" viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M2,2V0h2v2h2v2H4v2H2V4H0V2H2z"/>
+                </svg>
+                <span class="iris_btn-content">Theo dõi
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    </div>
+  </div>
+</div>
+
+@stop
 
 @section('page-content')
+{{-- Header --}}
+<div class="iris_p-header">
+  <h1 class="iris_header grid_module__header">
+    <a href="#" class="iris_link iris_link--gray-2" data-fatal-attraction="container:category_standard_multi_2|component:header">
+      <span>
+        <span class="grid_module__header-text--long">Nổi bật
+        </span>
+      </span>
+      <!-- react-text: 104 --> 
+      <!-- /react-text -->
+      <svg class="iris_ic is--12 grid_module__header-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 8">
+        <path d="M11.7 1.3l-1-1c-.4-.4-1-.4-1.4 0L6 3.6 2.7.3c-.4-.4-1-.4-1.4 0l-1 1c-.4.4-.4 1 0 1.4l5 5c.2.2.5.3.7.3s.5-.1.7-.3l5-5c.4-.4.4-1 0-1.4">
+        </path>
+      </svg>
+    </a>
+  </h1>
+  <a class="grid_module__header-link iris_link iris_link--arrow" href="/categories/art/videos" data-fatal-attraction="container:category_standard_multi_2|component:view_more">Xem thêm
+  </a>
+</div>
+
 {{-- Courses grid --}}
 		<div class="courses-grid-view">
 			<ol class="posts posts--full-width nolinks">
@@ -174,13 +233,9 @@
 
 @section('pagination')
 		{{-- Pagination --}}
-		@if($sort != '')
-			{{$listCourse->appends(['sort' => $sort])->render()}}
-		@else
-			<nav class="pagination">
-			  {{$listCourse->render()}}
-			</nav>
-		@endif
+		<nav class="pagination">
+		  {{$listCourse->render()}}
+		</nav>
 		{{-- /Pagination --}}
 @stop
 

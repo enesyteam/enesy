@@ -94,7 +94,7 @@ class CourseController extends Controller
                 ->orderBy('tbl_course.love','DESC')
                 ->orderBy('tbl_course.num_of_learn','DESC')  
                 ->paginate(Course::PAGE_SIZE);
-            return view('frontend.course.course-by-cat',['listCourse'=>$listCourse, 'cat'=>$cat]);
+            return view('frontend.themes.default.pages.course.by-cat',['listCourse'=>$listCourse, 'cat'=>$cat]);
         } else {
             return redirect()->route('error');
         }
