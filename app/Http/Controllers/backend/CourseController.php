@@ -135,7 +135,7 @@ class CourseController extends Controller
                 DB::table('tbl_course_requirement')->insert($data_insert); // Query Builder
             }            
 
-            return Redirect::to('/admin/course');
+            return Redirect::to('/admin/course/create-lesson/'.$course->id);
 
        }
 
