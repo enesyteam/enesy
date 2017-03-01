@@ -265,6 +265,11 @@ Enesy | Khóa học lập trình AutoCAD với C# trình độ cơ bản
                            <i class="e-icon -icon-cart -margin-right"></i> <strong>Mua khóa học</strong>
                            </button>
                         </div>
+                        <div class="purchase-form__button">
+                           <a class="js-purchase__add-to-cart e-btn--3d -color-primary -size-m -width-full" href="{{route('course.view',['id'=>$course_detail->id])}}">
+                            <strong>Vào học</strong>
+                           </a>
+                        </div>
                      </div>
                   </form>
                </div>

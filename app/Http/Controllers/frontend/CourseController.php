@@ -11,6 +11,7 @@ use App\Http\Models\CourseHit;
 use App\Http\Models\Member;
 use App\Http\Models\Section;
 use App\Http\Models\Lesson;
+use Illuminate\Support\Facades\Input as Input;
 use DB;
 use View;
 
@@ -70,7 +71,26 @@ class CourseController extends Controller
 		return view('frontend.course.course-preview',['course_detail'=>$course_detail]);
     }
     public function view(){
-        return view('frontend.course.course-view');
+        $id = Input::get('id');
+        $course_detail = Course::where('id',$id)->where('status',1)->first();
+        if($course_detail){
+         $mentor             = Member::where('id',$course_detail->mentor_id)->first();
+         $lesson             = Lesson::where('course_id',$id)->get();
+         $course_of_mentor   = Course::where('mentor_id',$course_detail->mentor_id)->get();
+
+         $data = array();
+         $data['course_detail']      = $course_detail;
+         $data['mentor']             = $mentor;
+         $data['lesson']             = $lesson;
+         $data['course_of_mentor']   = $course_of_mentor;         
+          // seo
+          View::share ( 'meta_title',$course_detail->title );
+          View::share ( 'meta_des',$course_detail->introtext );
+          // end seo
+           return view('frontend.course.course-view');
+        } else {
+            return redirect()->route('error');
+        }
     }
     public function share(){
     	return view('frontend.course.course-share');
