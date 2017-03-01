@@ -70,6 +70,7 @@ class CourseController extends Controller
                 ->leftJoin('tbl_member','tbl_member.id','=','tbl_course.mentor_id')
                 ->leftJoin('tbl_categories as cat1','cat1.id','=','tbl_course.parent_cat_id')
                 ->leftJoin('tbl_categories as cat2','cat2.id','=','tbl_course.cat_id');
+            $listCourse->where('tbl_course.status',1);   
             if($cat->parent_id == 0) {
                 $listCourse->where('parent_cat_id', $id);
             } else {

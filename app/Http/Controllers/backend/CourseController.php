@@ -98,6 +98,7 @@ class CourseController extends Controller
             $course->introtext        = $data["introtext"];      
             $course->content          = $data["content"];
             $course->love             = 0;
+            $course->status           = 1;
             $course->picture          = $data["picture"];
             $course->video            = $data["file"];
             $course->num_of_learn     = 0;
@@ -109,6 +110,14 @@ class CourseController extends Controller
             $benefit            = isset($data["benefit"])     ? $data["benefit"]: array();
             $requirement        = isset($data["requirement"]) ? $data["requirement"]: array();
 
+            // insert hit
+            $data_insert[] = array(     "course_id"=>$course->id
+                                        ,"view"=>1
+                                        ,'create_date'=>time()
+                                        ,'updated_at'=>time() 
+                                        );
+
+            DB::table('tbl_course_hit')->insert($data_insert); // Query Builder
 
             if($benefit){
                 $data_insert = array();

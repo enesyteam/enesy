@@ -20,7 +20,9 @@ class PagesController extends Controller
             ,'cat1.alias as cat_alias2')
     					->leftJoin('tbl_member','tbl_member.id','=','tbl_course.mentor_id')
     					->leftJoin('tbl_categories as cat1','cat1.id','=','tbl_course.parent_cat_id')
-    					->leftJoin('tbl_categories as cat2','cat2.id','=','tbl_course.cat_id');				
+    					->leftJoin('tbl_categories as cat2','cat2.id','=','tbl_course.cat_id');		
+
+      $listCourse->where('tbl_course.status',1);         		
       if($sort != '') {
         $dataSort = explode("-", $sort);
         if(count($sort) >1) {
