@@ -8,6 +8,9 @@ use App\Http\Models\Category;
 use App\Http\Models\CourseBenefit;
 use App\Http\Models\CourseRequirement;
 use App\Http\Models\CourseHit;
+use App\Http\Models\Member;
+use App\Http\Models\Section;
+use App\Http\Models\Lesson;
 use DB;
 use View;
 
@@ -27,6 +30,10 @@ class CourseController extends Controller
          $course_benefit     = CourseBenefit::where('course_id',$id)->get();
          $course_requirement = CourseRequirement::where('course_id',$id)->get();
          $course_hit         = CourseHit::where('course_id',$id)->first();
+         $mentor             = Member::where('id',$course_detail->mentor_id)->first();
+         $section            = Section::where('course_id',$id)->get();
+         $lesson             = Lesson::where('course_id',$id)->get();
+         $course_of_mentor   = Course::where('mentor_id',$course_detail->mentor_id)->get();
 
          $data = array();
          $data['course_detail']      = $course_detail;
@@ -35,6 +42,10 @@ class CourseController extends Controller
          $data['course_benefit']     = $course_benefit;
          $data['course_requirement'] = $course_requirement;
          $data['course_hit']         = $course_hit;
+         $data['mentor']             = $mentor;
+         $data['section']            = $section;
+         $data['lesson']             = $lesson;
+         $data['course_of_mentor']   = $course_of_mentor;
 
           // seo
           View::share ( 'meta_title',$course_detail->title );
