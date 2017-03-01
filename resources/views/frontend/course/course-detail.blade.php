@@ -93,7 +93,7 @@ Enesy | Khóa học lập trình AutoCAD với C# trình độ cơ bản
 <!--#Context Header-->
 <div class="content-main" id="content">
    <div class="grid-container">
-      <link itemprop="thumbnailUrl" href="https://0.s3.envato.com/files/213029039/Thumbnail.jpg">
+      
       <div class="content-s">
          <div class="box--no-padding no-border">
             <div class="item-preview -preview-live">
@@ -541,19 +541,20 @@ Enesy | Khóa học lập trình AutoCAD với C# trình độ cơ bản
          </div>
          <section data-view="recommendedItems" data-url="/item/edulearn-education-school-courses-html-template/17695406/recommended_items" id="recommended_items"></section>
          <section class="related-by-author h-my2 h-pb1">
-            <h1 class="t-heading -size-xs -weight-normal">Các khóa học khác từ giảng viên Đỗ Trường Quân</h1>
+            <h1 class="t-heading -size-xs -weight-normal">Các khóa học khác từ giảng viên {{$mentor->first_name}} {{$mentor->middle_name}} {{$mentor->last_name}}</h1>
             <div class="related-by-author__list h-py1" data-view="productList">
                <ul class="item-thumbnail-carousel--item-page overthrow">
+                  <?php foreach ($course_of_mentor as $key => $item) {
+                    $link_detail  = route('course.detail',['alias'=>$item->alias,'id'=>$item->id]);
+                    $link_preview = route('course.preview',['id'=>$item->id]);
+                      ?>
                   <li class="item-thumbnail-container">
                      <div class="item-thumbnail__image">
-                        <a class="js-google-analytics__list-event-trigger" href="#"><img border="0" alt="Architecture - Interior Design, Decor &amp; Architecture Template - ThemeForest Item for Sale" title="Architecture - Interior Design, Decor &amp; Architecture Template" height="80" width="80" class="landscape-image-magnifier preload no_preview" data-preview-width="" data-preview-height="" data-item-name="Architecture - Interior Design, Decor &amp; Architecture Template" data-item-author="cowthemes" data-item-id="19321225" data-item-category="Site Templates / Corporate / Business" data-item-cost="20" data-google-analytics-payload="{&quot;actionData&quot;:null,&quot;productsArray&quot;:[{&quot;id&quot;:19321225,&quot;name&quot;:&quot;Architecture - Interior Design, Decor \u0026 Architecture Template&quot;,&quot;brand&quot;:&quot;cowthemes&quot;,&quot;category&quot;:&quot;themeforest.net/category/site-templates/corporate/business&quot;,&quot;position&quot;:1,&quot;list&quot;:&quot;Item page: More items by this author&quot;}],&quot;timestamp&quot;:1486520806}" data-preview-url="https://preview-tf.s3.envato.com/files/219966830/Theme%20Preview/01_Theme_Preview.__large_preview.jpg" src="https://thumb-tf.s3.envato.com/files/220489054/Thumbnail.jpg"></a>
+                        <a class="js-google-analytics__list-event-trigger" href="{{$link_detail}}">
+                        <img border="0" alt="{{$item->title}}" title="{{$item->title}}" height="80" width="80" class="landscape-image-magnifier preload no_preview"  src="<?php echo Helper::getPic($item->picture); ?>"></a>
                      </div>
                   </li>
-                  <li class="item-thumbnail-container">
-                     <div class="item-thumbnail__image">
-                        <a class="js-google-analytics__list-event-trigger" href=""><img border="0" alt="Digital Industry - Industrial Business Joomla Template - ThemeForest Item for Sale" title="Digital Industry - Industrial Business Joomla Template" height="80" width="80" class="landscape-image-magnifier preload no_preview" data-preview-width="" data-preview-height="" data-item-name="Digital Industry - Industrial Business Joomla Template" data-item-author="cowthemes" data-item-id="19268979" data-item-category="CMS Themes / Joomla / Corporate / Business" data-item-cost="49" data-google-analytics-payload="{&quot;actionData&quot;:null,&quot;productsArray&quot;:[{&quot;id&quot;:19268979,&quot;name&quot;:&quot;Digital Industry - Industrial Business Joomla Template&quot;,&quot;brand&quot;:&quot;cowthemes&quot;,&quot;category&quot;:&quot;themeforest.net/category/cms-themes/joomla/corporate/business&quot;,&quot;position&quot;:2,&quot;list&quot;:&quot;Item page: More items by this author&quot;}],&quot;timestamp&quot;:1486520806}" data-preview-url="https://preview-tf.s3.envato.com/files/219461945/preview.__large_preview.jpg" src="https://thumb-tf.s3.envato.com/files/219461937/Thumbnail.jpg"></a>
-                     </div>
-                  </li>
+                  <?php }?>
                </ul>
             </div>
             <div>
@@ -612,16 +613,16 @@ Enesy | Khóa học lập trình AutoCAD với C# trình độ cơ bản
                <div class="media__item">
                   <div class="avatar-wrapper tooltip-advanced">
                      <a class="avatar" title="cowthemes" href="">
-                     <img width="80" height="80" alt="cowthemes" src="{{url('frontend/images/authors/default-user-thumb.png')}}">
+                     <img width="80" height="80" alt="cowthemes" src="<?php echo Helper::getPic($mentor->avatar); ?>">
                      </a>
                   </div>
                </div>
                <div class="media__body">
                   <h2 class="t-heading -size-s">
-                     <a rel="author" class="t-link -color-dark -decoration-none" href="">Đỗ Trường Quân</a>
+                     <a rel="author" class="t-link -color-dark -decoration-none" href="">{{$mentor->first_name}} {{$mentor->middle_name}} {{$mentor->last_name}}</a>
                   </h2>
                   <div class="author-desc">
-                     Kỹ sư cầu đường với 05 năm kinh nghiệm thiết kế các dự án lớn như: Hầm đường bộ qua Đèo Cả, mở rộng hầm hải Vân. Chuyên gia lập trình AutoCAD .NET với hơn 8 năm làm việc với các ngôn ngữ lập trình AutoCAD như: AutoLISP, VBA, C#, C++
+                     {{$mentor->info}} 
                   </div>
                </div>
             </div>
@@ -630,7 +631,7 @@ Enesy | Khóa học lập trình AutoCAD với C# trình độ cơ bản
             </div>
          </div>
          <div class="t-body -size-s h-text-align-center h-mt2">
-            © Đỗ Trường Quân và Enesy giữ bản quyền khóa học này
+            © {{$mentor->first_name}} {{$mentor->middle_name}} {{$mentor->last_name}} và Enesy giữ bản quyền khóa học này
             <br>
             <a href="#">Liên hệ bản quyền tại đây</a>
          </div>
