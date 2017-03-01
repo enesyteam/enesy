@@ -181,15 +181,12 @@ Enesy | Khóa học lập trình AutoCAD với C# trình độ cơ bản
                                        Xem trước
                                        </a>
                                     </div>
-                                 </td>
-
-                                 
+                                 </td>     
                                  <td class="tar lec-det">
                                      {{$value->duration}}
                                  </td>
                               </tr>
-                              
-                              
+                                                       
                               <?php } } ?>
                            </tbody>
                         </table>
