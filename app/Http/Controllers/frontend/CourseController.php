@@ -32,8 +32,17 @@ class CourseController extends Controller
          $course_hit         = CourseHit::where('course_id',$id)->first();
          $mentor             = Member::where('id',$course_detail->mentor_id)->first();
          $section            = Section::where('course_id',$id)->get();
-         $lesson             = Lesson::where('course_id',$id)->get();
+         $lesson_temp        = Lesson::where('course_id',$id)->get();
          $course_of_mentor   = Course::where('mentor_id',$course_detail->mentor_id)->get();
+
+         $lesson = array();
+
+         foreach ($lesson_temp as $row){
+            $lesson[$row->section_id][] = $row;
+         }
+         if(!$lesson){
+           $lesson = $lesson_temp ;
+         }
 
          $data = array();
          $data['course_detail']      = $course_detail;

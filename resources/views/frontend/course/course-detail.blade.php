@@ -152,22 +152,29 @@ Enesy | Khóa học lập trình AutoCAD với C# trình độ cơ bản
                      <div class="table-responsive b0-xs">
                         <table class="cur-list table table-hover" curriculum-loader="" course-id="21323" has-more-to-load="1" num-displayed-items="100" is-seo-traffic="0">
                            <tbody>
+                             
+                              <?php foreach($section as $sec_row){
+
+                                 $list_lesson= isset($lesson[$sec_row->id]) ? $lesson[$sec_row->id]: array();
+                               ?>
                               <tr class="cur-list-title">
                                  <th colspan="4" class="w30 tal hm">
-                                    Phần 1: Giới thiệu khóa học
+                                    {{$sec_row->title}}
                                  </th>
                               </tr>
+                              <?php foreach ($list_lesson as $key => $value) {
+                                  ?>
                               <tr class="cur-list-row cur-list-row-wo-desc " data-purpose="lecture-row-1">
                                  <td class="lec-icon tac hm cur-icon wa-force-xs">
                                     <i class="udi udi-play-circle"></i>
                                  </td>
                                  <td class="count wa-force-xs" data-purpose="lecture-name-1">
-                                    Bài số 1.1
+                                    {{$value->title}}
                                  </td>
                                  <td class="lec-title-and-preview">
                                     <div class="lec-title-and-preview-inner dif aic fxjsa-xs pr10-xs fxac-ie">
                                        <div class="lec-title fx" data-purpose="lecture-title-1">
-                                          Giới thiệu khóa học Lập trình AutoCAD với C# - Trình độ cơ bản
+                                          {{$value->introtext}}
                                        </div>
                                        <a class="btn btn-sm ud-courseimpressiontracker preview-btn ml15 btn-primary
                                           " target="_blank" href="{{route('course.preview',['id'=>$course_detail->id])}}" rel="modal:open">
@@ -175,35 +182,15 @@ Enesy | Khóa học lập trình AutoCAD với C# trình độ cơ bản
                                        </a>
                                     </div>
                                  </td>
-                                 <td class="tar lec-det">
-                                    10:01
-                                 </td>
-                              </tr>
-                              <tr class="cur-list-row cur-list-row-wo-desc  on" data-purpose="lecture-row-2">
-                                 <td class="lec-icon tac hm cur-icon wa-force-xs">
-                                    <i class="udi udi-play-circle"></i>
-                                 </td>
-                                 <td class="count wa-force-xs" data-purpose="lecture-name-2">
-                                    Bài số 1.2
-                                 </td>
-                                 <td class="lec-title-and-preview">
-                                    <div class="lec-title-and-preview-inner dif aic fxjsa-xs pr10-xs fxac-ie">
-                                       <div class="lec-title fx" data-purpose="lecture-title-2">
-                                          Sử dụng các tập tin của khóa học
-                                       </div>
-                                       <a class="btn btn-sm ud-courseimpressiontracker preview-btn ml15 btn-primary
-                                          " target="_blank" href="{{route('course.preview',['id'=>$course_detail->id])}}" rel="modal:open">
-                                       Xem trước
-                                       </a>
-                                    </div>
-                                 </td>
-                                 <td class="tar lec-det">
-                                    03:34
-                                 </td>
-                              </tr>
-                              
-                              
 
+                                 
+                                 <td class="tar lec-det">
+                                     {{$value->duration}}
+                                 </td>
+                              </tr>
+                              
+                              
+                              <?php } } ?>
                            </tbody>
                         </table>
                      </div>
