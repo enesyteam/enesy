@@ -30,7 +30,7 @@ Enesy | Đang xem Khóa học lập trình AutoCAD với C# trình độ cơ b�
                      <div id="player-api" class="player-width player-height off-screen-target player-api">
                         <div class="html5-video-player">
                         <div style="height: 100%;width: 100%;line-height: 360px;text-align: center;font-size: 30px;">            <video height="360" controls>
-              <source src="{{url('frontend/images/courses/course-preview.mp4')}}" type="video/mp4">
+              <source src="<?php echo Helper::getDocs($lesson_detail->path); ?>" type="video/mp4">
             Your browser does not support the video tag.
             </video></div>
                         </div>
@@ -55,11 +55,11 @@ Enesy | Đang xem Khóa học lập trình AutoCAD với C# trình độ cơ b�
                                     </div>
                                     <div class="playlist-info">
                                        <h3 class="playlist-title">
-                                          <a href="#" class=" yt-uix-sessionlink spf-link" title="Khóa học lập trình AutoCAD với C# - trình độ cơ bản">Lập trình AutoCAD với C# - trình độ cơ bản</a>
+                                          <a href="#" class=" yt-uix-sessionlink spf-link" title="{{$course_detail->title}}">{{$course_detail->title}}</a>
                                        </h3>
                                        <ul class="playlist-details">
                                           <li class="author-attribution">
-                                             <a href="#" class=" yt-uix-sessionlink spf-link ">Đỗ Trường Quân</a>
+                                             <a href="#" class=" yt-uix-sessionlink spf-link ">{{$mentor->first_name}} {{$mentor->middle_name}} {{$mentor->last_name}}</a>
                                           </li>
                                           <li class="playlist-progress">
                                              <span id="playlist-current-index">3</span><span id="playlist-length">3 videos</span>
@@ -71,11 +71,18 @@ Enesy | Đang xem Khóa học lập trình AutoCAD với C# trình độ cơ b�
                               <div class="playlist-videos-container yt-scrollbar-dark yt-scrollbar">
                                  <ol id="playlist-autoscroll-list" class="playlist-videos-list yt-uix-scroller">
                                     <!--Lesson-->
-                                    <li class="yt-uix-scroller-scroll-unit">
+                                    <?php 
+                                     $i=0; 
+                                     foreach($lesson as $l_row){
+                                       
+                                       $i++;  
+                                       $url_detail = route('course.view',['id'=>$course_detail->id,'lesson_id'=>$l_row->id])
+                                       ?>
+                                    <li class="yt-uix-scroller-scroll-unit <?php if($l_row->id==$lesson_detail->id){ echo "active"; } ?>">
                                        <span class="index">
-                                       1
+                                       {{$i}}
                                        </span>
-                                       <a href="#" class=" spf-link  playlist-video clearfix  yt-uix-sessionlink      spf-link ">
+                                       <a href="<?php echo  $url_detail; ?>" class=" spf-link  playlist-video clearfix  yt-uix-sessionlink spf-link ">
                                           <span class="video-thumb  yt-thumb yt-thumb-72">
                                           <span class="yt-thumb-default">
                                           <span class="yt-thumb-clip">
@@ -86,140 +93,17 @@ Enesy | Đang xem Khóa học lập trình AutoCAD với C# trình độ cơ b�
                                           </span>
                                           <div class="playlist-video-description">
                                              <h4 class="yt-ui-ellipsis yt-ui-ellipsis-2">
-                                                Tiêu đề bài học ở đây
+                                                {{$l_row->title}}
                                              </h4>
                                              <span class="video-uploader-byline">
-                                             <span class="" data-ytid="UCIdYTLffZ_SKITZihrlSACQ">Đỗ Trường Quân</span>
+                                             <span class="" data-ytid="UCIdYTLffZ_SKITZihrlSACQ">{{$mentor->first_name}} {{$mentor->middle_name}} {{$mentor->last_name}}</span>
                                              </span>
                                           </div>
                                        </a>
                                     </li>
+                                    <?php }?>
                                     <!--#Lesson-->
-                                    <!--Lesson-->
-                                    <li class="yt-uix-scroller-scroll-unit currently-playing">
-                                       <span class="index">
-                                       2
-                                       </span>
-                                       <a href="#" class=" spf-link  playlist-video clearfix  yt-uix-sessionlink      spf-link ">
-                                          <span class="video-thumb  yt-thumb yt-thumb-72">
-                                          <span class="yt-thumb-default">
-                                          <span class="yt-thumb-clip">
-                                          <img alt="" aria-hidden="true" width="72" src="frontend/images/courses/lecture_thumb.jpg">
-                                          <span class="vertical-align"></span>
-                                          </span>
-                                          </span>
-                                          </span>
-                                          <div class="playlist-video-description">
-                                             <h4 class="yt-ui-ellipsis yt-ui-ellipsis-2">
-                                                Tiêu đề bài học ở đây
-                                             </h4>
-                                             <span class="video-uploader-byline">
-                                             <span class="" data-ytid="UCIdYTLffZ_SKITZihrlSACQ">Đỗ Trường Quân</span>
-                                             </span>
-                                          </div>
-                                       </a>
-                                    </li>
-                                    <!--#Lesson-->
-                                    <!--Lesson-->
-                                    <li class="yt-uix-scroller-scroll-unit ">
-                                       <span class="index">
-                                       3
-                                       </span>
-                                       <a href="#" class=" spf-link  playlist-video clearfix  yt-uix-sessionlink      spf-link ">
-                                          <span class="video-thumb  yt-thumb yt-thumb-72">
-                                          <span class="yt-thumb-default">
-                                          <span class="yt-thumb-clip">
-                                          <img alt="" aria-hidden="true" width="72" src="frontend/images/courses/lecture_thumb.jpg">
-                                          <span class="vertical-align"></span>
-                                          </span>
-                                          </span>
-                                          </span>
-                                          <div class="playlist-video-description">
-                                             <h4 class="yt-ui-ellipsis yt-ui-ellipsis-2">
-                                                Tiêu đề bài học ở đây
-                                             </h4>
-                                             <span class="video-uploader-byline">
-                                             <span class="" data-ytid="UCIdYTLffZ_SKITZihrlSACQ">Đỗ Trường Quân</span>
-                                             </span>
-                                          </div>
-                                       </a>
-                                    </li>
-                                    <!--#Lesson-->
-                                    <!--Lesson-->
-                                    <li class="yt-uix-scroller-scroll-unit ">
-                                       <span class="index">
-                                       4
-                                       </span>
-                                       <a href="#" class=" spf-link  playlist-video clearfix  yt-uix-sessionlink      spf-link ">
-                                          <span class="video-thumb  yt-thumb yt-thumb-72">
-                                          <span class="yt-thumb-default">
-                                          <span class="yt-thumb-clip">
-                                          <img alt="" aria-hidden="true" width="72" src="frontend/images/courses/lecture_thumb.jpg">
-                                          <span class="vertical-align"></span>
-                                          </span>
-                                          </span>
-                                          </span>
-                                          <div class="playlist-video-description">
-                                             <h4 class="yt-ui-ellipsis yt-ui-ellipsis-2">
-                                                Tiêu đề bài học ở đây
-                                             </h4>
-                                             <span class="video-uploader-byline">
-                                             <span class="" data-ytid="UCIdYTLffZ_SKITZihrlSACQ">Đỗ Trường Quân</span>
-                                             </span>
-                                          </div>
-                                       </a>
-                                    </li>
-                                    <!--#Lesson-->
-                                    <!--Lesson-->
-                                    <li class="yt-uix-scroller-scroll-unit ">
-                                       <span class="index">
-                                       5
-                                       </span>
-                                       <a href="#" class=" spf-link  playlist-video clearfix  yt-uix-sessionlink      spf-link ">
-                                          <span class="video-thumb  yt-thumb yt-thumb-72">
-                                          <span class="yt-thumb-default">
-                                          <span class="yt-thumb-clip">
-                                          <img alt="" aria-hidden="true" width="72" src="frontend/images/courses/lecture_thumb.jpg">
-                                          <span class="vertical-align"></span>
-                                          </span>
-                                          </span>
-                                          </span>
-                                          <div class="playlist-video-description">
-                                             <h4 class="yt-ui-ellipsis yt-ui-ellipsis-2">
-                                                Tiêu đề bài học ở đây
-                                             </h4>
-                                             <span class="video-uploader-byline">
-                                             <span class="" data-ytid="UCIdYTLffZ_SKITZihrlSACQ">Đỗ Trường Quân</span>
-                                             </span>
-                                          </div>
-                                       </a>
-                                    </li>
-                                    <!--#Lesson-->
-                                    <!--Lesson-->
-                                    <li class="yt-uix-scroller-scroll-unit ">
-                                       <span class="index">
-                                       6
-                                       </span>
-                                       <a href="#" class=" spf-link  playlist-video clearfix  yt-uix-sessionlink      spf-link ">
-                                          <span class="video-thumb  yt-thumb yt-thumb-72">
-                                          <span class="yt-thumb-default">
-                                          <span class="yt-thumb-clip">
-                                          <img alt="" aria-hidden="true" width="72" src="frontend/images/courses/lecture_thumb.jpg">
-                                          <span class="vertical-align"></span>
-                                          </span>
-                                          </span>
-                                          </span>
-                                          <div class="playlist-video-description">
-                                             <h4 class="yt-ui-ellipsis yt-ui-ellipsis-2">
-                                                Tiêu đề bài học ở đây
-                                             </h4>
-                                             <span class="video-uploader-byline">
-                                             <span class="" data-ytid="UCIdYTLffZ_SKITZihrlSACQ">Đỗ Trường Quân</span>
-                                             </span>
-                                          </div>
-                                       </a>
-                                    </li>
-                                    <!--#Lesson-->
+                                    
                                  </ol>
                               </div>
                            </div>
@@ -243,15 +127,15 @@ Enesy | Đang xem Khóa học lập trình AutoCAD với C# trình độ cơ b�
                               <div id="watch7-headline" class="clearfix">
                                  <div id="watch-headline-title">
                                     <h1 class="watch-title-container">
-                                       <span id="eow-title" class="watch-title" dir="ltr" title="[Đỗ Trường Quân] Tiêu đề bài học dài dài dài dài dài">
-                                       [Đỗ Trường Quân] Tiêu đề bài học dài dài dài dài dài
+                                       <span id="eow-title" class="watch-title" dir="ltr" title="[{{$mentor->first_name}} {{$mentor->middle_name}} {{$mentor->last_name}}] {{$course_detail->title}}">
+                                       [{{$mentor->first_name}} {{$mentor->middle_name}} {{$mentor->last_name}}] {{$lesson_detail->title}}
                                        </span>
                                     </h1>
                                  </div>
                               </div>
                               <!--User-->
                               <div id="watch7-user-header" class=" spf-link ">
-                                 <a href="#" class="yt-user-photo g-hovercard yt-uix-sessionlink      spf-link ">
+                                 <a href="#" class="yt-user-photo g-hovercard yt-uix-sessionlink spf-link">
                                  <span class="video-thumb  yt-thumb yt-thumb-48 g-hovercard">
                                  <span class="yt-thumb-square">
                                  <span class="yt-thumb-clip">
@@ -262,10 +146,10 @@ Enesy | Đang xem Khóa học lập trình AutoCAD với C# trình độ cơ b�
                                  </span>
                                  </a>
                                  <div class="yt-user-info">
-                                    <a href="#" class="g-hovercard yt-uix-sessionlink spf-link ">Đỗ Trường Quân</a>
+                                    <a href="#" class="g-hovercard yt-uix-sessionlink spf-link ">{{$mentor->first_name}} {{$mentor->middle_name}} {{$mentor->last_name}}</a>
                                  </div>
                               </div>
-                              <span style="color: red"> Chưa biết nên hiển thị thông tin ở đây như thế nào?????</span>
+                              <span style="color: red"> {{$course_detail->title}}</span>
                               <!--#User-->
                            </div>
                            <!--#Watch header-->
@@ -277,7 +161,7 @@ Enesy | Đang xem Khóa học lập trình AutoCAD với C# trình độ cơ b�
                                        <strong class="watch-time-text">Tóm tắt bài học</strong>
                                     </div>
                                     <div id="watch-description-text" class="">
-                                       <p id="eow-description" class="">Bài này bạn sẽ được học về blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah <strong>3 dòng</strong></p>
+                                       <p id="eow-description" class="">{{$lesson_detail->introtext}}</strong></p>
                                     </div>
                                  </div>
                               </div>

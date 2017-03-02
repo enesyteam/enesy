@@ -73,23 +73,33 @@ class CourseController extends Controller
     }
     // học bài
     public function view(){
-        $id = Input::get('id');
+        $id        = Input::get('id');
+        $lesson_id = Input::get('lesson_id');
         $course_detail = Course::where('id',$id)->where('status',1)->first();
+        $lesson_detail = array(); 
+        if($lesson_id>0){
+            $lesson_detail = Lesson::where('id',$lesson_id)->first();
+        }
+        
         if($course_detail){
          $mentor             = Member::where('id',$course_detail->mentor_id)->first();
          $lesson             = Lesson::where('course_id',$id)->get();
+         if(!$lesson_detail){
+           $lesson_detail = $lesson->first(); 
+         }
          $course_of_mentor   = Course::where('mentor_id',$course_detail->mentor_id)->get();
 
          $data = array();
          $data['course_detail']      = $course_detail;
          $data['mentor']             = $mentor;
          $data['lesson']             = $lesson;
-         $data['course_of_mentor']   = $course_of_mentor;         
+         $data['course_of_mentor']   = $course_of_mentor; 
+         $data['lesson_detail']      = $lesson_detail;             
           // seo
           View::share ( 'meta_title',$course_detail->title );
           View::share ( 'meta_des',$course_detail->introtext );
           // end seo
-           return view('frontend.course.course-view');
+           return view('frontend.course.course-view',$data);
         } else {
             return redirect()->route('error');
         }
