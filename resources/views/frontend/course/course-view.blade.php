@@ -29,10 +29,12 @@ Enesy | Đang xem Khóa học lập trình AutoCAD với C# trình độ cơ b�
                   <div class="player-mole-container">
                      <div id="player-api" class="player-width player-height off-screen-target player-api">
                         <div class="html5-video-player">
-                        <div style="height: 100%;width: 100%;line-height: 360px;text-align: center;font-size: 30px;">            <video height="360" controls>
-              <source src="<?php echo Helper::getDocs($lesson_detail->path); ?>" type="video/mp4">
-            Your browser does not support the video tag.
-            </video></div>
+                        <div style="height: 100%;width: 100%;line-height: 360px;text-align: center;font-size: 30px;">            
+                           <video height="360" controls>
+                             <source src="<?php echo Helper::getDocs($lesson_detail->path); ?>" type="video/mp4">
+                           Your browser does not support the video tag.
+                           </video>
+                        </div>
                         </div>
                      </div>
                      <!--Playlist-->
@@ -62,7 +64,7 @@ Enesy | Đang xem Khóa học lập trình AutoCAD với C# trình độ cơ b�
                                              <a href="#" class=" yt-uix-sessionlink spf-link ">{{$mentor->first_name}} {{$mentor->middle_name}} {{$mentor->last_name}}</a>
                                           </li>
                                           <li class="playlist-progress">
-                                             <span id="playlist-current-index">3</span><span id="playlist-length">3 videos</span>
+                                             <span id="playlist-current-index"></span><span id="playlist-length"><?php echo count($lesson); ?> videos</span>
                                           </li>
                                        </ul>
                                     </div>
@@ -289,17 +291,20 @@ Enesy | Đang xem Khóa học lập trình AutoCAD với C# trình độ cơ b�
                                     <div class="watch-sidebar-body">
                                        <ul id="watch-related" class="video-list">
                                           <!--Recommended Course-->
+                                          <?php foreach ($course_of_mentor as $key => $item) {
+                                            $link_detail  = route('course.detail',['alias'=>$item->alias,'id'=>$item->id]);
+                                            $link_preview = route('course.preview',['id'=>$item->id]);
+                                              ?>
                                           <li class="video-list-item related-list-item related-list-item-compact-video">
                                              <!--Content-->
                                              <div class="content-wrapper">
-                                                <a href="" class=" content-link spf-link  yt-uix-sessionlink      spf-link ">
-                                                   <span dir="ltr" class="title">										Làm thế nào để trở thành cao thủ PHP?
-                                                   </span>
-                                                   <span class="stat attribution"><span class="g-hovercard" data-ytid="UC9-QTozb8dsivZcBYFDlZLQ" data-name="related">Nguyễn Văn Đức</span></span>
+                                                <a href="" class=" content-link spf-link  yt-uix-sessionlink spf-link ">
+                                                   <span dir="ltr" class="title">{{$item->title}}</span>
+                                                   <span class="stat attribution"><span class="g-hovercard" data-ytid="UC9-QTozb8dsivZcBYFDlZLQ" data-name="related">{{$mentor->first_name}} {{$mentor->middle_name}} {{$mentor->last_name}}</span></span>
                                                    <span class="stat view-count">
-                                                      2000 Học viên
+                                                      {{$item->num_of_learn}} Học viên
                                                       <ul class="yt-badge-list ">
-                                                         <li class="yt-badge-item"><span class="yt-badge ">120 giờ học</span></li>
+                                                         <li class="yt-badge-item"><span class="yt-badge ">{{$item->time_learn}} giờ học</span></li>
                                                       </ul>
                                                    </span>
                                                 </a>
@@ -307,127 +312,14 @@ Enesy | Đang xem Khóa học lập trình AutoCAD với C# trình độ cơ b�
                                              <!--#Content-->
                                              <!--Thumb-->
                                              <div class="thumb-wrapper">
-                                                <a href="#" class="thumb-link spf-link yt-uix-sessionlink spf-link"  aria-hidden="true"><span class="yt-uix-simple-thumb-wrap yt-uix-simple-thumb-related" tabindex="0" data-vid="Ut4deXaDktE"><img alt="" width="168" src="frontend/images/courses/course_thumb336x188.jpg" aria-hidden="true" style="top: 0px" height="94"><span class="video-time">15:19</span></span></a>
-                                                <button class="yt-uix-button yt-uix-button-size-small yt-uix-button-default yt-uix-button-empty yt-uix-button-has-icon no-icon-markup addto-button video-actions spf-nolink hide-until-delayloaded addto-watch-later-button-sign-in yt-uix-tooltip" type="button" role="button" title="Watch Later"><span class="yt-uix-button-arrow yt-sprite"></span></button>
-                                                <span class="thumb-menu dark-overflow-action-menu video-actions">
-                                                   <button aria-expanded="false" class="yt-uix-button-reverse flip addto-watch-queue-menu spf-nolink hide-until-delayloaded yt-uix-button yt-uix-button-dark-overflow-action-menu yt-uix-button-size-default yt-uix-button-has-icon no-icon-markup yt-uix-button-empty" type="button" aria-haspopup="true">
-                                                      <span class="yt-uix-button-arrow yt-sprite"></span>
-                                                      <ul class="watch-queue-thumb-menu yt-uix-button-menu yt-uix-button-menu-dark-overflow-action-menu hid">
-                                                         <li role="menuitem" class="overflow-menu-choice addto-watch-queue-menu-choice addto-watch-queue-play-next yt-uix-button-menu-item"><span class="addto-watch-queue-menu-text">Play next</span></li>
-                                                         <li role="menuitem" class="overflow-menu-choice addto-watch-queue-menu-choice addto-watch-queue-play-now yt-uix-button-menu-item"><span class="addto-watch-queue-menu-text">Play now</span></li>
-                                                      </ul>
-                                                   </button>
-                                                </span>
-                                                <button class="yt-uix-button yt-uix-button-size-small yt-uix-button-default yt-uix-button-empty yt-uix-button-has-icon no-icon-markup addto-button addto-queue-button video-actions spf-nolink hide-until-delayloaded addto-tv-queue-button yt-uix-tooltip" type="button" title="Queue"></button>
+                                                <a href="#" class="thumb-link spf-link yt-uix-sessionlink spf-link"  aria-hidden="true"><span class="yt-uix-simple-thumb-wrap yt-uix-simple-thumb-related" tabindex="0" data-vid="Ut4deXaDktE"><img alt="{{$item->title}}" width="168" src="<?php echo Helper::getPic($item->picture); ?>" aria-hidden="true" style="top: 0px" height="94"><span class="video-time">15:19</span></span></a>
+                           
                                              </div>
                                              <!--Thumb-->
                                           </li>
+                                          <?php }?>
                                           <!--#Recommended Course-->
-                                          <!--Recommended Course-->
-                                          <li class="video-list-item related-list-item related-list-item-compact-video">
-                                             <!--Content-->
-                                             <div class="content-wrapper">
-                                                <a href="" class=" content-link spf-link  yt-uix-sessionlink      spf-link ">
-                                                   <span dir="ltr" class="title">										Làm thế nào để trở thành cao thủ PHP?
-                                                   </span>
-                                                   <span class="stat attribution"><span class="g-hovercard" data-ytid="UC9-QTozb8dsivZcBYFDlZLQ" data-name="related">Nguyễn Văn Đức</span></span>
-                                                   <span class="stat view-count">
-                                                      2000 Học viên
-                                                      <ul class="yt-badge-list ">
-                                                         <li class="yt-badge-item"><span class="yt-badge ">120 giờ học</span></li>
-                                                      </ul>
-                                                   </span>
-                                                </a>
-                                             </div>
-                                             <!--#Content-->
-                                             <!--Thumb-->
-                                             <div class="thumb-wrapper">
-                                                <a href="#" class="thumb-link spf-link yt-uix-sessionlink spf-link"  aria-hidden="true"><span class="yt-uix-simple-thumb-wrap yt-uix-simple-thumb-related" tabindex="0" data-vid="Ut4deXaDktE"><img alt="" width="168" src="frontend/images/courses/course_thumb336x188.jpg" aria-hidden="true" style="top: 0px" height="94"><span class="video-time">15:19</span></span></a>
-                                                <button class="yt-uix-button yt-uix-button-size-small yt-uix-button-default yt-uix-button-empty yt-uix-button-has-icon no-icon-markup addto-button video-actions spf-nolink hide-until-delayloaded addto-watch-later-button-sign-in yt-uix-tooltip" type="button" role="button" title="Watch Later"><span class="yt-uix-button-arrow yt-sprite"></span></button>
-                                                <span class="thumb-menu dark-overflow-action-menu video-actions">
-                                                   <button aria-expanded="false" class="yt-uix-button-reverse flip addto-watch-queue-menu spf-nolink hide-until-delayloaded yt-uix-button yt-uix-button-dark-overflow-action-menu yt-uix-button-size-default yt-uix-button-has-icon no-icon-markup yt-uix-button-empty" type="button" aria-haspopup="true">
-                                                      <span class="yt-uix-button-arrow yt-sprite"></span>
-                                                      <ul class="watch-queue-thumb-menu yt-uix-button-menu yt-uix-button-menu-dark-overflow-action-menu hid">
-                                                         <li role="menuitem" class="overflow-menu-choice addto-watch-queue-menu-choice addto-watch-queue-play-next yt-uix-button-menu-item"><span class="addto-watch-queue-menu-text">Play next</span></li>
-                                                         <li role="menuitem" class="overflow-menu-choice addto-watch-queue-menu-choice addto-watch-queue-play-now yt-uix-button-menu-item"><span class="addto-watch-queue-menu-text">Play now</span></li>
-                                                      </ul>
-                                                   </button>
-                                                </span>
-                                                <button class="yt-uix-button yt-uix-button-size-small yt-uix-button-default yt-uix-button-empty yt-uix-button-has-icon no-icon-markup addto-button addto-queue-button video-actions spf-nolink hide-until-delayloaded addto-tv-queue-button yt-uix-tooltip" type="button" title="Queue"></button>
-                                             </div>
-                                             <!--Thumb-->
-                                          </li>
-                                          <!--#Recommended Course-->
-                                          <!--Recommended Course-->
-                                          <li class="video-list-item related-list-item related-list-item-compact-video">
-                                             <!--Content-->
-                                             <div class="content-wrapper">
-                                                <a href="" class=" content-link spf-link  yt-uix-sessionlink      spf-link ">
-                                                   <span dir="ltr" class="title">										Làm thế nào để trở thành cao thủ PHP?
-                                                   </span>
-                                                   <span class="stat attribution"><span class="g-hovercard" data-ytid="UC9-QTozb8dsivZcBYFDlZLQ" data-name="related">Nguyễn Văn Đức</span></span>
-                                                   <span class="stat view-count">
-                                                      2000 Học viên
-                                                      <ul class="yt-badge-list ">
-                                                         <li class="yt-badge-item"><span class="yt-badge ">120 giờ học</span></li>
-                                                      </ul>
-                                                   </span>
-                                                </a>
-                                             </div>
-                                             <!--#Content-->
-                                             <!--Thumb-->
-                                             <div class="thumb-wrapper">
-                                                <a href="#" class="thumb-link spf-link yt-uix-sessionlink spf-link"  aria-hidden="true"><span class="yt-uix-simple-thumb-wrap yt-uix-simple-thumb-related" tabindex="0" data-vid="Ut4deXaDktE"><img alt="" width="168" src="frontend/images/courses/course_thumb336x188.jpg" aria-hidden="true" style="top: 0px" height="94"><span class="video-time">15:19</span></span></a>
-                                                <button class="yt-uix-button yt-uix-button-size-small yt-uix-button-default yt-uix-button-empty yt-uix-button-has-icon no-icon-markup addto-button video-actions spf-nolink hide-until-delayloaded addto-watch-later-button-sign-in yt-uix-tooltip" type="button" role="button" title="Watch Later"><span class="yt-uix-button-arrow yt-sprite"></span></button>
-                                                <span class="thumb-menu dark-overflow-action-menu video-actions">
-                                                   <button aria-expanded="false" class="yt-uix-button-reverse flip addto-watch-queue-menu spf-nolink hide-until-delayloaded yt-uix-button yt-uix-button-dark-overflow-action-menu yt-uix-button-size-default yt-uix-button-has-icon no-icon-markup yt-uix-button-empty" type="button" aria-haspopup="true">
-                                                      <span class="yt-uix-button-arrow yt-sprite"></span>
-                                                      <ul class="watch-queue-thumb-menu yt-uix-button-menu yt-uix-button-menu-dark-overflow-action-menu hid">
-                                                         <li role="menuitem" class="overflow-menu-choice addto-watch-queue-menu-choice addto-watch-queue-play-next yt-uix-button-menu-item"><span class="addto-watch-queue-menu-text">Play next</span></li>
-                                                         <li role="menuitem" class="overflow-menu-choice addto-watch-queue-menu-choice addto-watch-queue-play-now yt-uix-button-menu-item"><span class="addto-watch-queue-menu-text">Play now</span></li>
-                                                      </ul>
-                                                   </button>
-                                                </span>
-                                                <button class="yt-uix-button yt-uix-button-size-small yt-uix-button-default yt-uix-button-empty yt-uix-button-has-icon no-icon-markup addto-button addto-queue-button video-actions spf-nolink hide-until-delayloaded addto-tv-queue-button yt-uix-tooltip" type="button" title="Queue"></button>
-                                             </div>
-                                             <!--Thumb-->
-                                          </li>
-                                          <!--#Recommended Course-->
-                                          <!--Recommended Course-->
-                                          <li class="video-list-item related-list-item related-list-item-compact-video">
-                                             <!--Content-->
-                                             <div class="content-wrapper">
-                                                <a href="" class=" content-link spf-link  yt-uix-sessionlink      spf-link ">
-                                                   <span dir="ltr" class="title">										Làm thế nào để trở thành cao thủ PHP?
-                                                   </span>
-                                                   <span class="stat attribution"><span class="g-hovercard" data-ytid="UC9-QTozb8dsivZcBYFDlZLQ" data-name="related">Nguyễn Văn Đức</span></span>
-                                                   <span class="stat view-count">
-                                                      2000 Học viên
-                                                      <ul class="yt-badge-list ">
-                                                         <li class="yt-badge-item"><span class="yt-badge ">120 giờ học</span></li>
-                                                      </ul>
-                                                   </span>
-                                                </a>
-                                             </div>
-                                             <!--#Content-->
-                                             <!--Thumb-->
-                                             <div class="thumb-wrapper">
-                                                <a href="#" class="thumb-link spf-link yt-uix-sessionlink spf-link"  aria-hidden="true"><span class="yt-uix-simple-thumb-wrap yt-uix-simple-thumb-related" tabindex="0" data-vid="Ut4deXaDktE"><img alt="" width="168" src="frontend/images/courses/course_thumb336x188.jpg" aria-hidden="true" style="top: 0px" height="94"><span class="video-time">15:19</span></span></a>
-                                                <button class="yt-uix-button yt-uix-button-size-small yt-uix-button-default yt-uix-button-empty yt-uix-button-has-icon no-icon-markup addto-button video-actions spf-nolink hide-until-delayloaded addto-watch-later-button-sign-in yt-uix-tooltip" type="button" role="button" title="Watch Later"><span class="yt-uix-button-arrow yt-sprite"></span></button>
-                                                <span class="thumb-menu dark-overflow-action-menu video-actions">
-                                                   <button aria-expanded="false" class="yt-uix-button-reverse flip addto-watch-queue-menu spf-nolink hide-until-delayloaded yt-uix-button yt-uix-button-dark-overflow-action-menu yt-uix-button-size-default yt-uix-button-has-icon no-icon-markup yt-uix-button-empty" type="button" aria-haspopup="true">
-                                                      <span class="yt-uix-button-arrow yt-sprite"></span>
-                                                      <ul class="watch-queue-thumb-menu yt-uix-button-menu yt-uix-button-menu-dark-overflow-action-menu hid">
-                                                         <li role="menuitem" class="overflow-menu-choice addto-watch-queue-menu-choice addto-watch-queue-play-next yt-uix-button-menu-item"><span class="addto-watch-queue-menu-text">Play next</span></li>
-                                                         <li role="menuitem" class="overflow-menu-choice addto-watch-queue-menu-choice addto-watch-queue-play-now yt-uix-button-menu-item"><span class="addto-watch-queue-menu-text">Play now</span></li>
-                                                      </ul>
-                                                   </button>
-                                                </span>
-                                                <button class="yt-uix-button yt-uix-button-size-small yt-uix-button-default yt-uix-button-empty yt-uix-button-has-icon no-icon-markup addto-button addto-queue-button video-actions spf-nolink hide-until-delayloaded addto-tv-queue-button yt-uix-tooltip" type="button" title="Queue"></button>
-                                             </div>
-                                             <!--Thumb-->
-                                          </li>
-                                          <!--#Recommended Course-->
+                                          
                                        </ul>
                                     </div>
                                  </div>
