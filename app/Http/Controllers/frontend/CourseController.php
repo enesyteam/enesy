@@ -20,6 +20,7 @@ class CourseController extends Controller
     public function index(){
     	return view('frontend.course.index');
     }
+    // chi tiết khóa học
     public function detail($alias,$id){
         $course_detail = Course::where('id',$id)->where('status',1)->first();
         if($course_detail){
@@ -70,6 +71,7 @@ class CourseController extends Controller
         $course_detail = Course::where('id',$id)->where('status',1)->first();
 		return view('frontend.course.course-preview',['course_detail'=>$course_detail]);
     }
+    // học bài
     public function view(){
         $id = Input::get('id');
         $course_detail = Course::where('id',$id)->where('status',1)->first();
