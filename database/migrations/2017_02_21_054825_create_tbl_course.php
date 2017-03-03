@@ -27,6 +27,7 @@ class CreateTblCourse extends Migration
                     $table->string('introtext',500)->nullable();
                     $table->text('content')->nullable();
                     $table->double('price')->nullable();
+                    $table->double('sale')->nullable();
                     $table->tinyInteger('status')->unsigned()->nullable()->default(0)->index()->comment = '1:active, 0:not active';   
                     $table->tinyInteger('trending')->unsigned()->nullable()->default(0)->index();  
                     $table->string('create_user', 255)->nullable();  

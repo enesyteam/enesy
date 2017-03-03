@@ -18,7 +18,18 @@
                     <label lass="control-label" for="inputError" style="color:red;" >{{ $errors->first('title') }}</label>
                 </div>              
             </div>
-           
+             <div class="form-group">
+                  <label class="required">Price</label>
+                  <input class="form-control" name="price" value="{{ $course->price }}" required="">
+                  <div class="form-group has-error">
+                    <label lass="control-label" for="inputError" style="color:red;" >{{ $errors->first('price') }}</label>
+                  </div>              
+                </div>
+             <div class="form-group">
+                  <label class="required">Sale Price</label>
+                  <input class="form-control" name="sale" value="{{ $course->sale }}">
+                               
+             </div>           
            
             <div class="form-group">
                 <label class="required">Category</label>

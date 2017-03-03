@@ -101,6 +101,8 @@ class CourseController extends Controller
             $course->status           = 1;
             $course->picture          = $data["picture"];
             $course->video            = $data["file"];
+            $course->price            = $data["price"];
+            $course->sale             = $data["sale"]; 
             $course->num_of_learn     = 0;
             $course->create_date      = time();
             $course->updated_at       = time();
@@ -215,7 +217,9 @@ class CourseController extends Controller
             $course->introtext        = $data["introtext"];      
             $course->content          = $data["content"];
             $course->picture          = $data["picture"];
-            $course->video            = $data["file"];            
+            $course->video            = $data["file"];    
+            $course->price            = $data["price"];
+            $course->sale             = $data["sale"];                     
             $course->updated_at       = time();
             $course->save(['timestamps' => false]);
 
